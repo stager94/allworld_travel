@@ -1,0 +1,25 @@
+.navbar-static-top.navbar-colorized.container-fluid
+  .navbar-inner
+    .container
+      .row
+        .navbar-header.clblock
+          =link_to root_path do
+            =image_tag Setting.logotype, style: "margin-top: -4px;height:35px;"
+            &nbsp;AllWorld 
+            %span travel
+          %button.navbar-toggle.collapsed{type:"button", 'data-toggle'=>"collapse", 'data-target'=>"#navbar", 'aria-expanded'=>"false", 'aria-controls'=>"navbar"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+        
+        .leftsearchblock.pull-right
+          = render :partial => 'shared/search'
+        #navbar.collapse.navbar-collapse.pull-left
+          = render :partial => 'shared/mainmenu'
+      .row-bredcrumb.row
+        .pull-left.leftblock{style: "line-height: 1em;"}
+          &nbsp;
+        .pull-left{style: "line-height: 1em;"}
+          %ol.breadcrumb
+            =@bredcrumb.html_safe

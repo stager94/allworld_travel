@@ -19,21 +19,23 @@
 //= require turbolinks
 
 $(function() {
-$( "#hidemarquee" ).click(function() {
-  $( "#marqueeblock" ).toggle();
-      
-  $.ajax
-    ({ 
-        url: '/ajax/showhide',
-        data: {"showed": $(this).attr('class')},
-        type: 'post',
-        success: function(result)
-        {
-             $("#hidemarquee").removeClass();
-             $("#hidemarquee").addClass(result);
-        }
-    });
-});
+  $( "#hidemarquee" ).click(function() {
+    $( "#marqueeblock" ).toggle();
+        
+    $.ajax
+      ({ 
+          url: '/ajax/showhide',
+          data: {"showed": $(this).attr('class')},
+          type: 'post',
+          success: function(result)
+          {
+               $("#hidemarquee").removeClass();
+               $("#hidemarquee").addClass(result);
+          }
+      });
+  });
+
+  $('[data-toggle="tooltip"]').tooltip();
 });
 
 $(function() {

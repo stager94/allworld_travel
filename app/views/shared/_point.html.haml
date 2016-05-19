@@ -15,10 +15,10 @@
           =countries.count
           ):
       -countries.each do |lccountry|
-        =link_to "/country/"+lccountry.tag, :title => lccountry.name do
+        =link_to "/country/"+lccountry.tag, title: lccountry.name do
           .flag_img
             -if flagimg = lccountry.flag.url(:thumb)
-              =image_tag flagimg, :style => 'width:35px;', :alt => lccountry.name
+              = image_tag flagimg, style: 'width:35px;', alt: lccountry.name, data: { toggle: "tooltip", placement: "bottom", title: lccountry.name }
       -if places.sum('point') >0
         .current_point.pull-right
           =places.sum('point').to_s
@@ -45,12 +45,12 @@
         =link_to "/country/"+lccountry.country.tag do
           .flag_img
             -if flagimg = lccountry.country.flag.url(:thumb)
-              =image_tag flagimg, :style => 'width:35px;'
-      -if places.sum('point') >0
+              =image_tag flagimg, style: 'width:35px;'
+      - if places.sum('point') > 0
         .current_point.pull-right
           =places.sum('point').to_s
           баллов
-  -else
+  - else
     .current_country
       .pull-left.strani
         Страны, в которых я был

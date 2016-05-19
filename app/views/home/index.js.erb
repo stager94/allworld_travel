@@ -1,1 +1,3 @@
 $('#contenetblock').html('<%= escape_javascript render('index') %>');
+$('#shared-point').html("<%= j render 'shared/point' %>");
+$('#shared-point [data-toggle="tooltip"]').tooltip();
