@@ -1,0 +1,29 @@
+<div class="microcontainer">
+<h2 class='textcenter'>Регистрация</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {:honeypot => true, class: "form-horizontal"}) do |f| %>
+  <%= devise_error_messages! %>
+
+
+
+  <div class='field form-group'><%= f.label :username, class: 'col-sm-3 control-label' %>
+  <div class="col-sm-6" style="margin: 0 20px;">
+  <%= f.text_field :username, required: true, placeholder: "введите логин", :pattern => "[0-9a-zA-Z_\-]{3,}", :title =>"Используйте только цифры и латинские символы, минимум 3 символа", class: "form-control" %></div>
+</div>
+  <div class='field form-group'><%= f.label :password, class: 'col-sm-3 control-label' %> <% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %>
+  <div class="col-sm-6" style="margin: 0 20px;">
+    <%= f.password_field :password, autocomplete: "off", required: true, placeholder: "введите пароль", :pattern => "[0-9a-zA-Z_\-]{6,}", :title =>"Используйте только цифры и латинские символы, минимум 6 символов", class: "form-control" %></div>
+</div>
+  <div class='field form-group'><%= f.label :password_confirmation, class: 'col-sm-3 control-label' %>
+  <div class="col-sm-6" style="margin: 0 20px;">
+    <%= f.password_field :password_confirmation, autocomplete: "off", required: true, placeholder: "повторите пароль", :pattern => "[0-9a-zA-Z_\-]{6,}", :title =>"Используйте только цифры и латинские символы, минимум 6 символов", class: "form-control" %></div>
+</div>
+  <div class='field form-group'><%= f.label :email, class: 'col-sm-3 control-label' %>
+  <div class="col-sm-6" style="margin: 0 20px;">
+  <%= f.email_field :email, required: true, placeholder: "введите E-mail", :title =>"например email@example.com", class: "form-control" %></div>
+</div>
+  <div class='field form-group textcenter'><%= f.submit t('user.register'), class:'btn btn-primary' %></div>
+<% end %>
+  <div class="clear"></div>
+<%= render "devise/shared/links" %>
+</div>

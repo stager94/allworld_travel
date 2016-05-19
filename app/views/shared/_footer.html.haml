@@ -1,0 +1,23 @@
+.container
+  .row
+    - Footermenu.order('sortorder ASC').each do |razdel|
+      .block5
+        %h4=razdel.name
+        -razdel.footersubmenus.order('sortorder ASC').each do |subfooter|
+          %p=link_to subfooter.name, subfooter.url
+      .afdelimit
+
+    .block5contact
+      %h4 Контакты
+      %p
+        e-mail: info@allworld-travel.com
+      %p
+        Служба поддержки
+      -#=$setting.contactadress
+      .socialicons
+        %span#icovk
+        %span#icofb
+        %span#icoin
+        %span#icotw
+        %span#icoyb
+        %span#icogp

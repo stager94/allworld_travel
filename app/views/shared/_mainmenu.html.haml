@@ -1,0 +1,3 @@
+%ul.nav.navbar-nav.pull-right
+  - Mainmenu.order('sortorder ASC').each do |menu|
+    = menu_item menu.name, menu.url

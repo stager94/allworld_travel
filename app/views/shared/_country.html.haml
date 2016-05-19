@@ -1,0 +1,5 @@
+.country_wcorner
+  =link_to "/country/"+country.tag do
+    -if flagimg = country.flag.url(:thumb)
+      =image_tag flagimg, :class => 'flag', :alt => country.name, :title => country.name
+      %p=country.name

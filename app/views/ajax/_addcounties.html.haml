@@ -1,0 +1,20 @@
+.modal-dialog#addcountries
+  .modal-content
+    .well
+      %h5
+        Пожалуйста выберите страну в которой Вы видели 
+        =@shplace.name
+      %hr
+      .countries
+        - placevidelsclass='bignocheck'
+        - @shplace.countries.each do |country|
+          .country_item
+            - if @videlarr.include?(country.id.to_i)
+              -placevidelsclass='bigcheck'
+            - else
+              -placevidelsclass='bignocheck'
+            =link_to "/multyseen/"+@shplace.id.to_s+'/'+country.id.to_s, :class=>placevidelsclass do
+              .flag_img
+                -if flagimg = country.flag.url(:thumb)
+                  =image_tag flagimg
+              =country.name

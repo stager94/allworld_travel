@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fulltext: MyText
+  sortorder: 1
+  showplace_id: 
+  textblock_id: 
+
+two:
+  fulltext: MyText
+  sortorder: 1
+  showplace_id: 
+  textblock_id: 

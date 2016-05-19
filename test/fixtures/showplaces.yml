@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  h1: MyString
+  keywords: MyText
+  description: MyText
+  tag: MyString
+  shortdesc: MyText
+  googlemap: MyText
+  fulldesc: MyText
+  primech: MyText
+  section: 
+  category: 
+  group: 
+  region: 
+  datapostroyki: MyString
+  lose: false
+  wonders7: false
+  top100: false
+  unesco: false
+
+two:
+  name: MyString
+  h1: MyString
+  keywords: MyText
+  description: MyText
+  tag: MyString
+  shortdesc: MyText
+  googlemap: MyText
+  fulldesc: MyText
+  primech: MyText
+  section: 
+  category: 
+  group: 
+  region: 
+  datapostroyki: MyString
+  lose: false
+  wonders7: false
+  top100: false
+  unesco: false

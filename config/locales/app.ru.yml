@@ -1,0 +1,36 @@
+ru:
+  user:
+    register: "Регистрация"
+    sign: "Войти"
+    signblock: "Вход"
+    logout: "Выйти"
+    logoutblock: "Выход"
+    username: "Логин:"
+    home: "Кабинет"
+    email: "E-mail:"
+    name: "Имя:"
+    family: "Фамилия:"
+    password: "Пароль:"
+    confirmpassword: "Подтвердите пароль:"
+    remember: "Запомнить меня"
+  meta:
+    keywords: "default keyword"
+    descriptions: "default descriptions"
+  group:
+    meta: "Meta теги и SEO"
+    obshee: "Общая информация"
+    shapka: "Описание"
+    mediainfo: "Медиа"
+    slugebnoe: "Служебная информация"
+    allother: "Информация"
+    navigates: "Навигация"
+    statistic: "Статистика"
+  menu:
+    content: "Контент"
+    admin: "Администрирование"
+    system: "Служебное"
+    menu: "Навигация"
+    setting: "Настройки"
+  ajax:
+    show: "fa fa-eye"
+    hide: "fa fa-eye-slash"

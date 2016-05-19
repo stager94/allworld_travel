@@ -1,0 +1,114 @@
+.showplace_wcorner
+  .showplace_item
+    =link_to "/place/"+showplace.tag do
+      .showplace_img
+        -if firstimg = showplace.showplacepictures.first
+          =image_tag firstimg.image.url(:medium)
+        -else
+          =image_tag '/img/blank/medium/pustota.png'
+        .showplace_flag
+          - thiscountries=showplace.countries
+          - if current_user
+            - if test=current_user.placevidels.where('showplace_id'=>showplace.id).first and test.showplace.countries.count>1
+              -# objcnt2 =test.countryarray.split(",").map { |s| s.to_i }
+              -# thiscountries = Country.where('id' => objcnt2)
+          -if thiscountries.count >1
+            .maxflags
+              -thiscountries.each do |lccountry|
+                -if flagimg = lccountry.flag.url(:thumb)
+                  =image_tag flagimg, :style => 'width:20px;vertical-align:middle;', :alt => lccountry.name, :title => lccountry.name
+            
+          -else
+            -if lccountry = thiscountries.first
+              -if flagimg = lccountry.flag.url(:thumb)
+                =image_tag flagimg, :style => 'width:20px;vertical-align:middle;', :alt => lccountry.name, :title => lccountry.name
+                =lccountry.name
+        %p=showplace.name
+      .showplace_medal
+        -if top100 = showplace.top100
+          .showplace_top100{:title=>"ТОП 100"}
+            
+        -if lose = showplace.lose
+          .showplace_lost{:title=>"Исчезнувшее"}
+            
+        -if unesco = showplace.unesco
+          .showplace_unesco{:title=>"Наследие Юнеско"}
+            
+        -if wonders7 = showplace.wonders7
+          .showplace_wonders{:title=>"7 чудес мира"}
+            
+        -if ginnesa = showplace.ginnesa
+          .showplace_ginnes{:title=>"В книге Гиннеса"}
+            
+    -if showplace.showfilter
+      .showplace_atr
+        - if current_user
+          - if test=current_user.placevidels.where('showplace_id'=>showplace.id).first
+            - placevidelsclass='check'
+            - placevidelsgo='/noseen/'
+          - else
+            - placevidelsclass='nocheck'
+            - placevidelsgo='/seenjs/'
+          - if test=current_user.placevidels.where('showplace_id'=>showplace.id).first and test.showplace.countries.count>1
+            - placevidelsgo='/seenjs/'
+          - if test=current_user.placenets.where('showplace_id'=>showplace.id).first 
+            - placenetsclass='check'
+            - placenetsgo='/nono/'
+          - else
+            - placenetsclass='nocheck'
+            - placenetsgo='/no/'
+          - if test=current_user.placedas.where('showplace_id'=>showplace.id).first 
+            - placedasclass='check'
+            - placedasgo='/nowish/'
+          - else
+            - placedasclass='nocheck'
+            - placedasgo='/wish/'
+        - else
+          - if (not session[:placevidels].nil?) and session[:placevidels].include?(showplace.id.to_s)
+            - placevidelsclass='check'
+            - placevidelsgo='/noseen/'
+          - else
+            - placevidelsclass='nocheck'
+            - placevidelsgo='/seenjs/'
+          - if (not session[:placevidels].nil?) and session[:placevidels].include?(showplace.id.to_s) and showplace.countries.count>1
+            - placevidelsgo='/seenjs/'
+          - if (not session[:placenets].nil?) and session[:placenets].include?(showplace.id.to_s)
+            - placenetsclass='check'
+            - placenetsgo='/nono/'
+          - else
+            - placenetsclass='nocheck'
+            - placenetsgo='/no/'
+          - if (not session[:placedas].nil?) and session[:placedas].include?(showplace.id.to_s)
+            - placedasclass='check'
+            - placedasgo='/nowish/'
+          - else
+            - placedasclass='nocheck'
+            - placedasgo='/wish/'
+        .fatr
+        .fatr=link_to 'Был, видел', placevidelsgo+showplace.id.to_s, :class=>placevidelsclass, :remote=>true
+        .fatr=link_to 'Хочу', placedasgo+showplace.id.to_s, :class=>placedasclass, :remote=>true
+        .fatr=link_to 'Позже', placenetsgo+showplace.id.to_s, :class=>placenetsclass, :remote=>true
+        .fatr
+        %span.stretch
+    -else
+      .showplace_atr
+
+    .shbottomlinks
+      .showplace_back
+        .fatr
+        .fatr
+          =link_to '/place/'+showplace.tag do
+            =image_tag '/img/content_otzivi.png'
+            Отзывы
+        .fatr
+          =image_tag '/img/content_rating.png', style: " vertical-align: text-bottom; "
+          -if point = showplace.point
+            = showplace.point.to_s.gsub('.', ',')
+          -else
+            0,0
+        .fatr
+        %span.stretch
+    .showplace_detal
+      =link_to '/place/'+showplace.tag do
+        Подробнее
+        %span.fa.fa-angle-double-right

@@ -1,0 +1,9 @@
+.shpage
+  .prevsh
+    = link_to_prev @relatedspls, {:param_name => :page, :remote => true}, (image_tag '/img/content_arr_slider_left.png')
+  .contsh
+    - @relatedspls.each do |place|
+      = render :partial => 'shared/showplace', :locals => {:showplace => place}
+  .nextsh
+    = link_to_next @relatedspls, {:param_name => :page, :remote => true}, (image_tag '/img/content_arr_slider_right.png')
+

@@ -1,0 +1,89 @@
+.showplace_block
+  %p
+    %b Новые
+    (
+    =Showplace.all.count
+    )
+  .placepaginator
+    = paginate @showplaces, :left => 4, :right => 1,:param_name => :shpage, :remote => true
+  - counterplaces = 0
+  - @showplaces.each do |showplace|
+    - if counterplaces==0
+      = render :partial => 'shared/prevblockshowplace'
+    -# if counterplaces>0 and (counterplaces % $perpaged)==0 
+      = render :partial => 'shared/nextblockshowplace'
+      = render :partial => 'shared/prevblockshowplace'
+    
+    = render :partial => 'shared/showplace', :locals => {:showplace => showplace}
+    - counterplaces += 1
+  = render :partial => 'shared/nextblockshowplace'
+
+
+
+  -#.shpage
+    .prevsh
+        = link_to_prev @showplaces, {:param_name => :shpage, :remote => true}, (image_tag '/img/content_arr_slider_left.png')
+    .contsh
+      - @showplaces.each do |showplace|
+        = render :partial => 'shared/showplace', :locals => {:showplace => showplace}
+    .nextsh
+        = link_to_next @showplaces, {:param_name => :shpage, :remote => true}, (image_tag '/img/content_arr_slider_right.png')
+
+
+
+
+- if @placevidels
+  .showplace_block
+    %p
+      %b Был, Видел
+      (
+      =@placevidelscount
+      )
+    .placepaginator
+      = paginate @placevidels, :left => 4, :right => 1,:param_name => :vidpage, :remote => true
+    .shpage
+      .prevsh
+        = link_to_prev @placevidels, {:param_name => :vidpage, :remote => true}, (image_tag '/img/content_arr_slider_left.png')
+      .contsh
+        - @placevidels.each do |placevidel|
+          = render :partial => 'shared/showplace', :locals => {:showplace => placevidel}
+      .nextsh
+        = link_to_next @placevidels, {:param_name => :vidpage, :remote => true}, (image_tag '/img/content_arr_slider_right.png')
+
+          
+- if @placedas
+  .showplace_block
+    %p
+      %b Хочу побывать
+      (
+      =@placedascount
+      )
+    .placepaginator
+      = paginate @placedas, :left => 4, :right => 1,:param_name => :dapage, :remote => true
+    .shpage
+      .prevsh
+        = link_to_prev @placedas, {:param_name => :dapage, :remote => true}, (image_tag '/img/content_arr_slider_left.png')
+      .contsh
+        - @placedas.each do |placeda|
+          = render :partial => 'shared/showplace', :locals => {:showplace => placeda}
+      .nextsh
+        = link_to_next @placedas, {:param_name => :dapage, :remote => true}, (image_tag '/img/content_arr_slider_right.png')
+
+- if @placenets
+  .showplace_block
+    %p
+      %b Позже
+      (
+      =@placenetscount
+      )
+    .placepaginator
+      = paginate @placenets, :left => 4, :right => 1,:param_name => :netpage, :remote => true
+    .shpage
+      .prevsh
+        = link_to_prev @placenets, {:param_name => :netpage, :remote => true}, (image_tag '/img/content_arr_slider_left.png')
+      -#= paginate @showplaces, :left => 4, :right => 1,:param_name => :netpage
+      .contsh
+        - @placenets.each do |placenet|
+          = render :partial => 'shared/showplace', :locals => {:showplace => placenet}
+      .nextsh
+        = link_to_next @placenets, {:param_name => :netpage, :remote => true}, (image_tag '/img/content_arr_slider_right.png')

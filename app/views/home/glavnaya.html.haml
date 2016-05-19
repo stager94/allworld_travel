@@ -1,0 +1,26 @@
+-@bredcrumb='<li><a href="/">Главная</a></li>'
+%h1
+  Это будет интересно и полезно тем, кто:
+.rowsection
+  - Homekarusel.order('sortorder ASC').first(3).each do |section|
+    .pull-left.section
+      .blockimgsection
+        =image_tag section.image.url(:block)
+      .sectiontitle
+        =section.name
+.clear
+.rowsection
+  -unless Allsetting.where(:default => true).first.homeinfografik.blank?
+    =image_tag Allsetting.where(:default => true).first.homeinfografik.url(:block)
+.clear
+%h1
+  Открой мир незабываемых впечатлений
+.rowsection
+  - Section.order('sortorder ASC').each do |section|
+    .pull-left.section
+      = link_to "/section/"+section.tag.name do
+        .blockimgsection
+          =image_tag section.image.url(:block)
+        .sectiontitle
+          =section.name
+.clear

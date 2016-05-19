@@ -1,0 +1,36 @@
+- @bredcrumb = capture do
+  %li= link_to 'Главная', '/'
+  %li= link_to 'Страны мира', '/allcountries'
+  %li.active= @region.name
+.showplace_block#allcountries
+  %h3 
+    =@region.name
+  -if @region.googlemap.present?
+    .adaptiveiframe
+      =@region.googlemap.html_safe
+  =@region.descrip.html_safe
+  - if @countries.where("parent_id is null").count >0
+    .topblock
+      Признанные независимые государства  - члены или наблюдатели ООН (#{@countries.where("parent_id is null").count.to_s}):
+    .countries.newspaper.panel-body.alcountry
+      - @countries.where("parent_id is null").order('name ASC').each do |country|
+        =render :partial => "shared/country", :locals => { :country => country }
+  - if Country.where("parent_id >0").where(:region =>@region).count >0
+    .topblock.pad10top
+      Территориально отдаленные земли или заморские территории, считаемые неотъемлемой частью соответствующих независимых государств - членов ООН (#{Country.where("parent_id >0").where(:region =>@region).count.to_s}):
+    #accordionteritory.panel-group{"role"=>"tablist", "aria-multiselectable"=>"false"}
+      - Country.order('name ASC').each do |countri|
+        - if countri.children.where(:region =>@region).count >0
+          .pdefault
+            .panelheading{"role"=>"tab", "id"=>'headingteritory'+countri.id.to_s}
+              %h4.panel-title
+                %a{"role"=>"button", "data-toggle"=>"collapse", "data-parent"=>"#accordionteritory", "href"=>"#collapseteritory"+countri.id.to_s, "aria-expanded"=>"true", "aria-controls"=>"collapseteritory"+countri.id.to_s}
+                  =countri.name
+                  (
+                  =countri.children.where(:region =>@region).count
+                  )
+            .panel-collapse.collapse.in{"role"=>"tabpanel", "aria-labelledby"=>"headingteritory"+countri.id.to_s, "id"=>'collapseteritory'+countri.id.to_s}
+              .panel-body.alcountry.newspaper
+                - countri.children.where(:region =>@region).order('name ASC').each do |country|
+                  =render :partial => "shared/country", :locals => { :country => country }
+  =@region.hint.html_safe

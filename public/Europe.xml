@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<countrylist>
+	<country>
+		<cname>Австрия</cname>
+		<capital>Вена</capital>
+		<woeid>551801</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/avstriya</link>
+	</country>
+    <country>
+		<cname>Албания</cname>
+		<capital>Тирана</capital>
+		<woeid>472135</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/albaniya</link>
+	</country>	
+	<country>
+		<cname>Андорра</cname>
+		<capital>Андорра-ла-Велья</capital>
+		<woeid>20070553</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/andorra</link>
+	</country>
+	<country>
+		<cname>Беларусь</cname>
+		<capital>Минск</capital>
+		<woeid>834463</woeid>
+		<flag></flag>
+        <timeZone>+3</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/belarus</link>
+	</country>
+	<country>
+		<cname>Бельгия</cname>
+		<capital>Брюссель</capital>
+		<woeid>968019</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/belgiya</link>
+	</country>
+	<country>
+		<cname>Болгария</cname>
+		<capital>София</capital>
+		<woeid>839722</woeid>
+		<flag></flag>
+		<timeZone>+3</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/bolgariya</link>
+	</country>	
+	<country>
+		<cname>Босния и Герцеговина</cname>
+		<capital>Сараево</capital>
+		<woeid>943828</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/bosniya-i-gertsegovina</link>
+	</country>	
+	<country>
+		<cname>Великобритания</cname>
+		<capital>Лондон</capital>
+		<woeid>44418</woeid>
+		<flag></flag>
+		<timeZone>+1</timeZone>
+		<dtime> Страна: </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/velikobritaniya</link>
+	</country>
+	<country>
+		<cname>Венгрия</cname>
+		<capital>Будапешт</capital>
+		<woeid>804365</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/vengriya</link>
+	</country>	
+	<country>
+		<cname>Германия</cname>
+		<capital>Берлин</capital>
+		<woeid>638242</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/germaniya</link>
+	</country>
+	<country>
+		<cname>Греция</cname>
+		<capital>Афины</capital>
+		<woeid>946738</woeid>
+		<flag></flag>
+		<timeZone>+3</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/gretsiya</link>
+	</country>	
+	<country>
+		<cname>Дания</cname>
+		<capital>Копенгаген</capital>
+		<woeid>554890</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/daniya</link>
+	</country>
+	<country>
+		<cname>Ирландия</cname>
+		<capital>Дублин</capital>
+		<woeid>560743</woeid>
+		<flag></flag>
+		<timeZone>+1</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/irlandiya</link>
+	</country>
+	<country>
+		<cname>Исландия</cname>
+		<capital>Рейкьявик</capital>
+		<woeid>980389</woeid>
+		<flag></flag>
+		<timeZone></timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/islandiya</link>
+	</country>
+	<country>
+		<cname>Испания</cname>
+		<capital>Мадрид</capital>
+		<woeid>766273</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/ispaniya</link>
+	</country>
+	<country>
+		<cname>Италия</cname>
+		<capital>Рим</capital>
+		<woeid>721943</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/italiya</link>
+	</country>
+	<country>
+		<cname>Латвия</cname>
+		<capital>Рига</capital>
+		<woeid>854823</woeid>
+		<flag></flag>
+		<timeZone>+3</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/latviya</link>
+	</country>
+	<country>
+		<cname>Литва</cname>
+		<capital>Вильнюс</capital>
+		<woeid>479616</woeid>
+		<flag></flag>
+		<timeZone>+3</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/litva</link>
+	</country>
+	<country>
+		<cname>Лихтенштейн</cname>
+		<capital>Вадуц</capital>
+		<woeid>856440</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/lihtenshteyn</link>
+	</country>
+	<country>
+		<cname>Люксембург</cname>
+		<capital>Люксембург</capital>
+		<woeid>979721</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/lyuksemburg</link>
+	</country>
+	<country>
+		<cname>Македония</cname>
+		<capital>Скопье</capital>
+		<woeid>482940</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/makedoniya</link>
+	</country>	
+	<country>
+		<cname>Мальта</cname>
+		<capital>Валлетта</capital>
+		<woeid>483559</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/malta</link>
+	</country>
+	<country>
+		<cname>Молдова</cname>
+		<capital>Кишинев</capital>
+		<woeid>480793</woeid>
+		<flag></flag>
+		<timeZone>+3</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/moldova</link>
+	</country>
+	<country>
+		<cname>Монако</cname>
+		<capital>Монако</capital>
+		<woeid>24549798</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/monako</link>
+	</country>
+	<country>
+		<cname>Нидерланды</cname>
+		<capital>Амстердам</capital>
+		<woeid>727232</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/niderlandy</link>
+	</country>
+	<country>
+		<cname>Норвегия</cname>
+		<capital>Осло</capital>
+		<woeid>862592</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/norvegiya</link>
+	</country>
+	<country>
+		<cname>Польша</cname>
+		<capital>Варшава</capital>
+		<woeid>523920</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/polsha</link>
+	</country>
+	<country>
+		<cname>Португалия</cname>
+		<capital>Лиссабон</capital>
+		<woeid>742676</woeid>
+		<flag></flag>
+		<timeZone>+1</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/portugaliya</link>
+	</country>
+	<country>
+		<cname>Россия</cname>
+		<capital>Москва</capital>
+		<woeid>2122265</woeid>
+		<flag></flag>
+		<timeZone>+3</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/rossiya</link>
+	</country>
+	<country>
+		<cname>Румыния</cname>
+		<capital>Бухарест</capital>
+		<woeid>868274</woeid>
+		<flag></flag>
+		<timeZone>+3</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/rumyniya</link>
+	</country>	
+	<country>
+		<cname>Сан-Марино</cname>
+		<capital>Сан-Марино</capital>
+		<woeid>532373</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/san-marino</link>
+	</country>
+    <country>
+		<cname>Сербия</cname>
+		<capital>Белград</capital>
+		<woeid>532697</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/serbiya</link>
+	</country>	
+	<country>
+		<cname>Словакия</cname>
+		<capital>Братислава</capital>
+		<woeid>818717</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/slovakiya</link>
+	</country>	
+	<country>
+		<cname>Словения</cname>
+		<capital>Любляна</capital>
+		<woeid>530634</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/sloveniya</link>
+	</country>	
+	<country>
+		<cname>Украина</cname>
+		<capital>Киев</capital>
+		<woeid>924938</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/ukraina</link>
+	</country>
+	<country>
+		<cname>Финляндия</cname>
+		<capital>Хельсинки</capital>
+		<woeid>565346</woeid>
+		<flag></flag>
+		<timeZone>+3</timeZone>
+		<dtime> Страна: </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/finlyandiya</link>
+	</country>
+	<country>
+		<cname>Франция</cname>
+		<capital>Париж</capital>
+		<woeid>615702</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/frantsiya</link>
+	</country>
+	<country>
+		<cname>Хорватия</cname>
+		<capital>Загреб</capital>
+		<woeid>851128</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/horvatiya</link>
+	</country>	
+	<country>
+		<cname>Черногория</cname>
+		<capital>Подгорица</capital>
+		<woeid>536010</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/chernogoriya</link>
+	</country>	
+	<country>
+		<cname>Чехия</cname>
+		<capital>Прага</capital>
+		<woeid>796597</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/chehiya</link>
+	</country>
+	<country>
+		<cname>Швейцария</cname>
+		<capital>Берн</capital>
+		<woeid>781788</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/shveytsariya</link>
+	</country>
+	<country>
+		<cname>Швеция</cname>
+		<capital>Стокгольм</capital>
+		<woeid>906057</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/shvetsiya</link>
+	</country>
+	<country>
+		<cname>Эстония</cname>
+		<capital>Таллинн</capital>
+		<woeid>845743</woeid>
+		<flag></flag>
+		<timeZone>+3</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/estoniya</link>
+	</country>
+	<country>
+		<cname>Ватикан</cname>
+		<capital>Ватикан</capital>
+		<woeid>23424986</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/svyatoy-prestol-ili-vatikan</link>
+	</country>
+	<country>
+		<cname>Шпицберген</cname>
+		<capital>Европа</capital>
+		<woeid></woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/shpitsbergen-svalbard</link>
+	</country>
+	<country>
+		<cname>Остров Гернси</cname>
+		<capital>Великобритания</capital>
+		<woeid>23424827</woeid>
+		<flag></flag>
+		<timeZone>+1</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/ostrov-gernsi</link>
+	</country>
+	<country>
+		<cname>Остров Джерси</cname>
+		<capital>Великобритания</capital>
+		<woeid>24549617</woeid>
+		<flag></flag>
+		<timeZone>+1</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/ostrov-dzhersi</link>
+	</country>
+	<country>
+		<cname>Остров Мэн</cname>
+		<capital>Великобритания</capital>
+		<woeid>23424847</woeid>
+		<flag></flag>
+		<timeZone>+1</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/ostrov-men</link>
+	</country>
+	<country>
+		<cname>Остров Альборан</cname>
+		<capital>Испания</capital>
+		<woeid>767022</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/ostrov-alboran</link>
+	</country>
+	<country>
+		<cname>Аландские острова</cname>
+		<capital>Финлядния</capital>
+		<woeid>12577865</woeid>
+		<flag></flag>
+		<timeZone>+3</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/alandskie-ostrova</link>
+	</country>
+	<country>
+		<cname>Гибралтар</cname>
+		<capital>Великобритания</capital>
+		<woeid>472800</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/gibraltar</link>
+	</country>
+	<country>
+		<cname>Мелилья</cname>
+		<capital>Испания</capital>
+		<woeid>767022</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/melilya</link>
+	</country>
+	<country>
+		<cname>Остров Перехиль</cname>
+		<capital>Испания</capital>
+		<woeid>757400</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/ostrov-perehil</link>
+	</country>
+	<country>
+		<cname>Остров Ян-Майен</cname>
+		<capital>Норвегия</capital>
+		<woeid>23424859</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/ostrov-yan-mayen</link>
+	</country>
+	<country>
+		<cname>Острова Алусемас</cname>
+		<capital>Испания</capital>
+		<woeid>1531158</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/ostrova-alusemas</link>
+	</country>
+	<country>
+		<cname>Острова Чафаринас</cname>
+		<capital>Испания</capital>
+		<woeid>12478622</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/ostrova-chafarinas</link>
+	</country>
+	<country>
+		<cname>Пеньон-де-Велес-де-ла-Гомера</cname>
+		<capital>Испания</capital>
+		<woeid>1542248</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/penon-de-veles-de-la-gomera</link>
+	</country>	
+	<country>
+		<cname>Сеута</cname>
+		<capital>Испания</capital>
+		<woeid>757400</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/seuta</link>
+	</country>
+	<country>
+		<cname>Фарерские острова</cname>
+		<capital>Дания</capital>
+		<woeid>23424816</woeid>
+		<flag></flag>
+		<timeZone>+1</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/farerskie-ostrova</link>
+	</country>
+
+</countrylist>
+	
+	

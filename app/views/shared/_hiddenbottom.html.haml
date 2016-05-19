@@ -1,0 +1,11 @@
+- unless user_signed_in?
+  .registermpdal
+    = render :partial => 'shared/signup'
+  .signmodal
+    = render :partial => 'shared/signin'
+  .savesettings
+    = render :partial => 'shared/onexit'
+.modal.fade#extend-modal
+= render :partial => 'shared/analitics'
+= render :partial => 'shared/scripts'
+= javascript_include_tag "signup"

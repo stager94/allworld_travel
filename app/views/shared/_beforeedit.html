@@ -1,0 +1,9 @@
+<script type="text/javascript">
+
+    var ready = function() {
+      $('form').areYouSure( {'message':'Вы уверены что все изменения сохранены?'} );
+    };
+
+    $(document).ready(ready);
+    $(document).on('page:load', ready);
+</script>

@@ -1,0 +1,5 @@
+- @bredcrumb = capture do
+  %li= link_to 'Главная', '/'
+  %li= link_to 'Страны мира', '/allcountries'
+  %li.active Топ 100 достопримечательностельностей
+=render :partial => "listener", :locals => { :blockname => 'Топ 100 достопримечательностельностей' }

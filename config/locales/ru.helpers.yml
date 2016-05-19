@@ -1,0 +1,10 @@
+ru:
+  helpers:
+    links:
+      edit: Редактировать
+      destroy: Удалить
+      new: Добавить новое
+      back: Назад
+      cancel: Отменить
+    titles:
+      new: Новое %{model}

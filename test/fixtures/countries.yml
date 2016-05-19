@@ -1,0 +1,81 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  h1: MyString
+  keywords: MyText
+  description: MyText
+  offname: MyString
+  stolica: MyString
+  language: MyString
+  valute: MyString
+  ploscha: MyString
+  naselenie: MyString
+  datanezavis: MyString
+  delenie: MyString
+  glava: MyString
+  zakon: MyString
+  ispolnit: MyString
+  shortdesc: MyText
+  googlemap: MyText
+  descforturist: MyText
+  primech: MyText
+  visum: MyText
+  chtonugnoznat: MyText
+  ceny: MyText
+  valutes: MyText
+  jazik: MyText
+  bezopasnost: MyText
+  oteli: MyText
+  pitanie: MyText
+  transport: MyText
+  prazdniki: MyText
+  internet: MyText
+  chtobrat: MyText
+  suvenir: MyText
+  transport: MyText
+  dostoprimech: MyText
+  politika: MyText
+  naselenie: MyText
+  cultura: MyText
+  region: 
+
+two:
+  name: MyString
+  h1: MyString
+  keywords: MyText
+  description: MyText
+  offname: MyString
+  stolica: MyString
+  language: MyString
+  valute: MyString
+  ploscha: MyString
+  naselenie: MyString
+  datanezavis: MyString
+  delenie: MyString
+  glava: MyString
+  zakon: MyString
+  ispolnit: MyString
+  shortdesc: MyText
+  googlemap: MyText
+  descforturist: MyText
+  primech: MyText
+  visum: MyText
+  chtonugnoznat: MyText
+  ceny: MyText
+  valutes: MyText
+  jazik: MyText
+  bezopasnost: MyText
+  oteli: MyText
+  pitanie: MyText
+  transport: MyText
+  prazdniki: MyText
+  internet: MyText
+  chtobrat: MyText
+  suvenir: MyText
+  transport: MyText
+  dostoprimech: MyText
+  politika: MyText
+  naselenie: MyText
+  cultura: MyText
+  region: 

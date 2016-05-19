@@ -1,0 +1,1256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="hamster-applet" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.min.js"></script>
+    <link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/themes/base/jquery-ui.css" rel="stylesheet" />
+
+
+    <title>Отчёт о занятости за Май 01 – Июль 05, 2015</title>
+    <style type="text/css">
+        body {
+            font-family: "Droid Sans", "Liberation Sans", "Helvetica", "Arial", sans-serif;
+            font-size: 12px;
+            padding: 0;
+            margin: 0;
+            color: #303030;
+            background: #eee;
+        }
+
+        #content {
+            width: 700px;
+            padding:  24px 12px;
+            margin:0px auto;
+            background: #f6f6f6;
+            border-right: 2px solid #bbb;
+            border-left: 1px solid #bbb;
+        }
+
+        th, td {
+            text-align: left;
+            padding-right: 24px;
+        }
+
+        th {
+            padding-top: 12px;
+        }
+
+        h1 {margin-top: 0; margin-bottom: 1em;}
+        h2 {margin-bottom: 4px;}
+
+        .even {background-color: #eee;}
+        .odd {background-color: #fff;}
+
+        .by_day_controls {
+            margin-bottom: 24px;
+        }
+
+
+
+        table.chart {
+            border-collapse:collapse;
+            margin-bottom: 2em;
+        }
+
+        td.bar_col {
+            width: 100px;
+        }
+
+        .bar {
+            background-color: #7B8ED7;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            color: #fff;
+            height: 100%;
+        }
+
+        #date_chart {
+            width: 100%;
+            overflow: auto;
+            overflow-y: hidden;
+            height: 80px;
+        }
+
+        #date_chart table {
+            width: 100%;
+            height: 90%;
+            border-collapse: collapse;
+            margin-bottom: 4px;
+        }
+
+        #date_chart table tr {vertical-align: bottom;}
+        #date_chart table td {
+            padding: 0;
+            padding-right: 1px;
+        }
+
+        #date_chart .bar {
+            width: 100%;
+            background-color: #ccc;
+            border-radius: 0;
+            border-top-left-radius: 2px;
+            border-top-right-radius: 2px;
+        }
+
+        #grand_total {
+            color: #999;
+        }
+
+        #activity_log {
+            padding: 6px;
+            margin: 6px;
+            padding-left: 12px;
+            border: 1px solid silver;
+            background: #eee;
+
+        }
+
+        #date_facts tr:td {
+            padding-left: 24px;
+        }
+
+        p.template-instructions {
+            margin-top: 2em;
+        }
+    </style>
+
+
+
+</head>
+<body>
+
+<div id="content">
+    <h1>Отчёт о занятости за Май 01 – Июль 05, 2015 <span id="grand_total"></span></h1>
+
+    
+    <div id="activity_log">
+        <h2>Журнал деятельности</h2>
+        <table>
+            <tr>
+                <th>Дата</th>
+                <th>Занятие</th>
+                <th>Категория</th>
+                <th>Метки</th>
+                <th>Начало</th>
+                <th>Окончание</th>
+                <th>Длительность</th>
+                <th>Описание</th>
+            </tr>
+            
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Май 26, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>подготовка</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        14:38
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        15:11
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        33 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Май 26, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>авторизация</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        15:11
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        17:37
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        2 ч 26 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Май 26, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>авторизация</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        20:32
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        23:54
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        3 ч 22 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Май 27, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>авторизация</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        11:54
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        14:28
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        2 ч 33 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Май 27, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>категории</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        22:46
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        00:14
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        1 ч 28 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Май 28, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>категории</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        14:14
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        14:59
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        44 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Май 28, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>ЧПУ</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        14:59
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        17:01
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        2 ч 1 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Май 28, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>категории</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        17:01
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        17:31
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        29 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Май 28, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>категории</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        21:28
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        23:51
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        2 ч 23 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Июн 02, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>страны</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        16:23
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        17:10
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        47 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Июн 02, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>страны</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        17:24
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        19:36
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        2 ч 12 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Июн 02, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>страны</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        19:58
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        22:22
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        2 ч 24 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Июн 03, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>объекты</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        14:34
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        16:21
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        1 ч 47 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Июн 03, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>объекты</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        19:36
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        21:16
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        1 ч 40 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Июн 03, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>вывод страниц страны и объекты</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        22:27
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        23:00
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        33 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Июн 04, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>вывод страниц страны и объекты</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        20:32
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        22:58
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        2 ч 26 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Июн 04, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>вывод страниц страны и объекты</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        23:21
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        23:59
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        38 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Июн 05, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>вывод страниц страны и объекты</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        23:11
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        01:25
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        2 ч 14 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Июн 09, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>правки верстки</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        21:32
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        22:57
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        1 ч 25 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Июн 10, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>связь категорий и достопримечательностей</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        17:34
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        20:16
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        2 ч 42 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Июн 10, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>блокми топ100 и 7 чудес</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        20:34
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        00:23
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        3 ч 49 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Июн 11, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>картинки</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        19:28
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        21:02
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        1 ч 34 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Июн 11, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>картинки</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        21:08
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        00:51
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        3 ч 43 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Июн 14, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>картинки</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        18:30
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        19:45
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        1 ч 15 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Июн 14, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>картинки</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        19:58
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        01:26
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        5 ч 28 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Июн 15, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>левое меню</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        22:04
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        22:55
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        50 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Июн 15, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>левое меню</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        23:31
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        00:39
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        1 ч 8 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Июн 15, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>левое меню</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        00:45
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        00:54
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        9 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Июн 16, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>левое меню</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        17:54
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        18:58
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        1 ч 4 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Июн 16, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>админка</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        19:22
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        22:42
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        3 ч 20 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Июн 16, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>права доступа</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        22:42
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        00:11
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        1 ч 29 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Июн 16, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>левое меню</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        00:11
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        01:01
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        50 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Июн 17, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>левое меню</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        17:34
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        19:49
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        2 ч 15 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Июн 17, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>левое меню</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        20:22
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        21:15
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        53 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Июн 17, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>флаги</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        21:26
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        21:48
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        22 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Июн 17, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>флаги</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        21:48
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        22:04
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        16 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Июн 17, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>видео</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        22:24
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        23:04
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        40 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Июн 18, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>видео</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        20:34
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        23:16
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        2 ч 42 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Июн 19, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>фильтр</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        18:21
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        20:08
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        1 ч 47 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Июн 19, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>фильтр</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        20:30
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        23:42
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        3 ч 12 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Июн 28, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>админка</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        16:32
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        19:41
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        3 ч 9 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Июн 28, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>фильтр</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        19:41
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        23:14
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        3 ч 33 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Июн 29, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>баллы</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        20:09
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        21:41
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        1 ч 32 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Июн 29, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>баннеры</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        21:56
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        01:29
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        3 ч 33 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Июн 30, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>фильтр</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        16:00
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        18:18
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        2 ч 18 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+
+                <tr>
+                    <td>
+                        <!-- there is also date_iso -->
+                        Июн 30, 2015
+                    </td>
+                    <td>allworld</td>
+                    <td></td>
+                    <td>фильтр</td>
+                    <td>
+                        <!-- there is also start_iso -->
+                        22:24
+                    </td>
+                    <td>
+                        <!-- there is also end_iso -->
+                        23:23
+                    </td>
+                    <td>
+                        <!-- there is also duration_decimal and duration_minutes -->
+                        59 мин
+                    </td>
+                    <td></td>
+                </tr>
+            
+        </table>
+    </div>
+
+
+
+
+
+
+</div>
+</body>
+</html>

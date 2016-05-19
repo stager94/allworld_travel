@@ -1,0 +1,105 @@
+- @bredcrumb = capture do
+  %li= link_to 'Главная', '/'
+  %li= link_to 'Страны мира', '/allcountries'
+  %li= link_to @showplace.countries.first.region.name, '/countries/'+@showplace.countries.first.region.tag.name
+  %li
+    -if @showplace.countries.count <5
+      - @showplace.countries.each do |plcountry|
+        = link_to plcountry.name, '/country/'+plcountry.tag
+    -else
+      - @showplace.countries.first(5).each do |plcountry|
+        = link_to plcountry.name, '/country/'+plcountry.tag
+      и ...
+  %li.active= @showplace.name
+%h3=@showplace.h1
+.clear.showfulltext
+  .nonaklonniytext
+    =@showplace.shortdesc.html_safe
+.oh#place
+  .ohgallery
+    = render :partial => 'shared/slide'
+    .fotorama{"data-allowfullscreen"=>"true", "data-nav"=>"thumbs", "data-fit"=>"contain", "data-width"=>"100%", "data-thumbwidth" => "128px", "data-thumbheight" => "128px", "data-captions"=>"true"}
+      - @showplace.showplacepictures.each do |showplacepictures|
+        -if shimg = showplacepictures.image
+          =link_to showplacepictures.image.url(:large) do
+            =image_tag showplacepictures.image.url(:medium), "data-full" => showplacepictures.image.url(:large), "data-caption"=> showplacepictures.name
+      -if videos = @showplace.showplacevideos.first
+        - @showplace.showplacevideos.each do |video|
+          =link_to video.name, video.kode.html_safe
+  .ohdetails
+    .cntrmap
+      -if @showplace.googlemap.present?
+        =@showplace.googlemap.html_safe
+    .filterbl
+      .places_atr_block.textcenter.bold13
+        -if @showplace.showfilter
+          - if current_user and test=current_user.placevidels.where('showplace_id'=>@showplace.id).first 
+            - placevidelsclass='bigcheck'
+            - placevidelsgo='/noseen/'
+          - else
+            - placevidelsclass='bignocheck'
+            - placevidelsgo='/seen/'
+          - if current_user and test=current_user.placenets.where('showplace_id'=>@showplace.id).first 
+            - placenetsclass='bigcheck'
+            - placenetsgo='/nono/'
+          - else
+            - placenetsclass='bignocheck'
+            - placenetsgo='/no/'
+          - if current_user and test=current_user.placedas.where('showplace_id'=>@showplace.id).first 
+            - placedasclass='bigcheck'
+            - placedasgo='/nowish/'
+          - else
+            - placedasclass='bignocheck'
+            - placedasgo='/wish/'
+          
+          =link_to 'Был, видел', placevidelsgo+@showplace.id.to_s, :class=>placevidelsclass
+          =link_to 'Хочу', placedasgo+@showplace.id.to_s, :class=>placedasclass
+          =link_to 'Позже', placenetsgo+@showplace.id.to_s, :class=>placenetsclass
+      .places_atr_block
+        .attr.textcenter.reyt
+          =link_to '/place/'+@showplace.tag do
+            =image_tag '/img/content_otzivi.png'
+            Отзывы
+          =image_tag '/img/content_rating.png'
+          -if point = @showplace.point
+            = @showplace.point.to_s.gsub('.', ',')
+          -else
+            0.0
+          =link_to 'Рейтинг', '#'
+          
+          .medals.pull-right
+            -if top100 = @showplace.top100
+              .showplace_top100{:title=>"ТОП 100"}
+                
+            -if lose = @showplace.lose
+              .showplace_lost{:title=>"Исчезнувшее"}
+                
+            -if unesco = @showplace.unesco
+              .showplace_unesco{:title=>"Наследие Юнеско"}
+                
+            -if wonders7 = @showplace.wonders7
+              .showplace_wonders{:title=>"7 чудес мира"}
+                
+            -if ginnesa = @showplace.ginnesa
+              .showplace_ginnes{:title=>"В книге Гиннеса"}
+
+-#.showplace_block
+  %p
+    %b Еще из этого региона
+    (
+    =@relatedsplscount
+    )
+  #related
+    = render :partial => 'relatedspls'
+  
+-if @showplace.fulldesc.present?
+  .showfulltext
+    .samtextbig
+      =@showplace.fulldesc.html_safe
+    .next
+      %span.fa.fa-chevron-circle-down
+
+
+.clear
+.textsblocks#textblockscontent
+  = render :partial => 'textblokscontent'

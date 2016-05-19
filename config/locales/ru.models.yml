@@ -1,0 +1,263 @@
+ru:
+  activerecord:
+    models:
+      country: Страна
+      countries: Страны
+      category: Категория
+      categories: Категории
+      linkobjtocount: Связь стран и объектов
+      showplace: Достопримечательность
+      picture: Фото
+      user: Пользователь
+      group: Группа
+      region: Регион
+      section: Раздел
+      tag: Тег для ЧПУ
+      placeda: Фильтр Хочу
+      placenet: Фильтр Не интересует
+      placevidel: Фильтр Видел
+      position: Блоки банеров
+      showplacepicture: Фото объекта
+      showplacevideo: Видео объекта
+      countrypicture: Фото страны
+      countryvideo: Видео страны
+      marquee: Бегущая строка
+      baner: Банера
+      countrytextblocks: "Блоки информации"
+      countrytextblock: "Блок информации"
+      placetextblocks: "Блоки информации"
+      placetextblock: "Блок информации"
+      textblock: "Блоки"
+      grouptextblock: "Группы блоков"
+      news: "Новости"
+      newspictures: "Картинки"
+      newspicture: "Картинка"
+      newsvideos: "Видео"
+      newsvideo: "Видео"
+      staticpage: "Страничка"
+      staticpages: "Странички"
+      menulast: "Боковое меню"
+      mainmenu: "Главное меню"
+      allsetting: "Глобальные настройки"
+      homekarusel: "Карусель на главной"
+      slider: "Слайдеры"
+      footermenu: "Разделы подвала"
+      footersubmenu: "Пункты подвала"
+      rightmenu: "Правое меню"
+      chudesa: "7 чудес"
+
+    attributes:
+      allsetting:
+        default: "Использовать по умолчанию"
+        name: "Название блока настроек"
+        allcountriesname: "Пункт меню Все страны"
+        allcountriessort: "позиция Все страны"
+        allwondersname: "Пункт меню Чудеса мира"
+        allwonderssort: "позиция Чудеса мира"
+        allbestname: "Пункт меню Лучшие"
+        allbestsort: "позиция Лучшие"
+        gorodaname: "Пункт меню Города"
+        gorodasort: "позиция Города"
+        mainmenusort: "позиция основное меню"
+        leftmenusort: "позиция дополнительное меню"
+      
+      country:
+        tag: "ЧПУ"
+        descrip: "Описание"
+        name: "Страна"
+        datanezavis: "Дата независимости"
+        stolica: "Столица"
+        ploscha: "Площадь"
+        delenie: "Административное деление"
+        glava: "Глава государства"
+        zakon: "Высший законодательный орган"
+        ispolnit: "Высший исполнительный орган (Административный центр для территорий)"
+        naselenie: "Население"
+        language: "Официальный язык"
+        offname: "Официальное название"
+        valute: "Валюта"
+        shortdesc: "Краткое описание"
+        descforturist: "Полное описание"
+        primech: "Примечание"
+        flag: "Флаг"
+        region: "Регион"
+        countrypictures: "Фото"
+        countryvideos: "Видео"
+        countrytextblocks: "Блоки информации"
+        googlemap: "Код карты"
+        globus: "Картинка глобуса"
+        pogoda: "Код погодного информера"
+        chaspoyas: "Часовой пояс"
+        parent: "Принадлежит к"
+
+      category:
+        tag: ЧПУ
+        hint: Подсказка
+        descrip: Описание
+        name: Категория
+        sortorder: "Порядок сортировки"
+        showplaces: "Достопримечательности"
+
+      menulast:
+        tag: ЧПУ
+        hint: Подсказка
+        name: "Пункт меню"
+        sortorder: "Порядок сортировки"
+        page: "Полное описание"
+
+      mainmenu:
+        name: "Пункт меню"
+        sortorder: "Порядок сортировки"
+        url: "ссылка"
+
+      group:
+        tag: ЧПУ
+        hint: Подсказка
+        descrip: Описание
+        name: Группа
+        sortorder: "Порядок сортировки"
+        showplaces: "Достопримечательности"
+
+      region:
+        tag: ЧПУ
+        hint: Подсказка
+        descrip: Описание
+        name: Регион
+        sortorder: "Порядок сортировки"
+        googlemap: "Код карты"
+        showplaces: "Достопримечательности"
+        countries: "Страны"
+
+      section:
+        tag: ЧПУ
+        hint: Подсказка
+        descrip: Описание
+        name: Раздел
+        sortorder: "Порядок сортировки"
+        showplaces: "Достопримечательности"
+
+      textblock:
+        sortorder: "Порядок сортировки"
+        name: "Блок"
+
+      grouptextblock:
+        sortorder: "Порядок сортировки"
+        name: "Группа"
+
+      picture:
+        ad: :activerecord.models.ad  #g
+        image: фото
+        image_content_type: image_content_type  #g
+        image_file_name: image_file_name  #g
+        image_file_size: image_file_size  #g
+        image_updated_at: image_updated_at  #g
+        name: название
+
+      user:
+        name: "Имя:"
+        username: "Логин:"
+        family: "Фамилия:"
+        email: E-mail
+        remember_me: Запомнить меня
+        password: Пароль
+        encrypted_password: encrypted_password  #g
+        last_sign_in_at: last_sign_in_at  #g
+        last_sign_in_ip: last_sign_in_ip  #g
+        remember_created_at: remember_created_at  #g
+        reset_password_sent_at: reset_password_sent_at  #g
+        reset_password_token: reset_password_token  #g
+        
+      countrytextblock:
+        fulltext: "Текст"
+        sortorder: "Порядок сортировки"
+        image: "Картинка"
+        textblock: "Блок"
+        country: "Страна"
+        showplace: "Связать с достопримечательностью"
+        blocklink: "URL ссылки"
+        
+      placetextblock:
+        fulltext: "Текст"
+        sortorder: "Порядок сортировки"
+        image: "Картинка"
+        textblock: "Блок"
+        othershowplace: "Связать с достопримечательностью"
+        blocklink: "URL ссылки"
+        showplace: "Достопримечательность"
+ 
+      showplace:
+        fulldesc: "Полное описание"
+        primech: "Примечание"
+        shortdesc: "Краткое описание"
+        tag: "ЧПУ"
+        name: "Достопримечательность"
+        datapostroyki: "Дата постройки"
+        lose: "Уже не существует"
+        top100: "ТОП 100"
+        unesco: "Юнеско"
+        wonders7: "7 Чудес"
+        showplacepictures: "Фото"
+        showplacevideos: "Видео"
+        point: "Баллы"
+        showfilter: "Показывать фильтр"
+        showhome: "Показывать на главной"
+        showinsection: "Показывать в разделах"
+        showincountry: "Показывать в стране"
+        itsgorod: "Это город"
+        section: "Раздел"
+        category: "Категория"
+        group: "Группа"
+        region: "Регион"
+        countries: "Страны"
+        placetextblocks: "Блоки информации"
+        googlemap: "Код карты"
+        ginnesa: "В книге Гиннеса"
+        chudesa: "7 чудес"
+      
+      showplacevideo:
+        kode: "URL ссылка на youtube видео"
+        name: "Название"
+        showplace: "Достопримечательность"
+      showplacepicture:
+        name: "Название"
+        showplace: "Достопримечательность"
+        image: "Фото"
+      countryvideo:
+        kode: "URL ссылка на youtube видео"
+        name: "Название"
+        country: "Страна"
+      countrypicture:
+        name: "Название"
+        country: "Страна"
+        image: "Фото"
+      news:
+        name: "Название"
+        tag: "ЧПУ"
+        newspictures: "Картинки"
+        newsvideos: "Видео"
+        page: "Текст новости"
+      newspicture:
+        name: "Название"
+        news: "Новость"
+        image: "Фото"
+      newsvideo:
+        kode: "URL ссылка на youtube видео"
+        name: "Название"
+        news: "Новость"
+      marquee:
+        full: "Текст бегущей строки"
+        showcount: "Количество показов"
+      baner:
+        showcount: "Количество показов"
+        position: "Расположение"
+        likeurl: "Показывать только на страницах"
+        clickcount: "Количество кликов"
+        banerimage: "Картинка банера"
+        gourl: "URL адрес перехода"
+        showshowcount: "Разрешено показов(0-безлимит)"
+        showclickcount: "Разрешено кликов(0-безлимит)"
+      staticpage:
+        name: "Страничка"
+        page: "Текст странички"
+        tag: "ЧПУ"
+        menulast: "Боковое меню"

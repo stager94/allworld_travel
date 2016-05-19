@@ -1,0 +1,37 @@
+- if user_signed_in?
+  %li
+    = link_to current_user.login, user_root_path
+  %li
+    %span.delimiter 
+  %li
+    = link_to t('user.logoutblock'), destroy_user_session_path, :method => :delete
+  %li
+    %span.delimiter 
+
+  -#.old
+    %li
+      = link_to edit_user_registration_path do
+        %span.fa.fa-user
+        %span
+    - if can? :dashboard, User
+      %li
+        = link_to '/admin' do
+          %span.fa.fa-dashboard
+          %span
+    %li
+      = link_to user_root_path do
+        %span.fa.fa-home
+        %span
+    %li
+      = link_to destroy_user_session_path, :method => :delete do
+        %span.fa.fa-sign-out
+        %span
+- else
+  %li
+    = link_to t('user.register'), "#sign_up", :remote => true, 'data-toggle' => "modal", 'data-target' => "#sign_up", :method => 'get', "data-no-turbolink" => true
+  %li
+    %span.delimiter 
+  %li
+    = link_to t('user.signblock'), "#sign_in", :remote => true, 'data-toggle' => "modal", 'data-target' => "#sign_in", :method => 'get'
+  %li
+    %span.delimiter 

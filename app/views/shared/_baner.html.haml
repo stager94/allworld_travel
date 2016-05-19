@@ -1,0 +1,15 @@
+- if block
+  - banners = Baner.where('position_id' => block).toclickcount.toshowcount
+  - firstact = "item active"
+  
+  -if banners
+    #carousel-banner.carousel.slide{"data-ride"=>"carousel", "data-interval"=>"7000"}
+      .carousel-inner{:role=>"listbox"}
+        -banners.each do |baner|
+          %div{:class => firstact}
+            = link_to '/clickandgo/'+baner.id.to_s do
+              =image_tag baner.banerimage.url
+            - firstact = "item"
+            - baner.showcount = 0 if baner.showcount.nil?
+            - baner.showcount = baner.showcount+1
+            - baner.save

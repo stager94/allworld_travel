@@ -1,0 +1,29 @@
+.modal.fade{:id=>"sign_in", :tabindex=>"-1", :role=>"dialog", 'aria-labelledby'=>"signinLabel", 'aria-hidden'=>"true", :style=>'display:none'}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{:type=>"button", 'data-dismiss'=>"modal", 'aria-hidden'=>"true"} &times; 
+        %h4{:class=>'modal-title', :id=>"signinLabel"} 
+          = t('user.sign')
+      %div{:class=>'modal-body'}
+        = form_for(User.new, url: session_path(:user), html:{id: 'sign_in_user', :'data-type' => 'json'}, remote: true) do |f|
+          .form-inputs
+            .form-group
+              = f.label :login, t('user.username'), class: "control-label"
+              .inpt
+                = f.text_field :login, autofocus: true, required: true, class: "form-control", style: "width:180px;float:left;margin-right: 10px;"
+                %p{style: "padding-top: 6px;"} 
+                  = link_to "Регистрация", new_registration_path(:user)
+            .form-group
+              = f.label :password, t('user.password'), class: "control-label"
+              .inpt
+                = f.password_field :password, autocomplete: "off", class: "form-control", style: "width:180px;float:left;margin-right: 10px;"
+                %p{style: "padding-top: 6px;"}
+                  = link_to "Забыли пароль?", new_password_path(:user)
+            .form-inline
+              = f.check_box :remember_me
+              = f.label :remember_me, t('user.remember')
+          .modalfooter
+            .form-group{align: "center"}
+              = f.submit t('user.sign'), class: "btn btn-primary"
+      .modal-footer

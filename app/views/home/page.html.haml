@@ -1,0 +1,11 @@
+- @bredcrumb = capture do
+  %li= link_to 'Главная', '/'
+  %li= link_to 'Страны мира', '/allcountries'
+  %li= link_to @page.menulast.name, '/articles/'+@page.menulast.tag
+  %li.active= @page.name
+
+.info
+  %h1=@page.h1
+
+.showplace_block.textblock
+  =@page.page.html_safe

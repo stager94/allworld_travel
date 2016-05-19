@@ -1,0 +1,11 @@
+-@bredcrumb='<li><a href="/">Главная</a></li><li><a href="/allcountries">Страны мира</a></li><li class="active">'+@submenu.name+'</li>'
+.info
+  %h1=@submenu.h1
+
+.blockborder.showplace_block.textblock
+  =@submenu.page.html_safe
+.blockborder.showplace_block.textblock
+  -@submenu.staticpages.each do |page|
+    %p= link_to page.name, "/article/"+page.tag
+.blockborder.showplace_block.textblock
+  =@submenu.hint.html_safe

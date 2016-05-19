@@ -1,0 +1,21 @@
+%ul.nav.nav-list
+  %li.nav-header 
+  %li.opened
+    =link_to 'Навигация', ''
+    %span.closeopen.fa.fa-angle-up.pull-right
+    %ul
+      %li.nav-header 
+      %li= link_to "Мои маршруты", "#"
+      %li= link_to "Мои друзья", "#"
+      %li= link_to "Мои сообщения", "#"
+      %li= link_to "Мои фото", "#"
+      %li= link_to "Мой календарь", "#"
+  %li.opened
+    =link_to 'Персональное', ''
+    %span.closeopen.fa.fa-angle-up.pull-right
+    %ul
+      %li= link_to "Настройки", edit_user_registration_path
+      - if can? :dashboard, User
+        %li
+          = link_to '/admin' do
+            Панель управления

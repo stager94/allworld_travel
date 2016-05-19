@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<countrylist>
+	<country>
+		<cname>Аргентина</cname>
+		<capital>Буэнос-Айрес</capital>
+		<woeid>468739</woeid>
+		<flag></flag>
+		<timeZone>-3</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/argentina</link>
+	</country>
+	<country>
+		<cname>Аруба</cname>
+		<capital>Нидерланды</capital>
+		<woeid>23424736</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/aruba</link>
+	</country>
+	<country>
+		<cname>Архипелаг Лас-Авес</cname>
+		<capital>Венесуэла</capital>
+		<woeid>12505870</woeid>
+		<flag></flag>
+		<timeZone>-4.30</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/federalnye-vladeniya-venesuely</link>
+	</country>
+	<country>
+		<cname>Архипелаг Лос-Рокес</cname>
+		<capital>Венесуэла</capital>
+		<woeid>12505770</woeid>
+		<flag></flag>
+		<timeZone>-4.30</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/federalnye-vladeniya-venesuely</link>
+	</country>
+	<country>
+		<cname>Архипелаг Лос-Тестигос</cname>
+		<capital>Венесуэла</capital>
+		<woeid>468486</woeid>
+		<flag></flag>
+		<timeZone>-4.30</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>wwww.allworld-travel.com/country/federalnye-vladeniya-venesuely</link>
+	</country>
+	<country>
+		<cname>Архипелаг Лос-Фрайлес</cname>
+		<capital>Венесуэла</capital>
+		<woeid>468486</woeid>
+		<flag></flag>
+		<timeZone>-4.30</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/federalnye-vladeniya-venesuely</link>
+	</country>
+	<country>
+		<cname>Барбадос</cname>
+		<capital>Бриджтаун</capital>
+		<woeid>23424754</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/barbados</link>
+	</country>
+	<country>
+		<cname>Боливия</cname>
+		<capital>Ла-Пас</capital>
+		<woeid>346057</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/boliviya</link>
+	</country>
+	<country>
+		<cname>Бонэйр, Синт-Эстатиус и Саба</cname>
+		<capital>Нидерланды</capital>
+		<woeid>12484681</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/boneyr</link>
+	</country>
+	<country>
+		<cname>Бразилия</cname>
+		<capital>Бразилиа</capital>
+		<woeid>455819</woeid>
+		<flag></flag>
+        <timeZone>-3</timeZone>
+		<dtime> Страна: </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/braziliya</link>
+	<country>
+		<cname>Венесуэла</cname>
+		<capital>Каракас</capital>
+		<woeid>395269</woeid>
+		<flag></flag>
+		<timeZone>-5.30</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/venesuela</link>
+	</country>
+	<country>
+		<cname>Гайана</cname>
+		<capital>Джорджтаун</capital>
+		<woeid>376765</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/gayana</link>
+	</country>
+	<country>
+		<cname>Гренада</cname>
+		<capital>Сент-Джорджес</capital>
+		<woeid>23424826</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/grenada</link>
+	</country>
+	<country>
+		<cname>Исла-де-Паскуа</cname>
+		<capital>Чили</capital>
+		<woeid>28358162</woeid>
+		<flag></flag>
+		<timeZone>-5</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/isla-de-paskua</link>
+	</country>
+	<country>
+		<cname>Карриаку и Пти-Мартиника</cname>
+		<capital>Гренада</capital>
+		<woeid>12484088</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/karriaku-i-pti-martinika</link>
+	</country>
+	<country>
+		<cname>Колумбия</cname>
+		<capital>Богота</capital>
+		<woeid>368148</woeid>
+		<flag></flag>
+		<timeZone>-5</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/kolumbiya</link>
+	</country>
+	<country>
+		<cname>Кюрасао</cname>
+		<capital>Нидерланды</capital>
+		<woeid>56558057</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/kyurasao</link>
+	</country>
+	<country>
+		<cname>Остров Буве</cname>
+		<capital>Норвегия</capital>
+		<woeid>28289410</woeid>
+		<flag></flag>
+		<timeZone></timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/ostrov-buve</link>
+	</country>
+	<country>
+		<cname>Остров Ла-Бланкилья</cname>
+		<capital>Венесуэла</capital>
+		<woeid>12505712</woeid>
+		<flag></flag>
+		<timeZone>-4.30</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/federalnye-vladeniya-venesuely</link>
+	</country>
+	<country>
+		<cname>Остров Ла-Тортуга</cname>
+		<capital>Венесуэла</capital>
+		<woeid>12505774</woeid>
+		<flag></flag>
+		<timeZone>-4.30</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/federalnye-vladeniya-venesuely</link>
+	</country>
+	<country>
+		<cname>Остров Орчила</cname>
+		<capital>Венесуэла</capital>
+		<woeid>12505766</woeid>
+		<flag></flag>
+		<timeZone>-4.30</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/federalnye-vladeniya-venesuely</link>
+	</country>
+	<country>
+		<cname>Остров Патос</cname>
+		<capital>Венесуэла</capital>
+		<woeid>12505808</woeid>
+		<flag></flag>
+		<timeZone>-4.30</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/federalnye-vladeniya-venesuely</link>
+	</country>
+	<country>
+		<cname>Острова Питкэрн</cname>
+		<capital>Великобритания</capital>
+		<woeid>23424918</woeid>
+		<flag></flag>
+		<timeZone>-8</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/pitkern</link>
+	</country>
+	<country>
+		<cname>Острова Святой Елены, Вознесения и Тристан-да-Кунья</cname>
+		<capital>Великобритания</capital>
+		<woeid>23424944</woeid>
+		<flag></flag>
+		<timeZone></timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/ostrova-svyatoy-eleny-vozneseniya-i-tristan-da-kunya</link>
+	</country>
+	<country>
+		<cname>Парагвай</cname>
+		<capital>Асунсьон</capital>
+		<woeid>379176</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/paragvay</link>
+	</country>
+	<country>
+		<cname>Перу</cname>
+		<capital>Лима</capital>
+		<woeid>23424919</woeid>
+		<flag></flag>
+		<timeZone>-5</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/peru</link>
+	</country>
+	<country>
+		<cname>Сан-Андрес и Провиденсия</cname>
+		<capital>Колумбия</capital>
+		<woeid>365117</woeid>
+		<flag></flag>
+		<timeZone>-5</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/san-andres-i-providensiya</link>
+	</country>
+	<country>
+		<cname>Сент-Винсент и Гренадины</cname>
+		<capital>Кингстаун</capital>
+		<woeid>23424981</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/sent-vinsent-i-grenadiny</link>
+	</country>
+	<country>
+		<cname>Сент-Люсия</cname>
+		<capital>Кастри</capital>
+		<woeid>23424951</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/sent-lyusiya</link>
+	</country>
+	<country>
+		<cname>Суринам</cname>
+		<capital>Паpамаpибо</capital>
+		<woeid>377227</woeid>
+		<flag></flag>
+		<timeZone>-3</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/surinam</link>
+	</country>
+	<country>
+		<cname>Тринидад и Тобаго</cname>
+		<capital>Порт-оф-Спейн</capital>
+		<woeid>23424958</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/trinidad-i-tobago</link>
+	</country>
+	<country>
+		<cname>Уругвай</cname>
+		<capital>Монтевидео</capital>
+		<woeid>468052</woeid>
+		<flag></flag>
+		<timeZone>-3</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/urugvay</link>
+	</country>
+	<country>
+		<cname>Фолклендские острова</cname>
+		<capital>Великобритания</capital>
+		<woeid>23424814</woeid>
+		<flag></flag>
+		<timeZone>-3</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/folklendskie-ostrova</link>
+	</country>
+	<country>
+		<cname>Французская Гвиана</cname>
+		<capital>Франция</capital>
+		<woeid>379832</woeid>
+		<flag></flag>
+		<timeZone>-3</timeZone>
+		<dtime> Территория:  </dtime>
+		<cost> Владения:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/frantsuzskaya-gviana</link>
+	</country>
+	<country>
+		<cname>Чили</cname>
+		<capital>Сантьяго</capital>
+		<woeid>349859</woeid>
+		<flag></flag>
+		<timeZone>-3</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/ch-li</link>
+	</country>
+	<country>
+		<cname>Эквадор</cname>
+		<capital>Кито</capital>
+		<woeid>375732</woeid>
+		<flag></flag>
+		<timeZone>-5</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/ekvador</link>
+	</country>
+	<country>
+		<cname>Южная Георгия и Южные Сандвичевы острова</cname>
+		<capital>Великобритания</capital>
+		<woeid>23424955</woeid>
+		<flag></flag>
+		<timeZone>-2</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/yuzhnaya-georgiya-i-yuzhnye-sandvichevy-ostrova</link>
+	</country>
+
+
+</countrylist>
+	

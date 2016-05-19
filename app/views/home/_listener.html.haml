@@ -1,0 +1,19 @@
+.showplace_block
+  %p
+    %b=blockname
+    (
+    =@showplacescount
+    )
+  .placepaginator
+    = paginate @showplaces, :left => 4, :right => 1,:param_name => :shpage, :remote => true
+  - counterplaces = 0
+  - @showplaces.each do |showplace|
+    - if counterplaces==0
+      = render :partial => 'shared/prevblockshowplace'
+    -# if counterplaces>0 and (counterplaces % $perpaged)==0 
+      = render :partial => 'shared/nextblockshowplace'
+      = render :partial => 'shared/prevblockshowplace'
+    
+    = render :partial => 'shared/showplace', :locals => {:showplace => showplace}
+    - counterplaces += 1
+  = render :partial => 'shared/nextblockshowplace'

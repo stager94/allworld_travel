@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<countrylist>
+	<country>
+		<cname>Австралия</cname>
+		<capital>Канберра</capital>
+		<woeid>1100968</woeid>
+		<flag></flag>
+		<timeZone>+10</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/avstraliya</link>
+	</country>
+	<country>
+		<cname>Американское Самоа</cname>
+		<capital>США</capital>
+		<woeid>23424746</woeid>
+		<flag></flag>
+		<timeZone>-11</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/amerikanskoe-samoa</link>
+	</country>
+	<country>
+		<cname>Архипелаг Чатем</cname>
+		<capital>Новая Зеландия</capital>
+		<woeid>56000797</woeid>
+		<flag></flag>
+		<timeZone>+13.45</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/arhipelag-chatem</link>
+	</country>
+	<country>
+		<cname>Атолл Джонстон</cname>
+		<capital>США</capital>
+		<woeid>28289407</woeid>
+		<flag></flag>
+		<timeZone>-10</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/atoll-dzhonston</link>
+	</country>
+	<country>
+		<cname>Атолл Пальмира</cname>
+		<capital>США</capital>
+		<woeid>23424878</woeid>
+		<flag></flag>
+		<timeZone>-10</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/atoll-palmira</link>
+	</country>
+	<country>
+		<cname>Бугенвиль</cname>
+		<capital>Папуа-Новая Гвинея</capital>
+		<woeid>2346587</woeid>
+		<flag></flag>
+		<timeZone>+10</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/bugenvil</link>
+	</country>
+	<country>
+		<cname>Вануату</cname>
+		<capital>Вила</capital>
+		<woeid>23424907</woeid>
+		<flag></flag>
+		<timeZone>+11</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/vanuatu</link>
+	</country>
+	<country>
+		<cname>Гуам</cname>
+		<capital>США</capital>
+		<woeid>23424832</woeid>
+		<flag></flag>
+		<timeZone>+10</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/guam</link>
+	</country>
+	<country>
+		<cname>Кирибати</cname>
+		<capital>Южная Тарава  </capital>
+		<woeid>12494997</woeid>
+		<flag></flag>
+		<timeZone>+12</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/kiribati</link>
+	</country>
+	<country>
+		<cname>Маршаловы острова</cname>
+		<capital>Маджуро</capital>
+		<woeid>23424932</woeid>
+		<flag></flag>
+		<timeZone>+12</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/marshallovy-ostrova</link>
+	</country>
+	<country>
+		<cname>Микронезия</cname>
+		<capital>Паликир</capital>
+		<woeid>23424815</woeid>
+		<flag></flag>
+		<timeZone>+11</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/mikroneziya</link>
+	</country>
+	<country>
+		<cname>Науру</cname>
+		<capital>Ярен</capital>
+		<woeid>23424912</woeid>
+		<flag></flag>
+		<timeZone>+12</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Крупнейший город:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/nauru</link>
+	</country>
+	<country>
+		<cname>Ниуэ (Савидж)</cname>
+		<capital>Новая Зеландия</capital>
+		<woeid>23424904</woeid>
+		<flag></flag>
+		<timeZone>-11</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/niue-savidzh</link>
+	</country>
+	<country>
+		<cname>Новая Зеландия</cname>
+		<capital>Веллингтон</capital>
+		<woeid>2351310</woeid>
+		<flag></flag>
+		<timeZone>+12</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/novaya-zelandiya</link>
+	</country>
+	<country>
+		<cname>Новая Каледония</cname>
+		<capital>Франция</capital>
+		<woeid>1049640</woeid>
+		<flag></flag>
+		<timeZone>+11</timeZone>
+		<dtime> Территория:  </dtime>
+		<cost> Владения:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/novaya-kaledoniya</link>
+	</country>
+	<country>
+		<cname>Остров Бейкер</cname>
+		<capital>США</capital>
+		<woeid>23424818</woeid>
+		<flag></flag>
+		<timeZone>-10</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/ostrov-beyker</link>
+	</country>
+	<country>
+		<cname>Остров Джарвис</cname>
+		<capital>США</capital>
+		<woeid>23424799</woeid>
+		<flag></flag>
+		<timeZone>-11</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/ostrov-dzharvis</link>
+	</country>
+	<country>
+		<cname>Остров Норфолк</cname>
+		<capital>Австралия</capital>
+		<woeid>1049697</woeid>
+		<flag></flag>
+		<timeZone>+11.30</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/ostrov-norfolk</link>
+	</country>
+	<country>
+		<cname>Остров Рождества</cname>
+		<capital>Австралия</capital>
+		<woeid>23424869</woeid>
+		<flag></flag>
+		<timeZone>+7</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/ostrov-rozhdestva</link>
+	</country>
+	<country>
+		<cname>Остров Хауленд</cname>
+		<capital>США</capital>
+		<woeid>23424842</woeid>
+		<flag></flag>
+		<timeZone>-10</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/ostrov-haulend</link>
+	</country>
+    <country>
+		<cname>Острова Ашмор и Картье</cname>
+		<capital>Австралия</capital>
+		<woeid>23424749</woeid>
+		<flag></flag>
+		<timeZone>+8</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/ostrova-ashmor-i-kartie</link>
+	</country>
+	<country>
+		<cname>Острова Гилберта</cname>
+		<capital>Кирибати</capital>
+		<woeid>12495062</woeid>
+		<flag></flag>
+		<timeZone>+12</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/ostrova-gilberta</link>
+	</country>
+	<country>
+		<cname>Острова Кораллового моря</cname>
+		<capital>Австралия</capital>
+		<woeid>23424790</woeid>
+		<flag></flag>
+		<timeZone>+10</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/ostrova-korallovogo-morya</link>
+	</country>
+	<country>
+		<cname>Острова Кука</cname>
+		<capital>Новая Зеландия</capital>
+		<woeid>23424795</woeid>
+		<flag></flag>
+		<timeZone>-10</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/ostrova-kuka</link>
+	</country>
+	<country>
+		<cname>Острова Феникс</cname>
+		<capital>Кирибати</capital>
+		<woeid>12495062</woeid>
+		<flag></flag>
+		<timeZone>+13</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/ostrova-feniks</link>
+	</country>
+	<country>
+		<cname>Палау</cname>
+		<capital>Корор</capital>
+		<woeid>23424927</woeid>
+		<flag></flag>
+		<timeZone>+9</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/palau</link>
+	</country>
+	<country>
+		<cname>Папуа-Новая Гвинея</cname>
+		<capital>Порт-Морсби</capital>
+		<woeid>1062005</woeid>
+		<flag></flag>
+		<timeZone>+10</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/papua-novaya-gvineya</link>
+	</country>
+	<country>
+		<cname>Риф Кингмен</cname>
+		<capital>США</capital>
+		<woeid>23424866</woeid>
+		<flag></flag>
+		<timeZone>-11</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/rif-kingmen</link>
+	</country>
+    <country>
+		<cname>Ротума</cname>
+		<capital>Фиджи</capital>
+		<woeid>20069921</woeid>
+		<flag></flag>
+		<timeZone>+12</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/rotuma</link>
+	</country>
+	<country>
+		<cname>Самоа</cname>
+		<capital>Апиа</capital>
+		<woeid>23424992</woeid>
+		<flag></flag>
+		<timeZone>+14</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/samoa</link>
+	</country>
+	<country>
+		<cname>Северные Марианские острова</cname>
+		<capital>США</capital>
+		<woeid>23424788</woeid>
+		<flag></flag>
+		<timeZone>+10</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/severnye-marianskie-ostrova</link>
+	</country>
+	<country>
+		<cname>Соломоновы острова</cname>
+		<capital>Хониаpа</capital>
+		<woeid>1020496</woeid>
+		<flag></flag>
+		<timeZone>+11</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/solomonovy-ostrova</link>
+	</country>
+	<country>
+		<cname>Токелау</cname>
+		<capital>Новая Зеландия</capital>
+		<woeid>23424963</woeid>
+		<flag></flag>
+		<timeZone>+13</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/tokelau</link>
+	</country>
+	<country>
+		<cname>Тонга</cname>
+		<capital>Нукуалофа</capital>
+		<woeid>23424964</woeid>
+		<flag></flag>
+		<timeZone>+14</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/tonga</link>
+	</country>
+	<country>
+		<cname>Тувалу</cname>
+		<capital>Фунафути</capital>
+		<woeid>23424964</woeid>
+		<flag></flag>
+		<timeZone>+12</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/tuvalu</link>
+	</country>
+	<country>
+		<cname>Уоллис и Футуна</cname>
+		<capital>Франция</capital>
+		<woeid>23424989</woeid>
+		<flag></flag>
+		<timeZone>+12</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/uollis-i-futuna</link>
+	</country>
+	<country>
+		<cname>Фиджи</cname>
+		<capital>Сува</capital>
+		<woeid>1064103</woeid>
+		<flag></flag>
+		<timeZone>+12</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/fidzhi</link>
+	</country>
+	<country>
+		<cname>Французская Полинезия</cname>
+		<capital>Франция</capital>
+		<woeid>23424817</woeid>
+		<flag></flag>
+		<timeZone>-10</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.allworld-travel.com/country/frantsuzskaya-polineziya</link>
+	</country>
+	
+</countrylist>
+	

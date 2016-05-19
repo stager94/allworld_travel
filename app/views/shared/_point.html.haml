@@ -1,0 +1,58 @@
+- if user_signed_in?
+  - places = current_user.placevidels.joins(:showplace)
+  -# objcnt = places.select('showplaces.id').group('showplaces.id')
+  -# countries = Linkobjtocount.where('showplace_id' => objcnt).group('country_id')
+  - objcnt = []
+  - places.each do |placec|
+    - objcnt << placec.countryarray.split(",").map { |s| s.to_i } unless placec.countryarray.blank?
+  - countries = Country.where('id' => objcnt)
+  -unless countries.blank?
+    .current_country
+      .pull-left.strani
+        Страны, в которых я был
+        %span.ccount
+          (
+          =countries.count
+          ):
+      -countries.each do |lccountry|
+        =link_to "/country/"+lccountry.tag, :title => lccountry.name do
+          .flag_img
+            -if flagimg = lccountry.flag.url(:thumb)
+              =image_tag flagimg, :style => 'width:35px;', :alt => lccountry.name
+      -if places.sum('point') >0
+        .current_point.pull-right
+          =places.sum('point').to_s
+          баллов
+  -else
+    .current_country
+      .pull-left.strani
+        Страны, в которых я был
+        %span.ccount
+          (0)
+- else
+  - places = Showplace.where(:id => session[:placevidels])
+  - objcnt = places.select('showplaces.id').group('showplaces.id')
+  - countries = Linkobjtocount.where('showplace_id' => objcnt).group('country_id')
+  -if countries
+    .current_country
+      .pull-left.strani
+        Страны, в которых я был
+        %span.ccount
+          (
+          =countries.count.length
+          ):
+      -countries.each do |lccountry|
+        =link_to "/country/"+lccountry.country.tag do
+          .flag_img
+            -if flagimg = lccountry.country.flag.url(:thumb)
+              =image_tag flagimg, :style => 'width:35px;'
+      -if places.sum('point') >0
+        .current_point.pull-right
+          =places.sum('point').to_s
+          баллов
+  -else
+    .current_country
+      .pull-left.strani
+        Страны, в которых я был
+        %span.ccount
+          (0)

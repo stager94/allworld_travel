@@ -1,0 +1,32 @@
+- if current_user
+  - current_user.lastmarquee =0 if current_user.lastmarquee.blank?
+  -# @marq = Marquee.where('id > ?', current_user.lastmarquee.to_i).last(10)
+  - @marq = Marquee.last(10)
+  - current_user.lastmarquee = Marquee.last.id
+  - current_user.save
+- else
+  - @marq = Marquee.last(10)
+- if session[:marqueshow].nil? or session[:marqueshow] 
+  - showorhide = t('ajax.hide')
+  - shstyle = 'display: block;'
+- else
+  - showorhide = t('ajax.show')
+  - shstyle = 'display: none;'
+- if @marq.present?
+  .marqueeblocks
+    - if current_user
+      #hidemarqueeblock.textcenter
+        %p#hidemarquee{class: showorhide}
+  .marquee
+    .marquee_block
+      %marquee#marqueeblock{"direction"=>"left", "scrollamount"=>"2", "loop"=>"1", :style=>shstyle}
+        - @marq.each do |marquee|
+          =marquee.full
+          =image_tag '/img/mir.gif',:style=>"width:14px; height:14px;"
+          -# marquee.showcount = 0 if marquee.showcount.nil?
+          -# marquee.showcount = marquee.showcount+1
+          -# marquee.save
+- else 
+  .pull-left
+  .marquee
+    .marquee_block

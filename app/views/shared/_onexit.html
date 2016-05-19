@@ -1,0 +1,34 @@
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Сохраните настройки</h4>
+      </div>
+      <div class="modal-body">
+        <h3>Вы не зарегистрированы.</h3>
+        <p>  Если Вы покинете сайт все Ваши настройки не сохраняться. </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+        <a href="/users/sign_up" class="btn btn-primary">Регистрация</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+$(document).ready(function() {
+    $(document).mousemove(function(e) {
+        if(e.pageY <= 60) {
+            // Launch MODAL BOX
+            //$('#myModal').modal()
+            $('#exitalerts').fadeIn("slow");
+        } else {
+          $('#exitalerts').fadeOut("slow");
+        }
+ 
+    });
+});
+ 
+</script>

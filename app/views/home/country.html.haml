@@ -1,0 +1,179 @@
+- @bredcrumb = capture do
+  %li= link_to 'Главная', '/'
+  %li= link_to 'Страны мира', '/allcountries'
+  %li= link_to @country.region.name, '/countries/'+@country.region.tag.name
+  %li.active= @country.name
+.big_flag
+  -if flagimg = @country.flag.url(:thumb)
+    =image_tag flagimg
+.top_clock
+  .info
+    %h3=@country.h1
+  .showfulltext
+    .naklonniytext
+      =@country.shortdesc.html_safe
+.clear
+.oh#countri
+  .ohgallery
+    = render :partial => 'shared/slide'
+    .fotorama{"data-allowfullscreen"=>"true", "data-nav"=>"thumbs", "data-fit"=>"contain", "data-width"=>"100%", "data-thumbwidth" => "128px", "data-thumbheight" => "128px", "data-captions"=>"true"}
+      - @country.countrypictures.each do |countrypictures|
+        -if shimg = countrypictures.image
+          =link_to countrypictures.image.url(:large) do
+            =image_tag countrypictures.image.url(:medium), "data-full" => countrypictures.image.url(:large), "data-caption"=> countrypictures.name
+      -if videos = @country.countryvideos.first
+        - @country.countryvideos.each do |video|
+          =link_to video.name, video.kode.html_safe
+
+  .ohdetails
+    .cntrmap
+      -if @country.googlemap.present?
+        =@country.googlemap.html_safe
+
+    .shpageblock
+      -if globeimg = @country.globus.url(:thumb)
+        =image_tag globeimg, "align" =>"left", "width" => "180px", "height" => "180px", style: "float:left;"
+      .pogoda{style: "float:right;"}
+        .watch
+          = render :partial => 'shared/watch'
+        -if @country.pogoda.present?
+          =@country.pogoda.html_safe
+
+.showplace_block
+  %p
+    %b Достопримечательности и интересные места:
+    (
+    =@relatedsplscount
+    )
+  #related
+    = render :partial => 'relatedspls'
+
+
+
+.showfulltext
+  .samtext
+    =@country.descforturist.html_safe
+  .next
+    %span.fa.fa-chevron-circle-down
+    
+.showplace_block.textsblocks
+  %b Общая информация:
+  .col-md-3.col-lg-3
+    .wells
+      -if flagimg = @country.flag.url(:thumb)
+        =image_tag flagimg
+  .col-md-9.col-lg-9
+    %table
+      -if @country.offname.present?
+        %tr
+          %td
+            %b Официальное название:
+          %td
+            =@country.offname
+      -if @country.datanezavis.present?
+        %tr
+          %td
+            %b Дата независимости:
+          %td
+            =@country.datanezavis
+      -if @country.stolica.present?
+        %tr
+          %td
+            %b Столица:
+          %td
+            =@country.stolica
+      -if @country.ploscha.present?
+        %tr
+          %td
+            %b Площадь:
+          %td
+            =@country.ploscha
+      -if @country.delenie.present?
+        %tr
+          %td
+            %b Административное деление:
+          %td
+            =@country.delenie
+      -if @country.glava.present?
+        %tr
+          %td
+            %b Глава государства:
+          %td
+            =@country.glava
+      -if @country.zakon.present?
+        %tr
+          %td
+            %b Высший законодательный орган:
+          %td
+            =@country.zakon
+      -if @country.ispolnit.present?
+        %tr
+          %td
+            -if ( @country.parent_id.present? and @country.parent_id>0 )
+              %b Административный центр:
+            -else
+              %b Высший исполнительный орган:
+          %td
+            =@country.ispolnit
+      -if @country.naselenie.present?
+        %tr
+          %td
+            %b Население:
+          %td
+            =@country.naselenie
+      -if @country.language.present?
+        %tr
+          %td
+            %b Официальный язык:
+          %td
+            =@country.language
+      -if @country.valute.present?
+        %tr
+          %td
+            %b Валюта:
+          %td
+            =@country.valute
+
+      -if ( @country.parent_id.present? and @country.parent_id>0 )
+        %tr
+          %td
+            %b Владения:
+          %td
+            =@country.parent.name
+
+
+
+.clear
+.textsblocks
+  - textblockid = @country.countrytextblocks.select('textblock_id as id').group('textblock_id').to_a
+  - grouptextblocksid = Textblock.select('grouptextblock_id as id').where(:id => textblockid).group('grouptextblock_id').to_a
+  - grouptextblocks = Grouptextblock.where(:id => grouptextblocksid).order('sortorder ASC')
+  - grouptextblocks.each do |grouptextblock|
+    %b
+      %span.fa.fa-thumbs-o-up
+      =grouptextblock.name
+    - Textblock.where(:id => textblockid).where(:grouptextblock_id => grouptextblock.id).order('sortorder ASC').each do |textblock|
+      .textblock
+        - @country.countrytextblocks.where(:textblock_id => textblock.id).order('sortorder ASC').each do |countrytextblock|
+          .microblock
+            - if showplace = countrytextblock.showplace or countrytextblock.image.present?
+              .col-md-3.col-lg-3
+                - if showplace = countrytextblock.showplace
+                  = render :partial => 'shared/showplace', :locals => {:showplace => showplace}
+                - else 
+                  .showplace_wcorner
+                    .showplace_item.nohover
+                      .showplace_img
+                        =image_tag countrytextblock.image.url(:thumb)
+                        %p.mini=textblock.name
+              .col-md-9.col-lg-9.showfulltext
+                .samtext=countrytextblock.fulltext.html_safe
+                .next
+                  %span.fa.fa-chevron-circle-down
+            - else
+              .showfulltext
+                .samtext=countrytextblock.fulltext.html_safe
+                .next
+                  %span.fa.fa-chevron-circle-down
+          .clear
+

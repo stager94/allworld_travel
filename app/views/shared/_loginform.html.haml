@@ -1,0 +1,25 @@
+.loginform
+  %ul.list-unstyled
+    -#%li.nav-header Авторизация
+    %br
+    - if user_signed_in?
+      %li
+        = link_to edit_user_registration_path do
+          =current_user.email
+      - if can? :dashboard, User
+        %li
+          = link_to '/admin' do
+            Панель управления
+      %li
+        = link_to user_root_path do
+          Моя страница
+      %li= link_to "Выйти", destroy_user_session_path, :method => :delete
+
+    - else
+      = form_tag session_path(:user), {:style=>'margin: 0 0 0;'} do
+        = text_field_tag 'user[email]', nil, placeholder: 'E-mail', style: 'width: 90%;margin: auto;', :class => "form-control"
+        = password_field_tag 'user[password]', nil, placeholder: 'Пароль', style: 'width: 90%;margin: auto;', :class => "form-control"
+        %button{:class => 'btn btn-default', :style => 'width:95%;'} Войти
+      = link_to t('user.register'), "#sign_up", :remote => true, 'data-toggle' => "modal", 'data-target' => "#sign_up", :method => 'get', style: 'font-size: 11px;'
+      \|
+      = link_to "Забыли пароль?", new_password_path(:user), style: 'font-size: 11px;'

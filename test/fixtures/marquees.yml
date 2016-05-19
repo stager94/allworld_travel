@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  full: MyText
+  showcount: 1
+
+two:
+  full: MyText
+  showcount: 1

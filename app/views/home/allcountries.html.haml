@@ -1,0 +1,42 @@
+- @bredcrumb = capture do
+  %li= link_to 'Главная', '/'
+  %li.active Страны мира
+.showplace_block#allcountries
+  %h3 Страны мира и территории
+  .adaptiveiframe
+    = render :partial => 'shared/allcountriesmap'
+  .topblock
+    Признанные независимые государства - члены или наблюдатели ООН (#{Country.where("parent_id is null").count.to_s}):
+
+  #accordion.panel-group{"role"=>"tablist", "aria-multiselectable"=>"false"}
+    - Region.order('sortorder ASC').each do |regione|
+      .pdefault
+        .panelheading{"role"=>"tab", "id"=>'heading'+regione.id.to_s}
+          %h4.panel-title
+            %a{"role"=>"button", "data-toggle"=>"collapse", "data-parent"=>"#accordion", "href"=>"#collapse"+regione.id.to_s, "aria-expanded"=>"false", "aria-controls"=>"collapse"+regione.id.to_s}
+              =regione.name
+              (
+              =regione.countries.where("parent_id is null").count
+              )
+        .panel-collapse.collapse{"role"=>"tabpanel", "aria-labelledby"=>"heading"+regione.id.to_s, "id"=>'collapse'+regione.id.to_s}
+          .panel-body.alcountry.newspaper
+            - regione.countries.where("parent_id is null").order('name ASC').each do |country|
+              =render :partial => "shared/country", :locals => { :country => country }
+  .topblock
+    Территориально отдаленные земли или заморские территории, считаемые неотъемлемой частью соответствующих независимых государств - членов ООН (#{Country.where("parent_id >0").count.to_s}):
+
+  #accordionteritory.panel-group{"role"=>"tablist", "aria-multiselectable"=>"false"}
+    - Country.order('name ASC').each do |countri|
+      - if countri.children.count >0
+        .pdefault
+          .panelheading{"role"=>"tab", "id"=>'headingteritory'+countri.id.to_s}
+            %h4.panel-title
+              %a{"role"=>"button", "data-toggle"=>"collapse", "data-parent"=>"#accordionteritory", "href"=>"#collapseteritory"+countri.id.to_s, "aria-expanded"=>"false", "aria-controls"=>"collapseteritory"+countri.id.to_s}
+                =countri.name
+                (
+                =countri.children.count
+                )
+          .panel-collapse.collapse{"role"=>"tabpanel", "aria-labelledby"=>"headingteritory"+countri.id.to_s, "id"=>'collapseteritory'+countri.id.to_s}
+            .panel-body.alcountry.newspaper
+              - countri.children.order('name ASC').each do |country|
+                =render :partial => "shared/country", :locals => { :country => country }
