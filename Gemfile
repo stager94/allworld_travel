@@ -32,6 +32,7 @@ source 'https://rubygems.org'
 # in production environments by default.
   gem 'sass-rails'
   gem 'coffee-rails'
+  # gem 'singleton-rails', '0.0.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby

@@ -36,6 +36,7 @@ class Ability
         can :access, :rails_admin       # only allow admin users to access Rails Admin
         can :dashboard                  # allow access to dashboard
         can :manage, :all             # allow superadmins to do anything
+        cannot [:create, :destroy], Setting
       elsif user.role? :manager
         can :access, :rails_admin       # only allow admin users to access Rails Admin
         can :dashboard                  # allow access to dashboard

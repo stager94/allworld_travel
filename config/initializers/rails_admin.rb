@@ -69,5 +69,8 @@ RailsAdmin.config do |config|
   config.model 'Placeda' do
     navigation_label I18n.t('menu.system')
   end
+  config.model 'Settings' do
+    navigation_label I18n.t('menu.system')
+  end
 
 end

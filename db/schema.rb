@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151017181413) do
+ActiveRecord::Schema.define(version: 20160519005906) do
 
   create_table "allsettings", force: :cascade do |t|
     t.boolean  "default"
@@ -409,6 +409,24 @@ ActiveRecord::Schema.define(version: 20151017181413) do
     t.string   "image_content_type", limit: 255
     t.integer  "image_file_size",    limit: 4
     t.datetime "image_updated_at"
+  end
+
+  create_table "settings", force: :cascade do |t|
+    t.string   "sitename",               limit: 255
+    t.string   "favicon_file_name",      limit: 255
+    t.string   "favicon_content_type",   limit: 255
+    t.integer  "favicon_file_size",      limit: 4
+    t.datetime "favicon_updated_at"
+    t.string   "logotype_file_name",     limit: 255
+    t.string   "logotype_content_type",  limit: 255
+    t.integer  "logotype_file_size",     limit: 4
+    t.datetime "logotype_updated_at"
+    t.string   "watermark_file_name",    limit: 255
+    t.string   "watermark_content_type", limit: 255
+    t.integer  "watermark_file_size",    limit: 4
+    t.datetime "watermark_updated_at"
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
   end
 
   create_table "showplacepictures", force: :cascade do |t|
