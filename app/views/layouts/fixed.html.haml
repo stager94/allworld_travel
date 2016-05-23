@@ -45,8 +45,8 @@
                   %p=rightmn.name
       .container-flui{style: "background-color: #1a587f;"}
         .row
-          .row-point{style: "font-size: 0.9em;"}
-            = render :partial => 'shared/point'
+          #shared-point.row-point{style: "font-size: 0.9em;"}
+            = render partial: 'shared/point'
     .container
       .row.pull-center
         .leftmenu
