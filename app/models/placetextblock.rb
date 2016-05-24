@@ -8,9 +8,12 @@ class Placetextblock < ActiveRecord::Base
   attr_accessible :image
   has_attached_file :image, :styles => { :medium => "560x400#", :thumb => "208x149#" }, :default_url => "/img/placetextblock/:style/missing.png"
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
+  
   attr_accessor :delete_image
+
   attr_accessible :fulltext, :sortorder, :blocklink
   validates :textblock, presence: true
+  
   rails_admin do
     parent 'Showplace'
     edit do
@@ -18,5 +21,7 @@ class Placetextblock < ActiveRecord::Base
       field :fulltext, :ck_editor
     end
   end
-    
+
+  before_validation { binding.pry;self.image.clear if self.delete_image == '1' }
+
 end

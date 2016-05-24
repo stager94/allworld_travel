@@ -34,27 +34,20 @@ source 'https://rubygems.org'
   gem 'coffee-rails'
   # gem 'singleton-rails', '0.0.2.1'
 
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
   gem 'uglifier'
 
-#group :development do
-#  gem 'i18n_generators'
-#end
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
   gem 'honeypot-captcha'
+  gem 'pry'
+
+
+
+group :development, :test do
+  gem 'capistrano', '2.14.2'
+  gem 'rvm-capistrano', '1.4.1', require: false
+  gem 'capistrano_colors', '0.5.4', require: false
+  gem 'capistrano-ext', '1.2.1', require: false
+end
+
+group :production do
+  gem 'unicorn', '4.8.2'
+end
