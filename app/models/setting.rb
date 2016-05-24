@@ -27,7 +27,7 @@ class Setting < ActiveRecord::Base
   	instance.sitename
   end
 
-  def self.logotype(style = :header)
+  def self.logotype(style = :original)
   	instance.logotype.url(style)
   end
 
