@@ -1,7 +1,8 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-a {color: #1b587f;}
+a {color: #1b587f;outline: 0;}
+a:hover, a:active, a:focus {outline: 0;}
 h1{color: #1b587f;text-align:center;}
 h3{color: #1b587f;font-weight: bold;}
 .alert{position: absolute;width: 100%;z-index: 5;padding: 4px 25px;}
