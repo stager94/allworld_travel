@@ -24,7 +24,7 @@ source 'https://rubygems.org'
   gem 'maxminddb'
   gem 'awesome_nested_set'
   gem 'rails_admin', '0.6.3'
-  gem 'ckeditor', '4.1.6'
+  gem 'ckeditor'
   gem "the_string_to_slug"
   gem 'globalize'
   gem 'rails_admin_globalize_field'
