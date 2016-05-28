@@ -404,7 +404,8 @@ background-color: #ececec;}
 td, th {padding: 0 10px;}
 
 .microblock .showplace_wcorner{width: 220px;}
-.textsblocks>b{background-color: #5088a8;color: white;margin-top: 2px;background-image: url("/img/bgmenuleft.png");background-repeat: repeat-x;padding: 6px 25px; display:block;margin: 12px 0;}
+.textsblocks>b{background-color: #5088a8;color: white;margin-top: 2px;background-image: url("/img/bgmenuleft.png");background-repeat: repeat-x;padding: 6px 25px; display:block;margin: 12px 0;line-height: 16px;}
+.textsblocks>b>img {float: left;margin-right: 5px;}
 .textsblocks>b>a{color: white;}
 .topblock{background-color: #5088a8;color: white;margin-top: 2px;background-image: url("/img/bgmenuleft.png");background-repeat: repeat-x;padding: 6px 25px; display:block;margin: 12px 0;background-size: contain;}
 .showplace_item p.mini{/*font-size: 0.8em;*/}

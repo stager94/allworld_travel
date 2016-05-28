@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160519005906) do
+ActiveRecord::Schema.define(version: 20160528145511) do
 
   create_table "allsettings", force: :cascade do |t|
     t.boolean  "default"
@@ -213,10 +213,14 @@ ActiveRecord::Schema.define(version: 20160519005906) do
   end
 
   create_table "grouptextblocks", force: :cascade do |t|
-    t.text     "name",       limit: 65535
-    t.integer  "sortorder",  limit: 4
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.text     "name",              limit: 65535
+    t.integer  "sortorder",         limit: 4
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.string   "icon_file_name",    limit: 255
+    t.string   "icon_content_type", limit: 255
+    t.integer  "icon_file_size",    limit: 4
+    t.datetime "icon_updated_at"
   end
 
   create_table "homekarusels", force: :cascade do |t|

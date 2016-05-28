@@ -17,6 +17,7 @@ Allworld::Application.routes.draw do
   get '/allwonders', to: 'home#allwonders'
   get '/allcountries', to: 'home#allcountries'
   get '/goroda', to: 'home#goroda'
+  get '/search', to: 'application#search'
 
   get '/seen/:id', to: 'home#seen'
   get '/multyseen/:id/:country', to: 'home#multyseen'

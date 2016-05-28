@@ -39,7 +39,7 @@ source 'https://rubygems.org'
   gem 'honeypot-captcha'
   gem 'pry'
 
-
+  gem "google_custom_search_api"
 
 group :development, :test do
   gem 'capistrano', '2.14.2'
