@@ -1,7 +1,7 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-a {color: #1b587f;outline: 0;}
+a {color: #1b587f;outline: 0;noFocusLine:expression(this.hideFocus=true);outline-style:none;} /*noFocus should help fix dotted outline in IE*/
 a:hover, a:active, a:focus {outline: 0;}
 h1{color: #1b587f;text-align:center;}
 h3{color: #1b587f;font-weight: bold;}
@@ -479,7 +479,7 @@ text-decoration: none;
 
 @media screen and (max-width: 991px) {
 #exitalerts{display: none !important;}
-.nav > li{background-color: #1a587f;background-image: url("/img/bgmenuleft.png");;border-bottom: solid 1px #003d64;}
+.nav > li{background-color: #1a587f;background-image: url("/img/bgmenuleft.png");border-bottom: solid 1px #003d64;border-left: solid 1px #003d64;border-right: solid 1px #003d64;}
 .carousel-title{font-size: 1.6em;height: 100px;}
 .carousel-caption{font-size: 1.2em;bottom: 0px;}
 #countri .cntrmap {height: 324px;}
