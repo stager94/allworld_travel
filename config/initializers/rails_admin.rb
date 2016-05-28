@@ -1,3 +1,8 @@
+class RailsAdmin::Config::Fields::Types::Timezone < RailsAdmin::Config::Fields::Base
+  RailsAdmin::Config::Fields::Types::register(self)
+end
+
+
 # RailsAdmin config file. Generated on May 27, 2015 12:40
 # See github.com/sferik/rails_admin for more informations
 

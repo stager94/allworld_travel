@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160528145511) do
+ActiveRecord::Schema.define(version: 20160528204338) do
 
   create_table "allsettings", force: :cascade do |t|
     t.boolean  "default"
@@ -127,8 +127,8 @@ ActiveRecord::Schema.define(version: 20160528145511) do
     t.text     "politika",            limit: 65535
     t.text     "cultura",             limit: 65535
     t.integer  "region_id",           limit: 4
-    t.datetime "created_at",                                    null: false
-    t.datetime "updated_at",                                    null: false
+    t.datetime "created_at",                                        null: false
+    t.datetime "updated_at",                                        null: false
     t.string   "tag",                 limit: 255
     t.string   "flag_file_name",      limit: 255
     t.string   "flag_content_type",   limit: 255
@@ -138,9 +138,10 @@ ActiveRecord::Schema.define(version: 20160528145511) do
     t.string   "globus_content_type", limit: 255
     t.integer  "globus_file_size",    limit: 4
     t.datetime "globus_updated_at"
-    t.integer  "chaspoyas",           limit: 4,     default: 0, null: false
+    t.integer  "chaspoyas",           limit: 4,     default: 0,     null: false
     t.text     "pogoda",              limit: 65535
     t.integer  "parent_id",           limit: 4
+    t.string   "timezone",            limit: 255,   default: "UTC"
   end
 
   add_index "countries", ["region_id"], name: "index_countries_on_region_id", using: :btree

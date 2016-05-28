@@ -6,7 +6,7 @@ class Country < ActiveRecord::Base
   attr_accessible :descforturist, :shortdesc
   attr_accessible :googlemap
   attr_accessible :bezopasnost, :ceny, :chtobrat, :chtonugnoznat, :cultura, :dostoprimech,  :internet, :jazik,  :oteli, :pitanie, :politika, :prazdniki, :suvenir, :transport, :valutes, :visum
-  attr_accessible :primech, :tag, :chaspoyas, :pogoda
+  attr_accessible :primech, :tag, :chaspoyas, :pogoda, :timezone
 
   has_many :children, class_name: "Country", foreign_key: "parent_id"                             
   belongs_to :parent, class_name: "Country"        
@@ -111,6 +111,10 @@ class Country < ActiveRecord::Base
         group :mediainfo
       end
       fields :tag, :region, :chaspoyas, :parent  do 
+        group :slugebnoe
+      end
+      field :timezone do
+        partial :form_timezone
         group :slugebnoe
       end
       field :countrytextblocks  do 
