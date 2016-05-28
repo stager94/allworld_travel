@@ -478,6 +478,7 @@ text-decoration: none;
 
 
 @media screen and (max-width: 991px) {
+#exitalerts{display: none !important;}
 .nav > li{background-color: #1a587f;background-image: url("/img/bgmenuleft.png");;border-bottom: solid 1px #003d64;}
 .carousel-title{font-size: 1.6em;height: 100px;}
 .carousel-caption{font-size: 1.2em;bottom: 0px;}
@@ -533,7 +534,7 @@ text-decoration: none;
 #countri .shpageblock img{width:130px;height: 130px;}
 #countri .shpageblock p {margin-top: 0;}
 #countri .shpageblock{background-image: url('/img/watchblock_min.png');background-position: top right;background-repeat: no-repeat;height: 134px;}
-.navbar-toggle {display: block;}
+.navbar-toggle {display: none;}
 #place .cntrmap {height: 274px;}
 #place .cntrmap iframe {height: 274px;width:345px;}
 #place .places_atr_block a{margin: 2px;}
