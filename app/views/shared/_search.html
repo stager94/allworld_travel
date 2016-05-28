@@ -1,8 +1,8 @@
-<form class="form-inline">
+<form class="form-inline" action="<%= search_path %>">
   <div class="">
     <label class="sr-only" for="search">поиск по сайту</label>
     <div class="input-group">
-      <input type="text" class="form-control" id="search" placeholder="Поиск по сайту" style="padding: 0 12px !important;">
+      <input type="text" value="<%= params[:q] %>" class="form-control" name="q" id="search" placeholder="Поиск по сайту" style="padding: 0 12px !important;">
       <div class="input-group-addon"><button type="submit" class="searchbtn"><span class='searchico'></span></button></div>
     </div>
   </div>

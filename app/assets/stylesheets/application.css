@@ -21,3 +21,23 @@
     src: url( /fonts/calibril.ttf ); /* IE */
     src: local("Calibri Light"), url("/fonts/calibril.ttf") format("truetype"); /*non-IE*/
 }
+
+
+.search-section .items .url {
+	margin-top: 3px;
+	color: #008000;
+}
+
+.search-section .items ._row .cell img {
+	max-width: 90px;
+	max-height: 90px;
+	float: left;
+	margin-right: 10px;
+}
+.search-section h4 {
+	margin-top: 30px;
+}
+
+.search-section .info-with-img {
+	margin-left: 100px;
+}
