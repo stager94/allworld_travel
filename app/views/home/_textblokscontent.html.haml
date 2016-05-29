@@ -1,37 +1,75 @@
 - textblockid = @showplace.placetextblocks.select('textblock_id as id').group('textblock_id').to_a
 - grouptextblocksid = Textblock.select('grouptextblock_id as id').where(:id => textblockid).group('grouptextblock_id').to_a
 - grouptextblocks = Grouptextblock.where(:id => grouptextblocksid).order('sortorder ASC')
-- grouptextblocks.each do |grouptextblock|
-  %b
-    - if grouptextblock.icon.present?
-      = image_tag grouptextblock.icon(:small), size: "16x16"
-    - else
-      %span.fa.fa-thumbs-o-up
-    = grouptextblock.name
-  - Textblock.where(:id => textblockid).where(:grouptextblock_id => grouptextblock.id).order('sortorder ASC').each do |textblock|
-    .textblock
-      - @showplace.placetextblocks.where(:textblock_id => textblock.id).order('sortorder ASC').each do |placetextblock|
-        .microblock
-          - if showplace = placetextblock.othershowplace or placetextblock.image.present?
-            .col-md-3.col-lg-3
-              - if showplace = placetextblock.othershowplace
-                = render :partial => 'shared/showplace', :locals => {:showplace => showplace}
-              - else 
-                .showplace_wcorner
-                  .showplace_item.nohover
-                    .showplace_img
-                      =image_tag placetextblock.image.url(:thumb)
-                      %p.mini=textblock.name
-            .col-md-9.col-lg-9.showfulltext
-              .samtext=placetextblock.fulltext.html_safe
-              .next
-                %span.fa.fa-chevron-circle-down
-          - else
-            .showfulltext
-              .samtext=placetextblock.fulltext.html_safe
-              .next
-                %span.fa.fa-chevron-circle-down
-        .clear
+
+
+- previous_group_id = 0
+- @showplace.placetextblocks.each do |placetextblock|
+  - if placetextblock.textblock.grouptextblock.id != previous_group_id
+    - grouptextblock = placetextblock.textblock.grouptextblock
+    - previous_group_id = grouptextblock.id
+    %b
+      - if grouptextblock.icon.present?
+        = image_tag grouptextblock.icon(:small), size: "16x16"
+      - else
+        %span.fa.fa-thumbs-o-up
+      = grouptextblock.name
+
+  .textblock
+    .microblock
+      - if showplace = placetextblock.othershowplace or placetextblock.image.present?
+        .col-md-3.col-lg-3
+          - if showplace = placetextblock.othershowplace
+            = render :partial => 'shared/showplace', :locals => {:showplace => showplace}
+          - else 
+            .showplace_wcorner
+              .showplace_item.nohover
+                .showplace_img
+                  =image_tag placetextblock.image.url(:thumb)
+                  %p.mini= placetextblock.textblock.name
+        .col-md-9.col-lg-9.showfulltext
+          .samtext=placetextblock.fulltext.html_safe
+          .next
+            %span.fa.fa-chevron-circle-down
+      - else
+        .showfulltext
+          .samtext=placetextblock.fulltext.html_safe
+          .next
+            %span.fa.fa-chevron-circle-down
+    .clear
+
+
+/ - grouptextblocks.each do |grouptextblock|
+/   %b
+/     - if grouptextblock.icon.present?
+/       = image_tag grouptextblock.icon(:small), size: "16x16"
+/     - else
+/       %span.fa.fa-thumbs-o-up
+/     = grouptextblock.name
+/   - Textblock.where(:id => textblockid).where(:grouptextblock_id => grouptextblock.id).order('sortorder ASC').each do |textblock|
+/     .textblock
+/       - @showplace.placetextblocks.where(:textblock_id => textblock.id).order('position ASC').each do |placetextblock|
+/         .microblock
+/           - if showplace = placetextblock.othershowplace or placetextblock.image.present?
+/             .col-md-3.col-lg-3
+/               - if showplace = placetextblock.othershowplace
+/                 = render :partial => 'shared/showplace', :locals => {:showplace => showplace}
+/               - else 
+/                 .showplace_wcorner
+/                   .showplace_item.nohover
+/                     .showplace_img
+/                       =image_tag placetextblock.image.url(:thumb)
+/                       %p.mini=textblock.name
+/             .col-md-9.col-lg-9.showfulltext
+/               .samtext=placetextblock.fulltext.html_safe
+/               .next
+/                 %span.fa.fa-chevron-circle-down
+/           - else
+/             .showfulltext
+/               .samtext=placetextblock.fulltext.html_safe
+/               .next
+/                 %span.fa.fa-chevron-circle-down
+/         .clear
 
 
 -if countries = @showplace.countries.first

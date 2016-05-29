@@ -12,9 +12,12 @@ class Placetextblock < ActiveRecord::Base
   has_attached_file :image
   has_destroyable_file :image
 
-  attr_accessible :fulltext, :sortorder, :blocklink
+  attr_accessible :fulltext, :position, :blocklink
   validates :textblock, presence: true
   
+  default_scope ->{ order(:position) }
+  acts_as_positioned under: :showplace
+
   rails_admin do
     parent 'Showplace'
     edit do

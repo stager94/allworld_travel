@@ -7,7 +7,6 @@ class Showplacepicture < ActiveRecord::Base
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 
   default_scope ->{ order(:position) }
-
   acts_as_positioned under: :showplace
 
   rails_admin do
