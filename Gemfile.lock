@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/stager94/acts_as_positioned.git
+  revision: cf33b687d994b7879a7d5195c2a1c831520d3511
+  specs:
+    acts_as_positioned (1.0.4)
+      rails (> 3.1)
+
+GIT
   remote: git://github.com/vikewoods/paperclip-watermark.git
   revision: 3dbe35d348c193a6894c0d53d927870f71b4eceb
   specs:
@@ -294,6 +301,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts_as_positioned!
   awesome_nested_set
   cancan
   capistrano (= 2.14.2)

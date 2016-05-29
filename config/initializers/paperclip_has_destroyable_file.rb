@@ -19,7 +19,6 @@ class ActiveRecord::Base
       attr_accessor :"delete_#{attachment}"
       attr_accessible :"delete_#{attachment}"
       before_save do
-        binding.pry
         self.send(attachment).clear if self.send(:"delete_#{attachment}") == "1"
       end
     end

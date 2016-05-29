@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160528204338) do
+ActiveRecord::Schema.define(version: 20160529145020) do
 
   create_table "allsettings", force: :cascade do |t|
     t.boolean  "default"
@@ -436,13 +436,14 @@ ActiveRecord::Schema.define(version: 20160528204338) do
 
   create_table "showplacepictures", force: :cascade do |t|
     t.integer  "showplace_id",       limit: 4
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
+    t.datetime "created_at",                                 null: false
+    t.datetime "updated_at",                                 null: false
     t.string   "image_file_name",    limit: 255
     t.string   "image_content_type", limit: 255
     t.integer  "image_file_size",    limit: 4
     t.datetime "image_updated_at"
     t.string   "name",               limit: 255
+    t.integer  "position",           limit: 4,   default: 0
   end
 
   add_index "showplacepictures", ["showplace_id"], name: "index_showplacepictures_on_showplace_id", using: :btree

@@ -40,6 +40,7 @@ source 'https://rubygems.org'
   gem 'pry'
 
   gem "google_custom_search_api"
+  gem 'acts_as_positioned', git: 'git://github.com/stager94/acts_as_positioned.git'
 
 group :development, :test do
   gem 'capistrano', '2.14.2'
