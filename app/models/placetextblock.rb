@@ -13,13 +13,16 @@ class Placetextblock < ActiveRecord::Base
   has_destroyable_file :image
 
   attr_accessible :fulltext, :position, :blocklink
-  validates :textblock, presence: true
+  # validates :textblock, presence: true
   
   default_scope ->{ order(:position) }
   acts_as_positioned under: :showplace
 
   rails_admin do
     parent 'Showplace'
+    object_label_method do
+      :placetextblock_label_method
+    end
     edit do
       include_all_fields
       field :fulltext, :ck_editor

@@ -5,7 +5,7 @@
 
 - previous_group_id = 0
 - @showplace.placetextblocks.each do |placetextblock|
-  - if placetextblock.textblock.grouptextblock.id != previous_group_id
+  - if placetextblock.textblock && placetextblock.textblock.grouptextblock.id != previous_group_id
     - grouptextblock = placetextblock.textblock.grouptextblock
     - previous_group_id = grouptextblock.id
     %b
@@ -14,6 +14,9 @@
       - else
         %span.fa.fa-thumbs-o-up
       = grouptextblock.name
+  
+  - if placetextblock.textblock.nil?
+    - previous_group_id = 0
 
   .textblock
     .microblock

@@ -78,4 +78,8 @@ RailsAdmin.config do |config|
     navigation_label I18n.t('menu.system')
   end
 
+  def placetextblock_label_method
+    "Placetextblock ##{self.position}"
+  end
+
 end
