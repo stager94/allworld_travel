@@ -3,9 +3,6 @@
     var TimezoneOffset = <%= Time.now.in_time_zone(@country.timezone).utc_offset / 60.0 / 60.0 %>;
     var localTime = new Date(); 
     var ms = localTime.getTime() + (localTime.getTimezoneOffset() * 60000) + TimezoneOffset * 3600000;
-    
-    // var ms = Date.parse("<%= DateTime.now.in_time_zone(@country.timezone).iso8601 %>");
-
     var date = new Date(ms);
     var hours = date.getHours();
     var minutes = date.getMinutes();

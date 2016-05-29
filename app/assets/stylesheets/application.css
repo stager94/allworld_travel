@@ -41,3 +41,10 @@
 .search-section .info-with-img {
 	margin-left: 100px;
 }
+.marquee-container {
+	white-space: nowrap;
+	display: none;
+}
+#hidemarqueeblock {
+	cursor: pointer;
+}

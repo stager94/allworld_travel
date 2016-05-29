@@ -17,15 +17,26 @@
     - if current_user
       #hidemarqueeblock.textcenter
         %p#hidemarquee{class: showorhide}
-  .marquee
-    .marquee_block
-      %marquee#marqueeblock{"direction"=>"left", "scrollamount"=>"2", "loop"=>"1", :style=>shstyle}
-        - @marq.each do |marquee|
-          =marquee.full
-          =image_tag '/img/mir.gif',:style=>"width:14px; height:14px;"
-          -# marquee.showcount = 0 if marquee.showcount.nil?
-          -# marquee.showcount = marquee.showcount+1
-          -# marquee.save
+  .marquee#marqueeblock{ style: shstyle }
+    .marquee-container
+      - @marq.each do |marquee|
+        = marquee.full
+        = image_tag '/img/mir.gif',:style=>"width:14px; height:14px;"
+
+
+  / .marqueeblocks
+  /   - if current_user
+  /     #hidemarqueeblock.textcenter
+  /       %p#hidemarquee{class: showorhide}
+  / .marquee
+  /   .marquee_block
+  /     %marquee#marqueeblock{"direction"=>"left", "scrollamount"=>"2", "loop"=>"1", :style=>shstyle}
+  /       - @marq.each do |marquee|
+  /         =marquee.full
+  /         =image_tag '/img/mir.gif',:style=>"width:14px; height:14px;"
+  /         -# marquee.showcount = 0 if marquee.showcount.nil?
+  /         -# marquee.showcount = marquee.showcount+1
+  /         -# marquee.save
 - else 
   .pull-left
   .marquee

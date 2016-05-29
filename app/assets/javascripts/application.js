@@ -17,22 +17,28 @@
 //= require bootstrap
 //= require signup
 //= require turbolinks
+//= require jquery.cookie
+//= require jquery.marquee
 
 $(function() {
+
+  $('.marquee').marquee({
+    startPosition: $.cookie('marquee-position')
+  });
+
+
   $( "#hidemarquee" ).click(function() {
     $( "#marqueeblock" ).toggle();
         
-    $.ajax
-      ({ 
-          url: '/ajax/showhide',
-          data: {"showed": $(this).attr('class')},
-          type: 'post',
-          success: function(result)
-          {
-               $("#hidemarquee").removeClass();
-               $("#hidemarquee").addClass(result);
-          }
-      });
+    $.ajax({ 
+      url: '/ajax/showhide',
+      data: { "showed": $(this).attr('class')},
+      type: 'post',
+      success: function(result) {
+           $("#hidemarquee").removeClass();
+           $("#hidemarquee").addClass(result);
+      }
+    });
   });
 
   $('[data-toggle="tooltip"]').tooltip();
