@@ -9,7 +9,6 @@ class Placetextblock < ActiveRecord::Base
   has_attached_file :image, :styles => { :medium => "560x400#", :thumb => "208x149#" }, :default_url => "/img/placetextblock/:style/missing.png"
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 
-  has_attached_file :image
   has_destroyable_file :image
 
   attr_accessible :fulltext, :position, :blocklink
