@@ -114,12 +114,13 @@
 		<capital>Бразилиа</capital>
 		<woeid>455819</woeid>
 		<flag></flag>
-        <timeZone>-3</timeZone>
+    <timeZone>-3</timeZone>
 		<dtime> Страна: </dtime>
 		<cost> Столица:  </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
 		<link>www.allworld-travel.com/country/braziliya</link>
+	</country>
 	<country>
 		<cname>Венесуэла</cname>
 		<capital>Каракас</capital>
