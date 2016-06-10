@@ -20,7 +20,7 @@ module AllWorld
       def process_for_user
         user.placenets.where(showplace_id: showplace_id).delete_all
         
-        if country_ids.any?
+        if country_ids && country_ids.any?
           placevidel.countryarray = country_ids.join(",")
           placevidel.save
         else
@@ -31,7 +31,6 @@ module AllWorld
       end
 
       def process_for_guest
-        # binding.pry
         session[:placevidels] = [] if session[:placevidels].nil?
         session[:placenets] = [] if session[:placenets].nil?
         session[:placevidelscountries] = [] if session[:placevidelscountries].nil?
