@@ -66,7 +66,10 @@
         - else
           - if (not session[:placevidels].nil?) and ( session[:placevidels].include?(showplace.id.to_s) or session[:placevidels].include?(showplace.id) )
             - placevidelsclass='check'
-            - placevidelsgo='/seenjs/'
+            - if showplace.countries.count > 1
+              - placevidelsgo='/seenjs/'
+            - else
+              - placevidelsgo='/noseen/'
           - else
             - placevidelsclass='nocheck'
             - placevidelsgo='/seenjs/'

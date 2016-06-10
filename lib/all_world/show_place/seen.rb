@@ -31,6 +31,7 @@ module AllWorld
       end
 
       def process_for_guest
+        # binding.pry
         session[:placevidels] = [] if session[:placevidels].nil?
         session[:placenets] = [] if session[:placenets].nil?
         session[:placevidelscountries] = [] if session[:placevidelscountries].nil?
@@ -46,7 +47,9 @@ module AllWorld
           end
         else
           session[:placevidels].delete(showplace_id)
+          session[:placevidels].delete(showplace_id.to_s)
           session[:placevidelscountries].delete(showplace_id)
+          session[:placevidelscountries].delete(showplace_id.to_s)
         end
         
       end
