@@ -206,25 +206,38 @@ class HomeController < ApplicationController
 
   def multyseen
     if current_user
+      # shplece - Placevid object
       if shplece = current_user.placevidels.where('showplace_id'=>params[:id]).first
+
+        # Full countries array of Placevid object in which user seen this object
         shplccntarr = shplece.countryarray.split(",").map { |s| s.to_i }
+
+        # if country array already contain selected country - delete from list
         if shplccntarr.include?(params[:country].to_i)
           shplccntarr.delete(params[:country].to_i)
-          
+        # else - add new country to array
         else
           shplccntarr << params[:country].to_i
         end
+
+        
+        # TODO: refactor this with join()
         fullcountryarray = ''
         comma = ''
         shplccntarr.uniq.sort.each do |counryid|
           fullcountryarray = fullcountryarray + comma + counryid.to_s
           comma=','
         end
+
+        # TODO: refactor this with 1-line
         shplece.countryarray = fullcountryarray
         shplece.save
+
+        # if country array is blank - delete record
         if shplccntarr.blank? 
           current_user.placevidels.where('showplace_id'=>params[:id]).delete_all
         end
+
         redirect_to :back
       else
         current_user.placenets.where('showplace_id'=>params[:id]).delete_all
@@ -239,11 +252,14 @@ class HomeController < ApplicationController
           comma=','
         end
         @placevidel.fullcountryarray = fullcountryarray
+        
+        # TODO: WTF?
         if @placevidel.save
           redirect_to :back
         else
           redirect_to :back
         end
+
       end
     else
       session[:placevidels] =[] if session[:placevidels].nil?

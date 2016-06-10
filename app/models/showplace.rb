@@ -48,6 +48,10 @@ class Showplace < ActiveRecord::Base
   before_create :add_tag
   before_validation :comma_to_delimiter
   
+  def countries_ids
+    country_ids.join(",")
+  end
+
   def add_tag
     self.tag = self.name.to_slug_param
   end

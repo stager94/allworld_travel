@@ -21,6 +21,7 @@ Allworld::Application.routes.draw do
 
   get '/seen/:id', to: 'home#seen'
   get '/multyseen/:id/:country', to: 'home#multyseen'
+  post '/multyseen/:id', to: 'placevidels#multiseen', as: :placevidels_multiseen
   get '/seenjs/:id', to: 'ajax#seenjs'
   get '/w', to: 'ajax#setsize'
   get '/wish/:id', to: 'home#wish'

@@ -1,4 +1,5 @@
-$('#contenetblock').html('<%= escape_javascript render('index') %>');
+$(".modal").modal('hide');
+
+$('#contenetblock').html('<%= escape_javascript render("home/index") %>');
 $('#shared-point').html("<%= j render 'shared/point' %>");
 $('#shared-point [data-toggle="tooltip"]').tooltip();
-$(".modal").modal('hide');

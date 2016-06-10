@@ -62,12 +62,14 @@ module Allworld
     # Enable the asset pipeline
     config.assets.enabled = true
 
+    config.autoload_paths += Dir["#{config.root}/lib/"]
+
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
     config.to_prepare do
-        Devise::RegistrationsController.layout proc{ |controller| user_signed_in? ? "persons"   : "application" }
+        Devise::RegistrationsController.layout proc{ |controller| user_signed_in? ? "persons" : "application" }
     end
-    config.action_mailer.default_url_options = { :host => 'allworld-travel.com' }
+    config.action_mailer.default_url_options = { host: 'allworld-travel.com' }
     config.action_mailer.delivery_method = :smtp
     config.action_mailer.smtp_settings = {
         :address              => 'mail.ukraine.com.ua',

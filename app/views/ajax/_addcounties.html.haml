@@ -1,20 +1,23 @@
 .modal-dialog#addcountries
   .modal-content
     .well
+      %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+        %span{"aria-hidden" => "true"} ×
       %h5
-        Пожалуйста выберите страну в которой Вы видели 
-        =@shplace.name
+        Пожалуйста выберите страну, в которой Вы видели 
+        = @shplace.name
+
       %hr
-      .countries
+      = form_tag placevidels_multiseen_path, remote: true do
         - placevidelsclass='bignocheck'
-        - @shplace.countries.each do |country|
-          .country_item
-            - if @videlarr.include?(country.id.to_i)
-              -placevidelsclass='bigcheck'
-            - else
-              -placevidelsclass='bignocheck'
-            =link_to "/multyseen/"+@shplace.id.to_s+'/'+country.id.to_s, :class=>placevidelsclass do
-              .flag_img
-                -if flagimg = country.flag.url(:thumb)
-                  =image_tag flagimg
-              =country.name
+        .countries
+          - @shplace.countries.each do |country|
+            .country_item
+              = label_tag do
+                = check_box_tag 'country_ids[]', country.id, @videlarr.include?(country.id.to_i)
+                .flag_img
+                  - if flagimg = country.flag.url(:thumb)
+                    = image_tag flagimg
+                = country.name
+        .text-right
+          = submit_tag "OK", class: "btn btn-primary", style: "min-width:100px;margin:0 10px 10px 0;"

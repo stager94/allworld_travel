@@ -64,9 +64,9 @@
             - placedasclass='nocheck'
             - placedasgo='/wish/'
         - else
-          - if (not session[:placevidels].nil?) and session[:placevidels].include?(showplace.id.to_s)
+          - if (not session[:placevidels].nil?) and ( session[:placevidels].include?(showplace.id.to_s) or session[:placevidels].include?(showplace.id) )
             - placevidelsclass='check'
-            - placevidelsgo='/noseen/'
+            - placevidelsgo='/seenjs/'
           - else
             - placevidelsclass='nocheck'
             - placevidelsgo='/seenjs/'
