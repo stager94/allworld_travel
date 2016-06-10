@@ -567,12 +567,12 @@
 	</country>
 	<country>
 		<cname>Тайвань</cname>
-		<capital></capital>
+		<capital>Китай</capital>
 		<woeid>23424971</woeid>
 		<flag></flag>
 		<timeZone>+8</timeZone>
-		<dtime> Страна:  </dtime>
-		<cost> Столица:  </cost>
+		<dtime> Территория:  </dtime>
+		<cost> Владения:  </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
 		<link>www.allworld-travel.com/country/tayvan</link>
@@ -588,18 +588,6 @@
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
 		<link>www.allworld-travel.com/country/amirantskie-ostrova</link>
-	</country>
-	<country>
-		<cname>Палестина</cname>
-		<capital>Рамалла</capital>
-		<woeid>1937180</woeid>
-		<flag></flag>
-		<timeZone>+3</timeZone>
-		<dtime> Страна:  </dtime>
-		<cost> Столица:  </cost>
-		<store> Currently no </store>
-		<freedelivery> Free delivery over 100 Euro</freedelivery>
-		<link>www.google.com</link>
 	</country>
 	<country>
 		<cname>Коморы</cname>

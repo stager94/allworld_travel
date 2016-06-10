@@ -4,7 +4,7 @@
 .showplace_block#allcountries
   %h3 Страны мира и территории
   .adaptiveiframe
-    = render :partial => 'shared/allcountriesmap'
+    = render partial: 'shared/allcountriesmap'
   .topblock
     Признанные независимые государства - члены или наблюдатели ООН (#{Country.where("parent_id is null").count.to_s}):
 
