@@ -84,7 +84,8 @@
           - else
             - placenetsclass='nocheck'
             - placenetsgo='/no/'
-          - if (not session[:placedas].nil?) and session[:placedas].include?(showplace.id.to_s)
+
+          - if (not session[:placedas].nil?) and ( session[:placedas].include?(showplace.id.to_s) or session[:placedas].include?(showplace.id) )
             - placedasclass='check'
             - if showplace.countries.count == 1
               - placedasgo='/nowish/'

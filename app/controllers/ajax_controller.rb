@@ -57,9 +57,10 @@ class AjaxController < ApplicationController
     if @showplace.countries.length < 2
       redirect_to "/wish/#{params[:id]}"
     else
+      @marked_countries = []
       if current_user
         currently_wished = current_user.placedas.find_by_showplace_id(params[:id])
-        @marked_countries = currently_wished.try(:countries) || []
+        @marked_countries = currently_wished.try(:countries) if currently_wished
       else
         @marked_countries = session[:placedascountries][@showplace.id] if session[:placedascountries] && session[:placedascountries].any?
       end

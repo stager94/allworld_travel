@@ -3,9 +3,6 @@
 %p=current_user.family
 %p=current_user.email
 .countries
-  / - places = current_user.placedas.joins(:showplace)
-  / - objcnt = places.select('showplaces.id').group('showplaces.id')
-  / - countries = Linkobjtocount.where('showplace_id' => objcnt).group('country_id')
   - countries = current_user.wish_countries
   -if countries
     .current_country

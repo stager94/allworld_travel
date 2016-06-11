@@ -6,7 +6,7 @@ module AllWorld
 
 			def initialize(user, showplace_id, country_ids, session)
 				@user 				= user
-				@showplace_id = showplace_id
+				@showplace_id = showplace_id.to_i
 				@country_ids  = country_ids.map(&:to_i) rescue nil
 				@session 			= session
 			end
