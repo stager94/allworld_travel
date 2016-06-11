@@ -1,3 +1,5 @@
+- set_meta_tags title: @country.h1, reverse: true
+
 - @bredcrumb = capture do
   %li= link_to 'Главная', '/'
   %li= link_to 'Страны мира', '/allcountries'
@@ -8,7 +10,8 @@
     =image_tag flagimg
 .top_clock
   .info
-    %h3=@country.h1
+    .page-header
+      %h1=@country.h1
   .showfulltext
     .naklonniytext
       =@country.shortdesc.html_safe

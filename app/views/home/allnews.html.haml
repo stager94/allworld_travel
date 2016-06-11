@@ -1,8 +1,10 @@
+- set_meta_tags title: "Новости", reverse: true
+
 - @bredcrumb = capture do
   %li= link_to 'Главная', '/'
   %li= link_to 'Страны мира', '/allcountries'
   %li.active Новости
-.info
+.page-header
   %h1{style: "text-align:left;"} Новости
 .shpage
   = paginate @news, :left => 4, :right => 1,:param_name => :page

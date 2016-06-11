@@ -1,4 +1,7 @@
-%h4 Персональный кабинет
+- set_meta_tags title: "Персональный кабинет", reverse: true
+
+.page-header
+  %h1 Персональный кабинет
 %p=current_user.name
 %p=current_user.family
 %p=current_user.email

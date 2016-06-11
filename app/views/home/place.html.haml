@@ -1,3 +1,5 @@
+- set_meta_tags title: @showplace.h1, reverse: true
+
 - @bredcrumb = capture do
   %li= link_to 'Главная', '/'
   %li= link_to 'Страны мира', '/allcountries'
@@ -11,7 +13,10 @@
         = link_to plcountry.name, '/country/'+plcountry.tag
       и ...
   %li.active= @showplace.name
-%h3=@showplace.h1
+
+.page-header
+  %h1=@showplace.h1
+
 .clear.showfulltext
   .nonaklonniytext
     =@showplace.shortdesc.html_safe

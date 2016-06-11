@@ -38,6 +38,8 @@ source 'https://rubygems.org'
 
   gem 'honeypot-captcha'
   gem 'pry'
+  gem 'meta-tags'
+
 
   gem "google_custom_search_api"
   gem 'acts_as_positioned', git: 'git://github.com/stager94/acts_as_positioned.git'

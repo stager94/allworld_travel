@@ -1,8 +1,11 @@
+- set_meta_tags title: "Страны мира и территории", reverse: true
+
 - @bredcrumb = capture do
   %li= link_to 'Главная', '/'
   %li.active Страны мира
 .showplace_block#allcountries
-  %h3 Страны мира и территории
+  .page-header
+    %h1 Страны мира и территории
   .adaptiveiframe
     = render partial: 'shared/allcountriesmap'
   .topblock

@@ -38,7 +38,7 @@ class AjaxController < ApplicationController
       @topage = "/seen/"+params[:id]
       redirect_to "/seen/"+params[:id]
     else
-      @videlarr = []
+      @marked_countries = []
       if current_user
         if shplece = current_user.placevidels.find_by_showplace_id(params[:id])
           @marked_countries = shplece.countryarray.split(",").map { |s| s.to_i }
@@ -46,7 +46,7 @@ class AjaxController < ApplicationController
       else
         unless session[:placevidelscountries].nil? 
           if session[:placevidelscountries][params[:id].to_i].kind_of?(Array)
-            @marked_countries = session[:placevidelscountries][params[:id].to_i]
+            @marked_countries = session[:placevidelscountries][params[:id].to_i] || []
           end
         end
       end
@@ -62,7 +62,7 @@ class AjaxController < ApplicationController
         currently_wished = current_user.placedas.find_by_showplace_id(params[:id])
         @marked_countries = currently_wished.try(:countries) if currently_wished
       else
-        @marked_countries = session[:placedascountries][@showplace.id] if session[:placedascountries] && session[:placedascountries].any?
+        @marked_countries = (session[:placedascountries][@showplace.id] || []) if session[:placedascountries] && session[:placedascountries].any?
       end
     end
   end

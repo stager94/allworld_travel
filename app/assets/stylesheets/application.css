@@ -65,3 +65,18 @@
 label {
 	cursor: pointer;
 }
+
+
+.page-header {
+	margin-top: 10px !important;
+  padding: 0 !important;
+  margin-bottom: 10px !important;
+}
+
+.page-header h1 {
+	font-size: 20px;
+  text-align: left;
+  margin-top: 0;
+  display: inline-block;
+  color: #1b587f;
+}

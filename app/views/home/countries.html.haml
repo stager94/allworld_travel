@@ -1,10 +1,12 @@
+- set_meta_tags title: @region.name, reverse: true
+
 - @bredcrumb = capture do
   %li= link_to 'Главная', '/'
   %li= link_to 'Страны мира', '/allcountries'
   %li.active= @region.name
 .showplace_block#allcountries
-  %h3 
-    =@region.name
+  .page-header
+    %h1=@region.name
   -if @region.googlemap.present?
     .adaptiveiframe
       =@region.googlemap.html_safe

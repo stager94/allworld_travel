@@ -1,5 +1,10 @@
+<% set_meta_tags title: "Изменить информацию", reverse: true %>
+
 <div class="microcontainer">
-<h2 class='textcenter'>Изменить информацию</h2>
+  <div class="page-header">
+    <h1 class='textcenter'>Изменить информацию</h1>
+  </div>
+
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: "form-horizontal" }) do |f| %>
   <%= devise_error_messages! %>
