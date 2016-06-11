@@ -301,10 +301,12 @@ class HomeController < ApplicationController
         flash[:danger] = "Exist"
         redirect_to :back
       else
+        showplace = Showplace.find params[:id]
         current_user.placenets.where('showplace_id'=>params[:id]).delete_all
         @placeda = Placeda.new
         @placeda.user = current_user
         @placeda.showplace_id=params[:id]
+        @placeda.countries = @placeda.country_ids
         if @placeda.save
           redirect_to :back
         else

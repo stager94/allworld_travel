@@ -1,2 +1,2 @@
-$("#extend-modal").html("<%= escape_javascript(render 'addcounties') %>")
+$("#extend-modal").html("<%= escape_javascript(render 'addcounties', form_url: placevidels_multiseen_path) %>")
 $("#extend-modal").modal("show")

@@ -5,19 +5,19 @@
         %span{"aria-hidden" => "true"} ×
       %h5
         Пожалуйста выберите страну, в которой Вы видели 
-        = @shplace.name
+        = @showplace.name
 
       %hr
-      = form_tag placevidels_multiseen_path, remote: true do
-        - placevidelsclass='bignocheck'
+      = form_tag form_url, remote: true do
+        - placevidelsclass = 'bignocheck'
         .countries
-          - @shplace.countries.each do |country|
+          - @showplace.countries.each do |country|
             .country_item
               = label_tag do
-                = check_box_tag 'country_ids[]', country.id, @videlarr.include?(country.id.to_i)
+                = check_box_tag 'country_ids[]', country.id, @marked_countries.include?(country.id.to_i)
                 .flag_img
                   - if flagimg = country.flag.url(:thumb)
                     = image_tag flagimg
                 = country.name
         .text-right
-          = submit_tag "OK", class: "btn btn-primary", style: "min-width:100px;margin:0 10px 10px 0;"
+          = submit_tag "OK", class: "btn btn-primary", style: "min-width:100px;margin:0 10px 10px 0;", data: { disable_with: "Загрузка..." }

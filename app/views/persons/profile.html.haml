@@ -3,13 +3,14 @@
 %p=current_user.family
 %p=current_user.email
 .countries
-  - places = current_user.placedas.joins(:showplace)
-  - objcnt = places.select('showplaces.id').group('showplaces.id')
-  - countries = Linkobjtocount.where('showplace_id' => objcnt).group('country_id')
+  / - places = current_user.placedas.joins(:showplace)
+  / - objcnt = places.select('showplaces.id').group('showplaces.id')
+  / - countries = Linkobjtocount.where('showplace_id' => objcnt).group('country_id')
+  - countries = current_user.wish_countries
   -if countries
     .current_country
       %h4
         Страны в которые я хочу поехать
       .countries
-        -countries.each do |lccountry|
-          =render :partial => "shared/country", :locals => { :country => lccountry.country }
+        -countries.each do |country|
+          = render partial: "shared/country", locals: { country: country }

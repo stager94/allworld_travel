@@ -50,7 +50,6 @@ module AllWorld
           session[:placevidelscountries].delete(showplace_id)
           session[:placevidelscountries].delete(showplace_id.to_s)
         end
-        
       end
 
     protected

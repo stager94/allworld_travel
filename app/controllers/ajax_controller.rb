@@ -1,6 +1,7 @@
 class AjaxController < ApplicationController
   respond_to :html, :json
 
+  before_filter :load_showplace, only: [:wishjs, :seenjs]
 
   def setsize
     testperpaged = $perpaged
@@ -33,24 +34,42 @@ class AjaxController < ApplicationController
   end
 
   def seenjs
-    if Showplace.find(params[:id]).countries.count<2
+    if @showplace.countries.count < 2
       @topage = "/seen/"+params[:id]
       redirect_to "/seen/"+params[:id]
     else
       @videlarr = []
-      @shplace = Showplace.find(params[:id])
       if current_user
-        if shplece = current_user.placevidels.where('showplace_id'=>params[:id]).first
-          @videlarr = shplece.countryarray.split(",").map { |s| s.to_i }
+        if shplece = current_user.placevidels.find_by_showplace_id(params[:id])
+          @marked_countries = shplece.countryarray.split(",").map { |s| s.to_i }
         end
       else
         unless session[:placevidelscountries].nil? 
           if session[:placevidelscountries][params[:id].to_i].kind_of?(Array)
-            @videlarr = session[:placevidelscountries][params[:id].to_i]
+            @marked_countries = session[:placevidelscountries][params[:id].to_i]
           end
         end
       end
     end
+  end
+
+  def wishjs
+    if @showplace.countries.length < 2
+      redirect_to "/wish/#{params[:id]}"
+    else
+      if current_user
+        currently_wished = current_user.placedas.find_by_showplace_id(params[:id])
+        @marked_countries = currently_wished.try(:countries) || []
+      else
+        @marked_countries = session[:placedascountries][@showplace.id] if session[:placedascountries] && session[:placedascountries].any?
+      end
+    end
+  end
+
+private
+
+  def load_showplace
+    @showplace = Showplace.find params[:id]
   end
 
 end

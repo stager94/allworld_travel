@@ -6,6 +6,12 @@ class PlacevidelsController < ApplicationController
 		redirect_to :back
 	end
 
+	def multiwish
+		use_case 	= AllWorld::ShowPlace::Wish.new(current_user, params[:id], params[:country_ids], session)
+		showplace = use_case.run!
+		redirect_to :back
+	end
+
 private
 
 	def load_placevidel

@@ -59,10 +59,13 @@
             - placenetsgo='/no/'
           - if test=current_user.placedas.where('showplace_id'=>showplace.id).first 
             - placedasclass='check'
-            - placedasgo='/nowish/'
+            - if showplace.countries.count == 1
+              - placedasgo='/nowish/'
+            - else
+              - placedasgo='/wishjs/'
           - else
             - placedasclass='nocheck'
-            - placedasgo='/wish/'
+            - placedasgo='/wishjs/'
         - else
           - if (not session[:placevidels].nil?) and ( session[:placevidels].include?(showplace.id.to_s) or session[:placevidels].include?(showplace.id) )
             - placevidelsclass='check'
@@ -83,14 +86,17 @@
             - placenetsgo='/no/'
           - if (not session[:placedas].nil?) and session[:placedas].include?(showplace.id.to_s)
             - placedasclass='check'
-            - placedasgo='/nowish/'
+            - if showplace.countries.count == 1
+              - placedasgo='/nowish/'
+            - else
+              - placedasgo='/wishjs/'
           - else
             - placedasclass='nocheck'
-            - placedasgo='/wish/'
+            - placedasgo='/wishjs/'
         .fatr
-        .fatr=link_to 'Был, видел', placevidelsgo+showplace.id.to_s, :class=>placevidelsclass, :remote=>true
-        .fatr=link_to 'Хочу', placedasgo+showplace.id.to_s, :class=>placedasclass, :remote=>true
-        .fatr=link_to 'Позже', placenetsgo+showplace.id.to_s, :class=>placenetsclass, :remote=>true
+        .fatr=link_to 'Был, видел', placevidelsgo+showplace.id.to_s, class: placevidelsclass, remote: true
+        .fatr=link_to 'Хочу', placedasgo+showplace.id.to_s, class: placedasclass, remote: true
+        .fatr=link_to 'Позже', placenetsgo+showplace.id.to_s, class: placenetsclass, remote: true
         .fatr
         %span.stretch
     -else

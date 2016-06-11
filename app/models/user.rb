@@ -38,6 +38,14 @@ class User < ActiveRecord::Base
     else
       where(conditions.to_hash).first
     end
-  end  
+  end
+
+  def wish_countries_ids
+    placedas.pluck(:countries).flatten.uniq
+  end
+
+  def wish_countries
+    Country.where id: wish_countries_ids
+  end
 
 end
