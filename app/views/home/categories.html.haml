@@ -1,5 +1,7 @@
 - @bredcrumb = capture do
-  %li= link_to 'Главная', '/'
-  %li= link_to 'Страны мира', '/allcountries'
+  - section = @category.showplaces.first.section rescue nil
+  %li= link_to 'Путеводитель', '/'
+  - if section
+    %li= link_to section.name, "/section/"+section.tag.name
   %li.active= @category.name
 =render :partial => "listener", :locals => { :blockname => @category.name }

@@ -19,6 +19,7 @@ class ApplicationController < ActionController::Base
   end
 
   def set_default
+    @referer = Rails.application.routes.recognize_path(request.referrer)
     @bredcrumb=""
     $countobj = 20
     if session[:perpaged].blank?

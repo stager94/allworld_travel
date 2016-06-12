@@ -1,10 +1,21 @@
+= @referer
 - set_meta_tags title: @country.h1, reverse: true
 
 - @bredcrumb = capture do
-  %li= link_to 'Главная', '/'
-  %li= link_to 'Страны мира', '/allcountries'
-  %li= link_to @country.region.name, '/countries/'+@country.region.tag.name
-  %li.active= @country.name
+  %li= link_to 'Путеводитель', '/'
+  - if @referer[:controller] == 'home' && @referer[:action] == 'place'
+    - @showplace = Showplace.find_by_tag @referer[:tag]
+
+    %li= link_to @showplace.section.name, "/section/#{@showplace.section.tag.name}"
+    %li= link_to @showplace.category.name, "/categories/#{@showplace.category.tag.name}"
+    %li= link_to @showplace.name, "/place/#{@referer[:tag]}"
+    %li.active= @country.name
+
+  - else
+    %li= link_to 'Страны мира', '/allcountries'
+    %li= link_to @country.region.name, '/countries/'+@country.region.tag.name
+    %li.active= @country.name
+
 .big_flag
   -if flagimg = @country.flag.url(:thumb)
     =image_tag flagimg

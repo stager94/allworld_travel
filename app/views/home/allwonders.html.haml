@@ -1,8 +1,7 @@
 - set_meta_tags title: "Чудеса света", reverse: true
 
 - @bredcrumb = capture do
-  %li= link_to 'Главная', '/'
-  %li= link_to 'Страны мира', '/allcountries'
+  %li= link_to 'Путеводитель', '/'
   %li.active Чудеса света
   
 = render :partial => 'allwonders'

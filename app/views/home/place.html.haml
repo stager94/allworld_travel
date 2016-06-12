@@ -1,17 +1,28 @@
 - set_meta_tags title: @showplace.h1, reverse: true
-
 - @bredcrumb = capture do
-  %li= link_to 'Главная', '/'
-  %li= link_to 'Страны мира', '/allcountries'
-  %li= link_to @showplace.countries.first.region.name, '/countries/'+@showplace.countries.first.region.tag.name
-  %li
-    -if @showplace.countries.count <5
-      - @showplace.countries.each do |plcountry|
-        = link_to plcountry.name, '/country/'+plcountry.tag
-    -else
-      - @showplace.countries.first(5).each do |plcountry|
-        = link_to plcountry.name, '/country/'+plcountry.tag
-      и ...
+  %li= link_to 'Путеводитель', '/'
+  - if @referer[:controller] == 'home' && @referer[:action] == 'allwonders'
+    %li= link_to "Чудеса света", "/allwonders"
+  - elsif @referer[:controller] == 'home' && @referer[:action] == 'allbest'
+    %li= link_to "TOP 100", "/allbest"
+  - elsif @referer[:controller] == 'home' && @referer[:action] == 'goroda'
+    %li= link_to "Города", "/goroda"
+  - elsif @referer[:controller] == 'home' && @referer[:action] == 'categories'
+    %li= link_to @showplace.section.name, "/section/#{@showplace.section.tag.name}"
+    %li= link_to @showplace.category.name, "/categories/#{@showplace.category.tag.name}"
+  - elsif @referer[:controller] == 'home' && @referer[:action] == 'section'
+    %li= link_to @showplace.section.name, "/section/#{@showplace.section.tag.name}"
+  - else
+    %li= link_to 'Страны мира', '/allcountries'
+    %li= link_to @showplace.countries.first.region.name, '/countries/'+@showplace.countries.first.region.tag.name
+    %li
+      -if @showplace.countries.count <5
+        - @showplace.countries.each do |plcountry|
+          = link_to plcountry.name, '/country/'+plcountry.tag
+      -else
+        - @showplace.countries.first(5).each do |plcountry|
+          = link_to plcountry.name, '/country/'+plcountry.tag
+        и ...
   %li.active= @showplace.name
 
 .page-header
