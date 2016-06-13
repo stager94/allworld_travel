@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160611140343) do
+ActiveRecord::Schema.define(version: 20160613000618) do
 
   create_table "allsettings", force: :cascade do |t|
     t.boolean  "default"
@@ -142,6 +142,10 @@ ActiveRecord::Schema.define(version: 20160611140343) do
     t.text     "pogoda",              limit: 65535
     t.integer  "parent_id",           limit: 4
     t.string   "timezone",            limit: 255,   default: "UTC"
+    t.string   "crest_file_name",     limit: 255
+    t.string   "crest_content_type",  limit: 255
+    t.integer  "crest_file_size",     limit: 4
+    t.datetime "crest_updated_at"
   end
 
   add_index "countries", ["region_id"], name: "index_countries_on_region_id", using: :btree

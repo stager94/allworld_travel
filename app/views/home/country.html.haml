@@ -1,4 +1,3 @@
-= @referer
 - set_meta_tags title: @country.h1, reverse: true
 
 - @bredcrumb = capture do
@@ -75,15 +74,15 @@
   .col-md-3.col-lg-3
     .col-md-6
       -if flagimg = @country.flag.url(:thumb)
-        =image_tag flagimg, class: "img-responsive"
+        = image_tag flagimg, class: "img-responsive"
       .text-center Флаг
     .col-md-6
-      -if flagimg = @country.flag.url(:thumb)
-        =image_tag flagimg, class: "img-responsive"
-      .text-center Герб
+
+      - if crestimg = @country.crest.url(:thumb)
+        = image_tag crestimg, class: "img-responsive"
+        .text-center Герб
   .col-md-9.col-lg-9
     %table{ style: "font-size:13px;" } 
-      - binding.pry
       -if @country.offname.present?
         %tr
           %td

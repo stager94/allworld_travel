@@ -30,6 +30,10 @@ class Country < ActiveRecord::Base
   has_attached_file :flag, :styles => { :thumb => "140x100#", :micro => "70x50#" }, :default_url => "/images/:style/missing.png"
   validates_attachment_content_type :flag, :content_type => /\Aimage\/.*\Z/
 
+  attr_accessible :crest
+  has_attached_file :crest, :styles => { :thumb => "140>", :micro => "70x50#" }, default_url: ""
+  validates_attachment_content_type :crest, :content_type => /\Aimage\/.*\Z/
+
   attr_accessible :globus
   has_attached_file :globus, :styles => { :thumb => "180x180#" }, :default_url => "/img/mir.gif"
   validates_attachment_content_type :globus, :content_type => /\Aimage\/.*\Z/
@@ -107,7 +111,7 @@ class Country < ActiveRecord::Base
       fields  :shortdesc, :descforturist, :primech  do 
         group :shapka
       end
-      fields :flag, :googlemap, :countrypictures, :countryvideos, :globus, :pogoda  do 
+      fields :flag, :crest, :googlemap, :countrypictures, :countryvideos, :globus, :pogoda  do 
         group :mediainfo
       end
       fields :tag, :region, :chaspoyas, :parent  do 
