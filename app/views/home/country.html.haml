@@ -73,17 +73,30 @@
 .showplace_block.textsblocks
   %b Общая информация:
   .col-md-3.col-lg-3
-    .wells
+    .col-md-6
       -if flagimg = @country.flag.url(:thumb)
-        =image_tag flagimg
+        =image_tag flagimg, class: "img-responsive"
+      .text-center Флаг
+    .col-md-6
+      -if flagimg = @country.flag.url(:thumb)
+        =image_tag flagimg, class: "img-responsive"
+      .text-center Герб
   .col-md-9.col-lg-9
-    %table
+    %table{ style: "font-size:13px;" } 
+      - binding.pry
       -if @country.offname.present?
         %tr
           %td
             %b Официальное название:
           %td
             =@country.offname
+
+      -if ( @country.parent_id.present? and @country.parent_id>0 )
+        %tr
+          %td
+            %b Владения:
+          %td
+            =@country.parent.name
       -if @country.datanezavis.present?
         %tr
           %td
@@ -147,13 +160,6 @@
             %b Валюта:
           %td
             =@country.valute
-
-      -if ( @country.parent_id.present? and @country.parent_id>0 )
-        %tr
-          %td
-            %b Владения:
-          %td
-            =@country.parent.name
 
 
 
