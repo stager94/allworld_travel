@@ -111,3 +111,18 @@ $('.next').click(function() {
 });
 });
 
+
+
+$(document).ready(function(){
+              $('.fotorama').dblclick(function(){
+                  $(function () {
+                      var fotorama = $('.fotorama')
+                              .fotorama({allowfullscreen: true})
+                              .data('fotorama');
+                      fotorama.requestFullScreen();
+
+                  });
+
+              });
+
+          });

@@ -34,11 +34,12 @@
 .oh#place
   .ohgallery
     = render :partial => 'shared/slide'
-    .fotorama{"data-allowfullscreen"=>"true", "data-nav"=>"thumbs", "data-fit"=>"contain", "data-width"=>"100%", "data-thumbwidth" => "128px", "data-thumbheight" => "128px", "data-captions"=>"true"}
+
+    .fotorama{"data-allowfullscreen"=>"true", "data-nav"=>"thumbs", "data-fit"=>"contain", "data-width"=>"100%", "data-thumbwidth" => "118px", "data-thumbheight" => "84px", "data-arrows"=>"true"}
       - @showplace.showplacepictures.each do |showplacepictures|
         -if shimg = showplacepictures.image
-          =link_to showplacepictures.image.url(:large) do
-            =image_tag showplacepictures.image.url(:medium), "data-full" => showplacepictures.image.url(:large), "data-caption"=> showplacepictures.name
+          / =link_to showplacepictures.image.url(:large) do
+          =image_tag showplacepictures.image.url(:medium), "data-full" => showplacepictures.image.url(:large), "data-caption"=> showplacepictures.name
       -if videos = @showplace.showplacevideos.first
         - @showplace.showplacevideos.each do |video|
           =link_to video.name, video.kode.html_safe
