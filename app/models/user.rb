@@ -13,6 +13,10 @@ class User < ActiveRecord::Base
   attr_accessible :email, :username, :password, :password_confirmation, :remember_me, :lastmarquee
   attr_accessible :name, :family, :role
   attr_accessible :avatar
+
+  attr_accessible :country, :city, :gender, :birthday
+  attr_accessible :facebook_link, :twitter_link, :vk_link, :instagram_link, :google_link
+
   has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>", :micro => "50x50#" }, :default_url => "/images/:style/missing.png"
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
   attr_accessor :login

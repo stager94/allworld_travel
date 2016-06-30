@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
-  before_action :set_user
+  before_action :set_user, only: :finish_signup
+  layout "persons", only: [:edit, :update]
 
 	# GET/PATCH /users/:id/finish_signup
   def finish_signup
@@ -16,6 +17,21 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+    @user = current_user
+  end
+
+  def update
+    @user = current_user
+
+    @user.update params.require(:user).permit!
+    if @user.valid?
+      redirect_to profile_path
+    else
+      render :edit
+    end
+  end
+
 private
   
   def set_user
@@ -24,7 +40,7 @@ private
 
   def user_params
     accessible = [ :name, :email ] # extend with your own params
-    accessible << [ :password, :password_confirmation ] unless params[:user][:password].blank?
+    accessible << [ :password, :password_confirmation, :current_password ] unless params[:user][:password].blank?
     params.require(:user).permit(accessible)
   end
 

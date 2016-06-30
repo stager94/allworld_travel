@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160630120045) do
+ActiveRecord::Schema.define(version: 20160630145157) do
 
   create_table "allsettings", force: :cascade do |t|
     t.boolean  "default"
@@ -591,6 +591,15 @@ ActiveRecord::Schema.define(version: 20160630120045) do
     t.string   "username",               limit: 255
     t.integer  "lastmarquee",            limit: 4
     t.integer  "lastnews",               limit: 4
+    t.string   "country",                limit: 255
+    t.string   "city",                   limit: 255
+    t.string   "gender",                 limit: 255
+    t.date     "birthday"
+    t.string   "facebook_link",          limit: 255
+    t.string   "twitter_link",           limit: 255
+    t.string   "vk_link",                limit: 255
+    t.string   "instagram_link",         limit: 255
+    t.string   "google_link",            limit: 255
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

@@ -161,6 +161,15 @@ ru:
         email: E-mail
         remember_me: Запомнить меня
         password: Пароль
+        country: "Страна"
+        city: "Город"
+        gender: "Пол"
+        birthday: "Дата рождения"
+        facebook_link: "Facebook"
+        twitter_link: "Twitter"
+        vk_link: "VK"
+        instagram_link: "Instagram"
+        google_link: "Google+"
         encrypted_password: encrypted_password  #g
         last_sign_in_at: last_sign_in_at  #g
         last_sign_in_ip: last_sign_in_ip  #g

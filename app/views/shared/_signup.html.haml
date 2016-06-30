@@ -1,5 +1,5 @@
 .modal.fade{:id=>"sign_up", :tabindex=>"-1", :role=>"dialog", 'aria-labelledby'=>"signupLabel", 'aria-hidden'=>"true", :style=>'display:none'}
-  .modal-dialog
+  .modal-dialog.long
     .modal-content
       .modal-header
         %button.close{:type=>"button", 'data-dismiss'=>"modal", 'aria-hidden'=>"true"} &times; 
@@ -9,28 +9,55 @@
         = form_for(User.new, url: registration_path(:user), html: {id: 'sign_up_user', :'data-type' => 'json', :honeypot => true}, remote: true) do |f|
           .form-inputs
             .form-group
-              = f.label :username, t('user.username'), class: "control-label"
-              .inpt
-                = f.text_field :username, class: "form-control", style: "width:300px;", required: true, placeholder: "введите логин", :pattern => "[0-9a-zA-Z_\-]{3,}", :title =>"Используйте только цифры и латинские символы, минимум 3 символа"
+              .row
+                .col-md-6
+                  = f.label :username, t('user.username'), class: "control-label"
+                  .inpt
+                    = f.text_field :username, class: "form-control", required: true, placeholder: "введите логин", :pattern => "[0-9a-zA-Z_\-]{3,}", :title =>"Используйте только цифры и латинские символы, минимум 3 символа"
+                .col-md-6
+                  .username-error.text-danger(style="padding-top:20px;")
             .form-group
-              = f.label :password, t('user.password'), class: "control-label"
-              .inpt
-                = f.password_field :password, autocomplete: "off", class: "form-control", style: "width:300px;", required: true, placeholder: "введите пароль", :pattern => "[0-9a-zA-Z_\-]{6,}", :title =>"Используйте только цифры и латинские символы, минимум 6 символов"
+              .row
+                .col-md-6
+                  = f.label :password, t('user.password'), class: "control-label"
+                  .inpt
+                    = f.password_field :password, autocomplete: "off", class: "form-control", required: true, placeholder: "введите пароль", :pattern => "[0-9a-zA-Z_\-]{6,}", :title =>"Используйте только цифры и латинские символы, минимум 6 символов"
+                .col-md-6
+                  .password-error.text-danger(style="padding-top:20px;")
             .form-group
-              = f.label :password_confirmation, t('user.confirmpassword'), class: "control-label"
-              .inpt
-                = f.password_field :password_confirmation, autocomplete: "off", class: "form-control", style: "width:300px;", required: true, placeholder: "повторите пароль", :pattern => "[0-9a-zA-Z_\-]{6,}", :title =>"Используйте только цифры и латинские символы, минимум 6 символов"
+              .row
+                .col-md-6
+                  = f.label :password_confirmation, t('user.confirmpassword'), class: "control-label"
+                  .inpt
+                    = f.password_field :password_confirmation, autocomplete: "off", class: "form-control", required: true, placeholder: "повторите пароль", :pattern => "[0-9a-zA-Z_\-]{6,}", :title =>"Используйте только цифры и латинские символы, минимум 6 символов"
+                .col-md-6
+                  .password_confirmation-error.text-danger(style="padding-top:20px;")
             .form-group
-              = f.label :email, t('user.email'), class: "control-label"
-              .inpt
-                = f.email_field :email, class: "form-control", style: "width:300px;", :required => true, :pattern => '[^@]+@[^@]+\.[a-zA-Z]{2,6}', placeholder: "введите E-mail", :title =>"например email@example.com"
+              .row
+                .col-md-6
+                  = f.label :email, t('user.email'), class: "control-label"
+                  .inpt
+                    = f.email_field :email, class: "form-control", :required => true, :pattern => '[^@]+@[^@]+\.[a-zA-Z]{2,6}', placeholder: "введите E-mail", :title =>"например email@example.com"
+                .col-md-6
+                  .email-error.text-danger(style="padding-top:20px;")
             .form-group
               .control-label
               .form-inline
                 = f.check_box :remember_me
                 = f.label :remember_me, t('user.remember')
           .modalfooter
-            .form-group{align: "center"}
-              = f.submit t('user.register'), class: "btn btn-primary"
+            .row
+              .col-md-6
+                .form-group{align: "center"}
+                  = f.submit t('user.register'), class: "btn btn-primary btn-block"
+              .col-md-6.socialicons
+                через
+                = link_to "", user_facebook_omniauth_authorize_path, class: 'icofb social-auth'
+                = link_to "", user_twitter_omniauth_authorize_path, class: 'icotw social-auth'
+                = link_to "", user_vkontakte_omniauth_authorize_path, class: 'icovk social-auth'
+                = link_to "", user_instagram_omniauth_authorize_path, class: 'icoin social-auth'
+                = link_to "", user_google_oauth2_omniauth_authorize_path, class: 'icogp social-auth'
+
+        .greyed Продожая, Вы соглашаетесь с нашей политикой конфиденциальности и условиями пользования.
       .modal-footer
-      
+        

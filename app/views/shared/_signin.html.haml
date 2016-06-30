@@ -7,12 +7,6 @@
           = t('user.signblock')
       %div{:class=>'modal-body'}
         
-        = link_to "facebook", user_facebook_omniauth_authorize_path
-        = link_to "twitter", user_twitter_omniauth_authorize_path
-        = link_to "vkontakte", user_vkontakte_omniauth_authorize_path
-        = link_to "instagram", user_instagram_omniauth_authorize_path
-        = link_to "google+", user_google_oauth2_omniauth_authorize_path
-
         = form_for(User.new, url: session_path(:user), html:{id: 'sign_in_user', :'data-type' => 'json'}, remote: true) do |f|
           .form-inputs
             .form-group

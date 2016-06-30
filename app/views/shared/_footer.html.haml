@@ -1,10 +1,14 @@
-.container
+.container-fluid
   .row
     - Footermenu.order('sortorder ASC').each do |razdel|
       .block5
         %h4=razdel.name
         -razdel.footersubmenus.order('sortorder ASC').each do |subfooter|
-          %p=link_to subfooter.name, subfooter.url
+          %p
+            = link_to subfooter.url do
+              - if subfooter.icon.present?
+                = image_tag subfooter.icon.url(:micro), size: "24x24"
+              = subfooter.name
       .afdelimit
 
     .block5contact

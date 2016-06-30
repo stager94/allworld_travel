@@ -13,6 +13,10 @@ en:
     password: "Пароль:"
     confirmpassword: "Подтвердите пароль:"
     remember: "Запомнить меня"
+    country: "Страна"
+    city: "Город"
+    gender: "Пол"
+    birthday: "Дата рождения"
   meta:
     keywords: "default keyword"
     descriptions: "default descriptions"
@@ -24,6 +28,7 @@ en:
     slugebnoe: "Служебная информация"
     allother: "Информация"
     navigates: "Навигация"
+    statistic: "Статистика"
   menu:
     content: "Контент"
     admin: "Администрирование"
@@ -31,5 +36,5 @@ en:
     menu: "Навигация"
     setting: "Настройки"
   ajax:
-    show: "Показать"
-    hide: "Скрыть"
+    show: "fa fa-eye"
+    hide: "fa fa-eye-slash"

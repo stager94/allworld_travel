@@ -4,7 +4,7 @@
   .showplace_block.nonaklonniytext
     %h4
       %b=chudesa.name
-    %span=chudesa.toptext
+    %span= raw chudesa.toptext
     .shpage_null
       -#.prevsh
         =image_tag '/img/content_arr_slider_left.png'
@@ -13,6 +13,6 @@
           = render :partial => 'shared/showplace', :locals => {:showplace => showplace}
       -#.nextsh
         =image_tag '/img/content_arr_slider_right.png'
-    %span=chudesa.bottomtext
+    %span= raw chudesa.bottomtext
   %br
   %br

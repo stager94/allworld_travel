@@ -36,5 +36,6 @@ Allworld::Application.configure do
   config.assets.debug = true
   config.eager_load = true
   config.app_domain = 'stager.dev'
+  config.action_mailer.delivery_method = :letter_opener
 
 end

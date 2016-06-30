@@ -1,0 +1,133 @@
+<% set_meta_tags title: "Изменить информацию", reverse: true %>
+
+<div class="container-fluid">
+<div class="row">
+  <div class="col-md-12">
+    <div class="page-header">
+      <h1 class='textcenter'>Профиль пользователя</h1>
+    </div>
+  </div>
+</div>
+
+<% if !@user.valid? %>
+  <div id="error_explanation" class="text-danger" style="margin-bottom:20px;">
+    <%- @user.errors.full_messages.each do |msg| %>
+      <%= msg %>
+    <% end %>
+      <br>
+  </div>
+<% end %>
+
+<div class="row">
+  <%= form_for(@user, url: update_profile_path(), html: { method: :put, class: "form-horizontal" }) do |f| %>
+    <div class="col-md-6">
+      <h4 class="text-center">Аватар</h4>
+      <div class="text-center" style="margin-bottom:10px;"><%= image_tag f.object.avatar.url(:thumb) %></div>
+      <div class='field form-group'><%= f.label :avatar, class: "col-sm-3 control-label" %>
+        <div class="col-sm-8" style="margin: 0 20px;">
+          <%= f.file_field :avatar, class: "form-control" %>
+        </div>
+      </div>
+
+      <h4 class="text-center">Профили в соц. сетях</h4>
+
+      <div class='field form-group'><%= f.label :facebook_link, class: "col-sm-3 control-label" %>
+        <div class="col-sm-8" style="margin: 0 20px;">
+          <%= f.text_field :facebook_link, class: "form-control" %>
+        </div>
+      </div>
+      <div class='field form-group'><%= f.label :twitter_link, class: "col-sm-3 control-label" %>
+        <div class="col-sm-8" style="margin: 0 20px;">
+          <%= f.text_field :twitter_link, class: "form-control" %>
+        </div>
+      </div>
+      <div class='field form-group'><%= f.label :vk_link, class: "col-sm-3 control-label" %>
+        <div class="col-sm-8" style="margin: 0 20px;">
+          <%= f.text_field :vk_link, class: "form-control" %>
+        </div>
+      </div>
+      <div class='field form-group'><%= f.label :instagram_link, class: "col-sm-3 control-label" %>
+        <div class="col-sm-8" style="margin: 0 20px;">
+          <%= f.text_field :instagram_link, class: "form-control" %>
+        </div>
+      </div>
+      <div class='field form-group'><%= f.label :google_link, class: "col-sm-3 control-label" %>
+        <div class="col-sm-8" style="margin: 0 20px;">
+          <%= f.text_field :google_link, class: "form-control" %>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-6">
+      <h4 class="text-center">Общая информация</h4>
+      <div class='field form-group'><%= f.label :username, class: "col-sm-3 control-label" %>
+        <div class="col-sm-8" style="margin: 0 20px;">
+          <%= f.text_field :username, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class='field form-group'><%= f.label :email, class: "col-sm-3 control-label" %>
+        <div class="col-sm-8" style="margin: 0 20px;">
+          <%= f.email_field :email, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class='field form-group'><%= f.label :name, class: "col-sm-3 control-label" %>
+        <div class="col-sm-8" style="margin: 0 20px;">
+          <%= f.text_field :name, autofocus: true, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class='field form-group'><%= f.label :family, class: "col-sm-3 control-label" %>
+        <div class="col-sm-8" style="margin: 0 20px;">
+          <%= f.text_field :family, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class='field form-group'><%= f.label :country, class: "col-sm-3 control-label" %>
+        <div class="col-sm-8" style="margin: 0 20px;">
+          <%= f.text_field :country, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class='field form-group'><%= f.label :city, class: "col-sm-3 control-label" %>
+        <div class="col-sm-8" style="margin: 0 20px;">
+          <%= f.text_field :city, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class='field form-group'><%= f.label :gender, class: "col-sm-3 control-label" %>
+        <div class="col-sm-8" style="margin: 0 20px;">
+          <%= f.text_field :gender, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class='field form-group'><%= f.label :birthday, class: "col-sm-3 control-label" %>
+        <div class="col-sm-8" style="margin: 0 20px;">
+          <%= f.text_field :birthday, class: "form-control" %>
+        </div>
+      </div>
+     
+      <!--div class='field form-group'><%= f.label :password, class: "col-sm-3 control-label" %> <i>(оставьте пустым, если не хотите менять)</i>
+      <div class="col-sm-6" style="margin: 0 20px;">
+        <%= f.password_field :password, autocomplete: "off", class: "form-control" %></div>
+        </div>
+
+      <div class='field form-group'><%= f.label :password_confirmation, class: "col-sm-3 control-label" %>
+      <div class="col-sm-6" style="margin: 0 20px;">
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %></div>
+      </div>
+
+      <div class='field form-group'><%= f.label :current_password, class: "col-sm-3 control-label" %> <i>(укажите текущий пароль для внесения изменений)</i>
+      <div class="col-sm-6" style="margin: 0 20px;">
+        <%= f.password_field :current_password, autocomplete: "off", class: "form-control" %></div>
+      </div-->
+
+      <div class='field form-group'>
+        <div><%= f.submit "Сохранить изменения", class:'btn btn-primary btn-block' %></div><br /><br /></div>
+      <div class="clear"></div>
+    </div>
+  <% end %>
+
+  </div>
+</div>

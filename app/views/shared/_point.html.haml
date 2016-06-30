@@ -8,7 +8,7 @@
   - countries = Country.where('id' => objcnt)
   -unless countries.blank?
     .current_country
-      .pull-left.strani
+      .pull-left.strani(onclick="$(this).closest('.current_country').toggleClass('opened');return false;")
         Страны, в которых я был
         %span.ccount
           (
@@ -19,6 +19,7 @@
           .flag_img
             -if flagimg = lccountry.flag.url(:thumb)
               = image_tag flagimg, style: 'width:35px;', alt: lccountry.name, data: { toggle: "tooltip", placement: "bottom", title: lccountry.name }
+            %span.title= lccountry.name
       -if places.sum('point') >0
         .current_point.pull-right
           =places.sum('point').to_s
@@ -34,7 +35,7 @@
   - countries = Country.where(id: session[:placevidelscountries].flatten.compact.uniq) rescue []
   -if countries
     .current_country
-      .pull-left.strani
+      .pull-left.strani(onclick="$(this).closest('.current_country').toggleClass('opened');return false;")
         Страны, в которых я был
         %span.ccount
           (
@@ -45,6 +46,7 @@
           .flag_img
             -if flagimg = country.flag.url(:thumb)
               = image_tag flagimg, style: 'width:35px;', alt: country.name, data: { toggle: "tooltip", placement: "bottom", title: country.name }
+            %span.title= lccountry.name
       - if places.sum('point') > 0
         .current_point.pull-right
           =places.sum('point').to_s

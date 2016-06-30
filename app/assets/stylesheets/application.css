@@ -80,3 +80,120 @@ label {
   display: inline-block;
   color: #1b587f;
 }
+.greyed {
+  margin: 0 -45px -16px;
+  background: lightgray;
+  color: #666;
+  font-size: 12px;
+  padding: 10px 45px 5px;
+}
+
+
+@media screen and (max-width: 1000px) {
+	.leftmenu {
+		float: none !important;
+		width: 100% !important;
+	}
+	.fullcontent {
+		float: none !important;
+		width: 100% !important;
+	}
+	#contentbody {
+    padding: 0 20px !important;
+	}
+	.row-point {
+		height: auto !important;
+		padding: 10px !important;
+	}
+}
+
+@media screen and (min-width: 500px) {
+	.flag_img span {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.showplace_wcorner {
+		width: 100% !important;
+	}
+	.strani {
+		width: 100%;
+	}
+	.flag_img {
+		float: none !important;
+    width: auto !important;
+    border-top: 1px solid rgba(255,255,255,.15);
+    height: auto;
+    padding-top: 5px;
+    margin-top: 5px;
+	}
+	.flag_img img {
+    width: 35px;
+    display: inline-block;
+    vertical-align: middle;
+	}
+	.flag_img span {
+    display: inline-block;
+    color: white;
+    margin-left: 10px;
+    vertical-align: middle;
+	}
+	.current_country a {
+		display: none;
+	}
+	.current_country {
+		margin: 0 !important;
+	}
+	.current_country .strani {
+		cursor: pointer;
+		float: none !important;
+		/*margin-bottom: 10px;*/
+	}
+	.current_country.opened a {
+		display: block !important;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.navbar-static-top .navbar-collapse {
+    width: 100%;
+    left: 0px;
+    padding: 0px;
+	}
+	.navbar-static-top .navbar-collapse ul {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+	}
+	.afooter .block5 {
+		width: 100%!important;
+		height: auto;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.afooter .afdelimit {
+		display: none;
+	}
+	.afooter .block5 {
+		width: 18%;
+	}
+	footer {
+		height: auto !important;
+	}
+	.afooter {
+		background: #3b7ea9 !important;
+	}
+	.breadcrumb {
+		display: none;
+	}
+	.leftsearchblock {
+		display: none;
+	}
+}
+
+
+.container {
+	max-width: 100% !important;
+}

@@ -1,12 +1,12 @@
-<h2 class='textcenter'>Забыли пароль?</h2>
+<div class="col-md-6 col-md-offset-3">
+	<h3 class=''>Забыли пароль?</h3>
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, class: "form-horizontal" }) do |f| %>
-  <%= devise_error_messages! %>
+	<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, class: "" }) do |f| %>
+	  <%= devise_error_messages! %>
 
-  <div class='field form-group'><%= f.label :email, class: "col-sm-2 control-label" %><div class="col-sm-3" style="margin: 0 20px;">
-  <%= f.email_field :email, autofocus: true, class: "form-control" %></div>
+	  <div class='field form-group'>
+	  <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "введите e-mail" %></div>
+	  <div class='field form-group'><%= f.submit "Отправить ссылку для восстановления пароля", class:'btn btn-primary btn-block' %></div>
+	<% end %>
+	<div class="clear"></div>
 </div>
-  <div class='field form-group col-sm-6 control-label'><%= f.submit "Отправить мне инструкцию для восстановления", class:'btn btn-primary' %></div>
-<% end %>
-<div class="clear"></div>
-<%= render "devise/shared/links" %>

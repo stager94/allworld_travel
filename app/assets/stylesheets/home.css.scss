@@ -308,6 +308,16 @@ z-index: 100;
 #icoyb{background-image: url('/img/soc_youtube.png')}
 #icotw{background-image: url('/img/soc_tw.png')}
 #icoin{background-image: url('/img/soc_inst.png')}
+
+
+.icovk{background-image: url('/img/soc_vk.png')}
+.icofb{background-image: url('/img/soc_f.png')}
+.icogp{background-image: url('/img/soc_g.png')}
+.icoyb{background-image: url('/img/soc_youtube.png')}
+.icotw{background-image: url('/img/soc_tw.png')}
+.icoin{background-image: url('/img/soc_inst.png')}
+.social-auth { display: inline-block;width:30px;height:30px;vertical-align:middle; }
+
 .bold13{font-size:13px;font-weight: bold;}
 .nav > li.active > a {
 text-decoration: none;
@@ -440,6 +450,7 @@ opacity: 1;
 }
 .modal-body{padding: 15px 45px;color: #1b587f;}
 .modal-dialog {width: 400px;}
+.modal-dialog.long {width: 600px;}
 
 .btn-primary{background-color: #1b587f;}
 .fotorama__active .fotorama__thumb{box-shadow: 0 0 16px #98d1ec;}

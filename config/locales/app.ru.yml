@@ -13,6 +13,10 @@ ru:
     password: "Пароль:"
     confirmpassword: "Подтвердите пароль:"
     remember: "Запомнить меня"
+    country: "Страна"
+    city: "Город"
+    gender: "Пол"
+    birthday: "Дата рождения"
   meta:
     keywords: "default keyword"
     descriptions: "default descriptions"
