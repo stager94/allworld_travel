@@ -1,73 +1,82 @@
-- menu = []
-- menutext = capture do
-  %li.opened
-    = link_to "/allcountries" do
-      =image_tag '/img/left_menu_strani.png'
-      =$setting.allcountriesname
-    -#%span.closeopen.fa.fa-angle-up.pull-right
-    %ul
-      - Region.order('sortorder ASC').each do |region|
-        %li= link_to region.name, "/countries/"+region.tag.name
-- menu.insert($setting.allcountriessort, menutext)
+.open-leftmenu(onclick="$('#leftmenu').toggle();return false;")
+  %button.navbar-toggle.collapsed{type:"button"}
+    %span.icon-bar
+    %span.icon-bar
+    %span.icon-bar
+  Меню
 
+#leftmenu
 
-- menutext = ''
-- menutext = capture do
-  %li.opened
-    = link_to "/allwonders" do
-      =image_tag '/img/left_menu_chudesa.png'
-      =$setting.allwondersname
-    
-- menu.insert($setting.allwonderssort, menutext)
-
-
-- menutext = ''
-- menutext = capture do
-  %li.opened
-    = link_to "/allbest" do
-      =image_tag '/img/left_menu_top.png'
-      =$setting.allbestname
-    
-- menu.insert($setting.allbestsort, menutext)
-
-- menutext = ''
-- menutext = capture do
-  %li.opened
-    = link_to "/goroda" do
-      =image_tag '/img/left_menu_strani.png'
-      =$setting.gorodaname
-    
-- menu.insert($setting.gorodasort, menutext)
-
-
-- menutext = ''
-- menutext = capture do
-  
-  - Section.order('sortorder ASC').each do |section|
+  - menu = []
+  - menutext = capture do
     %li.opened
-      = link_to "/section/"+section.tag.name do
-        =image_tag section.icon.url
-        =section.name
-      %span.closeopen.fa.fa-angle-up.pull-right
+      = link_to "/allcountries" do
+        =image_tag '/img/left_menu_strani.png'
+        =$setting.allcountriesname
+      -#%span.closeopen.fa.fa-angle-up.pull-right
       %ul
-        - menus = Category.where(id: section.showplaces.select('category_id as id').group('category_id').to_a).order('sortorder ASC')
-        - menus.each do |category|
-          %li= link_to category.name, "/categories/"+category.tag.name
-- menu.insert($setting.mainmenusort, menutext)
+        - Region.order('sortorder ASC').each do |region|
+          %li= link_to region.name, "/countries/"+region.tag.name
+  - menu.insert($setting.allcountriessort, menutext)
 
-- menutext = ''
-- menutext = capture do
-  - Menulast.order('sortorder ASC').each do |menulastblock|
+
+  - menutext = ''
+  - menutext = capture do
     %li.opened
-      = link_to menulastblock.name, "/articles/"+menulastblock.tag
-      %span.closeopen.fa.fa-angle-up.pull-right
-      %ul
-        - menulastblock.staticpages.each do |category|
-          %li= link_to category.name, "/article/"+category.tag
-- menu.insert($setting.leftmenusort, menutext)
+      = link_to "/allwonders" do
+        =image_tag '/img/left_menu_chudesa.png'
+        =$setting.allwondersname
+      
+  - menu.insert($setting.allwonderssort, menutext)
 
-%ul.nav.nav-list
-  %li.nav-header 
-  - menu.each do |menublock|
-    =menublock
+
+  - menutext = ''
+  - menutext = capture do
+    %li.opened
+      = link_to "/allbest" do
+        =image_tag '/img/left_menu_top.png'
+        =$setting.allbestname
+      
+  - menu.insert($setting.allbestsort, menutext)
+
+  - menutext = ''
+  - menutext = capture do
+    %li.opened
+      = link_to "/goroda" do
+        =image_tag '/img/left_menu_strani.png'
+        =$setting.gorodaname
+      
+  - menu.insert($setting.gorodasort, menutext)
+
+
+  - menutext = ''
+  - menutext = capture do
+    
+    - Section.order('sortorder ASC').each do |section|
+      %li.opened
+        = link_to "/section/"+section.tag.name do
+          =image_tag section.icon.url
+          =section.name
+        %span.closeopen.fa.fa-angle-up.pull-right
+        %ul
+          - menus = Category.where(id: section.showplaces.select('category_id as id').group('category_id').to_a).order('sortorder ASC')
+          - menus.each do |category|
+            %li= link_to category.name, "/categories/"+category.tag.name
+  - menu.insert($setting.mainmenusort, menutext)
+
+  - menutext = ''
+  - menutext = capture do
+    - Menulast.order('sortorder ASC').each do |menulastblock|
+      %li.opened
+        = link_to menulastblock.name, "/articles/"+menulastblock.tag
+        %span.closeopen.fa.fa-angle-up.pull-right
+        %ul
+          - menulastblock.staticpages.each do |category|
+            %li= link_to category.name, "/article/"+category.tag
+  - menu.insert($setting.leftmenusort, menutext)
+
+  %ul.nav.nav-list
+    %li.nav-header 
+    - menu.each do |menublock|
+      =menublock
 
