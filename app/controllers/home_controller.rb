@@ -200,6 +200,9 @@ class HomeController < ApplicationController
          session[:placevidels] << params[:id]
          session[:placenets].delete(params[:id])
       end
+      session[:placevidelscountries] = [] if session[:placevidelscountries].nil?
+      session[:placevidelscountries][params[:id].to_i] = [] if session[:placevidelscountries][params[:id].to_i].nil?
+      session[:placevidelscountries][params[:id].to_i] = [Showplace.find(params[:id]).countries.first.id]
       redirect_to :back
     end
   end
@@ -290,6 +293,7 @@ class HomeController < ApplicationController
       current_user.placevidels.where('showplace_id'=>params[:id]).delete_all
     else
       session[:placevidels].delete(params[:id])
+      session[:placevidelscountries][params[:id].to_i] = []
     end
     redirect_to :back
   end

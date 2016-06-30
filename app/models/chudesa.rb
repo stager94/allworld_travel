@@ -6,6 +6,9 @@ class Chudesa < ActiveRecord::Base
   attr_accessible :showplaces_attributes
   accepts_nested_attributes_for :showplaces
   rails_admin do
+    include_all_fields
+    field :toptext, :ck_editor
+    field :bottomtext, :ck_editor
     configure :showplace_id do
       visible(false)
     end

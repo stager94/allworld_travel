@@ -1,4 +1,4 @@
-- set_meta_tags title: @country.h1, reverse: true
+- set_meta_tags title: @country.title, reverse: true
 
 - @bredcrumb = capture do
   %li= link_to 'Путеводитель', '/'
@@ -108,6 +108,15 @@
             %b Столица:
           %td
             =@country.stolica
+      -if @country.ispolnit.present?
+        %tr
+          %td
+            -if ( @country.parent_id.present? and @country.parent_id>0 )
+              %b Административный центр:
+            -else
+              %b Высший исполнительный орган:
+          %td
+            =@country.ispolnit
       -if @country.ploscha.present?
         %tr
           %td
@@ -132,15 +141,6 @@
             %b Высший законодательный орган:
           %td
             =@country.zakon
-      -if @country.ispolnit.present?
-        %tr
-          %td
-            -if ( @country.parent_id.present? and @country.parent_id>0 )
-              %b Административный центр:
-            -else
-              %b Высший исполнительный орган:
-          %td
-            =@country.ispolnit
       -if @country.naselenie.present?
         %tr
           %td

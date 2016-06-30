@@ -31,21 +31,20 @@
           (0)
 - else
   - places = Showplace.where(:id => session[:placevidels])
-  - objcnt = places.select('showplaces.id').group('showplaces.id')
-  - countries = Linkobjtocount.where('showplace_id' => objcnt).group('country_id')
+  - countries = Country.where(id: session[:placevidelscountries].flatten.compact.uniq) rescue []
   -if countries
     .current_country
       .pull-left.strani
         Страны, в которых я был
         %span.ccount
           (
-          =countries.count.length
+          =countries.count
           ):
-      -countries.each do |lccountry|
-        =link_to "/country/"+lccountry.country.tag do
+      -countries.each do |country|
+        =link_to "/country/"+country.tag do
           .flag_img
-            -if flagimg = lccountry.country.flag.url(:thumb)
-              =image_tag flagimg, style: 'width:35px;'
+            -if flagimg = country.flag.url(:thumb)
+              = image_tag flagimg, style: 'width:35px;', alt: country.name, data: { toggle: "tooltip", placement: "bottom", title: country.name }
       - if places.sum('point') > 0
         .current_point.pull-right
           =places.sum('point').to_s

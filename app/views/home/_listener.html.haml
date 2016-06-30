@@ -6,6 +6,8 @@
     (
     =@showplacescount
     )
+  - if defined? blocktext
+    %span= raw blocktext
   .placepaginator
     = paginate @showplaces, :left => 4, :right => 1,:param_name => :shpage, :remote => true
   - counterplaces = 0

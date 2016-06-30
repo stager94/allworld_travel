@@ -1,4 +1,5 @@
 - @bredcrumb = capture do
   %li= link_to 'Путеводитель', '/'
   %li.active Топ 100 достопримечательностельностей
-=render :partial => "listener", :locals => { :blockname => 'Топ 100 достопримечательностельностей' }
+
+= render partial: "listener", locals: { blockname: 'Топ 100 достопримечательностельностей', blocktext: Setting.top100_text }

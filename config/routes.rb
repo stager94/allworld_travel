@@ -4,7 +4,7 @@ Allworld::Application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
   get "persons/profile"
   get 'persons/profile', as: 'user_root'
-  devise_for :users, controllers: {sessions: 'sessions', registrations: 'registrations'}
+  devise_for :users, controllers: {sessions: 'sessions', registrations: 'registrations', omniauth_callbacks: 'omniauth_callbacks'}
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   get '/place/:tag', to: 'home#place'
   get '/country/:tag', to: 'home#country'
@@ -40,6 +40,7 @@ Allworld::Application.routes.draw do
   get '/article/:tag', to: 'home#page'
 
   get "guide", to: 'home#index', :as =>'guide'
+  match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], as: :finish_signup
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

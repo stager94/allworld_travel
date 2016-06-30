@@ -10,7 +10,7 @@ class Showplace < ActiveRecord::Base
   attr_accessible :group_id
   belongs_to :region, :inverse_of => :showplaces
   attr_accessible :region_id
-  attr_accessible :datapostroyki, :description, :fulldesc, :googlemap, :h1, :keywords, :lose, :name, :primech, :shortdesc, :tag, :top100, :unesco, :wonders7, :point, :showfilter, :showhome, :ginnesa
+  attr_accessible :datapostroyki, :description, :fulldesc, :googlemap, :h1, :keywords, :lose, :name, :primech, :shortdesc, :tag, :top100, :unesco, :wonders7, :point, :showfilter, :showhome, :ginnesa, :title
   attr_accessible :showinsection, :showincountry, :itsgorod
 
   has_many :placedas, :dependent => :destroy
@@ -118,7 +118,7 @@ class Showplace < ActiveRecord::Base
       fields :datapostroyki, :lose, :top100, :unesco, :wonders7, :ginnesa, :chudesa do 
         group :obshee
       end
-      fields :description, :h1, :keywords, :name  do 
+      fields :description, :h1, :keywords, :name, :title  do 
         group :meta
       end
       fields  :shortdesc, :fulldesc, :primech  do 

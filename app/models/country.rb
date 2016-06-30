@@ -4,7 +4,7 @@ class Country < ActiveRecord::Base
   attr_accessible :description, :h1, :keywords, :name
   attr_accessible :datanezavis, :stolica, :ploscha, :delenie, :glava, :zakon, :ispolnit, :naselenie, :language, :offname, :valute
   attr_accessible :descforturist, :shortdesc
-  attr_accessible :googlemap
+  attr_accessible :googlemap, :title
   attr_accessible :bezopasnost, :ceny, :chtobrat, :chtonugnoznat, :cultura, :dostoprimech,  :internet, :jazik,  :oteli, :pitanie, :politika, :prazdniki, :suvenir, :transport, :valutes, :visum
   attr_accessible :primech, :tag, :chaspoyas, :pogoda, :timezone
 
@@ -105,7 +105,7 @@ class Country < ActiveRecord::Base
       fields :datanezavis, :stolica, :ploscha, :delenie, :glava, :zakon, :ispolnit, :naselenie, :language, :offname, :valute do 
         group :obshee
       end
-      fields :description, :h1, :keywords, :name  do 
+      fields :description, :h1, :keywords, :name, :title  do 
         group :meta
       end
       fields  :shortdesc, :descforturist, :primech  do 
@@ -114,7 +114,7 @@ class Country < ActiveRecord::Base
       fields :flag, :crest, :googlemap, :countrypictures, :countryvideos, :globus, :pogoda  do 
         group :mediainfo
       end
-      fields :tag, :region, :chaspoyas, :parent  do 
+      fields :tag, :region, :parent  do 
         group :slugebnoe
       end
       field :timezone do

@@ -1,5 +1,7 @@
 class Setting < ActiveRecord::Base
 
+  attr_accessible :top100_text
+
 	has_attached_file :favicon, styles: { 
 		desktop: "32x32#", 
 		apple_touch: "120x120#",
@@ -29,6 +31,15 @@ class Setting < ActiveRecord::Base
 
   def self.logotype(style = :original)
   	instance.logotype.url(style)
+  end
+
+  def self.top100_text(style = :original)
+    instance.top100_text
+  end
+
+  rails_admin do
+    include_all_fields
+    field :top100_text, :ck_editor
   end
 
 end

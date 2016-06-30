@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160613000618) do
+ActiveRecord::Schema.define(version: 20160630101044) do
 
   create_table "allsettings", force: :cascade do |t|
     t.boolean  "default"
@@ -138,7 +138,6 @@ ActiveRecord::Schema.define(version: 20160613000618) do
     t.string   "globus_content_type", limit: 255
     t.integer  "globus_file_size",    limit: 4
     t.datetime "globus_updated_at"
-    t.integer  "chaspoyas",           limit: 4,     default: 0,     null: false
     t.text     "pogoda",              limit: 65535
     t.integer  "parent_id",           limit: 4
     t.string   "timezone",            limit: 255,   default: "UTC"
@@ -146,6 +145,7 @@ ActiveRecord::Schema.define(version: 20160613000618) do
     t.string   "crest_content_type",  limit: 255
     t.integer  "crest_file_size",     limit: 4
     t.datetime "crest_updated_at"
+    t.string   "title",               limit: 255
   end
 
   add_index "countries", ["region_id"], name: "index_countries_on_region_id", using: :btree
@@ -199,12 +199,16 @@ ActiveRecord::Schema.define(version: 20160613000618) do
   end
 
   create_table "footersubmenus", force: :cascade do |t|
-    t.string   "name",          limit: 255
-    t.integer  "sortorder",     limit: 4
-    t.string   "url",           limit: 255
-    t.integer  "footermenu_id", limit: 4
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.string   "name",              limit: 255
+    t.integer  "sortorder",         limit: 4
+    t.string   "url",               limit: 255
+    t.integer  "footermenu_id",     limit: 4
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.string   "icon_file_name",    limit: 255
+    t.string   "icon_content_type", limit: 255
+    t.integer  "icon_file_size",    limit: 4
+    t.datetime "icon_updated_at"
   end
 
   add_index "footersubmenus", ["footermenu_id"], name: "index_footersubmenus_on_footermenu_id", using: :btree
@@ -238,6 +242,16 @@ ActiveRecord::Schema.define(version: 20160613000618) do
     t.integer  "image_file_size",    limit: 4
     t.datetime "image_updated_at"
   end
+
+  create_table "identities", force: :cascade do |t|
+    t.integer  "user_id",    limit: 4
+    t.string   "provider",   limit: 255
+    t.string   "uid",        limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  add_index "identities", ["user_id"], name: "index_identities_on_user_id", using: :btree
 
   create_table "linkobjtocounts", force: :cascade do |t|
     t.integer  "showplace_id", limit: 4
@@ -435,8 +449,9 @@ ActiveRecord::Schema.define(version: 20160613000618) do
     t.string   "watermark_content_type", limit: 255
     t.integer  "watermark_file_size",    limit: 4
     t.datetime "watermark_updated_at"
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
+    t.text     "top100_text",            limit: 65535
   end
 
   create_table "showplacepictures", force: :cascade do |t|
@@ -482,6 +497,7 @@ ActiveRecord::Schema.define(version: 20160613000618) do
     t.boolean  "showincountry",                                       default: true
     t.boolean  "itsgorod",                                            default: false
     t.integer  "chudesa_id",    limit: 4
+    t.string   "title",         limit: 255
   end
 
   add_index "showplaces", ["category_id"], name: "index_showplaces_on_category_id", using: :btree
@@ -589,6 +605,7 @@ ActiveRecord::Schema.define(version: 20160613000618) do
   add_foreign_key "countrytextblocks", "countries"
   add_foreign_key "countrytextblocks", "textblocks"
   add_foreign_key "footersubmenus", "footermenus"
+  add_foreign_key "identities", "users"
   add_foreign_key "newspictures", "news"
   add_foreign_key "newsvideos", "news"
   add_foreign_key "placetextblocks", "showplaces"
