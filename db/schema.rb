@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160630101044) do
+ActiveRecord::Schema.define(version: 20160630120045) do
 
   create_table "allsettings", force: :cascade do |t|
     t.boolean  "default"
@@ -73,6 +73,14 @@ ActiveRecord::Schema.define(version: 20160630101044) do
   end
 
   add_index "chudesas", ["showplace_id"], name: "index_chudesas_on_showplace_id", using: :btree
+
+  create_table "chudesas_showplaces", id: false, force: :cascade do |t|
+    t.integer "chudesa_id",   limit: 4
+    t.integer "showplace_id", limit: 4
+  end
+
+  add_index "chudesas_showplaces", ["chudesa_id"], name: "index_chudesas_showplaces_on_chudesa_id", using: :btree
+  add_index "chudesas_showplaces", ["showplace_id"], name: "index_chudesas_showplaces_on_showplace_id", using: :btree
 
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string   "data_file_name",    limit: 255, null: false
@@ -496,7 +504,6 @@ ActiveRecord::Schema.define(version: 20160630101044) do
     t.boolean  "showinsection",                                       default: true
     t.boolean  "showincountry",                                       default: true
     t.boolean  "itsgorod",                                            default: false
-    t.integer  "chudesa_id",    limit: 4
     t.string   "title",         limit: 255
   end
 

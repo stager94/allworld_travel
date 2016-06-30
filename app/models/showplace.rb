@@ -2,8 +2,9 @@ class Showplace < ActiveRecord::Base
 
   belongs_to :section, :inverse_of => :showplaces
   attr_accessible :section_id
-  belongs_to :chudesa, :inverse_of => :showplaces
-  attr_accessible :chudesa_id
+  # belongs_to :chudesa, :inverse_of => :showplaces
+  has_and_belongs_to_many :chudesas
+  attr_accessible :chudesa_ids
   belongs_to :category, :inverse_of => :showplaces
   attr_accessible :category_id
   belongs_to :group, :inverse_of => :showplaces
@@ -115,7 +116,7 @@ class Showplace < ActiveRecord::Base
       field :fulldesc, :ck_editor
       field :shortdesc, :ck_editor
       field :primech, :ck_editor
-      fields :datapostroyki, :lose, :top100, :unesco, :wonders7, :ginnesa, :chudesa do 
+      fields :datapostroyki, :lose, :top100, :unesco, :wonders7, :ginnesa, :chudesas do 
         group :obshee
       end
       fields :description, :h1, :keywords, :name, :title  do 
