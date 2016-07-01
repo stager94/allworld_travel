@@ -46,7 +46,7 @@
           .flag_img
             -if flagimg = country.flag.url(:thumb)
               = image_tag flagimg, style: 'width:35px;', alt: country.name, data: { toggle: "tooltip", placement: "bottom", title: country.name }
-            %span.title= lccountry.name
+            %span.title= country.name
       - if places.sum('point') > 0
         .current_point.pull-right
           =places.sum('point').to_s

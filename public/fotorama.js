@@ -1022,6 +1022,7 @@ fotoramaVersion = "4.6.4", function(a, b, c, d, e) {
                 if (!f) {
                     f = e[g] = qe[g].clone(), h = f.data(), h.data = e;
                     var i = f[0];
+                    console.log(f);
                     "stage" === b ? (e.html && d('<div class="' + kc + '"></div>').append(e._html ? d(e.html).removeAttr("id").html(e._html) : e.html).appendTo(f), e.caption && d(N(oc, N(pc, e.caption))).appendTo(f), e.video && f.addClass(zb).append(Fe.clone()), X(i, function() {
                         setTimeout(function() {
                             Q(re)

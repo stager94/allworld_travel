@@ -59,7 +59,7 @@ $(function() {
   if(bloks_total.length){
     for(i=0; i < bloks_total.length;i++){
       blok_height = Number($(bloks_total[i]).css('height').replace('px',''));
-      if(blok_height > 185){
+      if(blok_height > 195){
         $(bloks_total[i]).css('max-height','180px');
         $(bloks_total[i]).parent().find('.next').show();
       }
@@ -114,15 +114,15 @@ $('.next').click(function() {
 
 
 $(document).ready(function(){
-              $('.fotorama').dblclick(function(){
-                  $(function () {
-                      var fotorama = $('.fotorama')
-                              .fotorama({allowfullscreen: true})
-                              .data('fotorama');
-                      fotorama.requestFullScreen();
+    $('.fotorama').dblclick(function(){
+        $(function () {
+            var fotorama = $('.fotorama')
+                    .fotorama({allowfullscreen: true})
+                    .data('fotorama');
+            fotorama.requestFullScreen();
 
-                  });
+        });
 
-              });
+    });
 
-          });
+});

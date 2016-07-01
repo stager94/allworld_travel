@@ -154,6 +154,12 @@ label {
 	.current_country.opened a {
 		display: block !important;
 	}
+	.showplace_wcorner {
+		float: none !important;
+	}
+	.showfulltext > .next > span {
+		right: 50% !important;
+	}
 }
 
 @media screen and (max-width: 700px) {
@@ -195,6 +201,12 @@ label {
 	#leftmenu {
 		display: none;
 	}
+	#leftmenu.opened {
+		display: block;
+	}
+	.open-leftmenu {
+		display: block !important;
+	}
 }
 
 
@@ -209,6 +221,7 @@ label {
   color: white;
   background-color: #1a587f;
   cursor: pointer;
+  display: none;
 }
 .open-leftmenu button {
 	margin: 3px 0 0 0;

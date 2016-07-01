@@ -22,8 +22,10 @@ $(document).ready(function() {
     $(document).mousemove(function(e) {
         if(e.pageY <= 60) {
             // Launch MODAL BOX
-            //$('#myModal').modal()
-            $('#exitalerts').fadeIn("slow");
+            // $('#myModal').modal()
+            if ($(".topnav .alert").length == 0) {
+              $('#exitalerts').fadeIn("slow");
+            }
         } else {
           $('#exitalerts').fadeOut("slow");
         }
