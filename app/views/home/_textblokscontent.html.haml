@@ -29,7 +29,7 @@
               .showplace_item.nohover
                 .showplace_img
                   =image_tag placetextblock.image.url(:thumb)
-                  - if placetextblock.textblock.name.present?
+                  - if placetextblock.textblock && placetextblock.textblock.name.present?
                     %p.mini= placetextblock.textblock.name
         .col-md-9.col-lg-9.showfulltext
           .samtext=placetextblock.fulltext.html_safe
