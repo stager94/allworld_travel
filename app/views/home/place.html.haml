@@ -35,13 +35,13 @@
   .ohgallery
     = render :partial => 'shared/slide'
 
-    .fotorama{"data-allowfullscreen"=>"true", "data-nav"=>"thumbs", "data-fit"=>"contain", "data-width"=>"100%", "data-thumbwidth" => "153px", "data-thumbheight" => "109px", "data-arrows"=>"true"}
+    .fotorama{"data-allowfullscreen"=>"true", "data-nav"=>"thumbs", "data-fit"=>"contain", "data-width"=>"100%", "data-thumbwidth" => "115px", "data-thumbheight" => "84px", "data-arrows"=>"true", "data-click"=>"false"}
       - @showplace.showplacepictures.each do |showplacepictures|
         - if shimg = showplacepictures.image
-          =image_tag showplacepictures.image.url(:medium), "data-full" => showplacepictures.image.url(:large), "data-caption"=> showplacepictures.name
+          = image_tag showplacepictures.image.url(:medium), "data-full" => showplacepictures.image.url(:large), "data-caption"=> showplacepictures.name
       - if videos = @showplace.showplacevideos.first
         - @showplace.showplacevideos.each do |video|
-          =link_to video.name, video.kode.html_safe
+          = link_to video.name, video.kode.html_safe
   .ohdetails
     .cntrmap
       -if @showplace.googlemap.present?

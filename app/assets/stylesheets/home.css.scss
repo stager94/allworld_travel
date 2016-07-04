@@ -1,3 +1,7 @@
+.fotorama__nav--thumbs .fotorama__nav__frame {height: 74px!important;width: 115px!important;}
+// .fotorama__nav--thumbs .fotorama__nav__frame  img{width: 118px!important;height: 84px!important;}
+
+
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
@@ -453,7 +457,7 @@ opacity: 1;
 .modal-dialog.long {width: 600px;}
 
 .btn-primary{background-color: #1b587f;}
-.fotorama__active .fotorama__thumb{box-shadow: 0 0 16px #98d1ec;}
+.fotorama__active .fotorama__thumb{outline: 2px solid #98d1ec;}
 .fotorama__thumb-border{display: none;}
 .filterbl {padding: 10px 0;}
 #accordionteritory .country_wcorner {width: 360px;}
@@ -541,8 +545,6 @@ text-decoration: none;
     -moz-column-gap: 20px; /* Firefox */
     column-gap: 20px;
 }
-.fotorama__nav--thumbs .fotorama__nav__frame {padding: 10px!important;height: 74px!important;width: 115px!important;}
-.fotorama__nav--thumbs .fotorama__nav__frame  img{width: 118px!important;height: 84px!important;left: -2px!important;top: -10px!important;}
 #place .places_atr_block{height: 36px;padding: 8px 0;}
 .filterbl {padding: 2px 0;}
 #place .places_atr_block a{margin: 8px;}
@@ -599,8 +601,6 @@ text-decoration: none;
 #place .cntrmap iframe {height: 288px;width:290px;}
 #place .ohgallery{padding-right: 296px;height: 365px;}
 #place .ohdetails{width: 296px;height: 384px;padding-left: 0;}
-.fotorama__nav--thumbs .fotorama__nav__frame {padding: 10px!important;height: 74px!important;width: 115px!important;}
-.fotorama__nav--thumbs .fotorama__nav__frame  img{width: 118px!important;height: 84px!important;left: -2px!important;top: -10px!important;}
 #place .places_atr_block{height: 36px;padding: 8px 0;}
 .filterbl {padding: 2px 0;}
 #gsInformerID-SaEv66Ur83g2e0{width: 125px!important;}
@@ -648,8 +648,6 @@ text-decoration: none;
 #place .cntrmap iframe {height: 375px;width:378px;}
 #place .ohgallery{padding-right: 385px;height: 479px;}
 #place .ohdetails{width: 385px;height: 496px;padding-left: 0;}
-.fotorama__nav--thumbs .fotorama__nav__frame {padding: 10px!important;height: 96px!important;width: 150px!important;}
-.fotorama__nav--thumbs .fotorama__nav__frame  img{width: 153px!important;height: 109px!important;left: -2px!important;top: -10px!important;}
 #place .places_atr_block{height: 47px;padding: 12px 0;}
 .filterbl {padding: 5px 0;}
 
@@ -695,8 +693,6 @@ text-decoration: none;
 #place .cntrmap iframe {height: 542px;width:544px;}
 #place .ohgallery{padding-right: 554px;height: 603px;}
 #place .ohdetails{width: 554px;height: 713px;padding-left: 0;}
-.fotorama__nav--thumbs .fotorama__nav__frame {padding: 10px!important;height: 138px!important;width: 216px!important;}
-.fotorama__nav--thumbs .fotorama__nav__frame  img{width: 220px!important;height: 157px!important;left: -2px!important;top: -10px!important;}
 #place .places_atr_block{height: 68px;padding: 24px 0;}
 }
 

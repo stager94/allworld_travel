@@ -19,6 +19,7 @@
 //= require turbolinks
 //= require jquery.cookie
 //= require jquery.marquee
+//= require jquery.doubletap
 
 $(function() {
 
@@ -114,15 +115,11 @@ $('.next').click(function() {
 
 
 $(document).ready(function(){
-    $('.fotorama').dblclick(function(){
-        $(function () {
+    $(document).delegate(".fotorama__stage", "doubletap dblclick", function(){
             var fotorama = $('.fotorama')
                     .fotorama({allowfullscreen: true})
                     .data('fotorama');
             fotorama.requestFullScreen();
-
-        });
-
     });
 
 });
