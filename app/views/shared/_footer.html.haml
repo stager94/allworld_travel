@@ -1,5 +1,8 @@
 .container-fluid
   .row
+    .block5
+      = Setting.footer_text
+    .afdelimit
     - Footermenu.order('sortorder ASC').each do |razdel|
       .block5
         %h4=razdel.name
@@ -14,14 +17,20 @@
     .block5contact
       %h4 Контакты
       %p
-        e-mail: info@allworld-travel.com
+        = "e-mail: #{Setting.system_email}"
       %p
         Служба поддержки
       -#=$setting.contactadress
       .socialicons
-        %span#icovk
-        %span#icofb
-        %span#icoin
-        %span#icotw
-        %span#icoyb
-        %span#icogp
+        = link_to Setting.vk_link, target: "_blank" do
+          %span#icovk
+        = link_to Setting.fb_link, target: "_blank" do
+          %span#icofb
+        = link_to Setting.instagram_link, target: "_blank" do
+          %span#icoin
+        = link_to Setting.twitter_link, target: "_blank" do
+          %span#icotw
+        = link_to Setting.youtube_link, target: "_blank" do
+          %span#icoyb
+        = link_to Setting.google_link, target: "_blank" do
+          %span#icogp

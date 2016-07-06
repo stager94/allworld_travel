@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160630145157) do
+ActiveRecord::Schema.define(version: 20160706223430) do
 
   create_table "allsettings", force: :cascade do |t|
     t.boolean  "default"
@@ -460,6 +460,14 @@ ActiveRecord::Schema.define(version: 20160630145157) do
     t.datetime "created_at",                           null: false
     t.datetime "updated_at",                           null: false
     t.text     "top100_text",            limit: 65535
+    t.text     "footer_text",            limit: 65535
+    t.string   "system_email",           limit: 255
+    t.string   "vk_link",                limit: 255
+    t.string   "fb_link",                limit: 255
+    t.string   "instagram_link",         limit: 255
+    t.string   "twitter_link",           limit: 255
+    t.string   "youtube_link",           limit: 255
+    t.string   "google_link",            limit: 255
   end
 
   create_table "showplacepictures", force: :cascade do |t|

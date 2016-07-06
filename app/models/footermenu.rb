@@ -1,5 +1,5 @@
 class Footermenu < ActiveRecord::Base
-  has_many :footersubmenus
+  has_many :footersubmenus, dependent: :destroy
   attr_accessible :name, :sortorder
 
   rails_admin do

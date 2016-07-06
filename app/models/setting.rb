@@ -1,6 +1,13 @@
 class Setting < ActiveRecord::Base
 
-  attr_accessible :top100_text
+  attr_accessible :top100_text, :footer_text
+  attr_accessible :system_email
+  attr_accessible :vk_link
+  attr_accessible :fb_link
+  attr_accessible :instagram_link
+  attr_accessible :twitter_link
+  attr_accessible :youtube_link
+  attr_accessible :google_link
 
 	has_attached_file :favicon, styles: { 
 		desktop: "32x32#", 
@@ -35,6 +42,32 @@ class Setting < ActiveRecord::Base
 
   def self.top100_text(style = :original)
     instance.top100_text
+  end
+
+  def self.footer_text
+    instance.footer_text
+  end
+
+  def self.system_email
+    instance.system_email
+  end
+  def self.vk_link
+    instance.vk_link
+  end
+  def self.fb_link
+    instance.fb_link
+  end
+  def self.instagram_link
+    instance.instagram_link
+  end
+  def self.twitter_link
+    instance.twitter_link
+  end
+  def self.youtube_link
+    instance.youtube_link
+  end
+  def self.google_link
+    instance.google_link
   end
 
   rails_admin do
