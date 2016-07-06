@@ -112,7 +112,13 @@ $('.next').click(function() {
 });
 });
 
-
+window.getTransform = function(el) {
+  css = $(el).css('-webkit-transform');
+  return css.match(/ma/) && css.match(/-?\d+(?!d)/g)[css.match(/3d/) ? 12 : 4];
+}
+window.constructTransform = function(pos) {
+  return 'translate3d(' + (pos/* + (_001 ? 0.001 : 0)*/) + 'px,0,0)'; // 0.001 to remove Retina artifacts
+}
 
 $(document).ready(function(){
     $(document).delegate(".fotorama__stage", "doubletap dblclick", function(){
@@ -122,4 +128,7 @@ $(document).ready(function(){
             fotorama.requestFullScreen();
     });
 
+
 });
+
+

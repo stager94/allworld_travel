@@ -89,6 +89,8 @@ var _fotoramaClass = 'fotorama',
     spinnerClass = _fotoramaClass + '__spinner',
 
     buttonAttributes = '" tabindex="0" role="button';
+
+
 var JQUERY_VERSION = $ && $.fn.jquery.split('.');
 
 if (!JQUERY_VERSION
@@ -1693,6 +1695,8 @@ function touch ($el, options) {
     }, TOUCH_TIMEOUT);
   }
 
+
+
   if (MS_POINTER) {
     addEvent(el, 'MSPointerDown', onStart);
     addEvent(document, 'MSPointerMove', onMove);
@@ -1706,6 +1710,9 @@ function touch ($el, options) {
     addEvent(document, 'touchstart', onOtherStart);
     addEvent(document, 'touchend', onOtherEnd);
     addEvent(document, 'touchcancel', onOtherEnd);
+
+    
+
 
     $WINDOW.on('scroll', onOtherEnd);
 
@@ -1973,7 +1980,6 @@ jQuery.Fotorama = function ($fotorama, opts) {
       $prevSlider = $(div("fotorama__prev")).appendTo($nav),
       $nextSlider = $(div("fotorama__next")).appendTo($nav),
 
-
       $fullscreenIcon = $(div(fullscreenIconClass + buttonAttributes)),
       fullscreenIcon = $fullscreenIcon[0],
       $videoPlay = $(div(videoPlayClass)),
@@ -2056,6 +2062,24 @@ jQuery.Fotorama = function ($fotorama, opts) {
       .toggleClass(wrapNoControlsClass, !opts.controlsonstart);
 
   fotoramaData.fotorama = this;
+
+  function onNextClick() {
+    var c = readPosition($navShaft);
+    c = Math.abs(c) + 117; // + needs to be refined - my thumbs are 70x70 
+    $navShaft.css(getTranslate(-c));
+    slideNavShaft.l = -c;
+    $(document).resize();
+  }
+  $(document).delegate('.fotorama__next', 'click', onNextClick);
+
+  function onPrevClick() {
+    var c = readPosition($navShaft);
+    c += 117; // + needs to be refined - my thumbs are 70x70 
+    $navShaft.css(getTranslate(c));
+    slideNavShaft.l = c;
+    $(document).resize();
+  }
+  $(document).delegate('.fotorama__prev', 'click', onPrevClick);
 
   function checkForVideo () {
     $.each(data, function (i, dataFrame) {
@@ -2559,7 +2583,7 @@ jQuery.Fotorama = function ($fotorama, opts) {
 
         dataFrame.caption && $(div(captionClass, div(captionWrapClass, dataFrame.caption))).appendTo($frame);
         if (dataFrame.video) {
-          $(div("fotorama__info", div('fotorama__type-photo', "<span class='fotorama-video-icon'></span>Видео" ))).appendTo($frame);
+          $(div("fotorama__info", div('fotorama__type-photo', "<span class='fotorama-photo-icon'></span>Видео" ))).appendTo($frame);
         } else {
           $(div("fotorama__info", div('fotorama__type-photo', "<span class='fotorama-photo-icon'></span>Фото" ))).appendTo($frame);
         }
@@ -2752,7 +2776,7 @@ jQuery.Fotorama = function ($fotorama, opts) {
   }
 
   function slideNavShaft (options) {
-    //console.log('slideNavShaft', options.guessIndex, options.keep, slideNavShaft.l);
+    console.log('slideNavShaft', options.guessIndex, options.keep, slideNavShaft.l);
     var $guessNavFrame = data[options.guessIndex][navFrameKey];
     if ($guessNavFrame) {
       var overflowFLAG = navShaftTouchTail.min !== navShaftTouchTail.max,
