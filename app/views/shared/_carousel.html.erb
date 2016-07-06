@@ -11,8 +11,10 @@ slides.each do |slide|
   indicators +='<li data-target="#carousel-example-generic" data-slide-to="'+counterslide.to_s+'" class="'+firctactive+'"></li>'
   items +='<div class="item '+firctactive+'">'
   items +='<img src="'+slide.image.url(:slide)+'" alt="'+slide.name+'">'
+  items +='<div class="carousel-caption_ext">'
   items +='<div class="carousel-caption">'+slide.description.html_safe+'</div>'
   items +='<div class="carousel-title">'+slide.name.html_safe+'</div>'
+  items +='</div>'
   items +='</div>'
   
   firctactive   =''

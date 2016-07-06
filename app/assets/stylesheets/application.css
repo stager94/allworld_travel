@@ -207,6 +207,12 @@ label {
 	.open-leftmenu {
 		display: block !important;
 	}
+	.slider {
+		display: none;
+	}
+	.fullcontent {
+		padding: 0 7px;
+	}
 }
 
 
