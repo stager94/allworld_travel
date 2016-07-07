@@ -1,19 +1,40 @@
 - set_meta_tags title: @country.title, reverse: true
+- use_previous_breadcrumbs = false
 
 - @bredcrumb = capture do
   %li= link_to 'Путеводитель', '/'
-  - if @referer[:controller] == 'home' && @referer[:action] == 'place'
-    - @showplace = Showplace.find_by_tag @referer[:tag]
 
-    %li= link_to @showplace.section.name, "/section/#{@showplace.section.tag.name}"
-    %li= link_to @showplace.category.name, "/categories/#{@showplace.category.tag.name}"
-    %li= link_to @showplace.name, "/place/#{@referer[:tag]}"
-    %li.active= @country.name
+  - session[:breadcrumbs] ||= []
+  - session[:breadcrumbs_old] = session[:breadcrumbs]
+  - session[:breadcrumbs] = []
 
-  - else
-    %li= link_to 'Страны мира', '/allcountries'
-    %li= link_to @country.region.name, '/countries/'+@country.region.tag.name
-    %li.active= @country.name
+  - if session[:breadcrumbs_old].any?
+    - titles = session[:breadcrumbs_old].map {|a| a[0]}
+    - if titles.include? @country.name
+      - index = titles.index @country.name
+      - session[:breadcrumbs] = session[:breadcrumbs_old][0..index]
+      - use_previous_breadcrumbs = true
+
+  - unless use_previous_breadcrumbs
+    - if @referer[:controller] == 'home' && @referer[:action] == 'place'
+      - @showplace = Showplace.find_by_tag @referer[:tag]
+      - session[:breadcrumbs] = session[:breadcrumbs_old]
+      / - session[:breadcrumbs] << [@showplace.section.name, "/section/#{@showplace.section.tag.name}"]
+      / - session[:breadcrumbs] << [@showplace.category.name, "/categories/#{@showplace.category.tag.name}"]
+      / - session[:breadcrumbs] << [@showplace.name, "/place/#{@referer[:tag]}"]
+    - else
+      - session[:breadcrumbs] << ['Страны мира', '/allcountries']
+      - session[:breadcrumbs] << [@country.region.name, '/countries/'+@country.region.tag.name]
+
+    - session[:breadcrumbs] << [@country.name, '/country/'+@country.tag]
+
+  / - binding.pry
+
+  - session[:breadcrumbs].each do |title, link|
+    - if link
+      %li= link_to title, link
+    - else
+      %li.active= title
 
 .big_flag
   -if flagimg = @country.flag.url(:thumb)

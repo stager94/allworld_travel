@@ -702,3 +702,13 @@ text-decoration: none;
   background: rgba(0,0,0,.5) !important;
   color: white;
 }
+
+
+@media screen and (max-width: 991px) {
+  .ohdetails {
+    width: 100%;
+  }
+  .cntrmap iframe {
+    width: 100% !important;
+  }
+}
