@@ -33,11 +33,10 @@
         
     .container-fluid#contentbody
       .row.pull-center
-        -#unless current_page?(root_url)
-        .leftmenu
-          .blocknoborder.sidebar-nav
-            = render :partial => 'shared/leftmenuperson'
-        .fullcontent#contenetblock
+        - unless (params[:controller] == "users" && %w(edit update).include?(params[:action]))
+          .leftmenu
+            .blocknoborder.sidebar-nav= render partial: 'shared/leftmenuperson'
+        #contenetblock{ class: "#{'fullcontent' unless (params[:controller] == "users" && %w(edit update).include?(params[:action])) }" }
           = yield
       
     .container-fluid

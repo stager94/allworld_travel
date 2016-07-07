@@ -24,8 +24,16 @@ class UsersController < ApplicationController
   def update
     @user = current_user
 
-    @user.update params.require(:user).permit!
+    if params[:commit] == "Изменить пароль"
+      permitted_params = params.require(:user).permit(:password)
+    else
+      permitted_params = params.require(:user).permit(:username, :email, :first_name, :last_name, :country, :city, :gender, :birthday)
+    end
+    
+    @user.update permitted_params
+
     if @user.valid?
+      sign_in(current_user, bypass: true)
       redirect_to profile_path
     else
       render :edit

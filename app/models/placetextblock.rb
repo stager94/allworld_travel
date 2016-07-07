@@ -14,7 +14,6 @@ class Placetextblock < ActiveRecord::Base
 
   attr_accessible :delete_image
 
-  # before_update :clear_image
   after_update :disable_clear_image
 
   # validates :textblock, presence: true
@@ -37,20 +36,11 @@ class Placetextblock < ActiveRecord::Base
 
 private
 
-  def clear_image
-    self.image.clear if self.delete_image == true
-    # self.delete_image = false
-    # binding.pry
-  end
-
   def disable_clear_image
     if delete_image_changed? && delete_image == true
       self.image.clear
       self.update_attribute :delete_image, false
     end
-    # Placetextblock.skip_callback true
-    
-    # Placetextblock.skip_callback false
   end
 
 

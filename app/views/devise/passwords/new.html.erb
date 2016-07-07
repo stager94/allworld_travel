@@ -3,7 +3,7 @@
 
 	<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, class: "" }) do |f| %>
 	  <%= devise_error_messages! %>
-
+	  <p>Введите свой адрес электронной почты и мы отправим Вам ссылку для восстановления пароля</p>
 	  <div class='field form-group'>
 	  <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "введите e-mail" %></div>
 	  <div class='field form-group'><%= f.submit "Отправить ссылку для восстановления пароля", class:'btn btn-primary btn-block' %></div>
