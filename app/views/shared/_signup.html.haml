@@ -58,6 +58,13 @@
                 = link_to "", user_instagram_omniauth_authorize_path, class: 'icoin social-auth'
                 = link_to "", user_google_oauth2_omniauth_authorize_path, class: 'icogp social-auth'
 
+
+            %hr
+            Уже зарегистрированы?
+            %br
+            = link_to "Войти", new_user_session_path, class: "btn btn-primary", style: "width:165px;max-width:100%;"
+            %hr
+
         .greyed Продожая, Вы соглашаетесь с нашей политикой конфиденциальности и условиями пользования.
       .modal-footer
         

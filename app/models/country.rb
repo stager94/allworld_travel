@@ -31,7 +31,7 @@ class Country < ActiveRecord::Base
   validates_attachment_content_type :flag, :content_type => /\Aimage\/.*\Z/
 
   attr_accessible :crest
-  has_attached_file :crest, :styles => { :thumb => "140>", :micro => "70x50#" }, default_url: ""
+  has_attached_file :crest, :styles => { :thumb => "140x100#", :micro => "70x50#" }, :default_url => "/images/:style/missing.png"
   validates_attachment_content_type :crest, :content_type => /\Aimage\/.*\Z/
 
   attr_accessible :globus
