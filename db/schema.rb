@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160706223430) do
+ActiveRecord::Schema.define(version: 20160707151356) do
 
   create_table "allsettings", force: :cascade do |t|
     t.boolean  "default"
@@ -359,8 +359,8 @@ ActiveRecord::Schema.define(version: 20160706223430) do
     t.text     "fulltext",           limit: 65535
     t.integer  "showplace_id",       limit: 4
     t.integer  "textblock_id",       limit: 4
-    t.datetime "created_at",                                   null: false
-    t.datetime "updated_at",                                   null: false
+    t.datetime "created_at",                                       null: false
+    t.datetime "updated_at",                                       null: false
     t.text     "image_file_name",    limit: 65535
     t.text     "image_content_type", limit: 65535
     t.integer  "image_file_size",    limit: 4
@@ -368,6 +368,7 @@ ActiveRecord::Schema.define(version: 20160706223430) do
     t.integer  "othershowplace_id",  limit: 4
     t.text     "blocklink",          limit: 65535
     t.integer  "position",           limit: 4,     default: 0
+    t.boolean  "delete_image",                     default: false
   end
 
   add_index "placetextblocks", ["showplace_id"], name: "index_placetextblocks_on_showplace_id", using: :btree

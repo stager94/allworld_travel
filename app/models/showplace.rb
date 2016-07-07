@@ -48,7 +48,8 @@ class Showplace < ActiveRecord::Base
   
   before_create :add_tag
   before_validation :comma_to_delimiter
-  
+  after_save -> { self.touch }
+
   def countries_ids
     country_ids.join(",")
   end
@@ -112,6 +113,7 @@ class Showplace < ActiveRecord::Base
       group :navigates do
         label I18n.t('group.navigates')
       end
+      
       include_all_fields
       field :fulldesc, :ck_editor
       field :shortdesc, :ck_editor
