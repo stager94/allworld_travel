@@ -9,6 +9,8 @@ if defined?(Bundler)
   Bundler.require(:default, :assets, Rails.env)
 end
 
+SECRETS = YAML.load(File.read(File.expand_path('../secrets.yml', __FILE__)))[Rails.env]
+
 module Allworld
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
