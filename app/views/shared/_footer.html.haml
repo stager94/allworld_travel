@@ -1,36 +1,37 @@
 .container-fluid
   .row
-    .block5
-      = Setting.footer_text
-    .afdelimit
-    - Footermenu.order('sortorder ASC').each do |razdel|
-      .block5
-        %h4=razdel.name
-        -razdel.footersubmenus.order('sortorder ASC').each do |subfooter|
-          %p
-            = link_to subfooter.url do
-              - if subfooter.icon.present?
-                = image_tag subfooter.icon.url(:micro), size: "24x24"
-              = subfooter.name
-      .afdelimit
+    .footer-table
+      .footer-cell
+        = Setting.footer_text
+      / .afdelimit
+      - Footermenu.order('sortorder ASC').each do |razdel|
+        .footer-cell
+          %h4=razdel.name
+          -razdel.footersubmenus.order('sortorder ASC').each do |subfooter|
+            %p
+              = link_to subfooter.url do
+                - if subfooter.icon.present?
+                  = image_tag subfooter.icon.url(:micro), width: "24px"
+                = subfooter.name
+        / .afdelimit
 
-    .block5contact
-      %h4 Контакты
-      %p
-        = "e-mail: #{Setting.system_email}"
-      %p
-        Служба поддержки
-      -#=$setting.contactadress
-      .socialicons
-        = link_to Setting.vk_link, target: "_blank" do
-          %span#icovk
-        = link_to Setting.fb_link, target: "_blank" do
-          %span#icofb
-        = link_to Setting.instagram_link, target: "_blank" do
-          %span#icoin
-        = link_to Setting.twitter_link, target: "_blank" do
-          %span#icotw
-        = link_to Setting.youtube_link, target: "_blank" do
-          %span#icoyb
-        = link_to Setting.google_link, target: "_blank" do
-          %span#icogp
+      .footer-cell
+        %h4 Контакты
+        %p
+          = "e-mail: #{Setting.system_email}"
+        %p
+          Служба поддержки
+        -#=$setting.contactadress
+        .socialicons
+          = link_to Setting.vk_link, target: "_blank" do
+            %span#icovk
+          = link_to Setting.fb_link, target: "_blank" do
+            %span#icofb
+          = link_to Setting.instagram_link, target: "_blank" do
+            %span#icoin
+          = link_to Setting.twitter_link, target: "_blank" do
+            %span#icotw
+          = link_to Setting.youtube_link, target: "_blank" do
+            %span#icoyb
+          = link_to Setting.google_link, target: "_blank" do
+            %span#icogp

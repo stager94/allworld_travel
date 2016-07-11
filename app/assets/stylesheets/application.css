@@ -238,3 +238,31 @@ label {
 	margin: 0 auto;
 	height: 70px;
 }
+
+
+.country_wcorner {
+	width: 25% !important;
+}
+
+@media screen and (max-width: 1199px) {
+	.country_wcorner {
+		width: 50% !important;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.country_wcorner {
+		width: 100% !important;
+	}
+}
+
+.footer-table {
+	width: 100%;
+	border-collapse: collapse;
+	table-layout: fixed;
+	display: table;
+}
+.footer-cell {
+	display: table-cell;
+	padding: 0px 20px;
+}
