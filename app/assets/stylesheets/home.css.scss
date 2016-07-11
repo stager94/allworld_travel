@@ -703,10 +703,25 @@ text-decoration: none;
   color: white;
 }
 
+#place, .ohgallery, .ohdetails {
+  height: auto !important;
+}
+#place .cntrmap, #place .cntrmap iframe {
+  max-height: 330px !important;
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+  #place .cntrmap, #place .cntrmap iframe {
+    height: 265px;
+  }
+}
 
 @media screen and (max-width: 991px) {
   .ohdetails {
     width: 100%;
+  }
+  .cntrmap {
+    width: 100% !important;
   }
   .cntrmap iframe {
     width: 100% !important;
