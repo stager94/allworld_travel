@@ -19,25 +19,34 @@ class UsersController < ApplicationController
 
   def edit
     @user = current_user
+    @errors = {}
   end
 
   def update
     @user = current_user
 
     if params[:commit] == "Изменить пароль"
-      permitted_params = params.require(:user).permit(:password)
+      permitted_params = params.require(:user).permit!
+
+      unless @user.valid_password? permitted_params[:current_password]
+        @user.errors.add(:current_password, permitted_params[:current_password].blank? ? :blank : :invalid)
+      else
+        @user.update permitted_params
+        sign_in(current_user, bypass: true) if @user.valid?
+      end
     else
       permitted_params = params.require(:user).permit(:username, :email, :first_name, :last_name, :country, :city, :gender, :birthday)
+      @user.update permitted_params
     end
-    
-    @user.update permitted_params
 
-    if @user.valid?
-      sign_in(current_user, bypass: true)
-      redirect_to profile_path
-    else
-      render :edit
+    if request.format != :js
+      if @user.errors.any?
+        redirect_to profile_path
+      else
+        render :edit
+      end
     end
+
   end
 
 private

@@ -1,0 +1,5 @@
+<% if @user.errors.any? %>
+	$("#change-password-body").html("<%= j render 'shared/change_password_body' %>");
+<% else %>
+	window.location.reload();
+<% end %>

@@ -43,7 +43,7 @@ Allworld::Application.routes.draw do
   match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], as: :finish_signup
   
   get '/users/profile' => 'users#edit', as: :profile
-  put '/users/update_profile' => 'users#update', as: :update_profile
+  match '/users/update_profile' => 'users#update', via: [:put, :patch], as: :update_profile
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
