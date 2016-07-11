@@ -233,3 +233,8 @@ label {
 	margin: 3px 0 0 0;
 	float: left;
 }
+
+.crest img {
+	margin: 0 auto;
+	height: 70px;
+}
