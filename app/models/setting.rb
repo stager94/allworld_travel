@@ -1,6 +1,6 @@
 class Setting < ActiveRecord::Base
 
-  attr_accessible :top100_text, :footer_text
+  attr_accessible :top100_text, :footer_text, :favicon, :logotype
   attr_accessible :system_email
   attr_accessible :vk_link
   attr_accessible :fb_link
