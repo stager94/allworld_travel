@@ -73,7 +73,7 @@ Allworld::Application.configure do
     address:   'smtp.mandrillapp.com',
     port:      587,
     user_name: 'allworld-travel',
-    password:  'cCi5eSNtJNFpsLNRH0eq'
+    password:  'cCi5eSNtJNFpsLNRH0eq-g'
   }
 
   config.action_mailer.default_url_options = { host: 'allworld-travel.com' }
