@@ -2582,13 +2582,42 @@ jQuery.Fotorama = function ($fotorama, opts) {
         }
 
         dataFrame.caption && $(div(captionClass, div(captionWrapClass, dataFrame.caption))).appendTo($frame);
+
         if (dataFrame.video) {
-          $(div("fotorama__info", div('fotorama__type-photo', "<span class='fotorama-photo-icon'></span>Видео" ))).appendTo($frame);
+          $(div("fotorama__info", div('fotorama__type-photo', "<a href='#' class='gotoPhotos'><span class='fotorama-photo-icon'></span>Фото</a><a href='#' class='active gotoVideos'><span class='fotorama-video-icon'></span>Видео</a>" ))).appendTo($frame);
         } else {
-          $(div("fotorama__info", div('fotorama__type-photo', "<span class='fotorama-photo-icon'></span>Фото" ))).appendTo($frame);
+          $(div("fotorama__info", div('fotorama__type-photo', "<a href='#' class='active gotoPhotos'><span class='fotorama-photo-icon'></span>Фото</a><a href='#' class='gotoVideos'><span class='fotorama-video-icon'></span>Видео</a>" ))).appendTo($frame);
+        }
+
+
+        $(document).delegate(".gotoVideos", 'click', function() {
+          fotoramaData.fotorama.show(firstVideoIndex);
+        });
+        $(document).delegate(".gotoPhotos", 'click', function() {
+          fotoramaData.fotorama.show(0);
+        });
+        
+        var photosCount = 0;
+        var videosCount = 0;
+        var firstVideoIndex = -1;
+        for (var i = data.length - 1; i >= 0; i--) {
+          if (data[i].video) {
+            if (firstVideoIndex == -1) {
+              firstVideoIndex = i;
+            }
+            videosCount++;
+          } else {
+            photosCount++;
+          }
+        }
+        console.log("photos count", photosCount, "videosCount", videosCount);
+
+        if (dataFrame.video) {
+          $(div("fotorama__info", div(captionWrapClass, (firstVideoIndex-index+1) + " из " + videosCount ))).appendTo($frame);  
+        } else {
+          $(div("fotorama__info", div(captionWrapClass, (index+1) + " из " + photosCount ))).appendTo($frame);
         }
         
-        $(div("fotorama__info", div(captionWrapClass, (index+1) + " из " + data.length ))).appendTo($frame);
 
         dataFrame.video && $frame
           .addClass(stageFrameVideoClass)

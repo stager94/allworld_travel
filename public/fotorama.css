@@ -633,6 +633,23 @@
   color: white;
   padding-top: 7px;
 }
+.fotorama__type-photo a {
+  display: block;
+  color: white;
+  padding: 2px;
+  margin-top: 5px;
+}
+.fotorama__type-photo a.active {
+  color: #FFC000;
+}
+.fotorama__type-photo a.active .fotorama-video-icon {
+  background: url('ic_videocam_white_48pt_3x_active.png') no-repeat 50% 50% ;
+  background-size: 15px 15px;
+}
+.fotorama__type-photo a.active .fotorama-photo-icon {
+  background: url('ic_photo_camera_white_48pt_3x_active.png') no-repeat 50% 50% ;
+  background-size: 15px 15px;
+}
 
 .fotorama--fullscreen .fotorama__caption {
   right: 100px;
