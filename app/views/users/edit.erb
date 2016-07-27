@@ -23,7 +23,7 @@
   <%= form_for(@user, url: update_profile_path(), html: { method: :put, class: "form-horizontal" }) do |f| %>
     <div class="col-md-5">
       <h4 class="text-center">Аватар</h4>
-      <div class="text-center" style="margin-bottom:10px;"><%= image_tag f.object.avatar.url(:thumb) %></div>
+      <div class="text-center" style="margin-bottom:10px;"><%= image_tag f.object.avatar.url(:medium), style: "max-width:300px;" %></div>
       <div class='field form-group'><%= f.label :avatar, class: "col-sm-3 control-label" %>
         <div class="col-sm-8" style="margin: 0 20px;">
           <%= f.file_field :avatar, class: "form-control" %>

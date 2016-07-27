@@ -35,7 +35,7 @@ class UsersController < ApplicationController
         sign_in(current_user, bypass: true) if @user.valid?
       end
     else
-      permitted_params = params.require(:user).permit(:username, :email, :first_name, :last_name, :country, :city, :gender, :birthday)
+      permitted_params = params.require(:user).permit(:username, :email, :first_name, :last_name, :country, :city, :gender, :birthday, :avatar)
       @user.update permitted_params
     end
 

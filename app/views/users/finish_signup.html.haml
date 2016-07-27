@@ -4,12 +4,12 @@
     .form-group
       = f.label :email
       .controls
-        = f.text_field :email, autofocus: true, value: '', class: 'form-control input-lg', placeholder: 'Example: email@me.com'
-        %p.help-block Please confirm your email address. No spam.
+        = f.text_field :email, autofocus: true, value: '', class: 'form-control input-lg', placeholder: 'Например: email@me.com'
+        %p.help-block Пожалуйста, укажите ваш адрес электронной почты
     - if @show_errors && @user.errors.any?
       #error_explanation.text-danger(style="margin-bottom:20px;")
         - @user.errors.full_messages.each do |msg|
           = msg
           %br
     .actions
-      = f.submit 'Continue', class: 'btn btn-primary'
+      = f.submit 'Продолжить', class: 'btn btn-primary'

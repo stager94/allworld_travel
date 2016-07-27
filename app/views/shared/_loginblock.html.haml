@@ -1,6 +1,12 @@
 - if user_signed_in?
-  %li
-    = link_to current_user.login, user_root_path
+  %li.dropdown
+    = link_to user_root_path, data: { toggle: "dropdown" }, role: "button", aria: { haspopup: true, expanded: false } do
+      = image_tag current_user.avatar.url(:micro), class: "img-circle", size: "25x25"
+      = current_user.login
+      %span.langdown
+    %ul.dropdown-menu.dropdown-menu-right
+      %li= link_to "Профиль", user_root_path
+      %li= link_to "Выход", destroy_user_session_path, method: :delete
   %li
     %span.delimiter 
   %li

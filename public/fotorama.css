@@ -640,7 +640,7 @@
   margin-top: 5px;
 }
 .fotorama__type-photo a.active {
-  color: #FFC000;
+  color: #ee7900;
 }
 .fotorama__type-photo a.active .fotorama-video-icon {
   background: url('ic_videocam_white_48pt_3x_active.png') no-repeat 50% 50% ;

@@ -44,9 +44,10 @@ margin-right: 4px;
 .stretch{width: 100%;display: inline-block;font-size: 0;line-height: 0;}
 .shpage{overflow: hidden;background-color: #eaeaea;margin: 20px 0;position: relative;}
 .shpage_null{overflow: hidden;margin: 20px 0;position: relative;}
-.shpageblock{overflow: hidden;margin: 10px 0;background-image: url('/img/watchblock.png');background-position: top right;background-repeat: no-repeat;}
-#countri .cntrmap {height: 324px;}
-#countri .cntrmap iframe {height: 324px;width:345px;}
+.shpageblock{overflow: hidden;margin: 10px 0;background-image: url('/img/fone-pogoda.jpg');color:white;background-position: top right;background-repeat: no-repeat;}
+.watch{padding:5px 10px;}
+#countri .cntrmap {height: 235px;}
+#countri .cntrmap iframe {height: 235px;width:345px;}
 #countri .shpageblock p{margin-top: 20px;}
 #countri .shpageblock img {
 /* border-radius: 50%; */
@@ -508,8 +509,8 @@ text-decoration: none;
 .nav > li{background-color: #1a587f;background-image: url("/img/bgmenuleft.png");border-bottom: solid 1px #003d64;border-left: solid 1px #003d64;border-right: solid 1px #003d64;}
 .carousel-title{font-size: 1.6em;height: 100px;}
 .carousel-caption{font-size: 1.2em;bottom: 0px;}
-#countri .cntrmap {height: 324px;}
-#countri .cntrmap iframe {height: 324px;width:360px;}
+#countri .cntrmap {height: 235px;}
+#countri .cntrmap iframe {height: 235px;width:360px;}
 #countri .ohdetails{border:none;}
 #place .cntrmap {height: 324px;width:360px;}
 #place .cntrmap iframe {height: 324px;width:360px;}
@@ -609,9 +610,9 @@ text-decoration: none;
 
 @media screen and (min-width: 1200px) and (max-width:1599px) {
 #gsInformerID-SaEv66Ur83g2e0{width: 165px!important;}
-#countri .cntrmap {height: 298px;}
-#countri .cntrmap iframe {height: 298px;width:345px;}
-#countri{width: 910px;height: 518px;}
+#countri .cntrmap {height: 235px;}
+#countri .cntrmap iframe {height: 235px;width:345px;}
+#countri{width: 910px;height: 465px;}
 #countri .shpageblock{height: 180px;}
 #countri .ohgallery{padding-right: 370px;}
 #countri .ohdetails{width: 370px;height: 508px;}
@@ -654,9 +655,9 @@ text-decoration: none;
 }
 
 @media screen and (min-width: 1600px) {
-#countri{width: 1310px;height: 738px;}
-#countri .cntrmap {height: 520px;}
-#countri .cntrmap iframe {height: 520px;width:508px;}
+#countri{width: 1310px;height: 465px;}
+#countri .cntrmap {height: 465px;}
+#countri .cntrmap iframe {height: 520px;width:465px;}
 #countri .shpageblock{height: 180px;}
 #countri .ohgallery{padding-right: 533px;}
 #countri .ohdetails{width: 533px;height: 728px;}
