@@ -1187,6 +1187,7 @@ function getDataFromHtml ($el) {
   var data = [];
 
   function getDataFromImg ($img, imgData, checkVideo) {
+    console.log($img, imgData, checkVideo);
     var $child = $img.children('img').eq(0),
         _imgHref = $img.attr('href'),
         _imgSrc = $img.attr('src'),
@@ -1229,8 +1230,10 @@ function getDataFromHtml ($el) {
         html: this,
         _html: $this.html() // Because of IE
       }));
-    } else return;
-
+    } else {
+      return;
+    }
+    // console.log(dataFrame);
     data.push(dataFrame);
   });
 
@@ -2082,6 +2085,7 @@ jQuery.Fotorama = function ($fotorama, opts) {
   $(document).delegate('.fotorama__prev', 'click', onPrevClick);
 
   function checkForVideo () {
+    console.log(data);
     $.each(data, function (i, dataFrame) {
       if (!dataFrame.i) {
         dataFrame.i = dataFrameCount++;
@@ -2453,7 +2457,7 @@ jQuery.Fotorama = function ($fotorama, opts) {
       }
 
       function loaded () {
-        ////console.log('loaded: ' + src);
+        console.log('loaded: ' + src);
 
         //console.log('$.Fotorama.measures[src]', $.Fotorama.measures[src]);
 
@@ -2639,6 +2643,7 @@ jQuery.Fotorama = function ($fotorama, opts) {
         addNavFrameEvents(frame);
         frameData.$wrap = $frame.children(':first');
         $navThumbFrame = $navThumbFrame.add($frame);
+        console.log(dataFrame, type);
         if (dataFrame.video) {
           frameData.$wrap.append($videoPlay.clone());
         } else {
@@ -2998,7 +3003,7 @@ jQuery.Fotorama = function ($fotorama, opts) {
   };
 
   that.show = function (options) {
-    console.log('that.show');
+    // console.log('that.show');
     ////console.time('that.show prepare');
     var index;
 

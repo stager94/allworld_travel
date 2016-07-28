@@ -20,6 +20,7 @@
 //= require jquery.cookie
 //= require jquery.marquee
 //= require jquery.doubletap
+//= require search-autocomplete
 
 $(function() {
 

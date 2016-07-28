@@ -2,8 +2,9 @@
   <div class="">
     <label class="sr-only" for="search">поиск по сайту</label>
     <div class="input-group">
-      <input type="text" value="<%= params[:q] %>" class="form-control" name="q" id="search" placeholder="Поиск по сайту" style="padding: 0 12px !important;">
+      <input type="text" value="<%= params[:q] %>" class="form-control" name="q" id="search" placeholder="Поиск по сайту" style="padding: 0 12px !important;" oninput="SearchAutocomplete.onChange(this)" autocomplete="off" onfocus="SearchAutocomplete.onFocus(this)" onblur="SearchAutocomplete.onBlur(this)">
       <div class="input-group-addon"><button type="submit" class="searchbtn"><span class='searchico'></span></button></div>
     </div>
+    <div class="search-dropdown-menu"></div>
   </div>
 </form>

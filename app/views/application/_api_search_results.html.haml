@@ -1,0 +1,19 @@
+%ul.api-search-results
+	- @result.each do |item|
+		%li
+			- if item.is_a? Showplace
+				= link_to "/place/#{item.tag}" do
+					.picture= image_tag item.showplacepictures.first.image, size: "40x40", class: "img-circle"
+					.title= item.name
+					.info
+						- if item.itsgorod
+							%span= Country.where(id: item.country_ids).map(&:name).join(", ")
+						- else
+							%span= [item.section.try(:name), item.category.try(:name)].compact.join(" / ")
+							
+			- else
+				= link_to "/country/#{item.tag}" do
+					.picture= image_tag item.flag, size: "40x40", class: "img-circle"
+					.title= item.name
+					.info
+						%span= item.region.name

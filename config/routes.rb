@@ -45,6 +45,8 @@ Allworld::Application.routes.draw do
   get '/users/profile' => 'users#edit', as: :profile
   match '/users/update_profile' => 'users#update', via: [:put, :patch], as: :update_profile
 
+  get '/api/search' => 'application#api_search', as: :api_search
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

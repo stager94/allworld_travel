@@ -278,3 +278,103 @@ label {
 .modal {
 	z-index: 9999999;
 }
+
+
+.search-input-group {
+	position: relative;
+}
+.search-input-group input {
+	height: 40px !important;
+	width: 250px !important;
+	border: none !important;
+	box-shadow: none !important;
+	outline: none !important;
+}
+.search-dropdown-menu {
+	position: absolute;
+	top: 40px;
+	left: 0;
+	right: 0;
+	background: white;
+	padding: 0;
+	color: #333;
+	margin-top: -10px;
+	display: none;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.search-dropdown-menu ul {
+	padding: 10px 0 0 0;
+	list-style-type: none;
+	margin: 0;
+}
+.search-dropdown-menu a {
+	border-bottom: 1px solid rgba(0,0,0,.05);
+	display: block;
+	padding: 7px 15px !important;
+	display: block;
+	cursor: pointer;
+	white-space: nowrap;
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.leftsearchblock {
+	margin: 0 !important;
+	width: auto !important;
+}
+.input-group-addon {
+	background: transparent !important;
+	border: none !important;
+	line-height: 40px !important;
+}
+.searchbtn {
+	background: transparent !important;
+}
+.leftsearchblock input {
+	display: none !important;
+}
+.leftsearchblock.focused input, .leftsearchblock:hover input {
+	display: block !important;
+}
+.leftsearchblock.focused .search-dropdown-menu, .leftsearchblock:hover .search-dropdown-menu {
+	display: block;
+}
+.leftsearchblock.focused .input-group-addon, .leftsearchblock:hover .input-group-addon,
+.leftsearchblock.focused input, .leftsearchblock:hover input {
+	background: #204760 !important;
+	color: white !important;
+}
+
+.api-search-results li a {
+	text-decoration: none !important;
+	cursor: pointer !important;
+}
+.api-search-results li a:hover {
+	background: rgba(0, 0, 0, .05);
+}
+.api-search-results .picture {
+	float: left;
+	margin-right: 10px;
+}
+.api-search-results .info {
+	font-size: 11px;
+	color: gray;
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.api-search-results .title {
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.searchico {
+	vertical-align: top;
+	margin-top: 12.5px;
+}
+
+.search-input-group .input-group {
+	z-index: 9999;
+}

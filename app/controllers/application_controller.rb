@@ -42,6 +42,12 @@ class ApplicationController < ActionController::Base
                                               page: page)
     end
   end
+
+  def api_search
+    @countries = Country.where("name LIKE '#{params[:q]}%'").first 2
+    @showplaces = Showplace.where("name LIKE '#{params[:q]}%'").first 10
+    @result = (@countries.to_a + @showplaces.to_a).first(6)
+  end
   
   protected
 
