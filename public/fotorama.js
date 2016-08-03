@@ -24,6 +24,7 @@ var _fotoramaClass = 'fotorama',
     stageClass = _fotoramaClass + '__stage',
     stageFrameClass = stageClass + '__frame',
     stageFrameVideoClass = stageFrameClass + '--video',
+    stageFramePanoClass = stageFrameClass + '--pano',
     stageShaftClass = stageClass + '__shaft',
 
     grabClass = _fotoramaClass + '__grab',
@@ -81,6 +82,7 @@ var _fotoramaClass = 'fotorama',
     videoClass = _fotoramaClass + '__video',
     videoPlayClass = videoClass + '-play',
     imagePlayClass = _fotoramaClass + '-image',
+    panoPlayClass = _fotoramaClass + '-pano',
     videoCloseClass = videoClass + '-close',
 
     captionClass = _fotoramaClass + '__caption',
@@ -1187,12 +1189,13 @@ function getDataFromHtml ($el) {
   var data = [];
 
   function getDataFromImg ($img, imgData, checkVideo) {
-    console.log($img, imgData, checkVideo);
     var $child = $img.children('img').eq(0),
         _imgHref = $img.attr('href'),
         _imgSrc = $img.attr('src'),
         _thumbSrc = $child.attr('src'),
         _video = imgData.video,
+        pano  = imgData.pano,
+        pano_src  = imgData.panorama,
         video = checkVideo ? findVideoId(_imgHref, _video === true) : false;
 
     if (video) {
@@ -1203,6 +1206,7 @@ function getDataFromHtml ($el) {
 
     getDimensions($img, $child, $.extend(imgData, {
       video: video,
+      pano: pano,
       img: imgData.img || _imgHref || _imgSrc || _thumbSrc,
       thumb: imgData.thumb || _thumbSrc || _imgSrc || _imgHref
     }));
@@ -1987,6 +1991,7 @@ jQuery.Fotorama = function ($fotorama, opts) {
       fullscreenIcon = $fullscreenIcon[0],
       $videoPlay = $(div(videoPlayClass)),
       $imagePlay = $(div(imagePlayClass)),
+      $panoPlay = $(div(panoPlayClass)),
       $videoClose = $(div(videoCloseClass)).appendTo($stage),
       videoClose = $videoClose[0],
 
@@ -2085,7 +2090,6 @@ jQuery.Fotorama = function ($fotorama, opts) {
   $(document).delegate('.fotorama__prev', 'click', onPrevClick);
 
   function checkForVideo () {
-    console.log(data);
     $.each(data, function (i, dataFrame) {
       if (!dataFrame.i) {
         dataFrame.i = dataFrameCount++;
@@ -2457,7 +2461,6 @@ jQuery.Fotorama = function ($fotorama, opts) {
       }
 
       function loaded () {
-        console.log('loaded: ' + src);
 
         //console.log('$.Fotorama.measures[src]', $.Fotorama.measures[src]);
 
@@ -2587,45 +2590,69 @@ jQuery.Fotorama = function ($fotorama, opts) {
 
         dataFrame.caption && $(div(captionClass, div(captionWrapClass, dataFrame.caption))).appendTo($frame);
 
-        if (dataFrame.video) {
-          $(div("fotorama__info", div('fotorama__type-photo', "<a href='#' class='gotoPhotos'><span class='fotorama-photo-icon'></span>Фото</a><a href='#' class='active gotoVideos'><span class='fotorama-video-icon'></span>Видео</a>" ))).appendTo($frame);
-        } else {
-          $(div("fotorama__info", div('fotorama__type-photo', "<a href='#' class='active gotoPhotos'><span class='fotorama-photo-icon'></span>Фото</a><a href='#' class='gotoVideos'><span class='fotorama-video-icon'></span>Видео</a>" ))).appendTo($frame);
-        }
-
-
         $(document).delegate(".gotoVideos", 'click', function() {
           fotoramaData.fotorama.show(firstVideoIndex);
         });
         $(document).delegate(".gotoPhotos", 'click', function() {
           fotoramaData.fotorama.show(0);
         });
+        $(document).delegate(".gotoPanos", 'click', function() {
+          fotoramaData.fotorama.show(firstPanoIndex);
+        });
         
         var photosCount = 0;
         var videosCount = 0;
+        var panosCount  = 0;
         var firstVideoIndex = -1;
-        for (var i = data.length - 1; i >= 0; i--) {
+        var firstPanoIndex  = -1;
+        for (var i = 0; i < data.length; i++) {
           if (data[i].video) {
             if (firstVideoIndex == -1) {
               firstVideoIndex = i;
             }
             videosCount++;
+          } else if (data[i].pano == true) {
+            if (firstPanoIndex == -1) {
+              firstPanoIndex = i;
+            }
+            panosCount++;
           } else {
             photosCount++;
           }
         }
-        console.log("photos count", photosCount, "videosCount", videosCount);
 
+
+        dataFrame.video && $frame
+          .addClass(stageFrameVideoClass)
+          .append($videoPlay.clone());
+
+        dataFrame.pano && $frame
+          .addClass(stageFramePanoClass);
+
+
+        if (dataFrame.pano == true) {
+          $frame.html(dataFrame.panorama)
+        }
+
+
+        console.log("First pano index is ", firstPanoIndex, index);
         if (dataFrame.video) {
-          $(div("fotorama__info", div(captionWrapClass, (firstVideoIndex-index+1) + " из " + videosCount ))).appendTo($frame);  
+          $(div("fotorama__info", div(captionWrapClass, (index-firstVideoIndex+1) + " из " + videosCount ))).appendTo($frame);  
+        } else if (dataFrame.pano) {
+          $(div("fotorama__info", div(captionWrapClass, (index-firstPanoIndex+1) + " из " + panosCount ))).appendTo($frame);  
         } else {
           $(div("fotorama__info", div(captionWrapClass, (index+1) + " из " + photosCount ))).appendTo($frame);
         }
         
 
-        dataFrame.video && $frame
-          .addClass(stageFrameVideoClass)
-          .append($videoPlay.clone());
+        if (dataFrame.video) {
+          $(div("fotorama__info", div('fotorama__type-photo', "<a href='#' class='gotoPhotos'><span class='fotorama-photo-icon'></span>Фото</a><a href='#' class='active gotoVideos'><span class='fotorama-video-icon'></span>Видео</a>  <a href='#' class='gotoPanos'><span class='fotorama-pano-icon'></span>Панорамы</a>" ))).appendTo($frame);
+        } else if (dataFrame.pano) {
+          $(div("fotorama__info", div('fotorama__type-photo', "<a href='#' class='gotoPhotos'><span class='fotorama-photo-icon'></span>Фото</a><a href='#' class='gotoVideos'><span class='fotorama-video-icon'></span>Видео</a> <a href='#' class='active gotoPanos'><span class='fotorama-pano-icon'></span>Панорамы</a>" ))).appendTo($frame);
+        } else {
+          $(div("fotorama__info", div('fotorama__type-photo', "<a href='#' class='active gotoPhotos'><span class='fotorama-photo-icon'></span>Фото</a><a href='#' class='gotoVideos'><span class='fotorama-video-icon'></span>Видео</a> <a href='#' class='gotoPanos'><span class='fotorama-pano-icon'></span>Панорамы</a>" ))).appendTo($frame);
+        }
+
 
         // This solves tabbing problems
         addFocus(frame, function () {
@@ -2643,9 +2670,10 @@ jQuery.Fotorama = function ($fotorama, opts) {
         addNavFrameEvents(frame);
         frameData.$wrap = $frame.children(':first');
         $navThumbFrame = $navThumbFrame.add($frame);
-        console.log(dataFrame, type);
         if (dataFrame.video) {
           frameData.$wrap.append($videoPlay.clone());
+        } else if (dataFrame.pano) {
+          frameData.$wrap.append($panoPlay.clone());
         } else {
           frameData.$wrap.append($imagePlay.clone());
         }
@@ -2810,7 +2838,6 @@ jQuery.Fotorama = function ($fotorama, opts) {
   }
 
   function slideNavShaft (options) {
-    console.log('slideNavShaft', options.guessIndex, options.keep, slideNavShaft.l);
     var $guessNavFrame = data[options.guessIndex][navFrameKey];
     if ($guessNavFrame) {
       var overflowFLAG = navShaftTouchTail.min !== navShaftTouchTail.max,
@@ -3542,7 +3569,6 @@ jQuery.Fotorama = function ($fotorama, opts) {
   stageWheelTail = wheel($stage, {
     shift: true,
     onEnd: function (e, direction) {
-    console.log('wheel $stage onEnd', direction);
       onTouchStart();
       onTouchEnd();
       that.show({index: direction, slow: e.altKey})
@@ -3551,7 +3577,6 @@ jQuery.Fotorama = function ($fotorama, opts) {
 
   navWheelTail = wheel($nav, {
     onEnd: function (e, direction) {
-      console.log('wheel $nav onEnd', direction);
       onTouchStart();
       onTouchEnd();
       var newPos = stop($navShaft) + direction * .25;

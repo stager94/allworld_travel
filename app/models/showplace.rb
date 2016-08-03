@@ -34,6 +34,11 @@ class Showplace < ActiveRecord::Base
   attr_accessible :showplacepictures_attributes
   accepts_nested_attributes_for :showplacepictures, :allow_destroy => true
 
+  has_many :showplacepanos, dependent: :destroy, inverse_of: :showplace
+  attr_accessible :showplacepano_ids
+  attr_accessible :showplacepanos_attributes
+  accepts_nested_attributes_for :showplacepanos, allow_destroy: true
+
 
 
   has_many :showplacevideos, :dependent => :destroy, :inverse_of => :showplace
@@ -127,7 +132,7 @@ class Showplace < ActiveRecord::Base
       fields  :shortdesc, :fulldesc, :primech  do 
         group :shapka
       end
-      fields :googlemap, :showplacepictures, :showplacevideos  do 
+      fields :googlemap, :showplacepictures, :showplacevideos, :showplacepanos  do 
         group :mediainfo
       end
       fields :tag, :point, :showfilter, :showhome, :showinsection, :showincountry, :itsgorod  do 

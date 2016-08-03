@@ -83,7 +83,9 @@
       - if videos = @showplace.showplacevideos.first
         - @showplace.showplacevideos.each do |video|
           = link_to video.name, video.kode.html_safe
-      = link_to "Panorama", "https://www.google.com/maps/embed?pb=!1m0!3m2!1sru!2sua!4v1469726954668!6m8!1m7!1sF%3A-3SaITOShLF0%2FVsaQryIpohI%2FAAAAAAAA470%2Fl4eJkOQkf5IUVEEhNRQL5WzN6AyfF3MJwCLIB!2m2!1d40.332809!2d116.477651!3f2.4330708661417333!4f3.3897637795275557!5f0.4000000000000002"
+      - @showplace.showplacepanos.each do |pano|
+        = link_to pano.title, "#", data: { pano: true, image: pano.thumb.url, thumb: pano.thumb.url, panorama: pano.src }
+
   .ohdetails
     .cntrmap
       -if @showplace.googlemap.present?

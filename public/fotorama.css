@@ -561,6 +561,19 @@
   border-radius: 20px;
 }
 
+.fotorama-pano {
+  z-index: 9;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  background: url('ic_pano_white_48pt_3x.png') no-repeat 50% 50% rgba(0,0,0,.4);
+  width: 25px;
+  height: 25px;
+  content: " ";
+  background-size: 15px 15px;
+  border-radius: 20px;
+}
+
 .fotorama__thumb .fotorama__video-play {
   z-index: 9;
   position: absolute;
@@ -607,7 +620,7 @@
   background-position: -32px 0;
 }
 
-.fotorama-photo-icon, .fotorama-video-icon {
+.fotorama-photo-icon, .fotorama-video-icon, .fotorama-pano-icon {
   background: url('ic_photo_camera_white_48pt_3x.png') no-repeat 50% 50% ;
   width: 15px;
   height: 15px;
@@ -621,6 +634,12 @@
   background: url('ic_videocam_white_48pt_3x.png') no-repeat 50% 50% ;
   background-size: 15px 15px;
 }
+
+.fotorama-pano-icon {
+  background: url('ic_pano_white_48pt_3x.png') no-repeat 50% 50% ;
+  background-size: 15px 15px;
+}
+
 
 .fotorama__type-photo {
   font-size: 12px;
@@ -648,6 +667,10 @@
 }
 .fotorama__type-photo a.active .fotorama-photo-icon {
   background: url('ic_photo_camera_white_48pt_3x_active.png') no-repeat 50% 50% ;
+  background-size: 15px 15px;
+}
+.fotorama__type-photo a.active .fotorama-pano-icon {
+  background: url('ic_pano_white_48pt_3x_active.png') no-repeat 50% 50% ;
   background-size: 15px 15px;
 }
 

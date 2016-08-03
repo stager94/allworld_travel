@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160707151356) do
+ActiveRecord::Schema.define(version: 20160802232543) do
 
   create_table "allsettings", force: :cascade do |t|
     t.boolean  "default"
@@ -470,6 +470,20 @@ ActiveRecord::Schema.define(version: 20160707151356) do
     t.string   "youtube_link",           limit: 255
     t.string   "google_link",            limit: 255
   end
+
+  create_table "showplacepanos", force: :cascade do |t|
+    t.string   "title",              limit: 255
+    t.text     "src",                limit: 65535
+    t.integer  "showplace_id",       limit: 4
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.string   "thumb_file_name",    limit: 255
+    t.string   "thumb_content_type", limit: 255
+    t.integer  "thumb_file_size",    limit: 4
+    t.datetime "thumb_updated_at"
+  end
+
+  add_index "showplacepanos", ["showplace_id"], name: "index_showplacepanos_on_showplace_id", using: :btree
 
   create_table "showplacepictures", force: :cascade do |t|
     t.integer  "showplace_id",       limit: 4
