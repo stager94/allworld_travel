@@ -50,7 +50,7 @@
 .oh#countri
   .ohgallery
     = render :partial => 'shared/slide'
-    .fotorama{"data-allowfullscreen"=>"true", "data-nav"=>"thumbs", "data-fit"=>"contain", "data-width"=>"100%", "data-thumbwidth" => "153px", "data-thumbheight" => "109px", "data-arrows"=>"true"}
+    .fotorama{"data-allowfullscreen"=>"true", "data-nav"=>"thumbs", "data-fit"=>"contain", "data-width"=>"100%", "data-thumbwidth" => "115px", "data-thumbheight" => "84px", "data-arrows"=>"true", "data-click"=>"false"}
       - @country.countrypictures.each do |countrypictures|
         -if shimg = countrypictures.image
           =image_tag countrypictures.image.url(:medium), "data-full" => countrypictures.image.url(:large), "data-caption"=> countrypictures.name
