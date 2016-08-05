@@ -655,7 +655,7 @@ text-decoration: none;
 }
 
 @media screen and (min-width: 1600px) {
-#countri{width: 1310px;height: 465px;}
+#countri{width: 1310px;height: auto !important;}
 #countri .cntrmap {height: 465px;}
 #countri .cntrmap iframe {height: 520px;width:465px;}
 #countri .shpageblock{height: 180px;}
