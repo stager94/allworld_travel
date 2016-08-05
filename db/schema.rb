@@ -146,6 +146,7 @@ ActiveRecord::Schema.define(version: 20160802232543) do
     t.string   "globus_content_type", limit: 255
     t.integer  "globus_file_size",    limit: 4
     t.datetime "globus_updated_at"
+    t.integer  "chaspoyas",           limit: 4,     default: 0,     null: false
     t.text     "pogoda",              limit: 65535
     t.integer  "parent_id",           limit: 4
     t.string   "timezone",            limit: 255,   default: "UTC"
