@@ -645,8 +645,8 @@ text-decoration: none;
 
 #place .places_atr_block a{margin: 15px;}
 #place{width: 910px;height: 506px;}
-#place .cntrmap {height: 375px;}
-#place .cntrmap iframe {height: 375px;width:378px;}
+#place .cntrmap {height: 330px;}
+#place .cntrmap iframe {height: 330px;width:378px;}
 #place .ohgallery{padding-right: 385px;height: 479px;}
 #place .ohdetails{width: 385px;height: 496px;padding-left: 0;}
 #place .places_atr_block{height: 47px;padding: 12px 0;}
@@ -690,8 +690,8 @@ text-decoration: none;
 
 #place .places_atr_block a{margin: 25px;}
 #place{width: 1310px;height: 723px;}
-#place .cntrmap {height: 542px;}
-#place .cntrmap iframe {height: 542px;width:544px;}
+#place .cntrmap {height: 450px;}
+#place .cntrmap iframe {height: 450px;width:544px;}
 #place .ohgallery{padding-right: 554px;height: 603px;}
 #place .ohdetails{width: 554px;height: 713px;padding-left: 0;}
 #place .places_atr_block{height: 68px;padding: 24px 0;}
@@ -707,9 +707,9 @@ text-decoration: none;
 #place, .ohgallery, .ohdetails {
   height: auto !important;
 }
-#place .cntrmap, #place .cntrmap iframe {
-  max-height: 330px !important;
-}
+// #place .cntrmap, #place .cntrmap iframe {
+//   max-height: 330px !important;
+// }
 
 @media screen and (max-width: 1199px) and (min-width: 992px) {
   #place .cntrmap, #place .cntrmap iframe {
