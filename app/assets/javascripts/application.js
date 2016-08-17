@@ -130,6 +130,9 @@ $(document).ready(function(){
     });
 
 
+    $('#country-globe').bind('contextmenu', function(e) {
+      return false;
+    }); 
 });
 
 
