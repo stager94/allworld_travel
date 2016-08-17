@@ -65,7 +65,7 @@
 
     .shpageblock
       -if globeimg = @country.globus.url(:thumb)
-        =image_tag globeimg, "align" =>"left", "width" => "180px", "height" => "180px", style: "float:left;"
+        =image_tag globeimg, "align" =>"left", "width" => "180px", "height" => "180px", style: "float:left;", id: "country-globe"
       .pogoda{style: "float:right;"}
         .watch
           = render :partial => 'shared/watch'

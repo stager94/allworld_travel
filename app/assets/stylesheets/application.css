@@ -395,3 +395,14 @@ label {
 .gmnoprint {
 	display: none;
 }
+
+#country-globe {
+	position: absolute;
+	z-index: 9999999;
+	transition: all ease 300ms;
+}
+#country-globe:hover {
+	width: 360px;
+	height: 360px;
+	margin: -90px 0 0 -90px;
+}
