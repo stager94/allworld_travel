@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160817131536) do
+ActiveRecord::Schema.define(version: 20160817205736) do
 
   create_table "allsettings", force: :cascade do |t|
     t.boolean  "default"
@@ -533,6 +533,7 @@ ActiveRecord::Schema.define(version: 20160817131536) do
     t.boolean  "itsgorod",                                            default: false
     t.string   "title",         limit: 255
     t.boolean  "visible",                                             default: true
+    t.text     "street_pano",   limit: 65535
   end
 
   add_index "showplaces", ["category_id"], name: "index_showplaces_on_category_id", using: :btree

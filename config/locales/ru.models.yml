@@ -232,6 +232,7 @@ ru:
         googlemap: "Код карты"
         ginnesa: "В книге Гиннеса"
         chudesa: "7 чудес"
+        street_pano: "Код просмотра улиц"
       
       showplacevideo:
         kode: "URL ссылка на youtube видео"

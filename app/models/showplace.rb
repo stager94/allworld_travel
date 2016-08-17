@@ -1,7 +1,7 @@
 class Showplace < ActiveRecord::Base
 
   belongs_to :section, :inverse_of => :showplaces
-  attr_accessible :section_id, :visible
+  attr_accessible :section_id, :visible, :street_pano
   # belongs_to :chudesa, :inverse_of => :showplaces
   has_and_belongs_to_many :chudesas
   attr_accessible :chudesa_ids
@@ -136,7 +136,7 @@ class Showplace < ActiveRecord::Base
       fields  :shortdesc, :fulldesc, :primech  do 
         group :shapka
       end
-      fields :googlemap, :showplacepictures, :showplacevideos, :showplacepanos  do 
+      fields :googlemap, :showplacepictures, :showplacevideos, :showplacepanos, :street_pano do 
         group :mediainfo
       end
       fields :tag, :point, :showfilter, :showhome, :showinsection, :showincountry, :itsgorod, :visible  do 

@@ -6,6 +6,11 @@
 - previous_group_id = 0
 - @showplace.placetextblocks.each do |placetextblock|
   - if placetextblock.textblock && placetextblock.textblock.grouptextblock.id != previous_group_id
+
+    - if placetextblock.textblock.grouptextblock.name == "Полезная информация" && @showplace.street_pano.present?
+      .street-pano= @showplace.street_pano.try(:html_safe)
+      
+
     - grouptextblock = placetextblock.textblock.grouptextblock
     - previous_group_id = grouptextblock.id
     %b

@@ -406,3 +406,6 @@ label {
 	height: 360px;
 	margin: -90px 0 0 -90px;
 }
+.street-pano iframe {
+	width: 100%;
+}
