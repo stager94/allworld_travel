@@ -398,7 +398,7 @@ label {
 
 #country-globe {
 	position: absolute;
-	z-index: 9999999;
+	z-index: 9;
 	transition: all ease 300ms;
 }
 #country-globe:hover {
