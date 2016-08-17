@@ -82,6 +82,10 @@ class User < ActiveRecord::Base
   def role?(role)
     self.role == role.to_s
   end
+
+  def has_extended_role?
+    %w(admin manager).include? self.role
+  end
   
   def self.find_for_database_authentication(warden_conditions)
     conditions = warden_conditions.dup

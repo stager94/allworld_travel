@@ -104,11 +104,11 @@ class HomeController < ApplicationController
         usedplace << session[:placenets]
       end
     end
-    @showplaces = Showplace.where(:showhome =>true).where.not(:id =>usedplace).order("RAND(id)").page(params[:shpage]).per(countobj)
+    @showplaces = Showplace.for_user(current_user).where(:showhome =>true).where.not(:id =>usedplace).order("RAND(id)").page(params[:shpage]).per(countobj)
   end
   
   def place
-    @showplace = Showplace.find_by_tag(params[:tag])
+    @showplace = Showplace.for_user(current_user).find_by_tag!(params[:tag])
     #@relatedspls = @showplace.countries.first.showplaces.where.not(:id => @showplace.id).page(params[:page]).per($perpaged)
     #@relatedsplscount = @showplace.countries.first.showplaces.where.not(:id => @showplace.id).count
 
@@ -125,19 +125,19 @@ class HomeController < ApplicationController
 
   def country
     @country = Country.find_by_tag(params[:tag])
-    @relatedspls = @country.showplaces.where('showincountry = 1').order('point DESC').page(params[:page]).per($perpaged*3)
-    @relatedsplscount = @country.showplaces.where('showincountry = 1').count
+    @relatedspls = @country.showplaces.for_user(current_user).where('showincountry = 1').order('point DESC').page(params[:page]).per($perpaged*3)
+    @relatedsplscount = @country.showplaces.for_user(current_user).where('showincountry = 1').count
     render :layout => 'fixed'
   end
 
   def allbest
-    @showplaces = Showplace.where('top100 = 1').page(params[:shpage]).per(20)
-    @showplacescount = Showplace.where('top100 = 1').count
+    @showplaces = Showplace.for_user(current_user).where('top100 = 1').page(params[:shpage]).per(20)
+    @showplacescount = Showplace.for_user(current_user).where('top100 = 1').count
   end
 
   def allwonders
-    @showplaces = Showplace.where('wonders7 = 1').page(params[:shpage]).per(20)
-    @showplacescount = Showplace.where('wonders7 = 1').count
+    @showplaces = Showplace.for_user(current_user).where('wonders7 = 1').page(params[:shpage]).per(20)
+    @showplacescount = Showplace.for_user(current_user).where('wonders7 = 1').count
   end
 
   def allcountries
@@ -146,19 +146,19 @@ class HomeController < ApplicationController
 
   def categories
     @category = Tag.find_by_name(params[:tag]).content
-    @showplaces = @category.showplaces.where('showinsection = 1').page(params[:shpage]).per(20)
-    @showplacescount = @category.showplaces.where('showinsection = 1').count
+    @showplaces = @category.showplaces.for_user(current_user).where('showinsection = 1').page(params[:shpage]).per(20)
+    @showplacescount = @category.showplaces.for_user(current_user).where('showinsection = 1').count
   end
 
   def section
     @section = Tag.find_by_name(params[:tag]).content
-    @showplaces = @section.showplaces.where('showinsection = 1').page(params[:shpage]).per(20)
-    @showplacescount = @section.showplaces.where('showinsection = 1').count
+    @showplaces = @section.showplaces.for_user(current_user).where('showinsection = 1').page(params[:shpage]).per(20)
+    @showplacescount = @section.showplaces.for_user(current_user).where('showinsection = 1').count
   end
 
   def goroda
-    @showplaces = Showplace.where('itsgorod = 1').page(params[:shpage]).per(20)
-    @showplacescount = Showplace.where('itsgorod = 1').count
+    @showplaces = Showplace.for_user(current_user).where('itsgorod = 1').page(params[:shpage]).per(20)
+    @showplacescount = Showplace.for_user(current_user).where('itsgorod = 1').count
   end
 
 

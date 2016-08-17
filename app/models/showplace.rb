@@ -1,7 +1,7 @@
 class Showplace < ActiveRecord::Base
 
   belongs_to :section, :inverse_of => :showplaces
-  attr_accessible :section_id
+  attr_accessible :section_id, :visible
   # belongs_to :chudesa, :inverse_of => :showplaces
   has_and_belongs_to_many :chudesas
   attr_accessible :chudesa_ids
@@ -54,6 +54,10 @@ class Showplace < ActiveRecord::Base
   before_create :add_tag
   before_validation :comma_to_delimiter
   after_save -> { self.touch }
+
+  # default_scope { where visible: true }
+  scope :only_visible, -> { where visible: true }
+  scope :for_user, ->(user) { (user && user.has_extended_role?) ? all : only_visible }
 
   def countries_ids
     country_ids.join(",")
@@ -135,7 +139,7 @@ class Showplace < ActiveRecord::Base
       fields :googlemap, :showplacepictures, :showplacevideos, :showplacepanos  do 
         group :mediainfo
       end
-      fields :tag, :point, :showfilter, :showhome, :showinsection, :showincountry, :itsgorod  do 
+      fields :tag, :point, :showfilter, :showhome, :showinsection, :showincountry, :itsgorod, :visible  do 
         group :slugebnoe
       end
       fields :section, :category, :group, :region, :countries  do 

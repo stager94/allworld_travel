@@ -19,6 +19,7 @@ ru:
       position: Блоки банеров
       showplacepicture: Фото объекта
       showplacevideo: Видео объекта
+      showplacepano: Панорама объекта
       countrypicture: Фото страны
       countryvideo: Видео страны
       marquee: Бегущая строка
@@ -45,6 +46,8 @@ ru:
       footersubmenu: "Пункты подвала"
       rightmenu: "Правое меню"
       chudesa: "7 чудес"
+      identity: "Привязка к соцсетям"
+      setting: "Настройки сайта"
 
     attributes:
       allsetting:
@@ -201,6 +204,7 @@ ru:
         showplace: "Достопримечательность"
  
       showplace:
+        visible: "Опубликовать"
         fulldesc: "Полное описание"
         primech: "Примечание"
         shortdesc: "Краткое описание"
