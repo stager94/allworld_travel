@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160802232543) do
+ActiveRecord::Schema.define(version: 20160817125431) do
 
   create_table "allsettings", force: :cascade do |t|
     t.boolean  "default"
@@ -470,6 +470,9 @@ ActiveRecord::Schema.define(version: 20160802232543) do
     t.string   "twitter_link",           limit: 255
     t.string   "youtube_link",           limit: 255
     t.string   "google_link",            limit: 255
+    t.text     "hotels",                 limit: 65535
+    t.text     "flights",                limit: 65535
+    t.text     "car_rental",             limit: 65535
   end
 
   create_table "showplacepanos", force: :cascade do |t|

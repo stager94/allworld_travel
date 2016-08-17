@@ -22,4 +22,8 @@ module ApplicationHelper
     end
   end
 
+  def render_partners
+    render 'shared/partners' if Setting.has_partners_codes?
+  end
+
 end
