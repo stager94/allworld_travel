@@ -8,11 +8,16 @@ class Staticpage < ActiveRecord::Base
     self.tag = self.name.to_slug_param
   end
 
+  def url
+    "/article/" + tag
+  end
+
   rails_admin do
     parent 'Menulast'
     list do
       field :name
       field :tag
+      field :url
     end
     edit do
       group :meta do
