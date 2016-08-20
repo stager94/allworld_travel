@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160817205736) do
+ActiveRecord::Schema.define(version: 20160820171405) do
 
   create_table "allsettings", force: :cascade do |t|
     t.boolean  "default"
@@ -370,6 +370,7 @@ ActiveRecord::Schema.define(version: 20160817205736) do
     t.text     "blocklink",          limit: 65535
     t.integer  "position",           limit: 4,     default: 0
     t.boolean  "delete_image",                     default: false
+    t.integer  "lines_offset",       limit: 4,     default: 0
   end
 
   add_index "placetextblocks", ["showplace_id"], name: "index_placetextblocks_on_showplace_id", using: :btree

@@ -28,7 +28,7 @@
       - if showplace = placetextblock.othershowplace or placetextblock.image.present?
         .col-md-3.col-lg-3
           - if showplace = placetextblock.othershowplace
-            = render :partial => 'shared/showplace', :locals => {:showplace => showplace}
+            = render partial: 'shared/showplace', locals: { showplace: showplace }
           - else 
             .showplace_wcorner
               .showplace_item.nohover
@@ -37,9 +37,11 @@
                   - if placetextblock.textblock && placetextblock.textblock.name.present?
                     %p.mini= placetextblock.textblock.name
         .col-md-9.col-lg-9.showfulltext
-          .samtext=placetextblock.fulltext.html_safe
+          .samtext(style="padding-top: 8px;" data-lines-count="#{6+placetextblock.lines_offset}")=placetextblock.fulltext.html_safe
+          = link_to "Подробнее >>", '/place/'+showplace.tag if showplace
           .next
-            %span.fa.fa-chevron-circle-down
+            - unless showplace
+              %span.fa.fa-chevron-circle-down
       - else
         .showfulltext
           .samtext=placetextblock.fulltext.html_safe

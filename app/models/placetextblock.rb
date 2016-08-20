@@ -5,7 +5,7 @@ class Placetextblock < ActiveRecord::Base
   attr_accessible :textblock_id
   attr_accessible :country_id
   attr_accessible :othershowplace_id
-  attr_accessible :image
+  attr_accessible :image, :lines_offset
   has_attached_file :image, :styles => { :medium => "560x400#", :thumb => "208x149#" }, :default_url => "/img/placetextblock/:style/missing.png"
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 

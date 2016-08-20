@@ -202,6 +202,7 @@ ru:
         othershowplace: "Связать с достопримечательностью"
         blocklink: "URL ссылки"
         showplace: "Достопримечательность"
+        lines_offset: "Отклонения от стандартной высоты блока"
  
       showplace:
         visible: "Опубликовать"

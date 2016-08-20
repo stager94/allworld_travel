@@ -116,32 +116,6 @@
       -if @showplace.googlemap.present?
         =@showplace.googlemap.html_safe
     .filterbl
-      / .places_atr_block.textcenter.bold13
-      /   -if @showplace.showfilter
-      /     - if current_user and test=current_user.placevidels.where('showplace_id'=>@showplace.id).first 
-      /       - placevidelsclass='bigcheck'
-      /       - placevidelsgo='/noseen/'
-      /     - else
-      /       - placevidelsclass='bignocheck'
-      /       - placevidelsgo='/seen/'
-      /     - if current_user and test=current_user.placenets.where('showplace_id'=>@showplace.id).first 
-      /       - placenetsclass='bigcheck'
-      /       - placenetsgo='/nono/'
-      /     - else
-      /       - placenetsclass='bignocheck'
-      /       - placenetsgo='/no/'
-      /     - if current_user and test=current_user.placedas.where('showplace_id'=>@showplace.id).first 
-      /       - placedasclass='bigcheck'
-      /       - placedasgo='/nowish/'
-      /     - else
-      /       - placedasclass='bignocheck'
-      /       - placedasgo='/wish/'
-          
-      /     =link_to 'Был, видел', placevidelsgo+@showplace.id.to_s, :class=>placevidelsclass
-      /     =link_to 'Хочу', placedasgo+@showplace.id.to_s, :class=>placedasclass
-      /     =link_to 'Позже', placenetsgo+@showplace.id.to_s, :class=>placenetsclass
-      / .places_atr_block
-      /   .textcenter
 
       .infoblock
         .new-countries
@@ -187,7 +161,7 @@
   
 -if @showplace.fulldesc.present?
   .showfulltext
-    .samtextbig
+    .samtext(data-lines-count="15")
       =@showplace.fulldesc.html_safe
     .next
       %span.fa.fa-chevron-circle-down

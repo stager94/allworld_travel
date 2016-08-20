@@ -62,8 +62,11 @@ $(function() {
   if(bloks_total.length){
     for(i=0; i < bloks_total.length;i++){
       blok_height = Number($(bloks_total[i]).css('height').replace('px',''));
-      if(blok_height > 195){
-        $(bloks_total[i]).css('max-height','180px');
+      linesCount = $(bloks_total[i]).data('lines-count') || 6
+      maxheight = linesCount * 20.5 + 10;
+      // console.log(blok_height, $(bloks_total[i]).data('lines-count') || 3);
+      if(blok_height > maxheight){
+        $(bloks_total[i]).css('max-height', maxheight + 'px');
         $(bloks_total[i]).parent().find('.next').show();
       }
     }
@@ -71,18 +74,21 @@ $(function() {
 });
 
 $(function() {
-$('.next').click(function() {
-  is_parent = $(this).parent();
-  blok = is_parent.find('.samtext');
-  if(blok.css('max-height') != 'none'){
-     blok.css('max-height','');
-     $(this).find('span').removeClass( "fa-chevron-circle-down" ).addClass( "fa-chevron-circle-up" );
-  } else {
-     blok.css('max-height','180px');   
-     $(this).find('span').removeClass( "fa-chevron-circle-up" ).addClass( "fa-chevron-circle-down" );
-  }
-  return false;
-});
+  $('.next').click(function() {
+    is_parent = $(this).parent();
+    blok = is_parent.find('.samtext');
+    if(blok.css('max-height') != 'none'){
+       blok.css('max-height','');
+       $(this).find('span').removeClass( "fa-chevron-circle-down" ).addClass( "fa-chevron-circle-up" );
+    } else {
+      linesCount = $(blok).data('lines-count') || 6
+      maxheight = linesCount * 20.5 + 10;
+
+       blok.css('max-height',maxheight+'px');   
+       $(this).find('span').removeClass( "fa-chevron-circle-up" ).addClass( "fa-chevron-circle-down" );
+    }
+    return false;
+  });
 });
 
 
