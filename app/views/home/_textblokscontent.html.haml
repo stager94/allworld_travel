@@ -1,6 +1,6 @@
 - textblockid = @showplace.placetextblocks.select('textblock_id as id').group('textblock_id').to_a
-- grouptextblocksid = Textblock.select('grouptextblock_id as id').where(:id => textblockid).group('grouptextblock_id').to_a
-- grouptextblocks = Grouptextblock.where(:id => grouptextblocksid).order('sortorder ASC')
+- grouptextblocksid = Textblock.select('grouptextblock_id as id').where(id: textblockid).group('grouptextblock_id').to_a
+- grouptextblocks = Grouptextblock.where(id: grouptextblocksid).order('sortorder ASC')
 
 
 - previous_group_id = 0
@@ -51,14 +51,3 @@
 
 
 = render_partners
-
-/ -if countries = @showplace.countries.first
-/   .blockborder.countries
-/     - @showplace.countries.each do |country|
-/       .country_item
-/         =link_to "/country/"+country.tag do
-/           .flag_img
-/             -if flagimg = country.flag.url(:thumb)
-/               =image_tag flagimg
-/           =country.name
-
