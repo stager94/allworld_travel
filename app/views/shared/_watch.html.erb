@@ -1,8 +1,12 @@
 <script type="text/javascript">
+  var span_class = "";
   function digitalWatch() {
     var TimezoneOffset = <%= Time.now.in_time_zone(@country.timezone).utc_offset / 60.0 / 60.0 %>;
     var localTime = new Date(); 
     var ms = localTime.getTime() + (localTime.getTimezoneOffset() * 60000) + TimezoneOffset * 3600000;
+    
+    var momentTime = moment(ms);
+
     var date = new Date(ms);
     var hours = date.getHours();
     var minutes = date.getMinutes();
@@ -10,12 +14,19 @@
     if (hours < 10) hours = "0" + hours;
     if (minutes < 10) minutes = "0" + minutes;
     if (seconds < 10) seconds = "0" + seconds;
-    document.getElementById("digital_watch").innerHTML = hours + ":" + minutes + ":" + seconds;
+    if (span_class == "") {
+      span_class = "unvisible";
+    } else {
+      span_class = "";
+    }
+    document.getElementById("digital_watch").innerHTML = hours + "<span class='" + span_class + "'>:</span>" + minutes;
+    document.getElementById("weekday").innerHTML = momentTime.format("dddd, DD MMMM YYYY");
     setTimeout("digitalWatch()", 1000);
   }
 </script>
-<p style="font-size: 80%; margin:0;">Время в столице</p>
-<p id="digital_watch" style="font-size: 110%; font-weight: bold; margin:0;"></p>
+<p style="font-size: 80%; margin:0;" class="text-right"><%= [@country.name, @country.stolica].join(", ") %></p>
+<p id="digital_watch"></p>
+<p id="weekday" style="font-size: 11px; margin:0;"></p>
 <script type="text/javascript">
   $(document).ready(function() {
     digitalWatch();

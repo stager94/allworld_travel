@@ -69,8 +69,8 @@
       .pogoda{style: "float:right;"}
         .watch
           = render :partial => 'shared/watch'
-        -if @country.pogoda.present?
-          =@country.pogoda.html_safe
+        / -if @country.pogoda.present?
+        /   =@country.pogoda.html_safe
 
 .showplace_block
   %p

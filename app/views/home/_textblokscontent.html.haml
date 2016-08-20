@@ -50,13 +50,13 @@
 
 = render_partners
 
--if countries = @showplace.countries.first
-  .blockborder.countries
-    - @showplace.countries.each do |country|
-      .country_item
-        =link_to "/country/"+country.tag do
-          .flag_img
-            -if flagimg = country.flag.url(:thumb)
-              =image_tag flagimg
-          =country.name
+/ -if countries = @showplace.countries.first
+/   .blockborder.countries
+/     - @showplace.countries.each do |country|
+/       .country_item
+/         =link_to "/country/"+country.tag do
+/           .flag_img
+/             -if flagimg = country.flag.url(:thumb)
+/               =image_tag flagimg
+/           =country.name
 

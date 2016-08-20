@@ -1,0 +1,98 @@
+$small_width: 600px;
+$medium_width: 1000px;
+$large_width: 1199px;
+
+
+.infoblock {
+	background-image: url("/img/fone-pogoda.jpg");
+	color: white;
+	background-position: top right;
+	background-repeat: no-repeat;
+	position: relative;
+
+	@media screen and (min-width: $large_width) {
+		height: 97px;
+		padding: 5px;
+	}
+	@media screen and (min-width: $small_width) and (max-width: $large_width) {
+		height: 78px;
+	}
+
+	.new-medals {
+		position: absolute;
+		right: 5px;
+		top: 5px;
+	}
+	.new-rating {
+		position: absolute;
+		right: 5px;
+		bottom: 5px;
+		a {
+			color: white;
+			margin-right: 10px;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	.new-countries {
+		padding-top: 5px;
+
+		@media screen and (min-width: $large_width) {
+			padding-right: 95px;
+		}
+
+		a {
+			color: white;
+		}
+	}
+}
+
+.flag_img {
+	height: 28px !important;
+	vertical-align: middle;
+	display: inline-block;
+	float: none !important;
+
+	&.small {
+		width: 30px;
+		height: 30px;
+	}
+}
+
+.page-header {
+	&.place {
+		@media screen and (min-width: $medium_width) {
+			display: table;
+			width: 100%;
+		}
+		h1 {
+			padding: 5px 0px !important;
+			@media screen and (min-width: $medium_width) {
+				display: table-cell;
+				width: 100%;
+				padding-right: 20px;
+			}
+		}
+		.links {
+			@media screen and (min-width: $medium_width) {
+				display: table-cell;
+				white-space: nowrap;
+				border-style: solid;
+				border-radius: 4px 30px 0px 0px;
+				padding-right: 25px;
+				border-width: 1px 1px 0px;
+				border-color: rgb(238, 238, 238);
+			}
+			@media screen and (max-width: $medium_width) {
+				text-align: center;
+				padding: 10px 0;
+				border-top: 1px solid #eee;
+			}
+			a {
+				margin-left: 10px;
+			}
+		}
+	}
+}

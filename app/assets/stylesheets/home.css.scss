@@ -554,11 +554,11 @@ text-decoration: none;
 @media screen and (min-width: 992px) and (max-width:1199px) {
 .carousel-title{font-size: 1.8em;height: 100px;}
 .carousel-caption{font-size: 1.2em;bottom: 0px;}
-#countri .cntrmap {height: 218px;}
+#countri .cntrmap {height: 199px;}
 #countri .cntrmap iframe {height: 218px;width:275px;}
 #countri .shpageblock img{width:130px;height: 130px;}
 #countri .shpageblock p {margin-top: 0;}
-#countri .shpageblock{background-image: url('/img/watchblock_min.png');background-position: top right;background-repeat: no-repeat;height: 134px;}
+#countri .shpageblock{height: 134px;min-height:150px;}
 .navbar-toggle {display: none;}
 #place .cntrmap {height: 274px;}
 #place .cntrmap iframe {height: 274px;width:345px;}
@@ -610,7 +610,7 @@ text-decoration: none;
 
 @media screen and (min-width: 1200px) and (max-width:1599px) {
 #gsInformerID-SaEv66Ur83g2e0{width: 165px!important;}
-#countri .cntrmap {height: 235px;}
+#countri .cntrmap {height: 220px;}
 #countri .cntrmap iframe {height: 235px;width:345px;}
 #countri{width: 910px;height: 465px;}
 #countri .shpageblock{height: 180px;}

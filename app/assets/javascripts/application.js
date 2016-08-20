@@ -21,9 +21,10 @@
 //= require jquery.marquee
 //= require jquery.doubletap
 //= require search-autocomplete
+//= require moment
 
 $(function() {
-
+  moment.locale('ru');
   $('.marquee').marquee({
     startPosition: $.cookie('marquee-position')
   });
