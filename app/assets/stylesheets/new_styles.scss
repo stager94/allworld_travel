@@ -38,6 +38,7 @@ $large_width: 1199px;
 	}
 	.new-countries {
 		padding-top: 5px;
+		min-height: 65px;
 
 		@media screen and (min-width: $large_width) {
 			padding-right: 95px;
@@ -54,6 +55,8 @@ $large_width: 1199px;
 	vertical-align: middle;
 	display: inline-block;
 	float: none !important;
+	max-width: 40px;
+	padding: 0;
 
 	&.small {
 		width: 30px;
@@ -104,5 +107,43 @@ $large_width: 1199px;
 	// max-height: 70px;
 	p {
 		margin: 0;
+	}
+}
+
+#weekday {
+	text-align: right;
+}
+
+.textsblocks iframe {
+	max-width: 100% !important;
+}
+
+.test2 {
+	@media screen and (min-width: $small_width) {
+		margin-left: 240px;
+	}
+}
+
+.showplace_img {
+	position: relative;
+	overflow: visible;
+	min-height: 150px;
+}
+.showplace_wcorner, .showplace_item, .showplace_img {
+	overflow: visible !important;
+}
+.showplace_img img {
+	@media screen and (min-width: $medium_width) {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	&:hover {
+		@media screen and (min-width: $medium_width) {
+			width: 400px;
+			margin-left: -100px;
+			margin-top: -100px;
+			z-index: 999;
+		}
 	}
 }
