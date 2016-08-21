@@ -132,7 +132,7 @@ $large_width: 1199px;
 .showplace_wcorner, .showplace_item, .showplace_img {
 	overflow: visible !important;
 }
-.showplace_img img {
+.showplace_img2 img {
 	@media screen and (min-width: $medium_width) {
 		position: absolute;
 		top: 0;
