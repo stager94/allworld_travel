@@ -183,37 +183,90 @@
 
 
 .clear
+/ .textsblocks
+/   - textblockid = @country.countrytextblocks.select('textblock_id as id').group('textblock_id').to_a
+/   - grouptextblocksid = Textblock.select('grouptextblock_id as id').where(:id => textblockid).group('grouptextblock_id').to_a
+/   - grouptextblocks = Grouptextblock.where(:id => grouptextblocksid).order('sortorder ASC')
+/   - grouptextblocks.each do |grouptextblock|
+/     %b
+/       %span.fa.fa-thumbs-o-up
+/       =grouptextblock.name
+/     - Textblock.where(:id => textblockid).where(:grouptextblock_id => grouptextblock.id).order('sortorder ASC').each do |textblock|
+/       .textblock
+/         - @country.countrytextblocks.where(:textblock_id => textblock.id).order('sortorder ASC').each do |countrytextblock|
+/           .microblock
+/             - if showplace = countrytextblock.showplace or countrytextblock.image.present?
+/               .col-md-3.col-lg-3
+/                 - if showplace = countrytextblock.showplace
+/                   = render :partial => 'shared/showplace', :locals => {:showplace => showplace}
+/                 - else 
+/                   .showplace_wcorner
+/                     .showplace_item.nohover
+/                       .showplace_img
+/                         =image_tag countrytextblock.image.url(:thumb)
+/                         %p.mini=textblock.name
+/               .col-md-9.col-lg-9.showfulltext
+/                 .samtext=countrytextblock.fulltext.html_safe
+/                 .next
+/                   %span.fa.fa-chevron-circle-down
+/             - else
+/               .showfulltext
+/                 .samtext=countrytextblock.fulltext.html_safe
+/                 .next
+/                   %span.fa.fa-chevron-circle-down
+/           .clear
+
+- textblockid = @country.countrytextblocks.select('textblock_id as id').group('textblock_id').to_a
+- grouptextblocksid = Textblock.select('grouptextblock_id as id').where(:id => textblockid).group('grouptextblock_id').to_a
+- grouptextblocks = Grouptextblock.where(:id => grouptextblocksid).order('sortorder ASC')
+- textblocks = @country.countrytextblocks
+
+- previous_group_id = 0
+
 .textsblocks
-  - textblockid = @country.countrytextblocks.select('textblock_id as id').group('textblock_id').to_a
-  - grouptextblocksid = Textblock.select('grouptextblock_id as id').where(:id => textblockid).group('grouptextblock_id').to_a
-  - grouptextblocks = Grouptextblock.where(:id => grouptextblocksid).order('sortorder ASC')
-  - grouptextblocks.each do |grouptextblock|
-    %b
-      %span.fa.fa-thumbs-o-up
-      =grouptextblock.name
-    - Textblock.where(:id => textblockid).where(:grouptextblock_id => grouptextblock.id).order('sortorder ASC').each do |textblock|
-      .textblock
-        - @country.countrytextblocks.where(:textblock_id => textblock.id).order('sortorder ASC').each do |countrytextblock|
-          .microblock
-            - if showplace = countrytextblock.showplace or countrytextblock.image.present?
-              .col-md-3.col-lg-3
-                - if showplace = countrytextblock.showplace
-                  = render :partial => 'shared/showplace', :locals => {:showplace => showplace}
-                - else 
-                  .showplace_wcorner
-                    .showplace_item.nohover
-                      .showplace_img
-                        =image_tag countrytextblock.image.url(:thumb)
-                        %p.mini=textblock.name
-              .col-md-9.col-lg-9.showfulltext
-                .samtext=countrytextblock.fulltext.html_safe
-                .next
-                  %span.fa.fa-chevron-circle-down
-            - else
-              .showfulltext
-                .samtext=countrytextblock.fulltext.html_safe
-                .next
-                  %span.fa.fa-chevron-circle-down
-          .clear
+  - textblocks.each do |block|
+    - if block.textblock && block.textblock.grouptextblock.id != previous_group_id
+
+      - if block.textblock.grouptextblock.name == "Полезная информация" && @showplace.street_pano.present?
+        .street-pano= @showplace.street_pano.try(:html_safe)
+        
+
+      - grouptextblock = block.textblock.grouptextblock
+      - previous_group_id = grouptextblock.id
+      %b
+        - if grouptextblock.icon.present?
+          = image_tag grouptextblock.icon(:small), size: "16x16"
+        - else
+          %span.fa.fa-thumbs-o-up
+        = grouptextblock.name
+    
+    - if block.textblock.nil?
+      - previous_group_id = 0
+
+    .textblock
+      .microblock
+        - if showplace = block.showplace or block.image.present?
+          .test
+            - if showplace = block.othershowplace
+              = render partial: 'shared/showplace', locals: { showplace: showplace }
+            - else 
+              .showplace_wcorner
+                .showplace_item.nohover
+                  .showplace_img.showplace_img2
+                    =image_tag block.image.url(:thumb)
+                    - if block.textblock && block.textblock.name.present?
+                      %p.mini= block.textblock.name
+          .test2.showfulltext
+            .samtext(style="padding-top: 8px;" data-lines-count="#{6+block.lines_offset}")=block.fulltext.html_safe
+            = link_to "Подробнее >>", '/place/'+showplace.tag if showplace
+            .next
+              - unless showplace
+                %span.fa.fa-chevron-circle-down
+        - else
+          .showfulltext
+            .samtext(data-lines-count="#{6+block.lines_offset}")=block.fulltext.html_safe
+            .next
+              %span.fa.fa-chevron-circle-down
+      .clear
 
 = render_partners

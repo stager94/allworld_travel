@@ -1,17 +1,17 @@
 - textblockid = @showplace.placetextblocks.select('textblock_id as id').group('textblock_id').to_a
 - grouptextblocksid = Textblock.select('grouptextblock_id as id').where(id: textblockid).group('grouptextblock_id').to_a
 - grouptextblocks = Grouptextblock.where(id: grouptextblocksid).order('sortorder ASC')
-
+- textblocks = @showplace.placetextblocks
 
 - previous_group_id = 0
-- @showplace.placetextblocks.each do |placetextblock|
-  - if placetextblock.textblock && placetextblock.textblock.grouptextblock.id != previous_group_id
+- textblocks.each do |block|
+  - if block.textblock && block.textblock.grouptextblock.id != previous_group_id
 
-    - if placetextblock.textblock.grouptextblock.name == "Полезная информация" && @showplace.street_pano.present?
+    - if block.textblock.grouptextblock.name == "Полезная информация" && @showplace.street_pano.present?
       .street-pano= @showplace.street_pano.try(:html_safe)
       
 
-    - grouptextblock = placetextblock.textblock.grouptextblock
+    - grouptextblock = block.textblock.grouptextblock
     - previous_group_id = grouptextblock.id
     %b
       - if grouptextblock.icon.present?
@@ -20,31 +20,31 @@
         %span.fa.fa-thumbs-o-up
       = grouptextblock.name
   
-  - if placetextblock.textblock.nil?
+  - if block.textblock.nil?
     - previous_group_id = 0
 
   .textblock
     .microblock
-      - if showplace = placetextblock.othershowplace or placetextblock.image.present?
+      - if showplace = block.othershowplace or block.image.present?
         .test
-          - if showplace = placetextblock.othershowplace
+          - if showplace = block.othershowplace
             = render partial: 'shared/showplace', locals: { showplace: showplace }
           - else 
             .showplace_wcorner
               .showplace_item.nohover
                 .showplace_img.showplace_img2
-                  =image_tag placetextblock.image.url(:thumb)
-                  - if placetextblock.textblock && placetextblock.textblock.name.present?
-                    %p.mini= placetextblock.textblock.name
+                  =image_tag block.image.url(:thumb)
+                  - if block.textblock && block.textblock.name.present?
+                    %p.mini= block.textblock.name
         .test2.showfulltext
-          .samtext(style="padding-top: 8px;" data-lines-count="#{6+placetextblock.lines_offset}")=placetextblock.fulltext.html_safe
+          .samtext(style="padding-top: 8px;" data-lines-count="#{6+block.lines_offset}")=block.fulltext.html_safe
           = link_to "Подробнее >>", '/place/'+showplace.tag if showplace
           .next
             - unless showplace
               %span.fa.fa-chevron-circle-down
       - else
         .showfulltext
-          .samtext(data-lines-count="#{6+placetextblock.lines_offset}")=placetextblock.fulltext.html_safe
+          .samtext(data-lines-count="#{6+block.lines_offset}")=block.fulltext.html_safe
           .next
             %span.fa.fa-chevron-circle-down
     .clear

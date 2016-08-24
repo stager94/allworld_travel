@@ -1,6 +1,6 @@
 class Countrypicture < ActiveRecord::Base
   belongs_to :country, inverse_of: :countrypictures
-  attr_accessible :country_id, :name
+  attr_accessible :country_id, :name, :position
   # attr_accessible :title, :body
   attr_accessible :image
   has_attached_file :image, processors: [:watermark], styles: { 
@@ -12,6 +12,9 @@ class Countrypicture < ActiveRecord::Base
   }, default_url: "/img/blank/:style/pustota.png"
   
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
+
+  default_scope ->{ order(:position) }
+  acts_as_positioned under: :country
 
   rails_admin do
     parent 'Country'
