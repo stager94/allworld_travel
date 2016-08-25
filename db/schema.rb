@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160824090400) do
+ActiveRecord::Schema.define(version: 20160825224845) do
 
   create_table "allsettings", force: :cascade do |t|
     t.boolean  "default"
@@ -155,6 +155,9 @@ ActiveRecord::Schema.define(version: 20160824090400) do
     t.integer  "crest_file_size",     limit: 4
     t.datetime "crest_updated_at"
     t.string   "title",               limit: 255
+    t.text     "hotels_code",         limit: 65535
+    t.text     "flights_code",        limit: 65535
+    t.text     "car_rental_code",     limit: 65535
   end
 
   add_index "countries", ["region_id"], name: "index_countries_on_region_id", using: :btree
@@ -474,9 +477,6 @@ ActiveRecord::Schema.define(version: 20160824090400) do
     t.string   "twitter_link",           limit: 255
     t.string   "youtube_link",           limit: 255
     t.string   "google_link",            limit: 255
-    t.text     "hotels",                 limit: 65535
-    t.text     "flights",                limit: 65535
-    t.text     "car_rental",             limit: 65535
   end
 
   create_table "showplacepanos", force: :cascade do |t|
@@ -508,36 +508,39 @@ ActiveRecord::Schema.define(version: 20160824090400) do
   add_index "showplacepictures", ["showplace_id"], name: "index_showplacepictures_on_showplace_id", using: :btree
 
   create_table "showplaces", force: :cascade do |t|
-    t.string   "name",          limit: 255
-    t.string   "h1",            limit: 255
-    t.text     "keywords",      limit: 65535
-    t.text     "description",   limit: 65535
-    t.string   "tag",           limit: 255
-    t.text     "shortdesc",     limit: 65535
-    t.text     "googlemap",     limit: 65535
-    t.text     "fulldesc",      limit: 65535
-    t.text     "primech",       limit: 65535
-    t.integer  "section_id",    limit: 4
-    t.integer  "category_id",   limit: 4
-    t.integer  "group_id",      limit: 4
-    t.integer  "region_id",     limit: 4
-    t.string   "datapostroyki", limit: 255
+    t.string   "name",            limit: 255
+    t.string   "h1",              limit: 255
+    t.text     "keywords",        limit: 65535
+    t.text     "description",     limit: 65535
+    t.string   "tag",             limit: 255
+    t.text     "shortdesc",       limit: 65535
+    t.text     "googlemap",       limit: 65535
+    t.text     "fulldesc",        limit: 65535
+    t.text     "primech",         limit: 65535
+    t.integer  "section_id",      limit: 4
+    t.integer  "category_id",     limit: 4
+    t.integer  "group_id",        limit: 4
+    t.integer  "region_id",       limit: 4
+    t.string   "datapostroyki",   limit: 255
     t.boolean  "lose"
     t.boolean  "wonders7"
     t.boolean  "top100"
     t.boolean  "unesco"
-    t.datetime "created_at",                                                          null: false
-    t.datetime "updated_at",                                                          null: false
-    t.decimal  "point",                       precision: 5, scale: 1
-    t.boolean  "showfilter",                                          default: true
-    t.boolean  "showhome",                                            default: true
+    t.datetime "created_at",                                                            null: false
+    t.datetime "updated_at",                                                            null: false
+    t.decimal  "point",                         precision: 5, scale: 1
+    t.boolean  "showfilter",                                            default: true
+    t.boolean  "showhome",                                              default: true
     t.boolean  "ginnesa"
-    t.boolean  "showinsection",                                       default: true
-    t.boolean  "showincountry",                                       default: true
-    t.boolean  "itsgorod",                                            default: false
-    t.string   "title",         limit: 255
-    t.boolean  "visible",                                             default: true
-    t.text     "street_pano",   limit: 65535
+    t.boolean  "showinsection",                                         default: true
+    t.boolean  "showincountry",                                         default: true
+    t.boolean  "itsgorod",                                              default: false
+    t.string   "title",           limit: 255
+    t.boolean  "visible",                                               default: true
+    t.text     "street_pano",     limit: 65535
+    t.text     "hotels_code",     limit: 65535
+    t.text     "flights_code",    limit: 65535
+    t.text     "car_rental_code", limit: 65535
   end
 
   add_index "showplaces", ["category_id"], name: "index_showplaces_on_category_id", using: :btree

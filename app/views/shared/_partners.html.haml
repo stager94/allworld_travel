@@ -2,9 +2,9 @@
   %b 
     %span.fa.fa-thumbs-o-up
     Авиабилеты, отели, прокат авто
-  .text-center= Setting.flights.html_safe
+  .text-center= object.get_flights_code.html_safe
   %br
-  .text-center= Setting.hotels.html_safe
+  .text-center= object.get_hotels_code.html_safe
   %br
-  .text-center= Setting.car_rental.html_safe
+  .text-center= object.get_car_rental_code.html_safe
   %br

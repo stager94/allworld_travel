@@ -8,7 +8,6 @@ class Setting < ActiveRecord::Base
   attr_accessible :twitter_link
   attr_accessible :youtube_link
   attr_accessible :google_link
-  attr_accessible :hotels, :flights, :car_rental
 
 	has_attached_file :favicon, styles: { 
 		desktop: "32x32#", 
@@ -69,19 +68,6 @@ class Setting < ActiveRecord::Base
   end
   def self.google_link
     instance.google_link
-  end
-  def self.hotels
-    instance.hotels
-  end
-  def self.flights
-    instance.flights
-  end
-  def self.car_rental
-    instance.car_rental
-  end
-
-  def self.has_partners_codes?
-    car_rental.present? || flights.present? || hotels.present?
   end
 
   rails_admin do

@@ -7,6 +7,7 @@ class Country < ActiveRecord::Base
   attr_accessible :googlemap, :title
   attr_accessible :bezopasnost, :ceny, :chtobrat, :chtonugnoznat, :cultura, :dostoprimech,  :internet, :jazik,  :oteli, :pitanie, :politika, :prazdniki, :suvenir, :transport, :valutes, :visum
   attr_accessible :primech, :tag, :chaspoyas, :pogoda, :timezone
+  attr_accessible :flights_code, :car_rental_code, :hotels_code
 
   has_many :children, class_name: "Country", foreign_key: "parent_id"                             
   belongs_to :parent, class_name: "Country"        
@@ -124,6 +125,9 @@ class Country < ActiveRecord::Base
       field :countrytextblocks  do 
         group :allother
       end
+      fields :flights_code, :car_rental_code, :hotels_code do
+        group :partners
+      end
     end
 
 
@@ -133,5 +137,18 @@ class Country < ActiveRecord::Base
     self.tag = self.name.to_slug_param
   end
 
+
+  def get_flights_code
+    flights_code
+  end
+  def get_hotels_code
+    hotels_code
+  end
+  def get_car_rental_code
+    car_rental_code
+  end
+  def has_partners_codes?
+    car_rental_code.present? || flights_code.present? || hotels_code.present?
+  end
 
 end

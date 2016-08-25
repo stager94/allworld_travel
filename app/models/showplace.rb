@@ -13,6 +13,7 @@ class Showplace < ActiveRecord::Base
   attr_accessible :region_id
   attr_accessible :datapostroyki, :description, :fulldesc, :googlemap, :h1, :keywords, :lose, :name, :primech, :shortdesc, :tag, :top100, :unesco, :wonders7, :point, :showfilter, :showhome, :ginnesa, :title
   attr_accessible :showinsection, :showincountry, :itsgorod
+  attr_accessible :flights_code, :car_rental_code, :hotels_code
 
   has_many :placedas, :dependent => :destroy
   has_many :placenets, :dependent => :destroy
@@ -148,6 +149,23 @@ class Showplace < ActiveRecord::Base
       field :placetextblocks  do 
         group :allother
       end
+      fields :flights_code, :car_rental_code, :hotels_code do
+        group :partners
+      end
     end
+  end
+
+  def get_flights_code
+    self[:flights_code].present? ? self[:flights_code] : self.countries.first.flights_code
+  end
+  def get_hotels_code
+    self[:hotels_code].present? ? self[:hotels_code] : self.countries.first.hotels_code
+  end
+  def get_car_rental_code
+    self[:car_rental_code].present? ? self[:car_rental_code] : self.countries.first.car_rental_code
+  end
+
+  def has_partners_codes?
+    get_car_rental_code.present? || get_flights_code.present? || get_hotels_code.present?
   end
 end
