@@ -11,9 +11,7 @@ h1{color: #1b587f;text-align:center;}
 h3{color: #1b587f;font-weight: bold;}
 .alert{position: absolute;width: 100%;z-index: 5;padding: 4px 25px;}
 .showplace_wcorner{text-align: center;float: left;overflow: hidden;padding: 10px 6px;position: relative;}
-.showplace_item{text-align: center;height: 100%;overflow: hidden;box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);}
-.showplace_item:hover {box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);}
-.nohover:hover {box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);}
+.showplace_item{text-align: center;height: 100%;overflow: hidden;}
 .showplace_img{width: 100%;background-color: white;margin:0;overflow: hidden;position: relative;}
 .showplace_img img{width: 100%;}
 .showplace_atr{background-color: white;font-size: 12px;padding-top: 2px;height: 18px;color:black;text-align: justify;-ms-text-justify: distribute-all-lines; text-justify: distribute-all-lines;}

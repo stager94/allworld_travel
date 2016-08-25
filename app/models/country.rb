@@ -35,7 +35,7 @@ class Country < ActiveRecord::Base
   validates_attachment_content_type :crest, :content_type => /\Aimage\/.*\Z/
 
   attr_accessible :globus
-  has_attached_file :globus, :styles => { :thumb => "180x180#" }, :default_url => "/img/mir.gif"
+  has_attached_file :globus, :styles => { :thumb => "360x360#" }, :default_url => "/img/mir.gif"
   validates_attachment_content_type :globus, :content_type => /\Aimage\/.*\Z/
 
   has_many :countryvideos, :dependent => :destroy, :inverse_of => :country

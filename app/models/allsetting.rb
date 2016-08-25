@@ -6,6 +6,8 @@ class Allsetting < ActiveRecord::Base
 
   rails_admin do
     navigation_label I18n.t('menu.setting')
+    include_all_fields
+    field :copyright, :ck_editor
   end
 
 end

@@ -47,7 +47,7 @@
         %footer
           %p 
             &copy;
-            =$setting.copyright
+            = raw $setting.copyright
     .hiddenbottom
       = render :partial => 'shared/hiddenbottom'
     = render "layouts/metrics"

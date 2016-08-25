@@ -6,7 +6,7 @@
       / .afdelimit
       - Footermenu.order('sortorder ASC').each do |razdel|
         .footer-cell
-          %h4=razdel.name
+          / %h4=razdel.name
           -razdel.footersubmenus.order('sortorder ASC').each do |subfooter|
             %p
               = link_to subfooter.url do
