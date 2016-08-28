@@ -93,6 +93,9 @@ ru:
         pogoda: "Код погодного информера"
         chaspoyas: "Часовой пояс"
         parent: "Принадлежит к"
+        hotels_code: "Отели"
+        flights_code: "Авиа"
+        car_rental_code: "Аренда авто"
       
       setting:
         hotels: "Код партнерки 'Отели'"
@@ -234,6 +237,9 @@ ru:
         ginnesa: "В книге Гиннеса"
         chudesa: "7 чудес"
         street_pano: "Код просмотра улиц"
+        hotels_code: "Отели"
+        flights_code: "Авиа"
+        car_rental_code: "Аренда авто"
       
       showplacevideo:
         kode: "URL ссылка на youtube видео"

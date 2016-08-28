@@ -93,6 +93,9 @@ class Country < ActiveRecord::Base
       group :allother do
         label I18n.t('group.allother')
       end
+      group :partners do
+        label I18n.t('group.partners')
+      end
       include_all_fields
       field :descforturist, :ck_editor
       field :shortdesc, :ck_editor
