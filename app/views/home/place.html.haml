@@ -56,7 +56,7 @@
       / %li= link_to @showplace.section.name, "/section/#{@showplace.section.tag.name}"
     - else
       - session[:breadcrumbs] << ['Страны мира', '/allcountries']
-      - session[:breadcrumbs] << [@showplace.countries.first.region.name, '/countries/'+@showplace.countries.first.region.tag.name]
+      - session[:breadcrumbs] << [@showplace.countries.first.region.name, '/countries/'+@showplace.countries.first.region.tag.name] rescue nil
       -if @showplace.countries.count <5
         - @showplace.countries.each do |plcountry|
           - session[:breadcrumbs] << [plcountry.name, '/country/'+plcountry.tag]
