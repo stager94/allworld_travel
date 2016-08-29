@@ -310,7 +310,7 @@ class HomeController < ApplicationController
         @placeda = Placeda.new
         @placeda.user = current_user
         @placeda.showplace_id=params[:id]
-        @placeda.countries = @placeda.country_ids
+        @placeda.countries = showplace.country_ids
         if @placeda.save
           redirect_to :back
         else

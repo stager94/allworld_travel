@@ -1,0 +1,53 @@
+
+- if current_user
+  - if test=current_user.placevidels.where('showplace_id'=>@showplace.id).first
+    - placevidelsclass='check'
+    - placevidelsgo='/noseen/'
+  - else
+    - placevidelsclass='nocheck'
+    - placevidelsgo='/seenjs/'
+  - if test=current_user.placevidels.where('showplace_id'=>@showplace.id).first and test.@showplace.countries.count>1
+    - placevidelsgo='/seenjs/'
+  - if test=current_user.placenets.where('showplace_id'=>@showplace.id).first 
+    - placenetsclass='check'
+    - placenetsgo='/nono/'
+  - else
+    - placenetsclass='nocheck'
+    - placenetsgo='/no/'
+  - if test=current_user.placedas.where('showplace_id'=>@showplace.id).first 
+    - placedasclass='check'
+    - if @showplace.countries.count == 1
+      - placedasgo='/nowish/'
+    - else
+      - placedasgo='/wishjs/'
+  - else
+    - placedasclass='nocheck'
+    - placedasgo='/wishjs/'
+- else
+  - if (not session[:placevidels].nil?) and ( session[:placevidels].include?(@showplace.id.to_s) or session[:placevidels].include?(@showplace.id) )
+    - placevidelsclass='check'
+    - if @showplace.countries.count > 1
+      - placevidelsgo='/seenjs/'
+    - else
+      - placevidelsgo='/noseen/'
+  - else
+    - placevidelsclass='nocheck'
+    - placevidelsgo='/seenjs/'
+  - if (not session[:placevidels].nil?) and session[:placevidels].include?(@showplace.id.to_s) and @showplace.countries.count>1
+    - placevidelsgo='/seenjs/'
+  - if (not session[:placenets].nil?) and session[:placenets].include?(@showplace.id.to_s)
+    - placenetsclass='check'
+    - placenetsgo='/nono/'
+  - else
+    - placenetsclass='nocheck'
+    - placenetsgo='/no/'
+
+  - if (not session[:placedas].nil?) and ( session[:placedas].include?(@showplace.id.to_s) or session[:placedas].include?(@showplace.id) )
+    - placedasclass='check'
+    - if @showplace.countries.count == 1
+      - placedasgo='/nowish/'
+    - else
+      - placedasgo='/wishjs/'
+  - else
+    - placedasclass='nocheck'
+    - placedasgo='/wishjs/'
