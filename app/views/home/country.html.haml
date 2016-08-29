@@ -247,7 +247,7 @@
       .microblock
         - if showplace = block.showplace or block.image.present?
           .test
-            - if showplace = block.othershowplace
+            - if showplace = block.showplace
               = render partial: 'shared/showplace', locals: { showplace: showplace }
             - else 
               .showplace_wcorner
