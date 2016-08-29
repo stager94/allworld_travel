@@ -1,25 +1,24 @@
 - set_meta_tags title: @showplace.title, reverse: true
 - use_previous_breadcrumbs = false
 
--if @showplace.showfilter
-  - if current_user and test=current_user.placevidels.where('showplace_id'=>@showplace.id).first 
-    - placevidelsclass='bigcheck'
-    - placevidelsgo='/noseen/'
-  - else
-    - placevidelsclass='bignocheck'
-    - placevidelsgo='/seen/'
-  - if current_user and test=current_user.placenets.where('showplace_id'=>@showplace.id).first 
-    - placenetsclass='bigcheck'
-    - placenetsgo='/nono/'
-  - else
-    - placenetsclass='bignocheck'
-    - placenetsgo='/no/'
-  - if current_user and test=current_user.placedas.where('showplace_id'=>@showplace.id).first 
-    - placedasclass='bigcheck'
-    - placedasgo='/nowish/'
-  - else
-    - placedasclass='bignocheck'
-    - placedasgo='/wish/'
+- if current_user and test=current_user.placevidels.where('showplace_id'=>@showplace.id).first 
+  - placevidelsclass='bigcheck'
+  - placevidelsgo='/noseen/'
+- else
+  - placevidelsclass='bignocheck'
+  - placevidelsgo='/seen/'
+- if current_user and test=current_user.placenets.where('showplace_id'=>@showplace.id).first 
+  - placenetsclass='bigcheck'
+  - placenetsgo='/nono/'
+- else
+  - placenetsclass='bignocheck'
+  - placenetsgo='/no/'
+- if current_user and test=current_user.placedas.where('showplace_id'=>@showplace.id).first 
+  - placedasclass='bigcheck'
+  - placedasgo='/nowish/'
+- else
+  - placedasclass='bignocheck'
+  - placedasgo='/wish/'
   
 
 - @bredcrumb = capture do
@@ -90,6 +89,7 @@
 .page-header.place
   %h1=@showplace.h1
   .links
+    - binding.pry
     = link_to 'Был, видел', placevidelsgo+@showplace.id.to_s, :class=>placevidelsclass
     = link_to 'Хочу', placedasgo+@showplace.id.to_s, :class=>placedasclass
     = link_to 'Позже', placenetsgo+@showplace.id.to_s, :class=>placenetsclass
