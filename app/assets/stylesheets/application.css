@@ -454,3 +454,17 @@ footer a:hover {
 	text-decoration: none;
 	color: white;
 }
+
+
+.fotorama--fullscreen .fotorama__caption__wrap {
+	margin-left: 50px;
+}
+
+.fotorama__caption__wrap__length {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+.fotorama:not(.fotorama--fullscreen) .fotorama__caption {
+	width: 100% !important;
+}

@@ -2637,11 +2637,11 @@ jQuery.Fotorama = function ($fotorama, opts) {
 
         console.log("First pano index is ", firstPanoIndex, index);
         if (dataFrame.video) {
-          $(div("fotorama__info", div(captionWrapClass, (index-firstVideoIndex+1) + " из " + videosCount ))).appendTo($frame);  
+          $(div("fotorama__info", div(captionWrapClass + " fotorama__caption__wrap__length", (index-firstVideoIndex+1) + " из " + videosCount ))).appendTo($frame);  
         } else if (dataFrame.pano) {
-          $(div("fotorama__info", div(captionWrapClass, (index-firstPanoIndex+1) + " из " + panosCount ))).appendTo($frame);  
+          $(div("fotorama__info", div(captionWrapClass + " fotorama__caption__wrap__length", (index-firstPanoIndex+1) + " из " + panosCount ))).appendTo($frame);  
         } else {
-          $(div("fotorama__info", div(captionWrapClass, (index+1) + " из " + photosCount ))).appendTo($frame);
+          $(div("fotorama__info", div(captionWrapClass + " fotorama__caption__wrap__length", (index+1) + " из " + photosCount ))).appendTo($frame);
         }
         
 
@@ -3103,6 +3103,10 @@ jQuery.Fotorama = function ($fotorama, opts) {
         triggerEvent('showend', {
           user: options.user
         });
+        setTimeout(function(){
+          var width = $(".fotorama__img--full").width();
+          $(".fotorama__caption").css({width: width, margin: "0 auto"})
+        }, 1000);
       }
 
       //console.log('o_transition', o_transition);
@@ -3178,6 +3182,10 @@ jQuery.Fotorama = function ($fotorama, opts) {
   };
 
   that.requestFullScreen = function () {
+    setTimeout(function(){
+        var width = $(".fotorama__img--full").width();
+        $(".fotorama__caption").css({width: width, margin: "0 auto"})
+      }, 1000);
     if (o_allowFullScreen && !that.fullScreen) {
       scrollTop = $WINDOW.scrollTop();
       scrollLeft = $WINDOW.scrollLeft();
@@ -3321,6 +3329,11 @@ jQuery.Fotorama = function ($fotorama, opts) {
         measuresSetFLAG = setFLAG || true;
 
         ready();
+      setTimeout(function(){
+        var width = $(".fotorama__img--full").width();
+        $(".fotorama__caption").css({width: width, margin: "0 auto"})
+      }, 1000);
+        
       }
     }
 
