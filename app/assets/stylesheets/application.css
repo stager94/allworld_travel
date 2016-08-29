@@ -468,3 +468,6 @@ footer a:hover {
 .fotorama:not(.fotorama--fullscreen) .fotorama__caption {
 	width: 100% !important;
 }
+.new-countries {
+	max-width: 230px;
+}

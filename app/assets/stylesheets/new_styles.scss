@@ -40,10 +40,6 @@ $large_width: 1199px;
 		padding-top: 5px;
 		min-height: 65px;
 
-		@media screen and (min-width: $large_width) {
-			padding-right: 95px;
-		}
-
 		a {
 			color: white;
 		}

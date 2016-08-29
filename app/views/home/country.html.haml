@@ -28,7 +28,6 @@
 
     - session[:breadcrumbs] << [@country.name, '/country/'+@country.tag]
 
-  / - binding.pry
 
   - session[:breadcrumbs].each do |title, link|
     - if link

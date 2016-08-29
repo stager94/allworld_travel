@@ -6,7 +6,6 @@ class ActiveRecord::Base
       attr_accessible :"delete_#{attachment}"
       
       before_update do
-        binding.pry
         self.send(attachment).clear if self.send(:"delete_#{attachment}") == true
       end
 
