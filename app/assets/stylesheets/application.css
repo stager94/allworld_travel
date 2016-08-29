@@ -439,3 +439,18 @@ label {
 .showplace_item img {
 	box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
 }
+footer {
+	text-align: center;
+}
+footer p {
+	display: inline-block;
+	padding: 12px 5px !important;
+}
+footer a {
+	text-decoration: underline;
+	color: white;
+}
+footer a:hover {
+	text-decoration: none;
+	color: white;
+}
