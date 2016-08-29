@@ -159,13 +159,13 @@ class Showplace < ActiveRecord::Base
   end
 
   def get_flights_code
-    self[:flights_code].present? ? self[:flights_code] : self.countries.first.flights_code
+    self[:flights_code].present? ? self[:flights_code] : self.countries.first.flights_code rescue nil
   end
   def get_hotels_code
-    self[:hotels_code].present? ? self[:hotels_code] : self.countries.first.hotels_code
+    self[:hotels_code].present? ? self[:hotels_code] : self.countries.first.hotels_code rescue nil
   end
   def get_car_rental_code
-    self[:car_rental_code].present? ? self[:car_rental_code] : self.countries.first.car_rental_code
+    self[:car_rental_code].present? ? self[:car_rental_code] : self.countries.first.car_rental_code rescue nil
   end
 
   def has_partners_codes?
