@@ -73,6 +73,7 @@ class Setting < ActiveRecord::Base
   rails_admin do
     include_all_fields
     field :top100_text, :ck_editor
+    field :footer_text, :ck_editor
   end
 
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160825224845) do
+ActiveRecord::Schema.define(version: 20160903231350) do
 
   create_table "allsettings", force: :cascade do |t|
     t.boolean  "default"
@@ -161,6 +161,20 @@ ActiveRecord::Schema.define(version: 20160825224845) do
   end
 
   add_index "countries", ["region_id"], name: "index_countries_on_region_id", using: :btree
+
+  create_table "countrypanos", force: :cascade do |t|
+    t.string   "title",              limit: 255
+    t.text     "src",                limit: 65535
+    t.integer  "country_id",         limit: 4
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.string   "thumb_file_name",    limit: 255
+    t.string   "thumb_content_type", limit: 255
+    t.integer  "thumb_file_size",    limit: 4
+    t.datetime "thumb_updated_at"
+  end
+
+  add_index "countrypanos", ["country_id"], name: "index_countrypanos_on_country_id", using: :btree
 
   create_table "countrypictures", force: :cascade do |t|
     t.integer  "country_id",         limit: 4
@@ -654,6 +668,7 @@ ActiveRecord::Schema.define(version: 20160825224845) do
   add_index "versions", ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id", using: :btree
 
   add_foreign_key "chudesas", "showplaces"
+  add_foreign_key "countrypanos", "countries"
   add_foreign_key "countrytextblocks", "countries"
   add_foreign_key "countrytextblocks", "textblocks"
   add_foreign_key "footersubmenus", "footermenus"

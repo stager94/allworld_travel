@@ -56,6 +56,8 @@
       -if videos = @country.countryvideos.first
         - @country.countryvideos.each do |video|
           =link_to video.name, video.kode.html_safe
+      - @country.showplacepanos.each do |pano|
+        = link_to pano.title, "#", data: { pano: true, image: pano.thumb.url, thumb: pano.thumb.url, panorama: pano.src }
 
   .ohdetails
     .cntrmap
@@ -71,14 +73,15 @@
         / -if @country.pogoda.present?
         /   =@country.pogoda.html_safe
 
-.showplace_block
-  %p
-    %b Достопримечательности и интересные места:
-    (
-    =@relatedsplscount
-    )
-  #related
-    = render :partial => 'relatedspls'
+- if @relatedsplscount > 0
+  .showplace_block
+    %p
+      %b Достопримечательности и интересные места:
+      (
+      =@relatedsplscount
+      )
+    #related
+      = render partial: 'relatedspls'
 
 
 
@@ -257,7 +260,9 @@
                       %p.mini= block.textblock.name
           .test2.showfulltext
             .samtext(style="padding-top: 8px;" data-lines-count="#{6+block.lines_offset}")=block.fulltext.html_safe
-            = link_to "Подробнее >>", '/place/'+showplace.tag if showplace
+            - if showplace
+              .text-right= link_to "Подробнее >>", '/place/'+showplace.tag, style: "font-size: 13px;"
+
             .next
               - unless showplace
                 %span.fa.fa-chevron-circle-down

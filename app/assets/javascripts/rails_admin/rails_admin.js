@@ -1,5 +1,6 @@
 //=  require 'jquery'
 //=  require 'jquery_ujs'
+//=  require 'rails_admin/jquery.pjax'
 //=  require 'rails_admin/jquery.remotipart.fixed'
 //=  require 'jquery-ui/effect'
 //=  require 'jquery-ui/sortable'

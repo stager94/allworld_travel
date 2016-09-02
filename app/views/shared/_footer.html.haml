@@ -2,7 +2,7 @@
   .row
     .footer-table
       .footer-cell
-        = Setting.footer_text
+        = raw Setting.footer_text
       / .afdelimit
       - Footermenu.order('sortorder ASC').each do |razdel|
         .footer-cell
@@ -11,7 +11,7 @@
             %p
               = link_to subfooter.url do
                 - if subfooter.icon.present?
-                  = image_tag subfooter.icon.url(:micro), width: "24px"
+                  = image_tag subfooter.icon.url(:micro), width: "40"
                 = subfooter.name
         / .afdelimit
 
@@ -20,6 +20,7 @@
         %p
           = "e-mail: #{Setting.system_email}"
         %p
+          = image_tag "support_white.png", size: "20x20"
           Служба поддержки
         -#=$setting.contactadress
         .socialicons

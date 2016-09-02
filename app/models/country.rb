@@ -50,6 +50,11 @@ class Country < ActiveRecord::Base
   attr_accessible :countrytextblocks_attributes
   accepts_nested_attributes_for :countrytextblocks, :allow_destroy => true
 
+  has_many :countrypanos, dependent: :destroy, inverse_of: :country
+  attr_accessible :countrypano_ids
+  attr_accessible :countrypanos_attributes
+  accepts_nested_attributes_for :countrypanos, allow_destroy: true
+
   has_many :news, :dependent => :destroy, :inverse_of => :country
 
   before_create :add_tag
@@ -115,7 +120,7 @@ class Country < ActiveRecord::Base
       fields  :shortdesc, :descforturist, :primech  do 
         group :shapka
       end
-      fields :flag, :crest, :googlemap, :countrypictures, :countryvideos, :globus, :pogoda  do 
+      fields :flag, :crest, :googlemap, :countrypictures, :countryvideos, :countrypanos, :globus, :pogoda  do 
         group :mediainfo
       end
       fields :tag, :region, :parent  do 
