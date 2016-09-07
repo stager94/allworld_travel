@@ -62,7 +62,7 @@ $(function() {
   if(bloks_total.length){
     for(i=0; i < bloks_total.length;i++){
       blok_height = Number($(bloks_total[i]).css('height').replace('px',''));
-      linesCount = $(bloks_total[i]).data('lines-count') || 6
+      linesCount = $(bloks_total[i]).data('lines-count') || 8
       maxheight = linesCount * 20.5 + 10;
       // console.log(blok_height, $(bloks_total[i]).data('lines-count') || 3);
       if(blok_height > maxheight){
@@ -81,7 +81,7 @@ $(function() {
        blok.css('max-height','');
        $(this).find('span').removeClass( "fa-chevron-circle-down" ).addClass( "fa-chevron-circle-up" );
     } else {
-      linesCount = $(blok).data('lines-count') || 6
+      linesCount = $(blok).data('lines-count') || 8
       maxheight = linesCount * 20.5 + 10;
 
        blok.css('max-height',maxheight+'px');   

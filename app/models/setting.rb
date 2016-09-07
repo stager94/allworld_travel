@@ -1,6 +1,6 @@
 class Setting < ActiveRecord::Base
 
-  attr_accessible :top100_text, :footer_text, :favicon, :logotype
+  attr_accessible :top100_text, :footer_text, :favicon, :logotype, :standard_lines_count
   attr_accessible :system_email
   attr_accessible :vk_link
   attr_accessible :fb_link
@@ -68,6 +68,10 @@ class Setting < ActiveRecord::Base
   end
   def self.google_link
     instance.google_link
+  end
+
+  def self.standard_lines_count
+    instance.standard_lines_count || 8
   end
 
   rails_admin do

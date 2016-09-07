@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160903231350) do
+ActiveRecord::Schema.define(version: 20160907133904) do
 
   create_table "allsettings", force: :cascade do |t|
     t.boolean  "default"
@@ -480,8 +480,8 @@ ActiveRecord::Schema.define(version: 20160903231350) do
     t.string   "watermark_content_type", limit: 255
     t.integer  "watermark_file_size",    limit: 4
     t.datetime "watermark_updated_at"
-    t.datetime "created_at",                           null: false
-    t.datetime "updated_at",                           null: false
+    t.datetime "created_at",                                       null: false
+    t.datetime "updated_at",                                       null: false
     t.text     "top100_text",            limit: 65535
     t.text     "footer_text",            limit: 65535
     t.string   "system_email",           limit: 255
@@ -491,6 +491,7 @@ ActiveRecord::Schema.define(version: 20160903231350) do
     t.string   "twitter_link",           limit: 255
     t.string   "youtube_link",           limit: 255
     t.string   "google_link",            limit: 255
+    t.integer  "standard_lines_count",   limit: 4,     default: 8
   end
 
   create_table "showplacepanos", force: :cascade do |t|

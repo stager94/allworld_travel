@@ -37,7 +37,7 @@
                   - if block.textblock && block.textblock.name.present?
                     %p.mini= block.textblock.name
         .test2.showfulltext
-          .samtext(style="padding-top: 8px;" data-lines-count="#{6+block.lines_offset}")=block.fulltext.html_safe
+          .samtext(style="padding-top: 8px;" data-lines-count="#{8+block.lines_offset}")=block.fulltext.html_safe
           - if showplace
             .text-right= link_to "Подробнее >>", '/place/'+showplace.tag, style: "font-size: 13px;"
           .next

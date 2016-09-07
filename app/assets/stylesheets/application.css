@@ -500,5 +500,8 @@ footer a:hover {
 }
 
 .samtext p {
-	margin-bottom: 23px;
+	margin-bottom: 23px !important;
+}
+.crest img {
+	box-shadow: 0 0 12px rgba(0,0,0,0.3);
 }
