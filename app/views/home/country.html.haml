@@ -56,7 +56,7 @@
       -if videos = @country.countryvideos.first
         - @country.countryvideos.each do |video|
           =link_to video.name, video.kode.html_safe
-      - @country.showplacepanos.each do |pano|
+      - @country.countrypanos.each do |pano|
         = link_to pano.title, "#", data: { pano: true, image: pano.thumb.url, thumb: pano.thumb.url, panorama: pano.src }
 
   .ohdetails
