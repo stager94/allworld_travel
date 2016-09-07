@@ -256,7 +256,9 @@
                 .showplace_item.nohover
                   .showplace_img.showplace_img2
                     =image_tag block.image.url(:thumb)
-                    - if block.textblock && block.textblock.name.present?
+                    - if block.caption.present?
+                      %p.mini= block.caption
+                    - elsif block.textblock && block.textblock.name.present?
                       %p.mini= block.textblock.name
           .test2.showfulltext
             .samtext(style="padding-top: 8px;" data-lines-count="#{Setting.standard_lines_count+block.lines_offset}")=block.fulltext.html_safe

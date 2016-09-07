@@ -2,7 +2,7 @@ class Placetextblock < ActiveRecord::Base
   belongs_to :showplace, :inverse_of => :placetextblocks
   belongs_to :textblock, :inverse_of => :placetextblocks
   belongs_to :othershowplace, :class_name => 'Showplace', :foreign_key => 'othershowplace_id'
-  attr_accessible :textblock_id
+  attr_accessible :textblock_id, :caption
   attr_accessible :country_id
   attr_accessible :othershowplace_id
   attr_accessible :image, :lines_offset

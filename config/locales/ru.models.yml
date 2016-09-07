@@ -197,8 +197,10 @@ ru:
         country: "Страна"
         showplace: "Связать с достопримечательностью"
         blocklink: "URL ссылки"
+        caption: "Подпись на картинке"
         
       placetextblock:
+        caption: "Подпись на картинке"
         fulltext: "Текст"
         sortorder: "Порядок сортировки"
         image: "Картинка"

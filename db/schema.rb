@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160907133904) do
+ActiveRecord::Schema.define(version: 20160907154234) do
 
   create_table "allsettings", force: :cascade do |t|
     t.boolean  "default"
@@ -205,6 +205,7 @@ ActiveRecord::Schema.define(version: 20160907133904) do
     t.text     "blocklink",          limit: 65535
     t.integer  "position",           limit: 4,     default: 0
     t.integer  "lines_offset",       limit: 4,     default: 0
+    t.string   "caption",            limit: 255
   end
 
   add_index "countrytextblocks", ["country_id"], name: "index_countrytextblocks_on_country_id", using: :btree
@@ -391,6 +392,7 @@ ActiveRecord::Schema.define(version: 20160907133904) do
     t.integer  "position",           limit: 4,     default: 0
     t.boolean  "delete_image",                     default: false
     t.integer  "lines_offset",       limit: 4,     default: 0
+    t.string   "caption",            limit: 255
   end
 
   add_index "placetextblocks", ["showplace_id"], name: "index_placetextblocks_on_showplace_id", using: :btree
