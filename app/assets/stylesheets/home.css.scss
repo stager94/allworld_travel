@@ -458,7 +458,6 @@ opacity: 1;
 .fotorama__active .fotorama__thumb{outline: 2px solid #98d1ec;}
 .fotorama__thumb-border{display: none;}
 .filterbl {padding: 10px 0;}
-#accordionteritory .country_wcorner {width: 360px;}
 #addcountries{width: 600px;}
 #addcountries .country_item {width: 190px;}
 .modal-footer {padding: 0;}
@@ -728,9 +727,9 @@ text-decoration: none;
 
 
 .alcountry {
-  column-count: 4;
-  -webkit-column-count: 4;
-  -moz-column-count: 4;
+  column-count: 3;
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
 
   @media screen and (max-width: 1200px) {
     column-count: 3;
@@ -752,4 +751,29 @@ text-decoration: none;
   -webkit-column-gap: 10px;
   -moz-column-gap: 10px;
 
+}
+
+
+.watch {
+  min-height: 180px;
+  margin-left: 180px;
+  position: relative;
+
+  @media screen and (min-width: 991px) and (max-width: 1199px) {
+    margin-left: 140px;
+    min-height: 130px;
+    font-size: 12px;
+    line-height: 1.2;
+  }
+
+  .top {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
 }

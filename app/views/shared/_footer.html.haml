@@ -1,7 +1,7 @@
 .container-fluid
   .row
     .footer-table
-      .footer-cell
+      .footer-cell.right-s
         = raw Setting.footer_text
       / .afdelimit
       - Footermenu.order('sortorder ASC').each do |razdel|
@@ -15,7 +15,7 @@
                 = subfooter.name
         / .afdelimit
 
-      .footer-cell
+      .footer-cell.left-s
         %h4 Контакты
         %p
           = "e-mail: #{Setting.system_email}"

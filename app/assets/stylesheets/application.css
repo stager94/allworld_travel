@@ -253,10 +253,12 @@ label {
 	display: table-cell;
 	padding: 0px 20px;
 	vertical-align: top;
-	border-right: 1px solid white;
 }
-.footer-cell:last-child {
-	border-right: 0;
+.footer-cell.right-s {
+	background: transparent url("/img/footer_line_vert.png") no-repeat scroll right center;
+}
+.footer-cell.left-s {
+	background: transparent url("/img/footer_line_vert.png") no-repeat scroll left center;
 }
 .footer-cell h4 {
 	margin-top: 0;

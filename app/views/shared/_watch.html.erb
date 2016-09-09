@@ -24,9 +24,16 @@
     setTimeout("digitalWatch()", 1000);
   }
 </script>
-<p style="font-size: 80%; margin:0;" class="text-right"><%= [@country.name, @country.stolica].join(", ") %></p>
-<p id="digital_watch"></p>
-<p id="weekday" style="font-size: 11px; margin:0;"></p>
+<div class="top">
+  <p style="font-size: 80%; margin:0;" class="text-right"><%= [@country.name, @country.stolica].join(", ") %></p>
+  <% if @country.pogoda.present? %>
+    <%= @country.pogoda.html_safe %>
+  <% end %>
+</div>
+<div class="bottom">
+  <p id="digital_watch"></p>
+  <p id="weekday" style="font-size: 11px; margin:0;"></p>
+</div>
 <script type="text/javascript">
   $(document).ready(function() {
     digitalWatch();
