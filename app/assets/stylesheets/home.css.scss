@@ -801,3 +801,17 @@ text-decoration: none;
 //     }
 //   }
 // }
+@media screen and (max-width: 991px) {
+  .navbar-header {
+    float: none !important;
+    width: 100% !important;
+    a {
+      float: none !important;
+      display: inline-block !important;
+    }
+    button {
+      display: inline-block !important;
+      float: none !important;
+    }
+  }
+}
