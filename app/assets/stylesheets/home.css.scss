@@ -777,3 +777,27 @@ text-decoration: none;
     right: 0;
   }
 }
+
+
+.country_wcorner {
+  a {
+    display: table;
+    width: 100%;
+    margin: 10px 0;
+    overflow: visible;
+
+    img {
+      display: table-cell;
+      float: none;
+      width: 30px;
+      margin: 0;
+    }
+    p {
+      display: table-cell !important;
+      vertical-align: middle;
+      margin: 0;
+      padding-left: 10px;
+      width: 100%;
+    }
+  }
+}
