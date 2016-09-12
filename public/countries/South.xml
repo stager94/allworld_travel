@@ -11,7 +11,7 @@
 		<cost> Столица:  </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
-		<link>www.google.com</link>
+		<link>www.allworld-travel.com/country/argentina</link>
 	</country>
 	<country>
 		<cname>Аруба</cname>
@@ -23,7 +23,7 @@
 		<cost> Владения: </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
-		<link>www.google.com</link>
+		<link>www.allworld-travel.com/country/aruba</link>
 	</country>
 	<country>
 		<cname>Архипелаг Лас-Авес</cname>
@@ -35,7 +35,7 @@
 		<cost> Владения: </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
-		<link>www.google.com</link>
+		<link>www.allworld-travel.com/country/federalnye-vladeniya-venesuely</link>
 	</country>
 	<country>
 		<cname>Архипелаг Лос-Рокес</cname>
@@ -47,7 +47,7 @@
 		<cost> Владения: </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
-		<link>www.google.com</link>
+		<link>www.allworld-travel.com/country/federalnye-vladeniya-venesuely</link>
 	</country>
 	<country>
 		<cname>Архипелаг Лос-Тестигос</cname>
@@ -59,7 +59,7 @@
 		<cost> Владения: </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
-		<link>www.google.com</link>
+		<link>wwww.allworld-travel.com/country/federalnye-vladeniya-venesuely</link>
 	</country>
 	<country>
 		<cname>Архипелаг Лос-Фрайлес</cname>
@@ -71,7 +71,7 @@
 		<cost> Владения: </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
-		<link>www.google.com</link>
+		<link>www.allworld-travel.com/country/federalnye-vladeniya-venesuely</link>
 	</country>
 	<country>
 		<cname>Барбадос</cname>
@@ -83,7 +83,7 @@
 		<cost> Столица:  </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
-		<link>www.google.com</link>
+		<link>www.allworld-travel.com/country/barbados</link>
 	</country>
 	<country>
 		<cname>Боливия</cname>
@@ -95,7 +95,7 @@
 		<cost> Столица:  </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
-		<link>www.google.com</link>
+		<link>www.allworld-travel.com/country/boliviya</link>
 	</country>
 	<country>
 		<cname>Бонэйр, Синт-Эстатиус и Саба</cname>
@@ -107,19 +107,19 @@
 		<cost> Владения: </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
-		<link>www.google.com</link>
+		<link>www.allworld-travel.com/country/boneyr</link>
 	</country>
 	<country>
 		<cname>Бразилия</cname>
 		<capital>Бразилиа</capital>
 		<woeid>455819</woeid>
 		<flag></flag>
-        <timeZone>-3</timeZone>
+    <timeZone>-3</timeZone>
 		<dtime> Страна: </dtime>
 		<cost> Столица:  </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
-		<link>www.google.com</link>
+		<link>www.allworld-travel.com/country/braziliya</link>
 	</country>
 	<country>
 		<cname>Венесуэла</cname>
@@ -131,7 +131,7 @@
 		<cost> Столица:  </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
-		<link>www.google.com</link>
+		<link>www.allworld-travel.com/country/venesuela</link>
 	</country>
 	<country>
 		<cname>Гайана</cname>
@@ -143,7 +143,7 @@
 		<cost> Столица:  </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
-		<link>www.google.com</link>
+		<link>www.allworld-travel.com/country/gayana</link>
 	</country>
 	<country>
 		<cname>Гренада</cname>
@@ -155,7 +155,7 @@
 		<cost> Столица:  </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
-		<link>www.google.com</link>
+		<link>www.allworld-travel.com/country/grenada</link>
 	</country>
 	<country>
 		<cname>Исла-де-Паскуа</cname>
@@ -167,7 +167,7 @@
 		<cost> Владения: </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
-		<link>www.google.com</link>
+		<link>www.allworld-travel.com/country/isla-de-paskua</link>
 	</country>
 	<country>
 		<cname>Карриаку и Пти-Мартиника</cname>
@@ -179,7 +179,7 @@
 		<cost> Владения: </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
-		<link>www.google.com</link>
+		<link>www.allworld-travel.com/country/karriaku-i-pti-martinika</link>
 	</country>
 	<country>
 		<cname>Колумбия</cname>
@@ -191,7 +191,7 @@
 		<cost> Столица:  </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
-		<link>www.google.com</link>
+		<link>www.allworld-travel.com/country/kolumbiya</link>
 	</country>
 	<country>
 		<cname>Кюрасао</cname>
@@ -203,7 +203,7 @@
 		<cost> Владения: </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
-		<link>www.google.com</link>
+		<link>www.allworld-travel.com/country/kyurasao</link>
 	</country>
 	<country>
 		<cname>Остров Буве</cname>
@@ -215,7 +215,7 @@
 		<cost> Владения: </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
-		<link>www.google.com</link>
+		<link>www.allworld-travel.com/country/ostrov-buve</link>
 	</country>
 	<country>
 		<cname>Остров Ла-Бланкилья</cname>
@@ -227,7 +227,7 @@
 		<cost> Владения: </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
-		<link>www.google.com</link>
+		<link>www.allworld-travel.com/country/federalnye-vladeniya-venesuely</link>
 	</country>
 	<country>
 		<cname>Остров Ла-Тортуга</cname>
@@ -239,7 +239,7 @@
 		<cost> Владения: </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
-		<link>www.google.com</link>
+		<link>www.allworld-travel.com/country/federalnye-vladeniya-venesuely</link>
 	</country>
 	<country>
 		<cname>Остров Орчила</cname>
@@ -251,7 +251,7 @@
 		<cost> Владения: </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
-		<link>www.google.com</link>
+		<link>www.allworld-travel.com/country/federalnye-vladeniya-venesuely</link>
 	</country>
 	<country>
 		<cname>Остров Патос</cname>
@@ -263,7 +263,7 @@
 		<cost> Владения: </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
-		<link>www.google.com</link>
+		<link>www.allworld-travel.com/country/federalnye-vladeniya-venesuely</link>
 	</country>
 	<country>
 		<cname>Острова Питкэрн</cname>
@@ -275,7 +275,7 @@
 		<cost> Владения: </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
-		<link>www.google.com</link>
+		<link>www.allworld-travel.com/country/pitkern</link>
 	</country>
 	<country>
 		<cname>Острова Святой Елены, Вознесения и Тристан-да-Кунья</cname>
@@ -287,7 +287,7 @@
 		<cost> Владения: </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
-		<link>www.google.com</link>
+		<link>www.allworld-travel.com/country/ostrova-svyatoy-eleny-vozneseniya-i-tristan-da-kunya</link>
 	</country>
 	<country>
 		<cname>Парагвай</cname>
@@ -299,7 +299,7 @@
 		<cost> Столица:  </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
-		<link>www.google.com</link>
+		<link>www.allworld-travel.com/country/paragvay</link>
 	</country>
 	<country>
 		<cname>Перу</cname>
@@ -311,7 +311,7 @@
 		<cost> Столица:  </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
-		<link>www.google.com</link>
+		<link>www.allworld-travel.com/country/peru</link>
 	</country>
 	<country>
 		<cname>Сан-Андрес и Провиденсия</cname>
@@ -323,7 +323,7 @@
 		<cost> Владения: </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
-		<link>www.google.com</link>
+		<link>www.allworld-travel.com/country/san-andres-i-providensiya</link>
 	</country>
 	<country>
 		<cname>Сент-Винсент и Гренадины</cname>
@@ -335,7 +335,7 @@
 		<cost> Столица:  </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
-		<link>www.google.com</link>
+		<link>www.allworld-travel.com/country/sent-vinsent-i-grenadiny</link>
 	</country>
 	<country>
 		<cname>Сент-Люсия</cname>
@@ -347,7 +347,7 @@
 		<cost> Столица:  </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
-		<link>www.google.com</link>
+		<link>www.allworld-travel.com/country/sent-lyusiya</link>
 	</country>
 	<country>
 		<cname>Суринам</cname>
@@ -359,7 +359,7 @@
 		<cost> Столица:  </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
-		<link>www.google.com</link>
+		<link>www.allworld-travel.com/country/surinam</link>
 	</country>
 	<country>
 		<cname>Тринидад и Тобаго</cname>
@@ -371,7 +371,7 @@
 		<cost> Столица:  </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
-		<link>www.google.com</link>
+		<link>www.allworld-travel.com/country/trinidad-i-tobago</link>
 	</country>
 	<country>
 		<cname>Уругвай</cname>
@@ -383,7 +383,7 @@
 		<cost> Столица:  </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
-		<link>www.google.com</link>
+		<link>www.allworld-travel.com/country/urugvay</link>
 	</country>
 	<country>
 		<cname>Фолклендские острова</cname>
@@ -395,7 +395,7 @@
 		<cost> Владения: </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
-		<link>www.google.com</link>
+		<link>www.allworld-travel.com/country/folklendskie-ostrova</link>
 	</country>
 	<country>
 		<cname>Французская Гвиана</cname>
@@ -407,7 +407,7 @@
 		<cost> Владения:  </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
-		<link>www.google.com</link>
+		<link>www.allworld-travel.com/country/frantsuzskaya-gviana</link>
 	</country>
 	<country>
 		<cname>Чили</cname>
@@ -419,7 +419,7 @@
 		<cost> Столица:  </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
-		<link>www.google.com</link>
+		<link>www.allworld-travel.com/country/ch-li</link>
 	</country>
 	<country>
 		<cname>Эквадор</cname>
@@ -431,7 +431,7 @@
 		<cost> Столица:  </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
-		<link>www.google.com</link>
+		<link>www.allworld-travel.com/country/ekvador</link>
 	</country>
 	<country>
 		<cname>Южная Георгия и Южные Сандвичевы острова</cname>
@@ -443,7 +443,7 @@
 		<cost> Владения: </cost>
 		<store> Currently no </store>
 		<freedelivery> Free delivery over 100 Euro</freedelivery>
-		<link>www.google.com</link>
+		<link>www.allworld-travel.com/country/yuzhnaya-georgiya-i-yuzhnye-sandvichevy-ostrova</link>
 	</country>
 
 
