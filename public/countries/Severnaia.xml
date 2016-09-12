@@ -1,0 +1,775 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<countrylist>
+	<country>
+		<cname>Азорские острова</cname>
+		<capital>Португалия</capital>
+		<woeid>2346587</woeid>
+		<flag></flag>
+		<timeZone></timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Американские Виргинские острова</cname>
+		<capital>США</capital>
+		<woeid>23424985</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Ангилья</cname>
+		<capital>Великобритания</capital>
+		<woeid>23424751</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Антигуа и Барбуда</cname>
+		<capital>Сент-Джонс</capital>
+		<woeid>23424737</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Аруба</cname>
+		<capital>Нидерланды</capital>
+		<woeid>23424736</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+		<country>
+		<cname>Архипелаг Лас-Авес</cname>
+		<capital>Венесуэла</capital>
+		<woeid>12505870</woeid>
+		<flag></flag>
+		<timeZone>-4.30</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Архипелаг Лос-Рокес</cname>
+		<capital>Венесуэла</capital>
+		<woeid>12505770</woeid>
+		<flag></flag>
+		<timeZone>-4.30</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Архипелаг Лос-Тестигос</cname>
+		<capital>Венесуэла</capital>
+		<woeid>468486</woeid>
+		<flag></flag>
+		<timeZone>-4.30</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Архипелаг Лос-Фрайлес</cname>
+		<capital>Венесуэла</capital>
+		<woeid>468486</woeid>
+		<flag></flag>
+		<timeZone>-4.30</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Атолл Джонстон</cname>
+		<capital>США</capital>
+		<woeid>28289407</woeid>
+		<flag></flag>
+		<timeZone>-10</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Багамские острова</cname>
+		<capital>Нассау</capital>
+		<woeid>23424758</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Барбадос</cname>
+		<capital>Бриджтаун</capital>
+		<woeid>23424754</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Белиз</cname>
+		<capital>Бельмопан</capital>
+		<woeid>23424760</woeid>
+		<flag></flag>
+		<timeZone>-6</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Бермудские острова</cname>
+		<capital>Великобритания</capital>
+		<woeid>23424756</woeid>
+		<flag></flag>
+		<timeZone>-3</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Бонэйр, Синт-Эстатиус и Саба</cname>
+		<capital>Нидерланды</capital>
+		<woeid>12484681</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Британские Виргинские острова</cname>
+		<capital>Великобритания</capital>
+		<woeid>23424983</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+		<country>
+		<cname>Гавайи</cname>
+		<capital>США</capital>
+		<woeid>2347570</woeid>
+		<flag></flag>
+		<timeZone>-10</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Гаити</cname>
+		<capital>Порт-о-Пренс</capital>
+		<woeid>96110</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Гваделупа</cname>
+		<capital>Франция</capital>
+		<woeid>23424831</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Гватемала</cname>
+		<capital>Гватемала</capital>
+		<woeid>83123</woeid>
+		<flag></flag>
+		<timeZone>-6</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Гондурас</cname>
+		<capital>Тегусигальпа</capital>
+		<woeid>107681</woeid>
+		<flag></flag>
+		<timeZone>-6</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Гренада</cname>
+		<capital>Сент-Джорджес</capital>
+		<woeid>23424826</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Гренландия</cname>
+		<capital>Дания</capital>
+		<woeid>472856</woeid>
+		<flag></flag>
+		<timeZone>-2</timeZone>
+		<dtime> Территория:  </dtime>
+		<cost> Владения:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Доминика</cname>
+		<capital>Розо</capital>
+		<woeid>23424798</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Доминиканская Республика</cname>
+		<capital>Санто-Доминго</capital>
+		<woeid>76456</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Ямайка</cname>
+		<capital>Кингстон</capital>
+		<woeid>109251</woeid>
+		<flag></flag>
+		<timeZone>-5</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Кабо-Верде</cname>
+		<capital>Прая</capital>
+		<woeid>23424794</woeid>
+		<flag></flag>
+		<timeZone>-1</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Каймановы острова</cname>
+		<capital>Великобритания</capital>
+		<woeid>23424783</woeid>
+		<flag></flag>
+		<timeZone>-5</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Канада</cname>
+		<capital>Оттава</capital>
+		<woeid>29375164</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+		<country>
+		<cname>Канарские острова</cname>
+		<capital>Испания</capital>
+		<woeid>764814</woeid>
+		<flag></flag>
+		<timeZone>+1</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Карриаку и Пти-Мартиника</cname>
+		<capital>Гренада</capital>
+		<woeid>12484088</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Клиппертон</cname>
+		<capital>Франция</capital>
+		<woeid>23424850</woeid>
+		<flag></flag>
+		<timeZone>-5</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Коста-Рика</cname>
+		<capital>Сан-Хосе</capital>
+		<woeid>59426</woeid>
+		<flag></flag>
+		<timeZone>-6</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Куба</cname>
+		<capital>Гавана</capital>
+		<woeid>63817</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Кюрасао</cname>
+		<capital>Нидерланды</capital>
+		<woeid>56558057</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Мадейра</cname>
+		<capital>Португалия</capital>
+		<woeid>2346570</woeid>
+		<flag></flag>
+		<timeZone>+1</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Мартиника</cname>
+		<capital>Франция</capital>
+		<woeid>23424884</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Мексика</cname>
+		<capital>Мехико</capital>
+		<woeid>116545</woeid>
+		<flag></flag>
+		<timeZone>-5</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Монтсеррат</cname>
+		<capital>Великобритания</capital>
+		<woeid>23424888</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Никарагуа</cname>
+		<capital>Манагуа</capital>
+		<woeid>153523</woeid>
+		<flag></flag>
+		<timeZone>-6</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Остров Авес</cname>
+		<capital>Венесуэла</capital>
+		<woeid>23424831</woeid>
+		<flag></flag>
+		<timeZone>-4.30</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Остров Ла-Бланкилья</cname>
+		<capital>Венесуэла</capital>
+		<woeid>12505712</woeid>
+		<flag></flag>
+		<timeZone>-4.30</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Остров Ла-Тортуга</cname>
+		<capital>Венесуэла</capital>
+		<woeid>12505774</woeid>
+		<flag></flag>
+		<timeZone>-4.30</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Остров Навасса</cname>
+		<capital>США</capital>
+		<woeid>23424767</woeid>
+		<flag></flag>
+		<timeZone>-5</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Остров Орчила</cname>
+		<capital>Венесуэла</capital>
+		<woeid>12505766</woeid>
+		<flag></flag>
+		<timeZone>-4.30</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Остров Патос</cname>
+		<capital>Венесуэла</capital>
+		<woeid>12505808</woeid>
+		<flag></flag>
+		<timeZone>-4.30</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Остров Хауленд</cname>
+		<capital>США</capital>
+		<woeid>23424842</woeid>
+		<flag></flag>
+		<timeZone>-10</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Остров Ян-Майен</cname>
+		<capital>Норвегия</capital>
+		<woeid>23424859</woeid>
+		<flag></flag>
+		<timeZone>+2</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Панама</cname>
+		<capital>Панама</capital>
+		<woeid>159386</woeid>
+		<flag></flag>
+		<timeZone>-5</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Пуэрто-Рико</cname>
+		<capital>США</capital>
+		<woeid>161685</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Территория:  </dtime>
+		<cost> Владения:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Риф Кингмен</cname>
+		<capital>США</capital>
+		<woeid>23424866</woeid>
+		<flag></flag>
+		<timeZone>-11</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Сальвадор</cname>
+		<capital>Сан-Сальвадор</capital>
+		<woeid>79825</woeid>
+		<flag></flag>
+		<timeZone>-6</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Сан-Андрес и Провиденсия</cname>
+		<capital>Колумбия</capital>
+		<woeid>365117</woeid>
+		<flag></flag>
+		<timeZone>-5</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Сен-Бартелеми</cname>
+		<capital>Франция</capital>
+		<woeid>56042304</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Сен-Мартен</cname>
+		<capital>Франция</capital>
+		<woeid>56042305</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Сен-Пьер и Микелон</cname>
+		<capital>Франция</capital>
+		<woeid>23424939</woeid>
+		<flag></flag>
+		<timeZone>-2</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Сент-Винсент и Гренадины</cname>
+		<capital>Кингстаун</capital>
+		<woeid>23424981</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Сент-Китс и Невис</cname>
+		<capital>Бастер</capital>
+		<woeid>12485265</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Сент-Люсия</cname>
+		<capital>Кастри</capital>
+		<woeid>23424951</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Синт-Мартен</cname>
+		<capital>Нидерланды</capital>
+		<woeid>151970</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>США</cname>
+		<capital>Вашингтон</capital>
+		<woeid>2514815</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Теркс и Кайкос</cname>
+		<capital>Великобритания</capital>
+		<woeid>23424962</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Тринидад и Тобаго</cname>
+		<capital>Порт-оф-Спейн</capital>
+		<woeid>23424958</woeid>
+		<flag></flag>
+		<timeZone>-4</timeZone>
+		<dtime> Страна:  </dtime>
+		<cost> Столица:  </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+	<country>
+		<cname>Фарерские острова</cname>
+		<capital>Дания</capital>
+		<woeid>23424816</woeid>
+		<flag></flag>
+		<timeZone>+1</timeZone>
+		<dtime> Территория: </dtime>
+		<cost> Владения: </cost>
+		<store> Currently no </store>
+		<freedelivery> Free delivery over 100 Euro</freedelivery>
+		<link>www.google.com</link>
+	</country>
+
+	
+</countrylist>
+	
