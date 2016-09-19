@@ -4,15 +4,17 @@
       .footer-cell.right-s
         = raw Setting.footer_text
       / .afdelimit
-      - Footermenu.order('sortorder ASC').each do |razdel|
-        .footer-cell
-          / %h4=razdel.name
-          -razdel.footersubmenus.order('sortorder ASC').each do |subfooter|
-            %p
-              = link_to subfooter.url do
-                - if subfooter.icon.present?
-                  = image_tag subfooter.icon.url(:micro), width: "40"
-                = subfooter.name
+
+      .footer-cell
+        - Footermenu.order('sortorder ASC').each do |razdel|
+          %div(style="float:left;width:50%;")
+            / %h4=razdel.name
+            -razdel.footersubmenus.order('sortorder ASC').each do |subfooter|
+              %p
+                = link_to subfooter.url do
+                  - if subfooter.icon.present?
+                    = image_tag subfooter.icon.url(:micro), width: "40"
+                  = subfooter.name
         / .afdelimit
 
       .footer-cell.left-s

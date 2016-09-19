@@ -483,10 +483,6 @@ footer a:hover {
 	float: left;
 }
 
-#country-globe {
-	box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
-}
-
 
 .showplace_block table td {
 	vertical-align: top;
@@ -504,7 +500,7 @@ footer a:hover {
 .samtext p {
 	margin-bottom: 23px !important;
 }
-.crest img {
+.crest img.shadowed {
 	box-shadow: 0 0 12px rgba(0,0,0,0.3);
 }
 

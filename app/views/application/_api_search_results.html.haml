@@ -3,7 +3,11 @@
 		%li
 			- if item.is_a? Showplace
 				= link_to "/place/#{item.tag}" do
-					.picture= image_tag item.showplacepictures.first.image, size: "40x40", class: "img-circle"
+					.picture
+						- if item.showplacepictures.any?
+							= image_tag item.showplacepictures.first.image, size: "40x40", class: "img-circle" 
+						- else
+							= image_tag "big-ben.png", size: "40x40", class: "img-circle" 
 					.title= item.name
 					.info
 						- if item.itsgorod
