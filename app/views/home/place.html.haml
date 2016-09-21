@@ -216,7 +216,7 @@
 	
 -if @showplace.fulldesc.present?
 	.showfulltext
-		.samtext(data-lines-count="15")
+		.samtext(data-lines-count="#{Setting.standard_lines_count+@showplace.lines_offset}")
 			=@showplace.fulldesc.html_safe
 		.next
 			%span.fa.fa-chevron-circle-down

@@ -13,7 +13,7 @@ class Showplace < ActiveRecord::Base
   attr_accessible :region_id
   attr_accessible :datapostroyki, :description, :fulldesc, :googlemap, :h1, :keywords, :lose, :name, :primech, :shortdesc, :tag, :top100, :unesco, :wonders7, :point, :showfilter, :showhome, :ginnesa, :title
   attr_accessible :showinsection, :showincountry, :itsgorod
-  attr_accessible :flights_code, :car_rental_code, :hotels_code
+  attr_accessible :flights_code, :car_rental_code, :hotels_code, :lines_offset
 
   has_many :placedas, :dependent => :destroy
   has_many :placenets, :dependent => :destroy
@@ -137,7 +137,7 @@ class Showplace < ActiveRecord::Base
       fields :description, :h1, :keywords, :name, :title  do 
         group :meta
       end
-      fields  :shortdesc, :fulldesc, :primech  do 
+      fields  :shortdesc, :fulldesc, :primech, :lines_offset  do 
         group :shapka
       end
       fields :googlemap, :showplacepictures, :showplacevideos, :showplacepanos, :street_pano do 

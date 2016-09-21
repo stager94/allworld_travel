@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160907154234) do
+ActiveRecord::Schema.define(version: 20160921173153) do
 
   create_table "allsettings", force: :cascade do |t|
     t.boolean  "default"
@@ -158,6 +158,7 @@ ActiveRecord::Schema.define(version: 20160907154234) do
     t.text     "hotels_code",         limit: 65535
     t.text     "flights_code",        limit: 65535
     t.text     "car_rental_code",     limit: 65535
+    t.integer  "lines_offset",        limit: 4,     default: 0
   end
 
   add_index "countries", ["region_id"], name: "index_countries_on_region_id", using: :btree
@@ -558,6 +559,7 @@ ActiveRecord::Schema.define(version: 20160907154234) do
     t.text     "hotels_code",     limit: 65535
     t.text     "flights_code",    limit: 65535
     t.text     "car_rental_code", limit: 65535
+    t.integer  "lines_offset",    limit: 4,                             default: 0
   end
 
   add_index "showplaces", ["category_id"], name: "index_showplaces_on_category_id", using: :btree

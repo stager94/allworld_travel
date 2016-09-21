@@ -84,101 +84,102 @@
 
 
 .showfulltext
-  .samtext
+  .samtext(data-lines-count="#{Setting.standard_lines_count+@country.lines_offset}")
     =@country.descforturist.html_safe
   .next
     %span.fa.fa-chevron-circle-down
     
 .showplace_block.textsblocks
   %b Общая информация:
-  .col-md-3.col-lg-3
-    .col-xs-6.crest
-      -if flagimg = @country.flag.url(:thumb)
-        = image_tag flagimg, class: "img-responsive shadowed"
-      .text-center Флаг
-    .col-xs-6.crest
+  .div-table 
+    .div-cell.crests
+      .crest.semi-width
+        -if flagimg = @country.flag.url(:thumb)
+          = image_tag flagimg, class: "img-responsive shadowed"
+        .text-center Флаг
+      .crest.semi-width
+        - if crestimg = @country.crest.url(:thumb)
+          = image_tag crestimg, class: "img-responsive"
+          .text-center Герб
+    .div-cell
+      .col-md-9.col-lg-9
+        %table{ style: "font-size:13px;" } 
+          -if @country.offname.present?
+            %tr
+              %td
+                %b Официальное название:
+              %td
+                =@country.offname
 
-      - if crestimg = @country.crest.url(:thumb)
-        = image_tag crestimg, class: "img-responsive"
-        .text-center Герб
-  .col-md-9.col-lg-9
-    %table{ style: "font-size:13px;" } 
-      -if @country.offname.present?
-        %tr
-          %td
-            %b Официальное название:
-          %td
-            =@country.offname
-
-      -if ( @country.parent_id.present? and @country.parent_id>0 )
-        %tr
-          %td
-            %b Владения:
-          %td
-            =@country.parent.name
-      -if @country.datanezavis.present?
-        %tr
-          %td
-            %b Дата независимости:
-          %td
-            =@country.datanezavis
-      -if @country.stolica.present?
-        %tr
-          %td
-            %b Столица:
-          %td
-            =@country.stolica
-      -if @country.ispolnit.present?
-        %tr
-          %td
-            -if ( @country.parent_id.present? and @country.parent_id>0 )
-              %b Административный центр:
-            -else
-              %b Высший исполнительный орган:
-          %td
-            =@country.ispolnit
-      -if @country.ploscha.present?
-        %tr
-          %td
-            %b Площадь:
-          %td
-            =@country.ploscha
-      -if @country.delenie.present?
-        %tr
-          %td
-            %b Административное деление:
-          %td
-            =@country.delenie
-      -if @country.glava.present?
-        %tr
-          %td
-            %b Глава государства:
-          %td
-            =@country.glava
-      -if @country.zakon.present?
-        %tr
-          %td
-            %b Высший законодательный орган:
-          %td
-            =@country.zakon
-      -if @country.naselenie.present?
-        %tr
-          %td
-            %b Население:
-          %td
-            =@country.naselenie
-      -if @country.language.present?
-        %tr
-          %td
-            %b Официальный язык:
-          %td
-            =@country.language
-      -if @country.valute.present?
-        %tr
-          %td
-            %b Валюта:
-          %td
-            =@country.valute
+          -if ( @country.parent_id.present? and @country.parent_id>0 )
+            %tr
+              %td
+                %b Владения:
+              %td
+                =@country.parent.name
+          -if @country.datanezavis.present?
+            %tr
+              %td
+                %b Дата независимости:
+              %td
+                =@country.datanezavis
+          -if @country.stolica.present?
+            %tr
+              %td
+                %b Столица:
+              %td
+                =@country.stolica
+          -if @country.ispolnit.present?
+            %tr
+              %td
+                -if ( @country.parent_id.present? and @country.parent_id>0 )
+                  %b Административный центр:
+                -else
+                  %b Высший исполнительный орган:
+              %td
+                =@country.ispolnit
+          -if @country.ploscha.present?
+            %tr
+              %td
+                %b Площадь:
+              %td
+                =@country.ploscha
+          -if @country.delenie.present?
+            %tr
+              %td
+                %b Административное деление:
+              %td
+                =@country.delenie
+          -if @country.glava.present?
+            %tr
+              %td
+                %b Глава государства:
+              %td
+                =@country.glava
+          -if @country.zakon.present?
+            %tr
+              %td
+                %b Высший законодательный орган:
+              %td
+                =@country.zakon
+          -if @country.naselenie.present?
+            %tr
+              %td
+                %b Население:
+              %td
+                =@country.naselenie
+          -if @country.language.present?
+            %tr
+              %td
+                %b Официальный язык:
+              %td
+                =@country.language
+          -if @country.valute.present?
+            %tr
+              %td
+                %b Валюта:
+              %td
+                =@country.valute
 
 
 

@@ -7,7 +7,7 @@ class Country < ActiveRecord::Base
   attr_accessible :googlemap, :title
   attr_accessible :bezopasnost, :ceny, :chtobrat, :chtonugnoznat, :cultura, :dostoprimech,  :internet, :jazik,  :oteli, :pitanie, :politika, :prazdniki, :suvenir, :transport, :valutes, :visum
   attr_accessible :primech, :tag, :chaspoyas, :pogoda, :timezone
-  attr_accessible :flights_code, :car_rental_code, :hotels_code
+  attr_accessible :flights_code, :car_rental_code, :hotels_code, :lines_offset
 
   has_many :children, class_name: "Country", foreign_key: "parent_id"                             
   belongs_to :parent, class_name: "Country"        
@@ -117,7 +117,7 @@ class Country < ActiveRecord::Base
       fields :description, :h1, :keywords, :name, :title  do 
         group :meta
       end
-      fields  :shortdesc, :descforturist, :primech  do 
+      fields  :shortdesc, :descforturist, :primech, :lines_offset  do 
         group :shapka
       end
       fields :flag, :crest, :googlemap, :countrypictures, :countryvideos, :countrypanos, :globus, :pogoda  do 
