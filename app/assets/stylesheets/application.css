@@ -12,6 +12,7 @@
  *= require bootstrap_and_overrides
  *= require home
  *= require new_styles
+ *= require select2
  */
 @font-face {
     font-family: "Calibri";
@@ -24,6 +25,23 @@
     src: local("Calibri Light"), url("/fonts/calibril.ttf") format("truetype"); /*non-IE*/
 }
 
+.country-selector-form {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 1.3;
+}
+
+.display-as-inline-block {
+	display: inline-block;
+}
+
+.country-selector-block {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	background-color: #222222;
+	text-align: center;
+}
 
 .search-section .items .url {
 	margin-top: 3px;

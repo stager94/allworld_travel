@@ -47,6 +47,7 @@ source 'https://rubygems.org'
   gem 'honeypot-captcha'
   gem 'pry'
   gem 'meta-tags'
+  gem 'select2-rails'
 
 
   gem "google_custom_search_api"

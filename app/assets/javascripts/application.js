@@ -20,6 +20,7 @@
 //= require jquery.cookie
 //= require jquery.marquee
 //= require jquery.doubletap
+//= require select2
 //= require search-autocomplete
 //= require moment
 
@@ -29,6 +30,7 @@ $(function() {
     startPosition: $.cookie('marquee-position')
   });
 
+  $(".country-select").select2({width: "resolve"});
 
   $( "#hidemarquee" ).click(function() {
     $( "#marqueeblock" ).toggle();

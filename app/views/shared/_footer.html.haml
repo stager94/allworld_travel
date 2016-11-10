@@ -1,40 +1,43 @@
 .container
   .row
     .footer-table
-      .footer-cell.right-s
+      .footer-cell.right-s{style: "width: 40%"}
         = raw Setting.footer_text
       / .afdelimit
 
-      .footer-cell
+      .footer-cell{style: "width: 40%"}
         - Footermenu.order('sortorder ASC').each do |razdel|
-          %div(style="float:left;width:50%;")
+          .text-center.display-as-inline-block(style="float:left;width:50%;")
             / %h4=razdel.name
-            -razdel.footersubmenus.order('sortorder ASC').each do |subfooter|
-              %p
-                = link_to subfooter.url do
-                  - if subfooter.icon.present?
-                    = image_tag subfooter.icon.url(:micro), width: "40"
-                  = subfooter.name
+            .text-left.display-as-inline-block
+              -razdel.footersubmenus.order('sortorder ASC').each do |subfooter|
+                %p
+                  = link_to subfooter.url do
+                    - if subfooter.icon.present?
+                      = image_tag subfooter.icon.url(:micro), width: "40"
+                    = subfooter.name
         / .afdelimit
 
-      .footer-cell.left-s
-        %h4 Контакты
-        %p
-          = "e-mail: #{Setting.system_email}"
-        %p
-          = image_tag "support_white.png", size: "20x20"
-          Служба поддержки
-        -#=$setting.contactadress
-        .socialicons
-          = link_to Setting.vk_link, target: "_blank" do
-            %span#icovk
-          = link_to Setting.fb_link, target: "_blank" do
-            %span#icofb
-          = link_to Setting.instagram_link, target: "_blank" do
-            %span#icoin
-          = link_to Setting.twitter_link, target: "_blank" do
-            %span#icotw
-          = link_to Setting.youtube_link, target: "_blank" do
-            %span#icoyb
-          = link_to Setting.google_link, target: "_blank" do
-            %span#icogp
+      .footer-cell.left-s.text-right.display-as-inline-block
+        .text-left.display-as-inline-block
+          %h4 Контакты
+          %p
+            = "e-mail: #{Setting.system_email}"
+          %p
+            = image_tag "support_white.png", size: "20x20"
+            Служба поддержки
+          -#=$setting.contactadress
+          .socialicons
+            = link_to Setting.vk_link, target: "_blank" do
+              %span#icovk
+            = link_to Setting.fb_link, target: "_blank" do
+              %span#icofb
+            = link_to Setting.instagram_link, target: "_blank" do
+              %span#icoin
+            = link_to Setting.twitter_link, target: "_blank" do
+              %span#icotw
+            = link_to Setting.youtube_link, target: "_blank" do
+              %span#icoyb
+            = link_to Setting.google_link, target: "_blank" do
+              %span#icogp
+      
