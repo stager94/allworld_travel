@@ -1,11 +1,11 @@
 .container
   .row
     .footer-table
-      .footer-cell.right-s{style: "width: 40%"}
+      .footer-cell.right-s{style: "width: 35%"}
         = raw Setting.footer_text
       / .afdelimit
 
-      .footer-cell{style: "width: 40%"}
+      .footer-cell{style: "width: 45%"}
         - Footermenu.order('sortorder ASC').each do |razdel|
           .text-center.display-as-inline-block(style="float:left;width:50%;")
             / %h4=razdel.name
