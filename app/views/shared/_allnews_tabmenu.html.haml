@@ -23,7 +23,7 @@
                     = image_tag tmpimage.image.url(:medium)
                     %p.mini=piece.name
             = piece.page
-      - @last_news.select{|ln| ln.id != @last_news.last.id}.each do |piece| 
+      - @last_news.select{|ln| ln.id != @last_news.last.id}.reverse.each do |piece| 
         .col-md-5.older-news
           .textsblocks.inherit-height
             %b
