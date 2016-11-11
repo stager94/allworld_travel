@@ -22,7 +22,7 @@
                   .showplace_img_50
                     = image_tag tmpimage.image.url(:medium)
                     %p.mini=piece.name
-            = piece.description
+            = piece.page
       - @last_news.select{|ln| ln.id != @last_news.last.id}.each do |piece| 
         .col-md-5.older-news
           .textsblocks.inherit-height
@@ -35,7 +35,7 @@
                   .showplace_img
                     = image_tag tmpimage.image.url(:thumb)
             .older-news-text
-              = piece.description
+              = piece.page
 
   .tab-panel{id: "all_news"}
     .shpage
