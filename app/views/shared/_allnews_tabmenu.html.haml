@@ -20,7 +20,7 @@
               .showplace_wcorner_50
                 .showplace_item
                   .showplace_img_50
-                    = image_tag tmpimage.image.url(:thumb)
+                    = image_tag tmpimage.image.url(:medium)
                     %p.mini=piece.name
             = piece.page
       - @last_news.select{|ln| ln.id != @last_news.last.id}.each do |piece| 

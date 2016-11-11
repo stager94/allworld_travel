@@ -59,6 +59,10 @@
 	min-height: 250px;
 }
 
+.showplace_img_50 img, .showplace_wcorner_40 .showplace_item .showplace_img img{
+	width: 100% !important;
+}
+
 .no-margin {
 	margin: 0px !important;
 }
