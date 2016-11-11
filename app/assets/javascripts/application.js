@@ -32,6 +32,18 @@ $(function() {
 
   $(".country-select").select2({width: "resolve"});
 
+  $(".country-select").change(function(){
+    $(this).parent().submit();
+  });
+
+  $(".tab-link").click(function(){
+    $(".tab-panel").removeClass("active");
+    $(".tab-panel[id='"+$(this).children("span").attr("tab-id")+"']").addClass("active");
+
+    $(".tab-link").removeClass("active");
+    $(this).addClass("active");
+  });
+
   $( "#hidemarquee" ).click(function() {
     $( "#marqueeblock" ).toggle();
         

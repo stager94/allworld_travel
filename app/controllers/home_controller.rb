@@ -388,11 +388,22 @@ class HomeController < ApplicationController
   
   def allnews
     @news = News.page(params[:page]).per(20)
+    @last_news = News.last(4)
+  end
+
+  def allnews_filter
+    country_ids = params[:countries][:ids].reject(&:empty?).map(&:to_i)
+    if country_ids.present?
+      @news = News.where(country_id: country_ids).page(params[:page]).per(20)
+      @last_news = News.where(country_id: country_ids).last(4)
+    else
+      @news = News.page(params[:page]).per(20)
+      @last_news = News.last(4)
+    end
   end
 
   def news
     @news = News.find_by_tag(params[:tag])
   end
-
 
 end

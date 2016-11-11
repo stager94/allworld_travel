@@ -25,6 +25,105 @@
     src: local("Calibri Light"), url("/fonts/calibril.ttf") format("truetype"); /*non-IE*/
 }
 
+#select2-countries_ids-results {
+	max-height: 165px !important;
+}
+
+.select2-dropdown, .select2-selection.select2-selection--multiple {
+	background: rgba(255, 255, 255, 0.5) none repeat scroll 0% 0% !important;
+}
+
+.inherit-height {
+	height: 100% !important;
+}
+
+.showplace_wcorner_40 {
+	width: 40%;
+	height: 250px;
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.showplace_wcorner_50 {
+	width: 50%; 
+	height: 250px;
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.showplace_img_50 {
+	position: relative;
+	overflow: visible;
+	min-height: 250px;
+}
+
+.no-margin {
+	margin: 0px !important;
+}
+
+.main-news {
+	min-height: 600px !important;
+	text-align: justify;
+}
+
+.older-news {
+	height: 200px;
+	text-align: justify;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+}
+
+.older-news-text {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 80% !important; 
+}
+
+.tabmenu {
+	margin-bottom: 25px;
+}
+
+.tabmenu .tabmenu-header {
+	padding: 0px;
+	border-bottom: 3px solid #5088a8;
+	line-height: 2.5;
+	margin-bottom: 15px;
+}
+
+.tabmenu .tabmenu-header .tab-link {
+	display: inline-block;
+	line-height: 2.5;
+	width: 15%;
+	text-align: center;
+	cursor: pointer;
+}
+
+.tabmenu .tabmenu-header .tab-link:not(.active):hover {
+	background-color: rgba(0,0,0,0.1);
+}
+
+.tabmenu .tabmenu-header .tab-link.active {
+	background-color: #5088a8;
+}
+
+.tabmenu .tabmenu-header .tab-link.active span {
+	color: white !important;
+}
+
+.tabmenu .tabmenu-header .tab-link span {
+	cursor: inherit;
+}
+
+.tabmenu .tab-panel {
+	display: none;
+}
+
+.tabmenu .tab-panel.active {
+	display: block;
+}
+
 .country-selector-form {
 	display: inline-block;
 	vertical-align: middle;
@@ -35,11 +134,16 @@
 	display: inline-block;
 }
 
+.full-width-content {
+	width: 100% !important;
+}
+
 .country-selector-block {
 	width: 100%;
-	height: 50px;
-	line-height: 50px;
-	background-color: #222222;
+	height: 250px;
+	line-height: 250px;
+	background: url(/img/country_search_bg.png);
+	background-size: cover;
 	text-align: center;
 }
 

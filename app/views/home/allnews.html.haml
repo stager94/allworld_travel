@@ -5,30 +5,11 @@
   %li.active Новости
 .page-header
   %h1{style: "text-align:left;"} Новости
-  
-.shpage
-  = paginate @news, :left => 4, :right => 1,:param_name => :page
-.textsblocks
-  - @news.each do |newsblock|
-    %b
-      %span.fa.fa-thumbs-o-up
-      = link_to newsblock.name, "/news/"+newsblock.tag
-    .textblock
-      .microblock
-        - if tmpimage = newsblock.newspictures.first
-          .col-md-3.col-lg-3
-            .showplace_wcorner
-              .showplace_item
-                .showplace_img
-                  = image_tag tmpimage.image.url(:thumb)
-                  %p.mini=newsblock.name
-          .col-md-9.col-lg-9.showfulltext
-            .samtext=newsblock.page.html_safe
-            .next
-              %span.fa.fa-chevron-circle-down
-        - else
-          .showfulltext
-            .samtext=newsblock.page.html_safe
-            .next
-              %span.fa.fa-chevron-circle-down
-      .clear
+  .country-selector-block
+    .country-selector-form
+      = form_for :countries, url: allnews_filter_path, remote: true do |f|
+        = f.label :ids, "Выберите страну", style: "color: white"
+        %nobr
+          = f.select :ids, Country.all.map{|c| [c.name,c.id]}, {}, multiple: true, class: "country-select"
+.place-for-news  
+  = render "shared/allnews_tabmenu"

@@ -57,11 +57,15 @@
     .container
       .row.pull-center
         -#unless current_page?(root_url)
-        .leftmenu
-          .blocknoborder.sidebar-nav
-            = render :partial => 'shared/leftmenu'
-        .fullcontent#contenetblock
-          = yield
+        - if action_name != "allnews"
+          .leftmenu
+            .blocknoborder.sidebar-nav
+              = render :partial => 'shared/leftmenu'
+          .fullcontent#contenetblock
+            = yield
+        - else
+          .fullcontent#contenetblock.full-width-content
+            = yield
     .container-fluid
       .row.afooter
         = render :partial => 'shared/footer'
