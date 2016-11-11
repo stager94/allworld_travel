@@ -41,7 +41,7 @@
     .shpage
       = paginate @news, :left => 4, :right => 1,:param_name => :page
     .textsblocks
-      - @news.each do |newsblock|
+      - @news.reverse.each do |newsblock|
         %b
           %span.fa.fa-thumbs-o-up
           = link_to newsblock.name, "/news/"+newsblock.tag
