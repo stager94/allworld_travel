@@ -10,6 +10,7 @@ Allworld::Application.routes.draw do
   get '/country/:tag', to: 'home#country'
   get '/allnews', to: 'home#allnews'
   post '/allnews_filter', to: 'home#allnews_filter'
+  post '/allnews_showmore', to: 'home#allnews_showmore'
   get '/news/:tag', to: 'home#news'
   get '/countries/:tag', to: 'home#countries'
   get '/section/:tag', to: 'home#section'

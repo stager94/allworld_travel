@@ -1,0 +1,17 @@
+$(function() {
+
+  $("#all_news .textsblocks").html("<%= j render 'allnews_all_tab'%>");
+  
+  $(".country-select").change(function(){
+    $(this).parent().submit();
+  });
+
+  $(".tab-link").click(function(){
+    $(".tab-panel").removeClass("active");
+    $(".tab-panel[id='"+$(this).children("span").attr("tab-id")+"']").addClass("active");
+
+    $(".tab-link").removeClass("active");
+    $(this).addClass("active");
+  });
+
+});

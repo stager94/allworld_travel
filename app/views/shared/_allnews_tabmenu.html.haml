@@ -11,24 +11,28 @@
     .row.no-margin
       - piece = @last_news.last
       - if piece.present?
-        .col-md-7.main-news
-          .textsblocks
-            %b
-              %span.fa.fa-thumbs-o-up
-              = link_to piece.name, "/news/"+piece.tag
-            - if tmpimage = piece.newspictures.first
-              .showplace_wcorner_50
-                .showplace_item
-                  .showplace_img_50
-                    = image_tag tmpimage.image.url(:medium)
-                    %p.mini=piece.name
-            = piece.page
+        .col-md-7.main-news.gray-shadow
+          %b
+            = link_to piece.name, "/news/"+piece.tag
+          %hr.no-margin
+            %span.news-date
+              = piece.created_at.strftime("%d.%m.%Y")
+          %p
+          - if tmpimage = piece.newspictures.first
+            .showplace_wcorner_50
+              .showplace_item
+                .showplace_img_50
+                  = image_tag tmpimage.image.url(:medium)
+          = piece.page
       - @last_news.select{|ln| ln.id != @last_news.last.id}.reverse.each do |piece| 
-        .col-md-5.older-news
-          .textsblocks.inherit-height
+        .col-md-5.older-news.gray-shadow
+          .inherit-height
             %b
-              %span.fa.fa-thumbs-o-up
               = link_to piece.name, "/news/"+piece.tag
+            %hr.no-margin
+              %span.news-date
+                = piece.created_at.strftime("%d.%m.%Y")
+            %p
             - if tmpimage = piece.newspictures.first
               .showplace_wcorner_40
                 .showplace_item
@@ -37,28 +41,7 @@
             .older-news-text
               = piece.page
 
-  .tab-panel{id: "all_news"}
+  .tab-panel.row{id: "all_news"}
     .shpage
-      = paginate @news, :left => 4, :right => 1,:param_name => :page
     .textsblocks
-      - @news.reverse.each do |newsblock|
-        .col-md-3
-          %b
-            %span.fa.fa-thumbs-o-up
-            = link_to newsblock.name, "/news/"+newsblock.tag
-          .textblock
-            .microblock
-              - if tmpimage = newsblock.newspictures.first
-                .col-md-3.col-lg-3
-                  .showplace_wcorner
-                    .showplace_item
-                      .showplace_img
-                        = image_tag tmpimage.image.url(:thumb)
-                        %p.mini=newsblock.name
-              - else
-                .col-md-3.col-lg-3
-                  .showplace_wcorner
-                    .showplace_item
-                      .showplace_img
-                        %p.mini=newsblock.name
-            .clear
+      = render "allnews_all_tab"
