@@ -16,7 +16,7 @@
         .clear
 %p
   .col-md-12
-    - if @news.count != News.all.count or (@country_ids.present? and @news.count != News.where(country_id: @country_ids).count)
+    - if @news.count != @allnews.count
       = form_tag allnews_showmore_path, remote: true do
         = hidden_field_tag :page, @page
         - if @country_ids.present?
