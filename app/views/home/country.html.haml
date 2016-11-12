@@ -1,4 +1,4 @@
-- set_meta_tags title: @country.title, reverse: true
+- set_meta_tags title: @country.title, reverse: true, description: @country.description, keywords: @country.keywords
 - use_previous_breadcrumbs = false
 
 - @bredcrumb = capture do
@@ -88,10 +88,10 @@
     =@country.descforturist.html_safe
   .next
     %span.fa.fa-chevron-circle-down
-    
+
 .showplace_block.textsblocks
   %b Общая информация:
-  .div-table 
+  .div-table
     .div-cell.crests
       .crest.semi-width
         -if flagimg = @country.flag.url(:thumb)
@@ -103,7 +103,7 @@
           .text-center Герб
     .div-cell
       .col-md-9.col-lg-9
-        %table{ style: "font-size:13px;" } 
+        %table{ style: "font-size:13px;" }
           -if @country.offname.present?
             %tr
               %td
@@ -200,7 +200,7 @@
 /               .col-md-3.col-lg-3
 /                 - if showplace = countrytextblock.showplace
 /                   = render :partial => 'shared/showplace', :locals => {:showplace => showplace}
-/                 - else 
+/                 - else
 /                   .showplace_wcorner
 /                     .showplace_item.nohover
 /                       .showplace_img
@@ -230,7 +230,7 @@
 
       - if block.textblock.grouptextblock.name == "Полезная информация" && @showplace.street_pano.present?
         .street-pano= @showplace.street_pano.try(:html_safe)
-        
+
 
       - grouptextblock = block.textblock.grouptextblock
       - previous_group_id = grouptextblock.id
@@ -240,7 +240,7 @@
         - else
           %span.fa.fa-thumbs-o-up
         = grouptextblock.name
-    
+
     - if block.textblock.nil?
       - previous_group_id = 0
 
@@ -250,7 +250,7 @@
           .test
             - if showplace = block.showplace
               = render partial: 'shared/showplace', locals: { showplace: showplace }
-            - else 
+            - else
               .showplace_wcorner
                 .showplace_item.nohover
                   .showplace_img.showplace_img2
