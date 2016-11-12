@@ -15,6 +15,18 @@ class News < ActiveRecord::Base
 
   before_create :add_tag
   
+  def previous_news
+    News.where("id < ?", self.id).last
+  end
+
+  def next_news
+    News.where("id > ?", self.id).first
+  end
+
+  def neighbours  
+    {prev: previous_news, next: next_news}
+  end
+
   def add_tag
     self.tag = self.name.to_slug_param
   end

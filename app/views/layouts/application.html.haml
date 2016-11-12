@@ -2,7 +2,7 @@
 %html(lang="en")
   %head= render 'layouts/header'
 
-  %body{style:"padding-top: 117px;"}
+  %body{style:"padding-top: 117px;"}    
     .navbar-fixed-top
       .container-fluid.topnav
         = bootstrap_flash
@@ -57,7 +57,7 @@
     .container
       .row.pull-center
         -#unless current_page?(root_url)
-        - if action_name != "allnews"
+        - if ([action_name] & ["allnews","news"]).empty?
           .leftmenu
             .blocknoborder.sidebar-nav
               = render :partial => 'shared/leftmenu'

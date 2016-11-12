@@ -409,7 +409,19 @@ class HomeController < ApplicationController
   end
 
   def news
-    @news = News.find_by_tag(params[:tag])
+    @piece = News.find_by_tag(params[:tag])
+
+    @neighbours      = @piece.neighbours
+    @current_news_id = @piece.id
+
+    @allnews   = News.all
+    @news      = News.last(8)
+    @page      = 1
+
+    @all_country_news = News.where(country_id: @piece.country_id)
+    @country_news    = @all_country_news.last(8)
+    @country_page    = 1
+    @country_id     = @piece.country_id
   end
 
   def allnews_showmore
@@ -422,6 +434,36 @@ class HomeController < ApplicationController
     else
       @allnews = News.all
       @news    = News.last(8*@page)
+    end
+  end
+
+  def all_country_news_showmore
+    @country_id = params[:country_id]
+    @page       = params[:page].to_i + 1
+    
+    @all_country_news = News.where(country_id: @country_id)
+    @country_news     = @all_country_news.last(8*@page)
+  end
+
+  def prev_news
+    @piece            = News.find_by_id(params[:id])
+    @current_news_id = params[:current_id].to_i
+
+    if @piece
+      prev_news   = @piece.previous_news
+      @neighbours = {prev: prev_news.try(:id) != @current_news_id ? prev_news : prev_news.try(:previous_news),
+                     next: @piece}
+    end
+  end
+
+  def next_news
+    @piece            = News.find_by_id(params[:id])
+    @current_news_id = params[:current_id].to_i
+
+    if @piece
+      next_news   = @piece.next_news
+      @neighbours = {prev: @piece,
+                     next: next_news.try(:id) != @current_news_id ? next_news : next_news.try(:next_news)}
     end
   end
 

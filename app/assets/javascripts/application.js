@@ -32,6 +32,10 @@ $(function() {
 
   $(".country-select").select2({width: "resolve"});
 
+  $(".news-country-select").select2({width: "resolve"});
+
+  $(".news-country-select").val($(".news-country-select").attr("data-selected")).trigger("change");
+
   $(".country-select").change(function(){
     $(this).parent().submit();
   });

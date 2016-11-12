@@ -25,6 +25,90 @@
     src: local("Calibri Light"), url("/fonts/calibril.ttf") format("truetype"); /*non-IE*/
 }
 
+.share-links {
+	text-align: right;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.share-links table {
+	display: inline-block;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.twitter iframe {
+	display: inherit;
+}
+
+.vk table{
+	background-color: rgb(98, 135, 174) !important;
+	border-radius: 3px !important;
+}
+
+.older-news .showplace_wcorner_40{
+	height: 50% !important;
+}
+
+.left-arrow-button {
+	width: 100% !important;
+	height: 220px !important;
+	background: url("/img/arrow-left.svg") no-repeat;
+	background-size: cover;
+	border: none;
+}
+
+.right-arrow-button {
+	width: 100% !important;
+	height: 220px !important;
+	background: url("/img/arrow-right.svg") no-repeat;
+	background-size: cover;
+	border: none;
+}
+
+#vertical-separator {
+	height: 170px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	display: inline-block;
+	border-left: 3px solid rgba(0,0,0,0.1);
+}
+
+.col-md-4.neighbour {
+	width: 37.5% !important;
+}
+
+.news-neighbours {
+	margin-top: 15px;
+}
+
+.news-header-title {
+	font-size: 20px;
+	text-align: justify;
+	margin-top: 0;
+	display: inline-block;
+	color: #1b587f;
+}
+
+.news-page-block{
+	min-height: 440px !important;
+}
+
+.news-header-block {
+	margin-bottom: 15px;
+}
+
+.show-news-pictures {
+	width: 50% !important;
+	float: left;
+	margin-top: 0px !important;
+	margin-right: 10px !important;
+}
+
+.show-news {
+	padding-top: 10px;
+}
+
 .news-date {
 	color: rgb(166,166,166);
 	font-size: 12px;
@@ -72,7 +156,7 @@
 	margin: 0px !important;
 }
 
-#all_news {
+#all_news, #all_country_news {
 	background-color: rgb(236,236,236)
 }
 
@@ -86,6 +170,7 @@
 	padding: 2px 6px;
 	height: 80px !important;
 	overflow: hidden;
+	text-align: justify;
 	text-overflow: ellipsis;
 }
 

@@ -1,0 +1,51 @@
+.row
+  - piece = @neighbours[:prev]
+  .col-md-1
+    - if piece
+      = form_tag prev_news_path, remote: true do
+        = hidden_field_tag :id, piece.try(:id)
+        = hidden_field_tag :current_id, @current_news_id
+
+        = submit_tag "", class: "left-arrow-button"
+  .col-md-4.older-news.neighbour
+    - if piece
+      .inherit-height
+        %b
+          = link_to piece.name, "/news/"+piece.tag
+        %hr.no-margin
+          %span.news-date
+            = piece.created_at.strftime("%d.%m.%Y")
+        %p
+        - if tmpimage = piece.newspictures.first
+          .showplace_wcorner_40
+            .showplace_item
+              .showplace_img
+                = image_tag tmpimage.image.url(:thumb)
+        .older-news-text
+          = piece.page
+  .col-md-1.text-center
+    #vertical-separator
+  - piece = @neighbours[:next]
+  .col-md-4.older-news.neighbour
+    - if piece
+      .inherit-height
+        %b
+          = link_to piece.name, "/news/"+piece.tag
+        %hr.no-margin
+          %span.news-date
+            = piece.created_at.strftime("%d.%m.%Y")
+        %p
+        - if tmpimage = piece.newspictures.first
+          .showplace_wcorner_40
+            .showplace_item
+              .showplace_img
+                = image_tag tmpimage.image.url(:thumb)
+        .older-news-text
+          = piece.page
+  .col-md-1
+    - if piece
+      = form_tag next_news_path, remote: true do
+        = hidden_field_tag :id, piece.try(:id)
+        = hidden_field_tag :current_id, @current_news_id
+
+        = submit_tag "", class: "right-arrow-button"

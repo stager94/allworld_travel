@@ -1,20 +1,83 @@
+= render "/shared/share_sdks"
+
 - @bredcrumb = capture do
   %li= link_to 'Путеводитель', '/'
   %li= link_to 'Страны мира', '/allcountries'
-  %li= link_to @news.name, '/countries/'+@news.tag
-  %li.active= @news.name
+  %li= link_to @piece.name, '/countries/'+@piece.tag
+  %li.active= @piece.name
 .info
-  %h1=@news.h1
+  %h1=@piece.h1
 
-.blockborder.oh
-  .all
-    = render :partial => 'shared/slide'
-    .fotorama{"data-allowfullscreen"=>"true", "data-nav"=>"thumbs", "data-fit"=>"cover", "data-width"=>"100%", "data-thumbwidth" => "128px", "data-thumbheight" => "128px", "data-captions"=>"true"}
-      - @news.newspictures.each do |newspictures|
-        -if shimg = newspictures.image
-          =image_tag newspictures.image.url(:medium), "data-full" => newspictures.image.url(:medium), "data-caption"=> newspictures.name
-      -if videos = @news.newsvideos.first
-        - @news.newsvideos.each do |video|
-          =link_to video.name, video.kode.html_safe
-.showplace_block.textblock
-  =@news.page.html_safe
+.page-header
+  %h1{style: "text-align:left;"} Новости
+  .country-selector-block
+    .country-selector-form
+      = form_for :countries, url: allnews_filter_path, remote: true do |f|
+        = f.label :ids, "Выберите страну", style: "color: white"
+        %nobr
+          = f.select :ids, Country.all.map{|c| [c.name,c.id]}, {}, multiple: true, class: "news-country-select", data: {selected: @piece.country_id}
+.show-news
+  .news-header-block
+    .news-header-title
+      %b
+        = @piece.name
+    %hr.no-margin
+      %span.news-date
+        = @piece.created_at.strftime("%d.%m.%Y")
+  .news-page-block
+    .blockborder.oh.show-news-pictures
+      .all
+        = render :partial => 'shared/slide'
+        .fotorama{"data-allowfullscreen"=>"true", "data-nav"=>"thumbs", "data-fit"=>"cover", "data-width"=>"100%", "data-thumbwidth" => "128px", "data-thumbheight" => "128px", "data-captions"=>"true"}
+          - @piece.newspictures.each do |newspictures|
+            -if shimg = newspictures.image
+              =image_tag newspictures.image.url(:medium), "data-full" => newspictures.image.url(:medium), "data-caption"=> newspictures.name
+          -if videos = @piece.newsvideos.first
+            - @piece.newsvideos.each do |video|
+              =link_to video.name, video.kode.html_safe
+    = @piece.page.html_safe
+    .share-links#sharing
+      %table
+        %tr
+          %td
+            .fb
+              .fb-share-button{"data-href" => "https://developers.facebook.com/docs/plugins/", "data-layout" => "button", "data-mobile-iframe" => "true", "data-size" => "large"}
+                %a.fb-xfbml-parse-ignore{:href => "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&src=sdkpreparse", :target => "_blank"}
+                  Facebook
+          %td
+            .twitter
+              %a.twitter-share-button{"data-size" => "large", :href => "https://twitter.com/intent/tweet?text"}
+                Twitter
+          %td
+            .gp
+              .g-plus{"data-action" => "share", "data-annotation" => "none", "data-height" => "24"}
+          %td
+            .vk
+              :javascript
+                <!--
+                document.write(VK.Share.button(false,{type: "custom", text: "<img src=\"https://vk.com/images/share_32.png\" width=\"32\" height=\"32\" />"}));
+                -->
+
+
+  .news-neighbours#neighbours
+    = render "news_neighbours"
+  .other-news
+    .tabmenu
+      .tabmenu-header
+        .tab-link.active
+          %span{"tab-id" => "all_country_news"}
+            = "Другие новости по #{@piece.country.name}" 
+        .tab-link
+          %span{"tab-id" => "all_news"}
+            Все новости
+
+      .tab-panel.row.active{id: "all_country_news"}
+        .shpage
+        .textsblocks
+          = render "country_news_tab"
+      .tab-panel.row{id: "all_news"}
+        .shpage
+        .textsblocks
+          = render "allnews_all_tab"
+
+
