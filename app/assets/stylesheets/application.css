@@ -79,10 +79,14 @@
 .all-news-block {
 	padding: 1%;
 	background-color: white;
+	height: 300px !important;
 }
 
 .all-news-text {
 	padding: 2px 6px;
+	height: 80px !important;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .all-news-block .microblock .showplace_wcorner {
