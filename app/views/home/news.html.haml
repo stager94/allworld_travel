@@ -9,7 +9,6 @@
   %h1=@piece.h1
 
 .page-header
-  %h1{style: "text-align:left;"} Новости
   .country-selector-block
     .country-selector-form
       = form_for :countries, url: allnews_filter_path, remote: true do |f|
