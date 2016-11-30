@@ -1,5 +1,5 @@
 class News < ActiveRecord::Base
-  attr_accessible :name, :h1, :keywords, :description, :page, :tag
+  attr_accessible :name, :h1, :keywords, :description, :page, :tag, :news_type
   has_many :newspictures, :dependent => :destroy, :inverse_of => :news
   has_many :newsvideos, :dependent => :destroy, :inverse_of => :news
   attr_accessible :newspicture_id
@@ -14,7 +14,13 @@ class News < ActiveRecord::Base
   attr_accessible :country_id
 
   before_create :add_tag
+
+  enum news_type: ["news","event"]
   
+  def news_type_enum
+    ["news","event"]
+  end
+
   def previous_news
     News.where("id < ?", self.id).last
   end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160921173153) do
+ActiveRecord::Schema.define(version: 20161130192846) do
 
   create_table "allsettings", force: :cascade do |t|
     t.boolean  "default"
@@ -332,6 +332,7 @@ ActiveRecord::Schema.define(version: 20160921173153) do
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
     t.integer  "country_id",  limit: 4
+    t.integer  "news_type",   limit: 4
   end
 
   create_table "newspictures", force: :cascade do |t|

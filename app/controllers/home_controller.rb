@@ -387,10 +387,11 @@ class HomeController < ApplicationController
   end
   
   def allnews
-    @allnews   = News.all
-    @news      = News.last(8)
-    @last_news = News.last(4)
+    @allnews   = News.event.all
+    @news      = News.event.last(8)
+    @last_news = News.news.last(4)
     @page      = 1
+    @events    = true
   end
 
   def allnews_filter
@@ -435,6 +436,12 @@ class HomeController < ApplicationController
       @allnews = News.all
       @news    = News.last(8*@page)
     end
+
+    if params[:events].present?
+      @allnews = News.event.all
+      @news    = News.event.last(8*@page)
+      @events  = true 
+    end
   end
 
   def all_country_news_showmore
@@ -446,7 +453,7 @@ class HomeController < ApplicationController
   end
 
   def prev_news
-    @piece            = News.find_by_id(params[:id])
+    @piece           = News.find_by_id(params[:id])
     @current_news_id = params[:current_id].to_i
 
     if @piece
