@@ -20,7 +20,9 @@ class User < ActiveRecord::Base
   has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>", :micro => "50x50#" }, :default_url => "/default_avatar.png"
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
   attr_accessor :login
-  
+
+  validates_uniqueness_of :username
+
 
   def self.find_for_oauth(auth, signed_in_resource = nil)
     # Get the identity and user if they exist
@@ -73,7 +75,7 @@ class User < ActiveRecord::Base
 
   def login
     @login || self.username || self.email
-  end  
+  end
   # attr_accessible :title, :body
   def role_enum
     %w[admin manager member]
@@ -86,7 +88,7 @@ class User < ActiveRecord::Base
   def has_extended_role?
     %w(admin manager).include? self.role
   end
-  
+
   def self.find_for_database_authentication(warden_conditions)
     conditions = warden_conditions.dup
     if login = conditions.delete(:login)
