@@ -11,5 +11,6 @@
         = f.label :ids, "Выберите страну", style: "color: white"
         %nobr
           = f.select :ids, Country.all.map{|c| [c.name,c.id]}, {}, multiple: true, class: "country-select"
+
 .place-for-news  
   = render "shared/allnews_tabmenu"

@@ -387,9 +387,12 @@ class HomeController < ApplicationController
   end
   
   def allnews
-    @allnews   = News.event.all
-    @news      = News.event.last(8)
-    @last_news = News.news.last(4)
+    @allnews_events   = News.event.all
+    @news_events      = News.event.last(8)
+    @allnews_news     = News.news.all
+    @news_news        = News.news.last(8)
+    @last_news        = News.news.last(4)
+   
     @page      = 1
     @events    = true
   end
@@ -399,13 +402,17 @@ class HomeController < ApplicationController
     @page        = 1
     
     if @country_ids.present?
-      @allnews   = News.where(country_id: @country_ids)
-      @news      = @allnews.last(8)
-      @last_news = News.where(country_id: @country_ids).last(4)
+      @allnews_events   = News.event.where(country_id: @country_ids)
+      @news_events      = @allnews_events.last(8)
+      @allnews_news     = News.news.where(country_id: @country_ids)
+      @news_news        = @allnews_news.last(8)
+      @last_news        = @allnews_news.last(4)
     else
-      @allnews   = News.all
-      @news      = News.last(8)
-      @last_news = News.last(4)
+      @allnews_events   = News.event.all
+      @news_events      = News.event.last(8)
+      @allnews_news     = News.news.all
+      @news_news        = News.news.last(8)
+      @last_news        = News.news.last(4)
     end
   end
 
@@ -431,17 +438,37 @@ class HomeController < ApplicationController
     
     if @country_ids.present?
       @allnews = News.where(country_id: @country_ids)
-      @news    = @allnews.last(8*@page)
     else
       @allnews = News.all
-      @news    = News.last(8*@page)
     end
 
-    if params[:events].present?
-      @allnews = News.event.all
-      @news    = News.event.last(8*@page)
-      @events  = true 
+    @news = @allnews.last(8*@page)
+  end
+
+  def allnews_showmore_news
+    @country_ids = (params[:country_ids] || []).reject(&:empty?).map(&:to_i)
+    @page        = params[:page].to_i + 1
+    
+    if @country_ids.present?
+      @allnews_news = News.news.where(country_id: @country_ids)
+    else
+      @allnews_news = News.news
     end
+    
+    @news_news = @allnews_news.last(8*@page)
+  end
+
+  def allnews_showmore_events
+    @country_ids = (params[:country_ids] || []).reject(&:empty?).map(&:to_i)
+    @page        = params[:page].to_i + 1
+    
+    if @country_ids.present?
+      @allnews_events = News.event.where(country_id: @country_ids)
+    else
+      @allnews_events = News.event
+    end
+    
+    @news_events = @allnews_events.last(8*@page)
   end
 
   def all_country_news_showmore

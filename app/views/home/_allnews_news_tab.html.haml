@@ -1,4 +1,4 @@
-- @news.reverse.each do |newsblock|
+- @news_news.reverse.each do |newsblock|
   .col-md-3
     %b
     .textblock.all-news-block.gray-shadow
@@ -16,8 +16,8 @@
         .clear
 %p
   .col-md-12
-    - if @news.count != @allnews.count
-      = form_tag allnews_showmore_path, remote: true do
+    - if @news_news.count != @allnews_news.count
+      = form_tag allnews_showmore_news_path, remote: true do
         = hidden_field_tag :page, @page
         - if @country_ids.present?
           - @country_ids.each do |ci|

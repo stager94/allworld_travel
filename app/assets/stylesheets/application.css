@@ -156,7 +156,7 @@
 	margin: 0px !important;
 }
 
-#all_news, #all_country_news {
+#all_news, #all_country_news, #all_news_news, #all_news_events {
 	background-color: rgb(236,236,236)
 }
 
@@ -187,6 +187,11 @@
 	padding-right: 15px !important;
 	width: 57% !important;
 	margin-right: 1% !important;
+	padding: 15px !important;
+}
+
+.fresh-news-block {
+	margin-bottom: 20px !important;
 }
 
 .showmore-button {

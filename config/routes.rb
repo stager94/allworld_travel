@@ -11,6 +11,8 @@ Allworld::Application.routes.draw do
   get '/allnews', to: 'home#allnews'
   post '/allnews_filter', to: 'home#allnews_filter'
   post '/allnews_showmore', to: 'home#allnews_showmore'
+  post '/allnews_showmore_events', to: 'home#allnews_showmore_events'
+  post '/allnews_showmore_news', to: 'home#allnews_showmore_news'
   post '/all_country_news_showmore', to: 'home#all_country_news_showmore'
   post '/next_news', to: 'home#next_news'
   post '/prev_news', to: 'home#prev_news'
