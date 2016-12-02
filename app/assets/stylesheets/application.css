@@ -92,10 +92,15 @@
 
 .news-page-block{
 	min-height: 440px !important;
+	text-align: justify;
 }
 
 .news-header-block {
 	margin-bottom: 15px;
+}
+
+.source-url-place {
+	text-align: right;
 }
 
 .show-news-pictures {

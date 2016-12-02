@@ -22,7 +22,7 @@
         = @piece.name
     %hr.no-margin
       %span.news-date
-        = @piece.created_at.strftime("%d.%m.%Y")
+        = @piece.posted_on.try(:strftime, ("%d.%m.%Y"))
   .news-page-block
     .blockborder.oh.show-news-pictures
       .all
@@ -35,18 +35,11 @@
             - @piece.newsvideos.each do |video|
               =link_to video.name, video.kode.html_safe
     = @piece.page.html_safe
+    .source-url-place
+      = link_to @piece.source_url[/(?<=:\/\/)\w+.\w+/]
     .share-links#sharing
       %table
         %tr
-          %td
-            .fb
-              .fb-share-button{"data-href" => "https://developers.facebook.com/docs/plugins/", "data-layout" => "button", "data-mobile-iframe" => "true", "data-size" => "large"}
-                %a.fb-xfbml-parse-ignore{:href => "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&src=sdkpreparse", :target => "_blank"}
-                  Facebook
-          %td
-            .twitter
-              %a.twitter-share-button{"data-size" => "large", :href => "https://twitter.com/intent/tweet?text"}
-                Twitter
           %td
             .gp
               .g-plus{"data-action" => "share", "data-annotation" => "none", "data-height" => "24"}
@@ -56,6 +49,15 @@
                 <!--
                 document.write(VK.Share.button(false,{type: "custom", text: "<img src=\"https://vk.com/images/share_32.png\" width=\"32\" height=\"32\" />"}));
                 -->
+          %td
+            .fb
+              .fb-share-button{"data-href" => "https://developers.facebook.com/docs/plugins/", "data-layout" => "button", "data-mobile-iframe" => "true", "data-size" => "large"}
+                %a.fb-xfbml-parse-ignore{:href => "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&src=sdkpreparse", :target => "_blank"}
+                  Facebook
+          %td
+            .twitter
+              %a.twitter-share-button{"data-size" => "large", :href => "https://twitter.com/intent/tweet?text"}
+                Twitter
 
 
   .news-neighbours#neighbours

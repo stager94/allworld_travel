@@ -266,6 +266,12 @@ ru:
         newspictures: "Картинки"
         newsvideos: "Видео"
         page: "Текст новости"
+        news_type: "Тип новости"
+        posted_on: "Дата публикации"
+        source_url: "Ссылка на источник"
+        h1: "Заголовок"
+        country: "Страна"
+        description: "Описание"
       newspicture:
         name: "Название"
         news: "Новость"

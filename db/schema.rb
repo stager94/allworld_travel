@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161130192846) do
+ActiveRecord::Schema.define(version: 20161202165717) do
 
   create_table "allsettings", force: :cascade do |t|
     t.boolean  "default"
@@ -333,6 +333,8 @@ ActiveRecord::Schema.define(version: 20161130192846) do
     t.datetime "updated_at",                null: false
     t.integer  "country_id",  limit: 4
     t.integer  "news_type",   limit: 4
+    t.date     "posted_on"
+    t.string   "source_url",  limit: 255
   end
 
   create_table "newspictures", force: :cascade do |t|

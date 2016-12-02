@@ -14,7 +14,7 @@
           = link_to piece.name, "/news/"+piece.tag
         %hr.no-margin
           %span.news-date
-            = piece.created_at.strftime("%d.%m.%Y")
+            = piece.posted_on.try(:strftime, ("%d.%m.%Y"))
         %p
         - if tmpimage = piece.newspictures.first
           .showplace_wcorner_40
@@ -33,7 +33,7 @@
           = link_to piece.name, "/news/"+piece.tag
         %hr.no-margin
           %span.news-date
-            = piece.created_at.strftime("%d.%m.%Y")
+            = piece.posted_on.try(:strftime, ("%d.%m.%Y"))
         %p
         - if tmpimage = piece.newspictures.first
           .showplace_wcorner_40

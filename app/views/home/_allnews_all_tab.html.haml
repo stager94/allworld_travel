@@ -10,7 +10,7 @@
                 = image_tag tmpimage.image.url(:thumb)
       .all-news-text
         %span.news-date
-          = newsblock.created_at.strftime("%d.%m.%Y")
+          = newsblock.posted_on.try(:strftime, ("%d.%m.%Y"))
         %br
           = link_to newsblock.name, "/news/"+newsblock.tag
         .clear
