@@ -36,7 +36,8 @@
               =link_to video.name, video.kode.html_safe
     = @piece.page.html_safe
     .source-url-place
-      = link_to @piece.source_url.to_s[/(?<=:\/\/)\w+.\w+/]
+      - if @piece.news_source_url.present?
+        = link_to @piece.news_source_url.to_s[/(?<=:\/\/)\w+.\w+/], @piece.news_source_url
     .share-links#sharing
       %table
         %tr
