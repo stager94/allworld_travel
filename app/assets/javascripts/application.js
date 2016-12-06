@@ -40,6 +40,28 @@ $(function() {
     $(this).parent().submit();
   });
 
+  if ($(".select2.select2-container").height() > 40)
+  {
+    $(".select2.select2-container").addClass("arrow-hidden");
+  }
+
+  $(".country-select").on("select2:open",function(){
+    if ($(".select2.select2-container").height() < 40) 
+    {
+      $(".select2.select2-container").addClass("opened");
+    }
+  });
+
+  $(".country-select").on("select2:close",function(){
+    $(".select2.select2-container").removeClass("opened");
+    $(".select2.select2-container").removeClass("arrow-hidden");
+
+    if ($(".select2.select2-container").height() > 40)
+    {
+      $(".select2.select2-container").addClass("arrow-hidden");
+    }
+  });
+
   $(".tab-link").click(function(){
     $(".tab-panel").removeClass("active");
     $(".tab-panel[id='"+$(this).children("span").attr("tab-id")+"']").addClass("active");

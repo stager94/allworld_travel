@@ -25,6 +25,35 @@
     src: local("Calibri Light"), url("/fonts/calibril.ttf") format("truetype"); /*non-IE*/
 }
 
+.select2.select2-container:after {
+	position: absolute;
+	content: "";
+	background: url("/img/arrow-down.svg") no-repeat;
+	width: 20px;
+	height: 20px;
+	margin-top: -25px;
+	margin-left: 125px;
+	pointer-events: none;
+}
+
+.select2.select2-container.opened:after {
+	position: absolute;
+	content: "";
+	background: url("/img/arrow-up.svg") no-repeat;
+	width: 20px;
+	height: 20px;
+	margin-top: -25px;
+	margin-left: 125px;
+	pointer-events: none;
+}
+
+.select2.select2-container.arrow-hidden:after {
+	position: absolute;
+	content: "";
+	pointer-events: none;
+	background: transparent;
+}
+
 .share-links {
 	text-align: right;
 	margin-top: 10px;
@@ -264,7 +293,7 @@
 .tabmenu .tabmenu-header .tab-link {
 	display: inline-block;
 	line-height: 2.5;
-	width: 15%;
+	width: 18%;
 	text-align: center;
 	cursor: pointer;
 }
