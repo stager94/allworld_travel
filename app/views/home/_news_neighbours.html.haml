@@ -22,7 +22,7 @@
               .showplace_img
                 = image_tag tmpimage.image.url(:thumb)
         .older-news-text
-          = piece.page
+          = piece.page.html_safe
   .col-md-1.text-center
     #vertical-separator
   - piece = @neighbours[:next]
@@ -41,7 +41,7 @@
               .showplace_img
                 = image_tag tmpimage.image.url(:thumb)
         .older-news-text
-          = piece.page
+          = piece.page.html_safe
   .col-md-1
     - if piece
       = form_tag next_news_path, remote: true do
