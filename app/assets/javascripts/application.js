@@ -180,6 +180,90 @@ $(document).ready(function(){
     $('#country-globe').bind('contextmenu', function(e) {
       return false;
     }); 
+
+  Share = {
+    vkontakte: function(purl, ptitle, pimg, text, redirect_url) {
+      url  = 'http://vkontakte.ru/share.php?';
+      url += 'url='          + encodeURIComponent(purl);
+      url += '&title='       + encodeURIComponent(ptitle);
+      url += '&description=' + encodeURIComponent(text);
+      url += '&image='       + encodeURIComponent(pimg);
+      url += '&noparse=true';
+      Share.popup(url, redirect_url);
+    },
+    odnoklassniki: function(purl, text, redirect_url) {
+      url  = 'http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1';
+      url += '&st.comments=' + encodeURIComponent(text);
+      url += '&st._surl='    + encodeURIComponent(purl);
+      Share.popup(url, redirect_url);
+    },
+    facebook: function(purl, ptitle, pimg, text) {
+      url  = 'http://www.facebook.com/sharer.php?s=100';
+      url += '&p[title]='     + encodeURIComponent(ptitle);
+      url += '&p[summary]='   + encodeURIComponent(text);
+      url += '&p[url]='       + encodeURIComponent(purl);
+      url += '&p[images][0]=' + encodeURIComponent(pimg);
+      Share.popup(url);
+    },
+    twitter: function(purl, ptitle, redirect_url) {
+      url  = 'http://twitter.com/share?';
+      url += 'text='      + encodeURIComponent(ptitle);
+      url += '&url='      + encodeURIComponent(purl);
+      url += '&counturl=' + encodeURIComponent(purl);
+      Share.popup(url, redirect_url);
+    },
+    mailru: function(purl, ptitle, pimg, text) {
+      url  = 'http://connect.mail.ru/share?';
+      url += 'url='          + encodeURIComponent(purl);
+      url += '&title='       + encodeURIComponent(ptitle);
+      url += '&description=' + encodeURIComponent(text);
+      url += '&imageurl='    + encodeURIComponent(pimg);
+      Share.popup(url)
+    },
+    gplus: function(purl) {
+      url  = 'https://plus.google.com/share?';
+      url += '&url=' + encodeURIComponent(purl);
+      Share.popup(url);
+    },
+
+    popup: function(url, redirect_url) {
+      var win = window.open(url,'importwindow','toolbar=0,status=0,width=626,height=436');
+      if (redirect_url) {
+        var pollTimer = window.setInterval(function() {
+            if (win.closed !== false) {
+                window.clearInterval(pollTimer);
+                window.location = redirect_url;
+            }
+        }, 200);
+      }
+
+    }
+  };
+
+  $(".gplus-button").click(function(){
+    Share.gplus(window.location);
+  });
+
+  $(".facebook-button").click(function(){
+    Share.facebook(window.location, "Allworld", "", "Visit us");
+  });
+
+  $(".twitter-button").click(function(){
+    Share.twitter(window.location, "Visit us");
+  });
+
+  $(".vk-button").click(function(){
+    Share.vkontakte(window.location, "Allworld", "", "Visit us");
+  });
+
+  $(".od-button").click(function(){
+    Share.odnoklassniki(window.location, "Visit us");
+  });
+
+  $(".mailru-button").click(function(){
+    Share.mailru(window.location, "Allworld", "", "Visit us");
+  });
+
 });
 
 

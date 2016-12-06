@@ -42,23 +42,24 @@
       %table
         %tr
           %td
-            .gp
-              .g-plus{"data-action" => "share", "data-annotation" => "none", "data-height" => "24"}
+            .share-button.facebook-button
+              Facebook
           %td
-            .vk
-              :javascript
-                <!--
-                document.write(VK.Share.button(false,{type: "custom", text: "<img src=\"https://vk.com/images/share_32.png\" width=\"32\" height=\"32\" />"}));
-                -->
+            .share-button.twitter-button
+              Twitter
           %td
-            .fb
-              .fb-share-button{"data-href" => "https://developers.facebook.com/docs/plugins/", "data-layout" => "button", "data-mobile-iframe" => "true", "data-size" => "large"}
-                %a.fb-xfbml-parse-ignore{:href => "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&src=sdkpreparse", :target => "_blank"}
-                  Facebook
+            .share-button.gplus-button
+              Google+
           %td
-            .twitter
-              %a.twitter-share-button{"data-size" => "large", :href => "https://twitter.com/intent/tweet?text"}
-                Twitter
+            .share-button.vk-button
+              Vkontakte
+          %td
+            .share-button.od-button
+              Одноклассники
+          %td
+            .share-button.mailru-button
+              %span{style: "color: orange"}@
+              Mail.ru
 
 
   .news-neighbours#neighbours

@@ -60,6 +60,14 @@
 	margin-bottom: 10px;
 }
 
+#sharing table tbody tr td {
+	padding: 0px 0px 0px 10px !important;
+}
+
+#sharing table {
+	margin-right: 0px !important;
+}
+
 .share-links table {
 	display: inline-block;
 	margin-left: 5px;
@@ -281,6 +289,37 @@
 
 .tabmenu {
 	margin-bottom: 25px;
+}
+
+.share-button {
+	display: inline-block;
+	width: auto;
+	padding: 0px 5px 0px 5px;
+	height: 25px;
+	line-height: 25px;
+	border-radius: 3px;
+	text-align: center;
+	color: white !important;
+	cursor: pointer;
+}
+
+.gplus-button {
+	background-color: #d9534f;
+}
+.facebook-button {
+	background-color: #428bca;
+}
+.vk-button {
+	background-color: #507299;
+}
+.od-button {
+	background-color: #ee8208;
+}
+.twitter-button {
+	background-color: #1da1f2;
+}
+.mailru-button {
+	background-color: #07c;
 }
 
 .tabmenu .tabmenu-header {
