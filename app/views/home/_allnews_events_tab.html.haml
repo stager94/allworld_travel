@@ -4,10 +4,9 @@
     .textblock.all-news-block.gray-shadow
       .microblock
         .showplace_wcorner
-          .showplace_item
-            .showplace_img
-              - if tmpimage = newsblock.newspictures.first
-                = image_tag tmpimage.image.url(:thumb)
+          .showplace_img
+            - if tmpimage = newsblock.newspictures.first
+              = image_tag tmpimage.image.url(:thumb)
       .all-news-text
         %span.news-date
           = newsblock.posted_on.try(:strftime, ("%d.%m.%Y"))
@@ -22,7 +21,7 @@
         - if @country_ids.present?
           - @country_ids.each do |ci|
             = hidden_field_tag "country_ids[]", ci
-        
+
         = submit_tag "ПОКАЗАТЬ ЕЩЕ", class: "showmore-button"
       = link_to "", "#countries_ids", class: "goup-button"
     - else

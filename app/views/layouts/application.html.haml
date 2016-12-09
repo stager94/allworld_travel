@@ -2,13 +2,13 @@
 %html(lang="en")
   %head= render 'layouts/header'
 
-  %body{style:"padding-top: 117px;"}    
+  %body{style:"padding-top: 117px;"}
     .navbar-fixed-top
       .container-fluid.topnav
         = bootstrap_flash
         .pull-right
           %ul.navbar-nav.pull-right.list-unstyled
-            
+
             = render :partial => 'shared/loginblock'
             %li.dropdown
               = link_to '#', class: "dropdown-toggle", 'data-toggle'=>"dropdown", role:"button", 'aria-haspopup'=>"true", 'aria-expanded'=>"false" do
@@ -23,7 +23,7 @@
                       =v
         .pull-right#exitalerts
           Вы не зарегистрированы, при выходе с сайта Ваши настройки не сохранятся !
-            
+
       = render 'layouts/navigation'
 
       -#.container
@@ -54,6 +54,7 @@
         .row
           #shared-point.row-point{style: "font-size: 0.9em;"}
             = render partial: 'shared/point'
+    = yield :precontainer
     .container
       .row.pull-center
         -#unless current_page?(root_url)
@@ -72,7 +73,7 @@
     .container-fluid
       .row
         %footer
-          %p 
+          %p
             &copy;
             = raw $setting.copyright
     .hiddenbottom

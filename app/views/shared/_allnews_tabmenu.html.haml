@@ -10,11 +10,10 @@
       %p
       - if tmpimage = piece.newspictures.first
         .showplace_wcorner_50
-          .showplace_item
-            .showplace_img_50
-              = image_tag tmpimage.image.url(:medium)
+          .showplace_img_50
+            = image_tag tmpimage.image.url(:medium)
       = piece.page.html_safe
-  - @last_news.select{|ln| ln.id != @last_news.last.id}.reverse.each do |piece| 
+  - @last_news.select{|ln| ln.id != @last_news.last.id}.reverse.each do |piece|
     .col-md-5.older-news.gray-shadow
       .inherit-height
         %b
@@ -40,12 +39,12 @@
       %span{"tab-id" => "all_news_events"}
         События
 
-  .tab-panel.row.active{id: "all_news_news"}
+  .tab-panel.active{id: "all_news_news"}
     .shpage
     .textsblocks
       = render "allnews_news_tab"
 
-  .tab-panel.row{id: "all_news_events"}
+  .tab-panel{id: "all_news_events"}
     .shpage
     .textsblocks
       = render "allnews_events_tab"
