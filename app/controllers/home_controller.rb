@@ -409,12 +409,16 @@ class HomeController < ApplicationController
       @allnews_news     = News.news.where(country_id: @country_ids)
       @news_news        = @allnews_news.last(8)
       @last_news        = @allnews_news.last(4)
+      @allnews          = News.where(country_id: @country_ids)
+      @news             = @allnews.last(8)
     else
       @allnews_events   = News.event.all
       @news_events      = News.event.last(8)
       @allnews_news     = News.news.all
       @news_news        = News.news.last(8)
       @last_news        = News.news.last(4)
+      @allnews          = News.all
+      @news             = News.last(8)
     end
   end
 

@@ -64,6 +64,9 @@
   .news-neighbours#neighbours
     = render "news_neighbours"
   .other-news
+
+= content_for :postcontainer do
+  .tabmenu-background
     .tabmenu
       .tabmenu-header
         .tab-link.active

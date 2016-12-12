@@ -67,6 +67,7 @@
         - else
           .fullcontent#contenetblock.full-width-content
             = yield
+    = yield :postcontainer
     .container-fluid
       .row.afooter
         = render :partial => 'shared/footer'

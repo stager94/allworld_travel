@@ -177,7 +177,7 @@
 }
 
 .showplace_wcorner_50 {
-	width: 50%;
+	width: 50%; 
 	height: 250px;
 	float: left;
 	margin-right: 10px;
@@ -196,16 +196,6 @@
 
 .no-margin {
 	margin: 0px !important;
-}
-
-#all_news, #all_country_news, #all_news_news, #all_news_events {
-	background-color: rgb(236,236,236)
-}
-#all_news_news {
-	clear: both;
-	content: " ";
-	display: table;
-	width: 100%;
 }
 
 .all-news-block {
@@ -265,7 +255,7 @@
 
 .goup-button.showmoreless {
 	margin-right: -60px !important;
-	margin-top: -55px !important;
+	margin-top: -55px !important; 
 }
 
 .goup-button{
@@ -279,7 +269,7 @@
 .older-news {
 	height: 220px;
 	text-align: justify;
-	padding-bottom: 5px;
+	padding: 5px;
 	margin-bottom: 25px;
 }
 
@@ -290,7 +280,7 @@
 .older-news-text {
 	overflow: hidden;
 	text-overflow: ellipsis;
-	height: 75% !important;
+	height: 75% !important; 
 }
 
 .tabmenu {
@@ -326,6 +316,15 @@
 }
 .mailru-button {
 	background-color: #07c;
+}
+
+.tabmenu-background {
+	background-color: rgb(236,236,236);
+	padding: 25px 60px 10px 60px;
+}
+
+.tabmenu-background.transparent {
+	background: transparent;
 }
 
 .tabmenu .tabmenu-header {
@@ -390,6 +389,7 @@
 	background: url(/img/country_search_bg.png);
 	background-size: cover;
 	text-align: center;
+	margin-bottom: 20px;
 }
 
 .search-section .items .url {
