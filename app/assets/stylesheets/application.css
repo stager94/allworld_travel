@@ -177,7 +177,7 @@
 }
 
 .showplace_wcorner_50 {
-	width: 50%; 
+	width: 50%;
 	height: 250px;
 	float: left;
 	margin-right: 10px;
@@ -200,6 +200,12 @@
 
 #all_news, #all_country_news, #all_news_news, #all_news_events {
 	background-color: rgb(236,236,236)
+}
+#all_news_news {
+	clear: both;
+	content: " ";
+	display: table;
+	width: 100%;
 }
 
 .all-news-block {
@@ -259,7 +265,7 @@
 
 .goup-button.showmoreless {
 	margin-right: -60px !important;
-	margin-top: -55px !important; 
+	margin-top: -55px !important;
 }
 
 .goup-button{
@@ -284,7 +290,7 @@
 .older-news-text {
 	overflow: hidden;
 	text-overflow: ellipsis;
-	height: 75% !important; 
+	height: 75% !important;
 }
 
 .tabmenu {

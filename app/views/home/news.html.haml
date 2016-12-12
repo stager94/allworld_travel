@@ -5,16 +5,15 @@
   %li= link_to 'Страны мира', '/allcountries'
   %li= link_to @piece.name, '/countries/'+@piece.tag
   %li.active= @piece.name
-.info
-  %h1=@piece.h1
 
-.page-header
+= content_for :precontainer do
   .country-selector-block
     .country-selector-form
       = form_for :countries, url: allnews_filter_path, remote: true do |f|
         = f.label :ids, "Выберите страну", style: "color: white"
         %nobr
           = f.select :ids, Country.all.map{|c| [c.name,c.id]}, {}, multiple: true, class: "news-country-select", data: {selected: @piece.country_id}
+
 .show-news
   .news-header-block
     .news-header-title
@@ -69,7 +68,7 @@
       .tabmenu-header
         .tab-link.active
           %span{"tab-id" => "all_country_news"}
-            Другие новости по стране 
+            Другие новости по стране
         .tab-link
           %span{"tab-id" => "all_news"}
             Все новости

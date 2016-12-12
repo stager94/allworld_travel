@@ -18,9 +18,8 @@
         %p
         - if tmpimage = piece.newspictures.first
           .showplace_wcorner_40
-            .showplace_item
-              .showplace_img
-                = image_tag tmpimage.image.url(:thumb)
+            .showplace_img
+              = image_tag tmpimage.image.url(:thumb)
         .older-news-text
           = piece.page.html_safe
   .col-md-1.text-center
