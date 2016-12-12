@@ -20,27 +20,30 @@
                 = piece.posted_on.try(:strftime, ("%d.%m.%Y"))
             %p
             - if tmpimage = piece.newspictures.first
-              .showplace_wcorner_50
+              .showplace_wcorner_100
                 .showplace_item
                   .showplace_img_50
                     = image_tag tmpimage.image.url(:medium)
-            = piece.page.html_safe
-        - @last_news.select{|ln| ln.id != @last_news.last.id}.reverse.each do |piece| 
-          .col-md-5.older-news.gray-shadow
-            .inherit-height
-              %b
-                = link_to piece.name, "/news/"+piece.tag
-              %hr.no-margin
-                %span.news-date
-                  = piece.posted_on.try(:strftime, ("%d.%m.%Y"))
-              %p
-              - if tmpimage = piece.newspictures.first
-                .showplace_wcorner_40
-                  .showplace_item
-                    .showplace_img
-                      = image_tag tmpimage.image.url(:thumb)
-              .older-news-text
-                = piece.page.html_safe
+            %p
+            .fresh-news-text  
+              = piece.page.html_safe
+        .col-md-5
+          - @last_news.select{|ln| ln.id != @last_news.last.id}.reverse.each do |piece| 
+            .older-news.gray-shadow
+              .inherit-height
+                %b
+                  = link_to piece.name, "/news/"+piece.tag
+                %hr.no-margin
+                  %span.news-date
+                    = piece.posted_on.try(:strftime, ("%d.%m.%Y"))
+                %p
+                - if tmpimage = piece.newspictures.first
+                  .showplace_wcorner_40
+                    .showplace_item
+                      .showplace_img
+                        = image_tag tmpimage.image.url(:thumb)
+                .older-news-text
+                  = piece.page.html_safe
 
     .tab-panel.row{id: "all_news_events"}
       .shpage

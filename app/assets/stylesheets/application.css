@@ -184,6 +184,13 @@
 	margin-bottom: 10px;
 }
 
+.showplace_wcorner_100 {
+	width: 100%; 
+	height: 460px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
 .showplace_img_50 {
 	position: relative;
 	overflow: visible;
@@ -220,7 +227,7 @@
 }
 
 .main-news {
-	min-height: 710px !important;
+	height: 100% !important;
 	text-align: justify;
 	padding-right: 15px !important;
 	width: 57% !important;
@@ -267,9 +274,9 @@
 }
 
 .older-news {
-	height: 220px;
+	height: 100%;
 	text-align: justify;
-	padding: 5px;
+	padding: 10px;
 	margin-bottom: 25px;
 }
 
@@ -277,10 +284,16 @@
 	box-shadow: 0 0 5px rgba(0,0,0,0.3);
 }
 
+.fresh-news-text {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-height: 100px !important; 
+}
+
 .older-news-text {
 	overflow: hidden;
 	text-overflow: ellipsis;
-	height: 75% !important; 
+	max-height: 140px !important; 
 }
 
 .tabmenu {
