@@ -14,15 +14,15 @@
         %nobr
           = f.select :ids, Country.all.map{|c| [c.name,c.id]}, {}, multiple: true, class: "news-country-select", data: {selected: @piece.country_id}
 
-.show-news
-  .news-header-block
-    .news-header-title
+.show-news.row
+  .news-header-block.col-md-12
+    .news-header-title.col-md-12
       %b
         = @piece.name
     %hr.no-margin
       %span.news-date
         = @piece.posted_on.try(:strftime, ("%d.%m.%Y"))
-  .news-page-block
+  .news-page-block.col-md-12
     .blockborder.oh.show-news-pictures
       .all
         = render :partial => 'shared/slide'
@@ -61,7 +61,7 @@
               Mail.ru
 
 
-  .news-neighbours#neighbours
+  .news-neighbours#neighbours.col-md-12
     = render "news_neighbours"
   .other-news
 
