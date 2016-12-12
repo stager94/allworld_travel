@@ -62,11 +62,11 @@ $(function() {
     }
   });
 
-  $(".tab-link").click(function(){
-    $(".tab-panel").removeClass("active");
-    $(".tab-panel[id='"+$(this).children("span").attr("tab-id")+"']").addClass("active");
+  $(".tabmenu:not(.constant) .tabmenu-header .tab-link").click(function(){
+    $(".tabmenu:not(.constant) .tab-panel").removeClass("active");
+    $(".tabmenu:not(.constant) .tab-panel[id='"+$(this).children("span").attr("tab-id")+"']").addClass("active");
 
-    $(".tab-link").removeClass("active");
+    $(".tabmenu:not(.constant) .tabmenu-header .tab-link").removeClass("active");
     $(this).addClass("active");
   });
 

@@ -1,51 +1,59 @@
-.row.no-margin.fresh-news-block
-  - piece = @last_news.last
-  - if piece.present?
-    .col-md-7.main-news.gray-shadow
-      %b
-        = link_to piece.name, "/news/"+piece.tag
-      %hr.no-margin
-        %span.news-date
-          = piece.posted_on.try(:strftime, ("%d.%m.%Y"))
-      %p
-      - if tmpimage = piece.newspictures.first
-        .showplace_wcorner_50
-          .showplace_item
-            .showplace_img_50
-              = image_tag tmpimage.image.url(:medium)
-      = piece.page.html_safe
-  - @last_news.select{|ln| ln.id != @last_news.last.id}.reverse.each do |piece| 
-    .col-md-5.older-news.gray-shadow
-      .inherit-height
-        %b
-          = link_to piece.name, "/news/"+piece.tag
-        %hr.no-margin
-          %span.news-date
-            = piece.posted_on.try(:strftime, ("%d.%m.%Y"))
-        %p
-        - if tmpimage = piece.newspictures.first
-          .showplace_wcorner_40
-            .showplace_item
-              .showplace_img
-                = image_tag tmpimage.image.url(:thumb)
-        .older-news-text
-          = piece.page.html_safe
-
 .tabmenu
   .tabmenu-header
     .tab-link.active
-      %span{"tab-id" => "all_news_news"}
+      %span{"tab-id" => "fresh_news"}
         Новости
     .tab-link
       %span{"tab-id" => "all_news_events"}
         События
 
-  .tab-panel.row.active{id: "all_news_news"}
-    .shpage
-    .textsblocks
-      = render "allnews_news_tab"
+  .tab-panel.row.active{id: "fresh_news"}      
+    .row.no-margin.fresh-news-block
+      - piece = @last_news.last
+      - if piece.present?
+        .col-md-7.main-news.gray-shadow
+          %b
+            = link_to piece.name, "/news/"+piece.tag
+          %hr.no-margin
+            %span.news-date
+              = piece.posted_on.try(:strftime, ("%d.%m.%Y"))
+          %p
+          - if tmpimage = piece.newspictures.first
+            .showplace_wcorner_50
+              .showplace_item
+                .showplace_img_50
+                  = image_tag tmpimage.image.url(:medium)
+          = piece.page.html_safe
+      - @last_news.select{|ln| ln.id != @last_news.last.id}.reverse.each do |piece| 
+        .col-md-5.older-news.gray-shadow
+          .inherit-height
+            %b
+              = link_to piece.name, "/news/"+piece.tag
+            %hr.no-margin
+              %span.news-date
+                = piece.posted_on.try(:strftime, ("%d.%m.%Y"))
+            %p
+            - if tmpimage = piece.newspictures.first
+              .showplace_wcorner_40
+                .showplace_item
+                  .showplace_img
+                    = image_tag tmpimage.image.url(:thumb)
+            .older-news-text
+              = piece.page.html_safe
 
   .tab-panel.row{id: "all_news_events"}
     .shpage
     .textsblocks
       = render "allnews_events_tab"
+
+.tabmenu-background
+  .tabmenu.constant
+    .tabmenu-header
+      .tab-link.active
+        %span{"tab-id" => "all_news"}
+          Другие новости и события
+
+    .tab-panel.row.active{id: "all_news"}
+      .shpage
+      .textsblocks
+        = render "allnews_all_tab"

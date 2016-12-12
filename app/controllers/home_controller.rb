@@ -392,6 +392,8 @@ class HomeController < ApplicationController
     @allnews_news     = News.news.all
     @news_news        = News.news.last(8)
     @last_news        = News.news.last(4)
+    @allnews          = News.all
+    @news             = News.last(8)
    
     @page      = 1
     @events    = true

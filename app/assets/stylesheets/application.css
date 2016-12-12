@@ -355,6 +355,8 @@
 
 .tabmenu .tab-panel {
 	display: none;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 .tabmenu .tab-panel.active {
