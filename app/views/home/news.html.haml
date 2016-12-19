@@ -23,7 +23,7 @@
       %span.news-date
         = @piece.posted_on.try(:strftime, ("%d.%m.%Y"))
   .news-page-block.col-md-12
-    .blockborder.oh.show-news-pictures
+    .show-news-pictures
       .all
         = render :partial => 'shared/slide'
         .fotorama{"data-allowfullscreen"=>"true", "data-nav"=>"thumbs", "data-fit"=>"cover", "data-width"=>"100%", "data-thumbwidth" => "128px", "data-thumbheight" => "128px", "data-captions"=>"true"}

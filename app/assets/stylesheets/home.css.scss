@@ -64,7 +64,7 @@ border-bottom: solid 1px lightgrey;
 height: 56px;
 }
 .marqueeblocks{position: absolute;
-top: 94px;
+top: 0;
 left: 0;}
 .places_atr_block a{color: black;}
 // .showplace_block p{font-size: 20px;color:#1b587f;}
@@ -257,7 +257,7 @@ width: 28px;
 height: 28px;
 margin-left: -10px;
 }
-.navbar-colorized{ background-color: #1a587f; color:white;background-image: url('/img/nav_colored.png');background-repeat:repeat-x; height: 58px;}
+.navbar-colorized{ background-color: #4990be; color:white;background-image: url('/img/nav_colored.png');background-repeat:repeat-x; min-height: 58px; height: 100%;}
 .navbar-colorized .navbar-nav{}
 .topnav .fa {margin: 2px;}
 .topnav { background-color: #eaeaea; color:#030305; height:36px;}
@@ -270,7 +270,7 @@ box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
 .topnav .navbar-nav {margin: 0;}
 .row-bredcrumb{color:white;}
 .row-point{ background-color: #1a587f; color:white;min-height:42px;padding: 9px 9px 9px 20px;}
-.navbar-marquee{ background-color: #eaeaea;height:23px; line-height:23px;}
+.navbar-marquee{ background-color: #eaeaea;height:23px; line-height:23px;position:relative;}
 #hidemarquee{margin:0 6px;}
 #hidemarqueeblock{background-color: #eaeaea;}
 .leftmenu{width: 260px;float: left;}
