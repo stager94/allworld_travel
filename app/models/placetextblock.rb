@@ -6,7 +6,7 @@ class Placetextblock < ActiveRecord::Base
   attr_accessible :country_id
   attr_accessible :othershowplace_id
   attr_accessible :image, :lines_offset
-  has_attached_file :image, :styles => { :medium => "560x400#", :thumb => "416x298#" }, :default_url => "/img/placetextblock/:style/missing.png"
+  has_attached_file :image, :styles => { :medium => "1120x800#", :thumb => "832x596#" }, :default_url => "/img/placetextblock/:style/missing.png"
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 
   # has_destroyable_file :image
@@ -17,7 +17,7 @@ class Placetextblock < ActiveRecord::Base
   after_update :disable_clear_image
 
   # validates :textblock, presence: true
-  
+
   default_scope ->{ order(:position) }
   acts_as_positioned under: :showplace
 
