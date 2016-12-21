@@ -432,7 +432,7 @@ class HomeController < ApplicationController
     @news      = News.last(8)
     @page      = 1
 
-    @all_country_news = News.where(country_id: @piece.country_id)
+    @all_country_news = News.where(country_id: @piece.country_id).order posted_on: :desc
     @country_news    = @all_country_news.last(8)
     @country_page    = 1
     @country_id     = @piece.country_id
