@@ -86,7 +86,7 @@ class HomeController < ApplicationController
       #unless session[:placedas].blank? ->save to base
     else
       unless session[:placevidels].blank?
-        @placevidels  = Showplace.where(:id => session[:placevidels]).page(params[:vidpage]).per(@perpaged) 
+        @placevidels  = Showplace.where(:id => session[:placevidels]).page(params[:vidpage]).per(@perpaged)
         @placevidelscount = Showplace.where(:id => session[:placevidels]).count
         countobj = countobj -@perpaged
         usedplace << session[:placevidels]
@@ -106,7 +106,7 @@ class HomeController < ApplicationController
     end
     @showplaces = Showplace.for_user(current_user).where(:showhome =>true).where.not(:id =>usedplace).order("RAND(id)").page(params[:shpage]).per(countobj)
   end
-  
+
   def place
     @showplace = Showplace.for_user(current_user).find_by_tag!(params[:tag])
     #@relatedspls = @showplace.countries.first.showplaces.where.not(:id => @showplace.id).page(params[:page]).per($perpaged)
@@ -223,7 +223,7 @@ class HomeController < ApplicationController
           shplccntarr << params[:country].to_i
         end
 
-        
+
         # TODO: refactor this with join()
         fullcountryarray = ''
         comma = ''
@@ -237,7 +237,7 @@ class HomeController < ApplicationController
         shplece.save
 
         # if country array is blank - delete record
-        if shplccntarr.blank? 
+        if shplccntarr.blank?
           current_user.placevidels.where('showplace_id'=>params[:id]).delete_all
         end
 
@@ -255,7 +255,7 @@ class HomeController < ApplicationController
           comma=','
         end
         @placevidel.fullcountryarray = fullcountryarray
-        
+
         # TODO: WTF?
         if @placevidel.save
           redirect_to :back
@@ -276,7 +276,7 @@ class HomeController < ApplicationController
       else
         if session[:placevidelscountries][params[:id].to_i].include?(params[:country].to_i)
           session[:placevidelscountries][params[:id].to_i].delete(params[:country].to_i)
-          if session[:placevidelscountries][params[:id].to_i].blank? 
+          if session[:placevidelscountries][params[:id].to_i].blank?
             session[:placevidels].delete(params[:id])
           end
         else
@@ -385,7 +385,7 @@ class HomeController < ApplicationController
     @baner.save
     redirect_to @baner.gourl.html_safe
   end
-  
+
   def allnews
     @allnews_events   = News.event.all
     @news_events      = News.event.last(8)
@@ -394,7 +394,7 @@ class HomeController < ApplicationController
     @last_news        = News.news.last(4)
     @allnews          = News.all
     @news             = News.last(8)
-   
+
     @page      = 1
     @events    = true
   end
@@ -402,7 +402,7 @@ class HomeController < ApplicationController
   def allnews_filter
     @country_ids = params[:countries][:ids].reject(&:empty?).map(&:to_i)
     @page        = 1
-    
+
     if @country_ids.present?
       @allnews_events   = News.event.where(country_id: @country_ids)
       @news_events      = @allnews_events.last(8)
@@ -441,7 +441,7 @@ class HomeController < ApplicationController
   def allnews_showmore
     @country_ids = (params[:country_ids] || []).reject(&:empty?).map(&:to_i)
     @page        = params[:page].to_i + 1
-    
+
     if @country_ids.present?
       @allnews = News.where(country_id: @country_ids)
     else
@@ -454,33 +454,33 @@ class HomeController < ApplicationController
   def allnews_showmore_news
     @country_ids = (params[:country_ids] || []).reject(&:empty?).map(&:to_i)
     @page        = params[:page].to_i + 1
-    
+
     if @country_ids.present?
       @allnews_news = News.news.where(country_id: @country_ids)
     else
       @allnews_news = News.news
     end
-    
+
     @news_news = @allnews_news.last(8*@page)
   end
 
   def allnews_showmore_events
     @country_ids = (params[:country_ids] || []).reject(&:empty?).map(&:to_i)
     @page        = params[:page].to_i + 1
-    
+
     if @country_ids.present?
       @allnews_events = News.event.where(country_id: @country_ids)
     else
       @allnews_events = News.event
     end
-    
+
     @news_events = @allnews_events.last(8*@page)
   end
 
   def all_country_news_showmore
     @country_id = params[:country_id]
     @page       = params[:page].to_i + 1
-    
+
     @all_country_news = News.where(country_id: @country_id)
     @country_news     = @all_country_news.last(8*@page)
   end

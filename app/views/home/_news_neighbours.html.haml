@@ -12,16 +12,17 @@
       .inherit-height
         %b
           = link_to piece.name, "/news/"+piece.tag
-        %hr.no-margin
-          %span.news-date
-            = piece.posted_on.try(:strftime, ("%d.%m.%Y"))
+        %span.news-date
+          = piece.posted_on.try(:strftime, ("%d.%m.%Y"))
         %p
-        - if tmpimage = piece.newspictures.first
-          .showplace_wcorner_40
-            .showplace_img
-              = image_tag tmpimage.image.url(:thumb)
-        .older-news-text
-          = piece.page.html_safe
+        .tcell(style="width:40%;")
+          - if tmpimage = piece.newspictures.first
+            .showplace_wcorner_40
+              .showplace_img
+                = image_tag tmpimage.image.url(:thumb)
+        .tcell
+          .older-news-text
+            = piece.page.html_safe
   .col-md-1.text-center
     #vertical-separator
   - piece = @neighbours[:next]
@@ -34,12 +35,14 @@
           %span.news-date
             = piece.posted_on.try(:strftime, ("%d.%m.%Y"))
         %p
-        - if tmpimage = piece.newspictures.first
-          .showplace_wcorner_40
-            .showplace_img
-              = image_tag tmpimage.image.url(:thumb)
-        .older-news-text
-          = piece.page.html_safe
+        .tcell(style="width:40%;")
+          - if tmpimage = piece.newspictures.first
+            .showplace_wcorner_40
+              .showplace_img
+                = image_tag tmpimage.image.url(:thumb)
+        .tcell
+          .older-news-text
+            = piece.page.html_safe
   .col-md-1
     - if piece
       = form_tag next_news_path, remote: true do

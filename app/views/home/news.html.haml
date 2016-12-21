@@ -5,7 +5,7 @@
 - @bredcrumb = capture do
   %li= link_to 'Путеводитель', '/'
   %li= link_to 'Страны мира', '/allcountries'
-  %li= link_to @piece.name, '/countries/'+@piece.tag
+  %li= link_to @piece.country.name, '/countries/'+@piece.country.tag
   %li.active= @piece.name
 
 = content_for :precontainer do
@@ -69,22 +69,24 @@
 
 = content_for :postcontainer do
   .tabmenu-background
-    .tabmenu
-      .tabmenu-header
-        .tab-link.active
-          %span{"tab-id" => "all_country_news"}
-            Другие новости по стране
-        .tab-link
-          %span{"tab-id" => "all_news"}
-            Все новости
+    .container
+      .row
+        .tabmenu
+          .tabmenu-header
+            .tab-link.active
+              %span{"tab-id" => "all_country_news"}
+                Другие новости по стране
+            .tab-link
+              %span{"tab-id" => "all_news"}
+                Все новости
 
-      .tab-panel.row.active{id: "all_country_news"}
-        .shpage
-        .textsblocks
-          = render "country_news_tab"
-      .tab-panel.row{id: "all_news"}
-        .shpage
-        .textsblocks
-          = render "allnews_all_tab"
+          .tab-panel.row.active{id: "all_country_news"}
+            .shpage
+            .textsblocks
+              = render "country_news_tab"
+          .tab-panel.row{id: "all_news"}
+            .shpage
+            .textsblocks
+              = render "allnews_all_tab"
 
 
