@@ -12,7 +12,7 @@
   .country-selector-block
     .country-selector-form
       = form_for :countries, url: allnews_filter_path, remote: true do |f|
-        = f.label :ids, "Выберите страну", style: "color: white"
+        = f.label :ids, "Выбрать страну", style: "color: white"
         %nobr
           = f.select :ids, Country.ordered.map{|c| [c.name,c.id]}, {}, multiple: true, class: "news-country-select", data: {selected: @piece.country_id}
 

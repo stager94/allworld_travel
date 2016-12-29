@@ -389,6 +389,7 @@ class HomeController < ApplicationController
   def allnews
     @allnews_events   = News.ordered.event.all
     @news_events      = News.ordered.event.first(8)
+    @last_events      = News.ordered.event.last(4)
     @allnews_news     = News.ordered.news.all
     @news_news        = News.ordered.news.first(8)
     @last_news        = News.ordered.news.first(4)
@@ -404,21 +405,23 @@ class HomeController < ApplicationController
     @page        = 1
 
     if @country_ids.present?
-      @allnews_events   = News.event.where(country_id: @country_ids)
+      @allnews_events   = News.ordered.event.where(country_id: @country_ids)
       @news_events      = @allnews_events.last(8)
-      @allnews_news     = News.news.where(country_id: @country_ids)
+      @last_events      = @allnews_events.last(4)
+      @allnews_news     = News.ordered.news.where(country_id: @country_ids)
       @news_news        = @allnews_news.last(8)
       @last_news        = @allnews_news.last(4)
-      @allnews          = News.where(country_id: @country_ids)
+      @allnews          = News.ordered.where(country_id: @country_ids)
       @news             = @allnews.last(8)
     else
-      @allnews_events   = News.event.all
-      @news_events      = News.event.last(8)
-      @allnews_news     = News.news.all
-      @news_news        = News.news.last(8)
-      @last_news        = News.news.last(4)
-      @allnews          = News.all
-      @news             = News.last(8)
+      @allnews_events   = News.ordered.event.all
+      @news_events      = News.ordered.event.last(8)
+      @last_events      = News.ordered.event.last(4)
+      @allnews_news     = News.ordered.news.all
+      @news_news        = News.ordered.news.last(8)
+      @last_news        = News.ordered.news.last(4)
+      @allnews          = News.ordered.all
+      @news             = News.ordered.last(8)
     end
   end
 
@@ -469,9 +472,9 @@ class HomeController < ApplicationController
     @page        = params[:page].to_i + 1
 
     if @country_ids.present?
-      @allnews_events = News.event.where(country_id: @country_ids)
+      @allnews_events = News.ordered.event.where(country_id: @country_ids)
     else
-      @allnews_events = News.event
+      @allnews_events = News.ordered.event
     end
 
     @news_events = @allnews_events.last(8*@page)
@@ -481,7 +484,7 @@ class HomeController < ApplicationController
     @country_id = params[:country_id]
     @page       = params[:page].to_i + 1
 
-    @all_country_news = News.where(country_id: @country_id)
+    @all_country_news = News.ordered.where(country_id: @country_id)
     @country_news     = @all_country_news.last(8*@page)
   end
 

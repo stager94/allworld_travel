@@ -31,12 +31,12 @@ $(function() {
   });
 
   $(".country-select").select2({
-    width: "resolve",
+    width: "300px",
     maximumSelectionLength: 3
   });
 
   $(".news-country-select").select2({
-    width: "resolve",
+    width: "300px",
     maximumSelectionLength: 3
   });
 

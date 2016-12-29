@@ -235,7 +235,7 @@
 	padding-right: 15px !important;
 	width: 57% !important;
 	margin-right: 1% !important;
-	padding: 15px !important;
+	padding: 15px 15px 14px 15px !important;
 }
 
 .fresh-news-block {
@@ -334,6 +334,10 @@
 	background-color: #07c;
 }
 
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+	border: solid 1px #aaa !important;
+}
+
 .tabmenu-background {
 	background-color: rgb(236,236,236);
 	padding: 25px 60px 10px 60px;
@@ -348,6 +352,7 @@
 	border-bottom: 3px solid #cbced1;
 	line-height: 2.5;
 	margin-bottom: 15px;
+	font-weight: bold;
 }
 
 .tabmenu .tabmenu-header .tab-link {
@@ -358,8 +363,8 @@
 	padding: 0 10px;
 }
 
-.tabmenu .tabmenu-header .tab-link:not(.active):hover {
-	background-color: rgba(0,0,0,0.1);
+.tabmenu .tabmenu-header .tab-link:not(.active) {
+	color: #9A9A9A;
 }
 
 .tabmenu .tabmenu-header .tab-link.active {
