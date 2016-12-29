@@ -14,7 +14,7 @@
       = form_for :countries, url: allnews_filter_path, remote: true do |f|
         = f.label :ids, "Выберите страну", style: "color: white"
         %nobr
-          = f.select :ids, Country.all.map{|c| [c.name,c.id]}, {}, multiple: true, class: "news-country-select", data: {selected: @piece.country_id}
+          = f.select :ids, Country.ordered.map{|c| [c.name,c.id]}, {}, multiple: true, class: "news-country-select", data: {selected: @piece.country_id}
 
 .show-news.row
   .news-header-block.col-md-12

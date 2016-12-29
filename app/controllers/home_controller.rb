@@ -428,11 +428,11 @@ class HomeController < ApplicationController
     @neighbours      = @piece.neighbours
     @current_news_id = @piece.id
 
-    @allnews   = News.all
-    @news      = News.last(8)
+    @allnews   = News.all.reorder posted_on: :desc
+    @news      = News.reorder(posted_on: :desc).last(8)
     @page      = 1
 
-    @all_country_news = News.where(country_id: @piece.country_id).order posted_on: :desc
+    @all_country_news = News.where(country_id: @piece.country_id).reorder posted_on: :desc
     @country_news    = @all_country_news.last(8)
     @country_page    = 1
     @country_id     = @piece.country_id
@@ -443,9 +443,9 @@ class HomeController < ApplicationController
     @page        = params[:page].to_i + 1
 
     if @country_ids.present?
-      @allnews = News.where(country_id: @country_ids)
+      @allnews = News.where(country_id: @country_ids).reorder posted_on: :desc
     else
-      @allnews = News.all
+      @allnews = News.all.reorder posted_on: :desc
     end
 
     @news = @allnews.last(8*@page)

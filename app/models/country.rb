@@ -9,8 +9,8 @@ class Country < ActiveRecord::Base
   attr_accessible :primech, :tag, :chaspoyas, :pogoda, :timezone
   attr_accessible :flights_code, :car_rental_code, :hotels_code, :lines_offset
 
-  has_many :children, class_name: "Country", foreign_key: "parent_id"                             
-  belongs_to :parent, class_name: "Country"        
+  has_many :children, class_name: "Country", foreign_key: "parent_id"
+  belongs_to :parent, class_name: "Country"
   attr_accessible :parent_id
 
   has_many :linkobjtocounts, :dependent => :destroy
@@ -21,7 +21,7 @@ class Country < ActiveRecord::Base
   attr_accessible :showplace_ids
   accepts_nested_attributes_for :showplaces
   attr_accessible :showplace_attributes
-  
+
   has_many :countrypictures, :dependent => :destroy, :inverse_of => :country
   attr_accessible :countrypicture_ids
   attr_accessible :countrypictures_attributes
@@ -57,8 +57,10 @@ class Country < ActiveRecord::Base
 
   has_many :news, :dependent => :destroy, :inverse_of => :country
 
+  scope :ordered, ->{ reorder name: :asc }
+
   before_create :add_tag
-  
+
   rails_admin do
     navigation_label I18n.t('menu.content')
     weight -10
@@ -106,31 +108,31 @@ class Country < ActiveRecord::Base
       field :shortdesc, :ck_editor
       field :primech, :ck_editor
 
-      fields :bezopasnost, :ceny, :chtobrat, :chtonugnoznat, :cultura, :dostoprimech,  :internet, :jazik,  :oteli, :pitanie, :politika, :prazdniki, :suvenir, :transport, :valutes, :visum do 
+      fields :bezopasnost, :ceny, :chtobrat, :chtonugnoznat, :cultura, :dostoprimech,  :internet, :jazik,  :oteli, :pitanie, :politika, :prazdniki, :suvenir, :transport, :valutes, :visum do
         visible(false)
       end
-      
-      
-      fields :datanezavis, :stolica, :ploscha, :delenie, :glava, :zakon, :ispolnit, :naselenie, :language, :offname, :valute do 
+
+
+      fields :datanezavis, :stolica, :ploscha, :delenie, :glava, :zakon, :ispolnit, :naselenie, :language, :offname, :valute do
         group :obshee
       end
-      fields :description, :h1, :keywords, :name, :title  do 
+      fields :description, :h1, :keywords, :name, :title  do
         group :meta
       end
-      fields  :shortdesc, :descforturist, :primech, :lines_offset  do 
+      fields  :shortdesc, :descforturist, :primech, :lines_offset  do
         group :shapka
       end
-      fields :flag, :crest, :googlemap, :countrypictures, :countryvideos, :countrypanos, :globus, :pogoda  do 
+      fields :flag, :crest, :googlemap, :countrypictures, :countryvideos, :countrypanos, :globus, :pogoda  do
         group :mediainfo
       end
-      fields :tag, :region, :parent  do 
+      fields :tag, :region, :parent  do
         group :slugebnoe
       end
       field :timezone do
         partial :form_timezone
         group :slugebnoe
       end
-      field :countrytextblocks  do 
+      field :countrytextblocks  do
         group :allother
       end
       fields :flights_code, :car_rental_code, :hotels_code do
