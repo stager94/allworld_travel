@@ -30,9 +30,15 @@ $(function() {
     startPosition: $.cookie('marquee-position')
   });
 
-  $(".country-select").select2({width: "resolve"});
+  $(".country-select").select2({
+    width: "resolve",
+    maximumSelectionLength: 3
+  });
 
-  $(".news-country-select").select2({width: "resolve"});
+  $(".news-country-select").select2({
+    width: "resolve",
+    maximumSelectionLength: 3
+  });
 
   $(".news-country-select").val($(".news-country-select").attr("data-selected")).trigger("change");
 
@@ -46,7 +52,7 @@ $(function() {
   }
 
   $(".country-select").on("select2:open",function(){
-    if ($(".select2.select2-container").height() < 40) 
+    if ($(".select2.select2-container").height() < 40)
     {
       $(".select2.select2-container").addClass("opened");
     }
@@ -72,8 +78,8 @@ $(function() {
 
   $( "#hidemarquee" ).click(function() {
     $( "#marqueeblock" ).toggle();
-        
-    $.ajax({ 
+
+    $.ajax({
       url: '/ajax/showhide',
       data: { "showed": $(this).attr('class')},
       type: 'post',
@@ -91,7 +97,7 @@ $(function() {
   $('.closeopen').click(function() {
     $(this).toggleClass( "fa-angle-up" ).toggleClass( "fa-angle-down" )
     $(this).parent().toggleClass( "opened" ).toggleClass( "closed" );
-    
+
 });
 
 });
@@ -124,7 +130,7 @@ $(function() {
       linesCount = $(blok).data('lines-count') || 8
       maxheight = linesCount * 20.5 + 10;
 
-       blok.css('max-height',maxheight+'px');   
+       blok.css('max-height',maxheight+'px');
        $(this).find('span').removeClass( "fa-chevron-circle-up" ).addClass( "fa-chevron-circle-down" );
     }
     return false;
@@ -153,7 +159,7 @@ $('.next').click(function() {
      blok.css('max-height','');
      $(this).find('span').removeClass( "fa-chevron-circle-down" ).addClass( "fa-chevron-circle-up" );
   } else {
-     blok.css('max-height','320px');   
+     blok.css('max-height','320px');
      $(this).find('span').removeClass( "fa-chevron-circle-up" ).addClass( "fa-chevron-circle-down" );
   }
   return false;
@@ -179,7 +185,7 @@ $(document).ready(function(){
 
     $('#country-globe').bind('contextmenu', function(e) {
       return false;
-    }); 
+    });
 
   Share = {
     vkontakte: function(purl, ptitle, pimg, text, redirect_url) {
