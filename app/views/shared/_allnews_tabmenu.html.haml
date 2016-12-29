@@ -10,7 +10,7 @@
 
     .tab-panel.row.active{id: "fresh_news"}
       .row.no-margin.fresh-news-block
-        - piece = @last_news.last
+        - piece = @last_news.first
         - if piece.present?
           .col-md-7.main-news.gray-shadow
             %b
@@ -26,7 +26,7 @@
             .fresh-news-text
               = piece.page.html_safe
         .col-md-5
-          - @last_news.select{|ln| ln.id != @last_news.last.id}.reverse.each do |piece|
+          - @last_news.select{|ln| ln.id != @last_news.first.id}.each do |piece|
             .older-news.gray-shadow
               .inherit-height
                 = link_to piece.name, "/news/"+piece.tag

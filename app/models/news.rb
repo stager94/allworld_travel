@@ -16,7 +16,8 @@ class News < ActiveRecord::Base
   before_create :add_tag
 
   enum news_type: ["news","event"]
-  
+  scope :ordered, ->{ reorder posted_on: :desc }
+
   def news_type_enum
     ["news","event"]
   end
@@ -29,7 +30,7 @@ class News < ActiveRecord::Base
     News.where("id > ?", self.id).first
   end
 
-  def neighbours  
+  def neighbours
     {prev: previous_news, next: next_news}
   end
 

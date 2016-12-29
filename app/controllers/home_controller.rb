@@ -387,13 +387,13 @@ class HomeController < ApplicationController
   end
 
   def allnews
-    @allnews_events   = News.event.all
-    @news_events      = News.event.last(8)
-    @allnews_news     = News.news.all
-    @news_news        = News.news.last(8)
-    @last_news        = News.news.last(4)
-    @allnews          = News.all
-    @news             = News.last(8)
+    @allnews_events   = News.ordered.event.all
+    @news_events      = News.ordered.event.first(8)
+    @allnews_news     = News.ordered.news.all
+    @news_news        = News.ordered.news.first(8)
+    @last_news        = News.ordered.news.first(4)
+    @allnews          = News.ordered.all
+    @news             = News.ordered.first(8)
 
     @page      = 1
     @events    = true
@@ -429,11 +429,11 @@ class HomeController < ApplicationController
     @current_news_id = @piece.id
 
     @allnews   = News.all.reorder posted_on: :desc
-    @news      = News.reorder(posted_on: :desc).last(8)
+    @news      = News.reorder(posted_on: :desc).first(8)
     @page      = 1
 
     @all_country_news = News.where(country_id: @piece.country_id).reorder posted_on: :desc
-    @country_news    = @all_country_news.last(8)
+    @country_news    = @all_country_news.first(8)
     @country_page    = 1
     @country_id     = @piece.country_id
   end
@@ -443,12 +443,12 @@ class HomeController < ApplicationController
     @page        = params[:page].to_i + 1
 
     if @country_ids.present?
-      @allnews = News.where(country_id: @country_ids).reorder posted_on: :desc
+      @allnews = News.ordered.where(country_id: @country_ids)
     else
-      @allnews = News.all.reorder posted_on: :desc
+      @allnews = News.ordered
     end
 
-    @news = @allnews.last(8*@page)
+    @news = @allnews.first(8*@page)
   end
 
   def allnews_showmore_news
@@ -456,12 +456,12 @@ class HomeController < ApplicationController
     @page        = params[:page].to_i + 1
 
     if @country_ids.present?
-      @allnews_news = News.news.where(country_id: @country_ids)
+      @allnews_news = News.ordered.news.where(country_id: @country_ids)
     else
-      @allnews_news = News.news
+      @allnews_news = News.ordered.news
     end
 
-    @news_news = @allnews_news.last(8*@page)
+    @news_news = @allnews_news.first(8*@page)
   end
 
   def allnews_showmore_events
