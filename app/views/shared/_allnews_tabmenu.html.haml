@@ -1,92 +1,94 @@
 .tabmenu-background.transparent
-  .tabmenu
-    .tabmenu-header
-      .tab-link.active
-        %span{"tab-id" => "fresh_news"}
-          Новости
-      .tab-link
-        %span{"tab-id" => "all_news_events"}
-          События
+  .container
+    .tabmenu
+      .tabmenu-header
+        .tab-link.active
+          %span{"tab-id" => "fresh_news"}
+            Новости
+        .tab-link
+          %span{"tab-id" => "all_news_events"}
+            События
 
-    .tab-panel.row.active{id: "fresh_news"}
-      .row.no-margin.fresh-news-block
-        - piece = @last_news.first
-        - if piece.present?
-          .col-md-7.main-news.gray-shadow
-            .news-title.single-line
-              = link_to piece.name, "/news/"+piece.tag
-            %span.news-date
-              = piece.posted_on.try(:strftime, ("%d.%m.%Y"))
-            %p
-            - if tmpimage = piece.newspictures.first
-              .showplace_wcorner_100
-                .showplace_img_50
-                  = image_tag tmpimage.image.url(:medium)
-            %p
-            .fresh-news-text
-              = piece.page.html_safe
-        .col-md-5
-          - @last_news.select{|ln| ln.id != @last_news.first.id}.each do |piece|
-            .older-news.gray-shadow
-              .inherit-height
-                .news-title.single-line
-                  = link_to piece.name, "/news/"+piece.tag
-                %span.news-date
-                  = piece.posted_on.try(:strftime, ("%d.%m.%Y"))
+      .tab-panel.row.active{id: "fresh_news"}
+        .row.no-margin.fresh-news-block
+          - piece = @last_news.first
+          - if piece.present?
+            .col-md-7.main-news.gray-shadow
+              .news-title.single-line
+                = link_to piece.name, "/news/"+piece.tag
+              %span.news-date
+                = piece.posted_on.try(:strftime, ("%d.%m.%Y"))
+              %p
+              - if tmpimage = piece.newspictures.first
+                .showplace_wcorner_100
+                  .showplace_img_50
+                    = image_tag tmpimage.image.url(:medium)
+              %p
+              .fresh-news-text
+                = piece.page.html_safe
+          .col-md-5
+            - @last_news.select{|ln| ln.id != @last_news.first.id}.each do |piece|
+              .older-news.gray-shadow
+                .inherit-height
+                  .news-title.single-line
+                    = link_to piece.name, "/news/"+piece.tag
+                  %span.news-date
+                    = piece.posted_on.try(:strftime, ("%d.%m.%Y"))
 
-                .tcell(style="width:43%;")
-                  - if tmpimage = piece.newspictures.first
-                    .showplace_wcorner_40
-                      .showplace_img
-                        = image_tag tmpimage.image.url(:medium)
-                .tcell
-                  .older-news-text
-                    = piece.page.html_safe
+                  .tcell(style="width:43%;")
+                    - if tmpimage = piece.newspictures.first
+                      .showplace_wcorner_40
+                        .showplace_img
+                          = image_tag tmpimage.image.url(:medium)
+                  .tcell
+                    .older-news-text
+                      = piece.page.html_safe
 
-    .tab-panel.row{id: "all_news_events"}
-      .row.no-margin.fresh-news-block
-        - piece = @last_events.first
-        - if piece.present?
-          .col-md-7.main-news.gray-shadow
-            .news-title.single-line  
-              = link_to piece.name, "/news/"+piece.tag
-            %span.news-date
-              = piece.posted_on.try(:strftime, ("%d.%m.%Y"))
-            %p
-            - if tmpimage = piece.newspictures.first
-              .showplace_wcorner_100
-                .showplace_img_50
-                  = image_tag tmpimage.image.url(:medium)
-            %p
-            .fresh-news-text
-              = piece.page.html_safe
-        .col-md-5
-          - @last_events.select{|ln| ln.id != @last_events.first.id}.each do |piece|
-            .older-news.gray-shadow
-              .inherit-height
-                .news-title.single-line 
-                  = link_to piece.name, "/news/"+piece.tag
-                %span.news-date
-                  = piece.posted_on.try(:strftime, ("%d.%m.%Y"))
+      .tab-panel.row{id: "all_news_events"}
+        .row.no-margin.fresh-news-block
+          - piece = @last_events.first
+          - if piece.present?
+            .col-md-7.main-news.gray-shadow
+              .news-title.single-line  
+                = link_to piece.name, "/news/"+piece.tag
+              %span.news-date
+                = piece.posted_on.try(:strftime, ("%d.%m.%Y"))
+              %p
+              - if tmpimage = piece.newspictures.first
+                .showplace_wcorner_100
+                  .showplace_img_50
+                    = image_tag tmpimage.image.url(:medium)
+              %p
+              .fresh-news-text
+                = piece.page.html_safe
+          .col-md-5
+            - @last_events.select{|ln| ln.id != @last_events.first.id}.each do |piece|
+              .older-news.gray-shadow
+                .inherit-height
+                  .news-title.single-line 
+                    = link_to piece.name, "/news/"+piece.tag
+                  %span.news-date
+                    = piece.posted_on.try(:strftime, ("%d.%m.%Y"))
 
-                .tcell(style="width:43%;")
-                  - if tmpimage = piece.newspictures.first
-                    .showplace_wcorner_40
-                      .showplace_img
-                        = image_tag tmpimage.image.url(:medium)
-                .tcell
-                  .older-news-text
-                    = piece.page.html_safe
+                  .tcell(style="width:43%;")
+                    - if tmpimage = piece.newspictures.first
+                      .showplace_wcorner_40
+                        .showplace_img
+                          = image_tag tmpimage.image.url(:medium)
+                  .tcell
+                    .older-news-text
+                      = piece.page.html_safe
 
 
 .tabmenu-background
-  .tabmenu.constant
-    .tabmenu-header
-      .tab-link.active
-        %span{"tab-id" => "all_news"}
-          Другие новости и события
+  .container 
+    .tabmenu.constant
+      .tabmenu-header
+        .tab-link.active
+          %span{"tab-id" => "all_news"}
+            Другие новости и события
 
-    .tab-panel.row.active{id: "all_news"}
-      .shpage
-      .textsblocks
-        = render "allnews_all_tab"
+      .tab-panel.row.active{id: "all_news"}
+        .shpage
+        .textsblocks
+          = render "allnews_all_tab"

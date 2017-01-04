@@ -10,8 +10,7 @@
       .all-news-text
         %span.news-date
           = newsblock.posted_on.try(:strftime, ("%d.%m.%Y"))
-        %br
-          = link_to newsblock.name, "/news/"+newsblock.tag
+        = link_to newsblock.name, "/news/"+newsblock.tag
         .clear
 %p
   .col-md-12
