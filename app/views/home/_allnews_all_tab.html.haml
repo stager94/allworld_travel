@@ -1,7 +1,7 @@
 - @news.each do |newsblock|
   .col-md-3
     %b
-    .textblock.all-news-block.gray-shadow
+    .textblock.all-news-block.gray-shadow{onclick: "window.location = '/news/"+newsblock.tag+"'"}
       .microblock
         .showplace_wcorner
           .showplace_img
