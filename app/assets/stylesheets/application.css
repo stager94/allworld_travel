@@ -214,7 +214,7 @@
 }
 
 .news-title.single-line {
-	max-height: 21px;
+	height: 41px;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
@@ -235,11 +235,10 @@
 }
 
 .main-news {
-	height: 100% !important;
+	height: 881px !important;
+	overflow: hidden;
 	text-align: justify;
 	padding-right: 15px !important;
-	width: 57% !important;
-	margin-right: 1% !important;
 	padding: 15px 15px 14px 15px !important;
 }
 
@@ -282,10 +281,21 @@
 }
 
 .older-news {
-	height: 100%;
+	height: 287px !important;
+	overflow: hidden;
 	text-align: justify;
 	padding: 10px;
 	margin-bottom: 10px;
+}
+
+.older-news-container {
+	overflow: hidden;
+	height: 267px;
+}
+
+.fresh-news-container {
+	overflow: hidden;
+	height: 851px;
 }
 
 .gray-shadow:hover {
@@ -295,13 +305,11 @@
 .fresh-news-text {
 	overflow: hidden;
 	text-overflow: ellipsis;
-	max-height: 60px !important;
 }
 
 .older-news-text {
 	overflow: hidden;
 	text-overflow: ellipsis;
-	max-height: 120px !important;
 }
 
 .tabmenu {
@@ -313,11 +321,16 @@
 	width: auto;
 	padding: 0px 5px 0px 5px;
 	height: 25px;
-	line-height: 25px;
+	line-height: 22px;
+	border: solid #C1C1C1 1px;
 	border-radius: 3px;
 	text-align: center;
-	color: white !important;
 	cursor: pointer;
+}
+
+.share-button img {
+	width: 20px;
+	height: 20px;
 }
 
 .gplus-button {

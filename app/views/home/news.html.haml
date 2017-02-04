@@ -21,9 +21,10 @@
     .news-header-title.col-md-12
       %b
         = @piece.name
-    %hr.no-margin
-      %span.news-date
-        = @piece.posted_on.try(:strftime, ("%d.%m.%Y"))
+    .col-md-12
+      %hr.no-margin
+        %span.news-date
+          = @piece.posted_on.try(:strftime, ("%d.%m.%Y"))
   .news-page-block.col-md-12
     .show-news-pictures
       .all
@@ -38,28 +39,33 @@
     = @piece.page.html_safe
     .source-url-place
       - if @piece.news_source_url.present?
-        = link_to @piece.news_source_url.to_s[/(?<=:\/\/)\w+.\w+/], @piece.news_source_url
+        = link_to @source_name, @piece.news_source_url
     .share-links#sharing
       %table
         %tr
           %td
-            .share-button.facebook-button
+            .share-button
+              = image_tag '/img/fb.svg'
               Facebook
           %td
-            .share-button.twitter-button
+            .share-button
+              = image_tag '/img/twitter.svg'
               Twitter
           %td
-            .share-button.gplus-button
+            .share-button
+              = image_tag '/img/g_plus.svg'
               Google+
           %td
-            .share-button.vk-button
+            .share-button
+              = image_tag '/img/vk.svg'
               Vkontakte
           %td
-            .share-button.od-button
+            .share-button
+              = image_tag '/img/ok.svg'
               Одноклассники
           %td
-            .share-button.mailru-button
-              %span{style: "color: orange"}@
+            .share-button
+              = image_tag '/img/mailru.svg'
               Mail.ru
 
 

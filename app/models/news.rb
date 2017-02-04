@@ -1,5 +1,5 @@
 class News < ActiveRecord::Base
-  attr_accessible :name, :h1, :keywords, :description, :page, :tag, :news_type, :posted_on, :news_source_url
+  attr_accessible :name, :h1, :keywords, :description, :page, :tag, :news_type, :posted_on, :news_source_url, :news_source_name
   has_many :newspictures, :dependent => :destroy, :inverse_of => :news
   has_many :newsvideos, :dependent => :destroy, :inverse_of => :news
   attr_accessible :newspicture_id

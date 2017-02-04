@@ -389,7 +389,7 @@ class HomeController < ApplicationController
   def allnews
     @allnews_events   = News.ordered.event.all
     @news_events      = News.ordered.event.first(8)
-    @last_events      = News.ordered.event.last(4)
+    @last_events      = News.ordered.event.first(4)
     @allnews_news     = News.ordered.news.all
     @news_news        = News.ordered.news.first(8)
     @last_news        = News.ordered.news.first(4)
@@ -406,27 +406,31 @@ class HomeController < ApplicationController
 
     if @country_ids.present?
       @allnews_events   = News.ordered.event.where(country_id: @country_ids)
-      @news_events      = @allnews_events.last(8)
-      @last_events      = @allnews_events.last(4)
+      @news_events      = @allnews_events.first(8)
+      @last_events      = @allnews_events.first(4)
       @allnews_news     = News.ordered.news.where(country_id: @country_ids)
-      @news_news        = @allnews_news.last(8)
-      @last_news        = @allnews_news.last(4)
+      @news_news        = @allnews_news.first(8)
+      @last_news        = @allnews_news.first(4)
       @allnews          = News.ordered.where(country_id: @country_ids)
-      @news             = @allnews.last(8)
+      @news             = @allnews.first(8)
     else
       @allnews_events   = News.ordered.event.all
-      @news_events      = News.ordered.event.last(8)
-      @last_events      = News.ordered.event.last(4)
+      @news_events      = News.ordered.event.first(8)
+      @last_events      = News.ordered.event.first(4)
       @allnews_news     = News.ordered.news.all
-      @news_news        = News.ordered.news.last(8)
-      @last_news        = News.ordered.news.last(4)
+      @news_news        = News.ordered.news.first(8)
+      @last_news        = News.ordered.news.first(4)
       @allnews          = News.ordered.all
-      @news             = News.ordered.last(8)
+      @news             = News.ordered.first(8)
     end
   end
 
   def news
     @piece = News.find_by_tag(params[:tag])
+
+    if @piece.news_source_name.present?
+      @source_name = @piece.news_source_name || open(@piece.news_source_url).read.scan(/<title>(.*?)<\/title>/)[0][0]
+    end
 
     @neighbours      = @piece.neighbours
     @current_news_id = @piece.id
@@ -477,7 +481,7 @@ class HomeController < ApplicationController
       @allnews_events = News.ordered.event
     end
 
-    @news_events = @allnews_events.last(8*@page)
+    @news_events = @allnews_events.first(8*@page)
   end
 
   def all_country_news_showmore
@@ -485,7 +489,7 @@ class HomeController < ApplicationController
     @page       = params[:page].to_i + 1
 
     @all_country_news = News.ordered.where(country_id: @country_id)
-    @country_news     = @all_country_news.last(8*@page)
+    @country_news     = @all_country_news.first(8*@page)
   end
 
   def prev_news

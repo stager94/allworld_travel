@@ -269,6 +269,7 @@ ru:
         news_type: "Тип новости"
         posted_on: "Дата публикации"
         news_source_url: "Ссылка на источник"
+        news_source_name: "Название источника"
         h1: "Заголовок"
         country: "Страна"
         description: "Описание"

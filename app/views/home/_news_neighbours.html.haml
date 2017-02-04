@@ -31,9 +31,8 @@
       .inherit-height
         %b
           = link_to piece.name, "/news/"+piece.tag
-        %hr.no-margin
-          %span.news-date
-            = piece.posted_on.try(:strftime, ("%d.%m.%Y"))
+        %span.news-date
+          = piece.posted_on.try(:strftime, ("%d.%m.%Y"))
         %p
         .tcell(style="width:40%;")
           - if tmpimage = piece.newspictures.first
